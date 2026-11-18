@@ -34,7 +34,7 @@ test('独自ドメイン設定時: 正規URL・サイトマップ・ads.txt・�
   assert.match(pr, /Google AdSense/);
   assert.match(pr, /adssettings\.google\.com/);
   // 設定が無ければ ads.txt は作らない
-  const config2 = { ...base, outDir: join(tmp, 'pl-lab2') };
+  const config2 = { ...base, outDir: join(tmp, 'pl-lab2'), siteUrl: '', adsense: { client: '' } };
   await runBuild({ config: config2 });
   await assert.rejects(access(join(config2.outDir, 'ads.txt')));
 });

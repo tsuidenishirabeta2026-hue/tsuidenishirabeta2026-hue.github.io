@@ -34,7 +34,7 @@
   "siteUrl": "https://pacific-labo.com",
   "_siteUrl説明": "独自ドメインで公開したら https://example.com のように入れる（末尾の / なし）。正規URL・サイトマップ・旧URLからの転送に使う",
   "adsense": {
-    "client": "",
+    "client": "ca-pub-4831721034846373",
     "_説明": "Google AdSense のサイト運営者ID（ca-pub- で始まる）。siteUrl と両方そろったときだけ広告コードと ads.txt を出力する"
   }
 }
