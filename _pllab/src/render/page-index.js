@@ -2,6 +2,16 @@ import { esc, dateJa, dateShort, dateTimeJst, rate3, fixed, gb, signed, int, pla
 import { has, outsToIp } from '../metrics.js';
 import { leaders, hotPlayers } from '../model.js';
 import { page, term, teamChip, playerLink, PHASE_LABEL } from './layout.js';
+import { movesList, isTransaction } from './page-moves.js';
+
+function movesSection(ctx, root) {
+  if (!ctx.moves) return '';
+  const ev = ctx.moves.events.filter(isTransaction);
+  return `<h2 id="moves">移籍・契約の最新の動き <span class="tag" style="vertical-align:middle">実データ</span></h2>
+<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）ほか。成績のデモ表示とは別に、実際の出来事を掲載しています。</p>
+${movesList(ev, ctx.S, root, { limit: 6 })}
+<p><a href="${root}moves.html"><b>移籍・契約の一覧へ（球団・分類で絞り込み）</b></a></p>`;
+}
 
 export function statusBlock(ctx) {
   const { S, status } = ctx;
@@ -151,12 +161,14 @@ export function renderIndex(ctx) {
 ${statusBlock(ctx)}
 <h2 id="standings">順位表</h2>
 ${standingsTable(S, root)}
+${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? movesSection(ctx, root) : ''}
 <h2 id="games">試合結果と日程</h2>
 ${gamesSection(S, root)}
 <h2 id="leaders">主要ランキング</h2>
 ${leadersSection(S, root, th)}
 <h2 id="hot">最近好調な選手</h2>
 ${hotSection(S, root, th)}
+${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? '' : movesSection(ctx, root)}
 <h2 id="teams">球団別ページ</h2>
 <div class="team-cards">${teamCards}</div>
 <h2>選手を探す</h2>

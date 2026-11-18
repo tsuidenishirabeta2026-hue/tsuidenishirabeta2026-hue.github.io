@@ -18,10 +18,12 @@ export function playerLink(p, root) {
 }
 
 /** 全ページ共通の注意表示（デモ・更新失敗・シーズン状態） */
-export function notices(ctx) {
+export function notices(ctx, { realPage = false } = {}) {
   const { status, S, demo, site } = ctx;
   const out = [];
-  if (demo) {
+  if (demo && realPage) {
+    out.push(`<div class="notice info" role="note"><strong>このページは実際の出来事です（出典: Wikipedia ほか）。</strong>なお、成績・順位・選手ページは現在デモデータ（架空）で表示しています。</div>`);
+  } else if (demo) {
     out.push(`<div class="notice demo" role="note"><span class="demo-tag">デモ</span><strong style="display:inline">この画面はデモデータで表示しています。</strong>
       選手名・成績・試合結果はすべて乱数で作った架空のものです。実在の選手・試合とは関係ありません。球団名のみ実在のものを使用しています。</div>`);
   }
@@ -33,13 +35,14 @@ export function notices(ctx) {
   return out.join('\n');
 }
 
-export function page({ title, root, current, body, ctx, teamColor, description }) {
+export function page({ title, root, current, body, ctx, teamColor, description, realPage = false }) {
   const { site, status, S } = ctx;
   const nav = [
     ['index', 'トップ', 'index.html'],
     ['standings', '順位表', 'index.html#standings'],
     ['teams', '球団', 'index.html#teams'],
     ['players', '選手一覧', 'players/index.html'],
+    ['moves', '移籍・契約', 'moves.html'],
     ['about', 'データと分析の方法', 'about.html'],
   ];
   const fullTitle = title ? `${title}｜${site.name}` : `${site.name}（非公式）`;
@@ -50,25 +53,25 @@ export function page({ title, root, current, body, ctx, teamColor, description }
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description || 'パ・リーグ6球団のチーム成績と選手成績・分析をスマートフォンで確認できる非公式サイト。')}">
-${ctx.demo ? '<meta name="robots" content="noindex">' : ''}
+${ctx.demo && !realPage ? '<meta name="robots" content="noindex">' : ''}
 <link rel="stylesheet" href="${root}assets/style.css">
 ${teamColor ? `<style>:root{--team:${esc(teamColor)}}</style>` : ''}
 </head>
 <body>
 <a class="sr-only" href="#main">本文へ移動</a>
 <header class="site-header"><div class="wrap">
-  <a class="brand" href="${root}index.html">${esc(site.name)}</a><span class="badge-unofficial">非公式</span>${ctx.demo ? '<span class="badge-unofficial" style="border-color:var(--demo-line);color:var(--demo-line);font-weight:800">デモ</span>' : ''}
+  <a class="brand" href="${root}index.html">${esc(site.name)}</a><span class="badge-unofficial">非公式</span>${ctx.demo && !realPage ? '<span class="badge-unofficial" style="border-color:var(--demo-line);color:var(--demo-line);font-weight:800">デモ</span>' : ''}
   <nav class="nav" aria-label="サイト内">${nav.map(([k, l, h]) => `<a href="${root}${h}"${current === k ? ' aria-current="page"' : ''}>${l}</a>`).join('')}</nav>
 </div></header>
 <div class="wrap" data-last-success="${esc(status.last_success_at || '')}" data-stale-hours="${site.staleHours}" data-phase="${esc(S.meta.phase)}">
-${notices(ctx)}
+${notices(ctx, { realPage })}
 </div>
 <main id="main" class="wrap">
 ${body}
 </main>
 <footer class="site-footer"><div class="wrap">
   <p><strong>${esc(site.name)}</strong> は個人が運営する<strong>非公式</strong>のファンサイトです。日本野球機構（NPB）、パシフィックリーグマーケティング株式会社、各球団とは関係ありません。球団名・選手名等の権利は各権利者に帰属します。球団ロゴ・選手写真は使用していません。</p>
-  <p>データの出典: ${esc(S.meta.source_name)}${S.meta.source_url ? `（<a href="${esc(S.meta.source_url)}" rel="noopener">出典</a>）` : ''}。対象シーズン ${S.meta.season}年／基準日 ${esc(dateJa(S.meta.as_of_date))}／最終取得成功 ${esc(dateTimeJst(status.last_success_at))}</p>
+  <p>${realPage ? '成績データ' : 'データ'}の出典: ${esc(S.meta.source_name)}${S.meta.source_url ? `（<a href="${esc(S.meta.source_url)}" rel="noopener">出典</a>）` : ''}。対象シーズン ${S.meta.season}年／基準日 ${esc(dateJa(S.meta.as_of_date))}／最終取得成功 ${esc(dateTimeJst(status.last_success_at))}</p>
   <p>掲載内容の正確性には注意していますが、公式記録は各公式発表をご確認ください。分析文は成績データから機械的に作成したもので、将来の成績を保証するものではありません。 <a href="${root}about.html">データと分析の方法</a></p>
 </div></footer>
 <script src="${root}assets/glossary.js"></script>

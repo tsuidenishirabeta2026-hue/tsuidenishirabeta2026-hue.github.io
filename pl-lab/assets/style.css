@@ -261,3 +261,14 @@ details.more summary { cursor: pointer; font-weight: 700; }
 
 .empty { padding: 14px; text-align: center; color: var(--ink-3); background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* 移籍・契約 */
+ul.moves { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+li.move { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+li.move[hidden], section.move-month[hidden] { display: none; }
+li.move p { margin: 4px 0 0; }
+.move-head { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: .85rem; }
+.move-head time { font-weight: 800; font-variant-numeric: tabular-nums; }
+.move-head a { text-decoration: none; }
+li.move details.more { margin: 6px 0 0; padding: 4px 8px; }
+li.move details.more ul { padding-left: 1.2em; margin: 4px 0; }

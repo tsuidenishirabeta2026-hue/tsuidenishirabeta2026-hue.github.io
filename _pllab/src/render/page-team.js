@@ -4,6 +4,7 @@ import { analyzeTeam } from '../analysis.js';
 import { page, term, teamChip, playerLink } from './layout.js';
 import { BAT_COLS, PIT_COLS, td, headCells, termHelp } from './cols.js';
 import { standingsTable, gamesSection } from './page-index.js';
+import { movesList, isTransaction } from './page-moves.js';
 
 function analysisList(items) {
   return `<ul>${items.map((x) => `<li><span class="kind k-${esc(x.kind)}">${esc(x.kind)}</span>${esc(x.text)}<span class="basis">根拠: ${esc(x.basis)}</span></li>`).join('')}</ul>`;
@@ -105,6 +106,10 @@ ${A.pyth ? `<div class="card analysis"><ul><li><span class="kind k-${A.pyth.kind
 <h2>直近の試合と日程</h2>
 ${gamesSection(S, root, { teamId: tid, recentN: 5, upcomingDays: 3 })}
 
+${ctx.moves ? `<h2 id="moves">最近の動き（移籍・契約など） <span class="tag" style="vertical-align:middle">実データ</span></h2>
+<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）ほか。下の成績・所属選手はデモデータです。</p>
+${movesList(ctx.moves.events.filter((e) => e.teams.includes(tid) && isTransaction(e)), S, root, { limit: 8 })}
+<p><a href="${root}moves.html#team=${esc(tid)}">${esc(t.short_name)}の動きをすべて見る</a></p>` : ''}
 <h2 id="roster">所属選手 — 野手</h2>
 ${termHelp(BAT_COLS)}
 <div class="table-scroll"><table class="sticky-first sortable"><thead><tr><th class="l" scope="col">選手</th><th scope="col">背番号</th><th class="l" scope="col">守備</th>${headCells(BAT_COLS, { terms: false })}</tr></thead><tbody>${batters.sort(byPA).map(rowB).join('')}</tbody></table></div>

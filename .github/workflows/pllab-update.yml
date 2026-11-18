@@ -61,6 +61,16 @@ jobs:
           if [ "${{ inputs.allow_rollback }}" = "true" ]; then node src/update.js --allow-rollback; else node src/update.js; fi
           echo "code=$?" >> "$GITHUB_OUTPUT"
 
+      - name: 移籍・契約情報の取得（Wikipedia）
+        id: moves
+        env:
+          # 任意: Wikimedia の User-Agent 方針に沿った連絡先（URL やメールアドレス）。Repository variables で設定
+          PLLAB_UA_CONTACT: ${{ vars.PLLAB_UA_CONTACT }}
+        run: |
+          set +e
+          node src/update-moves.js
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+
       - name: サイト生成
         run: node src/build.js
 
@@ -83,8 +93,9 @@ jobs:
           exit 1
 
       - name: 更新失敗を通知
-        if: steps.update.outputs.code != '0'
+        if: steps.update.outputs.code != '0' || steps.moves.outputs.code != '0'
         run: |
-          echo "::error::データの取得・検証に失敗しました。前回の正常データを表示中です。_pllab/data/store/status.json と _pllab/data/logs/update-log.jsonl を確認してください。"
+          echo "::error::データの取得・検証に失敗しました。前回の正常データを表示中です。_pllab/data/store/status.json・moves-status.json と _pllab/data/logs/update-log.jsonl を確認してください。"
           cat data/store/status.json
+          cat data/store/moves-status.json || true
           exit 1

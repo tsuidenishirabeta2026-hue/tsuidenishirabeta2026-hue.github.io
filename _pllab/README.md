@@ -35,6 +35,7 @@ pl-lab/            ← 生成されたサイト（公開される。手で編集
 ```bash
 cd _pllab
 node src/update.js      # 取得 → 検証 → 保存（config の source。初期値は demo）
+node src/update-moves.js  # 移籍・契約（Wikipedia）。プロキシ環境では NODE_USE_ENV_PROXY=1 を付ける
 node src/build.js       # ../pl-lab/ にサイトを生成
 node scripts/serve.js   # http://localhost:8080/pl-lab/ で確認
 node --test test/*.test.js   # テスト
@@ -66,6 +67,24 @@ CSV を Web 上（自分のスプレッドシートの CSV 公開 URL、契約�
 
 新しい取得元を追加する場合は `src/sources/` にアダプタを作り、`fetchSeason(season)` が
 `{ 'meta.csv': '...', ... }`（CSV 形式のテキスト）を返すようにすれば、検証以降は共通です。
+
+## 移籍・契約ページ（実データ）
+
+`/pl-lab/moves.html` と、トップ・球団ページの「最近の動き」は実際の出来事を表示します。
+
+- 取得元: Wikipedia 日本語版「<年>年の日本プロ野球」の「できごと」節（MediaWiki API、1日1回）。
+  本文は CC BY-SA 4.0。ページに記事リンク（版番号つき）・ライセンス・改変の旨を表示しています。
+- 処理: `node src/update-moves.js`（取得 → パ・リーグ球団を含む出来事の抽出・分類 → 検証 → `data/store/moves.json`）。
+  成績の更新とは独立しており、失敗しても前回の内容を表示し続けます。
+- 任意: Repository variables に `PLLAB_UA_CONTACT`（連絡先 URL かメールアドレス）を設定すると、Wikimedia の User-Agent 方針に沿った形でアクセスします。
+- 手動追加: `data/input/moves.csv`（契約更改など Wikipedia に無い情報）
+
+```csv
+date,team_id,category,text,source_name,source_url
+2026-12-05,H,契約更改,○○選手が契約を更改したと球団が発表。,球団公式サイト,https://...
+```
+  `team_id` は F/E/L/M/B/H（複数は `/` 区切り）、`category` は トレード / FA / ポスティング・海外 / 戦力外・退団 / 現役引退 / 獲得・入団・契約 / 契約更改 / 首脳陣 / ドラフト / 背番号 / その他。
+  文章は自分の言葉で事実のみを書き、報道記事の文章を転載しないでください。
 
 ## 自動更新（GitHub Actions）
 

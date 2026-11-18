@@ -15,6 +15,7 @@ import { renderTeam } from './render/page-team.js';
 import { renderPlayer } from './render/page-player.js';
 import { renderList, playersJson } from './render/page-list.js';
 import { renderAbout } from './render/page-about.js';
+import { renderMoves } from './render/page-moves.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const MARKER = '.pllab-generated';
@@ -59,7 +60,7 @@ export async function runBuild({ config = loadConfig() } = {}) {
   if (basename(dir) === '' || dir === '/' ) throw new Error('出力先が不正です');
   await safeClean(dir);
 
-  for (const f of ['style.css', 'app.js', 'players.js']) await copyFile(join(HERE, 'assets', f), join(dir, 'assets', f)).catch(async () => {
+  for (const f of ['style.css', 'app.js', 'players.js', 'moves.js']) await copyFile(join(HERE, 'assets', f), join(dir, 'assets', f)).catch(async () => {
     await mkdir(join(dir, 'assets'), { recursive: true });
     await copyFile(join(HERE, 'assets', f), join(dir, 'assets', f));
   });
@@ -85,6 +86,8 @@ export async function runBuild({ config = loadConfig() } = {}) {
     demo: data.source.isDemo,
     sourceLabel: data.source.label,
     th: config.thresholds,
+    moves: await readJson(join(config.storeDir, 'moves.json')),
+    movesStatus: await readJson(join(config.storeDir, 'moves-status.json')),
   };
   let pages = 0;
   const write = async (rel, html) => {
@@ -94,6 +97,7 @@ export async function runBuild({ config = loadConfig() } = {}) {
 
   await write('index.html', renderIndex(ctx));
   await write('about.html', renderAbout(ctx, await readLogTail(config.logFile)));
+  if (ctx.moves) await write('moves.html', renderMoves(ctx, ctx.moves, ctx.movesStatus));
   for (const tid of S.teams.keys()) await write(`teams/${tid}.html`, renderTeam(ctx, tid, models));
   await write('players/index.html', renderList(ctx));
   await out(dir, 'data/players.json', JSON.stringify(playersJson(models, S.meta.season)));
