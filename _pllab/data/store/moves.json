@@ -1,18 +1,18 @@
 {
- "hash": "1ee65c8be14a86763d0dabd3bd02d60deb26551da00042adf171cbb75f1f25aa",
- "saved_at": "2026-11-18T09:35:22.895Z",
+ "hash": "00028ea2c870f672480f18eb0286c826ec48c6688c23ac4fb02f7efacd97582e",
+ "saved_at": "2026-11-18T14:33:00.403Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111813190,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111813190",
-   "count": 225
+   "revid": 111816547,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111816547",
+   "count": 228
   }
  ],
  "events": [
   {
    "date": "2026-11-18",
-   "text": "東北楽天ゴールデンイーグルスは、福岡ソフトバンクホークスを戦力外となっていた大江竜聖を支配下契約で、北海道日本ハムファイターズを戦力外となっていた梅林優貴を育成契約でそれぞれ獲得したことを発表。",
+   "text": "東北楽天ゴールデンイーグルスは、福岡ソフトバンクホークスを戦力外となっていた大江竜聖を支配下契約で、北海道日本ハムファイターズを戦力外となっていた梅林優貴を育成契約でそれぞれ獲得したことを発表。併せて、戦力外としていた林優樹、古賀康誠、大栄利哉、金子京介と育成契約を締結したことも発表。また、コーチを退任することとなっていた真喜志康永が今季限りで退団することを発表。",
    "details": [],
    "teams": [
     "F",
@@ -21,12 +21,23 @@
    ],
    "categories": [
     "戦力外・退団",
-    "獲得・入団・契約"
+    "獲得・入団・契約",
+    "首脳陣"
    ],
    "sources": [
     {
      "url": "https://full-count.jp/2026/11/18/post2046666/",
      "site": "Full-Count",
+     "date": "2026-11-18"
+    },
+    {
+     "url": "https://www.baseballchannel.jp/npb/302140/",
+     "site": "ベースボールチャンネル",
+     "date": "2026-11-18"
+    },
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611180000565.html",
+     "site": "日刊スポーツ",
      "date": "2026-11-18"
     }
    ],
@@ -61,6 +72,69 @@
     {
      "url": "https://full-count.jp/2026/11/18/post2046740/",
      "site": "Full-Count",
+     "date": "2026-11-18"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-18",
+   "text": "北海道日本ハムファイターズは、読売ジャイアンツを戦力外となっていた郡拓也を育成契約で獲得したことを発表。2024年3月以来4年ぶりの古巣復帰となる。背番号は160。",
+   "details": [],
+   "teams": [
+    "F"
+   ],
+   "categories": [
+    "戦力外・退団",
+    "獲得・入団・契約",
+    "背番号"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611180001038.html",
+     "site": "日刊スポーツ",
+     "date": "2026-11-18"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-18",
+   "text": "福岡ソフトバンクホークスの生海が、来季より登録名を本名の甲斐 生海に変更することを表明。",
+   "details": [],
+   "teams": [
+    "H"
+   ],
+   "categories": [
+    "その他"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611180001393.html",
+     "site": "日刊スポーツ",
+     "date": "2026-11-18"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-18",
+   "text": "千葉ロッテマリーンズは、戦力外としていた森遼大朗と育成契約を締結したことを発表。",
+   "details": [],
+   "teams": [
+    "M"
+   ],
+   "categories": [
+    "戦力外・退団",
+    "獲得・入団・契約"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611180001485.html",
+     "site": "日刊スポーツ",
      "date": "2026-11-18"
     }
    ],

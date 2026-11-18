@@ -1,6 +1,6 @@
 {
- "hash": "cc63ec0bf2a7ce9447c0f74986d0ee5dde89f808727548d40fcda57eeb636b34",
- "saved_at": "2026-11-18T09:34:51.675Z",
+ "hash": "232ca866b3d3c7866cee633865d90a0d67c60f1882e01fd112e70a9e55026675",
+ "saved_at": "2026-11-18T14:31:57.206Z",
  "data": {
   "schema": 1,
   "source": {
@@ -291,7 +291,7 @@
      "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
      "stats_level": "none",
      "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-18 取得、支配下・育成を含む）です。",
-     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111813750）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111813875）、Template:埼玉西武ライオンズの選手・スタッフ（版 111577600）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111813745）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111803878）、2026年の日本プロ野球（版 111813190）"
+     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111816484）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111813875）、Template:埼玉西武ライオンズの選手・スタッフ（版 111577600）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111813745）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111816559）、2026年の日本プロ野球（版 111816547）"
     },
     "titles": [
      {
@@ -746,21 +746,6 @@
       "roster_type": "支配下"
      },
      {
-      "player_id": "wb486a9b002",
-      "team_id": "F",
-      "name": "ラオ",
-      "name_kana": null,
-      "number": "30",
-      "position": "投手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "サウリン・ラオ",
-      "roster_type": "支配下"
-     },
-     {
       "player_id": "we19b405c04",
       "team_id": "F",
       "name": "柴田獅子",
@@ -1181,21 +1166,6 @@
       "roster_type": "支配下"
      },
      {
-      "player_id": "w8424c2e051",
-      "team_id": "F",
-      "name": "梅林優貴",
-      "name_kana": null,
-      "number": "98",
-      "position": "捕手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "梅林優貴",
-      "roster_type": "支配下"
-     },
-     {
       "player_id": "w0dec3596d5",
       "team_id": "F",
       "name": "上川畑大悟",
@@ -1223,21 +1193,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "野村佑希",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "w25be9e001d",
-      "team_id": "F",
-      "name": "カストロ",
-      "name_kana": null,
-      "number": "6",
-      "position": "内野手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "ロドルフォ・カストロ",
       "roster_type": "支配下"
      },
      {
@@ -8293,7 +8248,7 @@
      {
       "player_id": "w0e0eef72bb",
       "team_id": "H",
-      "name": "生海",
+      "name": "甲斐生海",
       "name_kana": null,
       "number": "154",
       "position": "外野手",
