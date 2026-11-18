@@ -1,9 +1,10 @@
 import { esc } from '../format.js';
+import { battingRates } from '../metrics.js';
 import { page, term, teamChip, playerLink } from './layout.js';
 import { BAT_COLS, PIT_COLS, termHelp } from './cols.js';
 
 /** 選手一覧ページ用の JSON（全シーズン分） */
-export function playersJson(models, current) {
+export function playersJson(models, current, history = null) {
   const enc = (x) => {
     if (x && typeof x === 'object' && 'v' in x) return x.v === null ? (x.why === 'zero' ? 'z' : null) : Math.round(x.v * 10000) / 10000;
     return Number.isFinite(x) ? x : null;
@@ -21,6 +22,8 @@ export function playersJson(models, current) {
         ts,
         tn: ts.map((t) => S.teams.get(t)?.short_name || t).join('→'),
         pos: p.info.position,
+        num: p.info.number || '',
+        ...latestOf(history, p, S.meta.season === current),
         role: p.role,
         qb: p.qualifiedBat,
         qp: p.qualifiedPit,
@@ -33,6 +36,7 @@ export function playersJson(models, current) {
   return {
     current,
     seasons: models.map((m) => m.meta.season).sort((a, b) => b - a),
+    noStats: models.filter((m) => !m.statsAvailable).map((m) => m.meta.season),
     teams: [...cur.teams.values()].map((t) => ({ id: t.team_id, name: t.short_name })),
     players: rows,
   };
@@ -51,8 +55,8 @@ export function renderList(ctx) {
     .join('');
   const body = `
 <p class="breadcrumb"><a href="${root}index.html">トップ</a> › 選手一覧</p>
-<h1>選手一覧・成績表</h1>
-<p class="lead">名前（漢字・ひらがな・カタカナ）で検索し、球団・守備位置・年度で絞り込めます。表の見出しをタップすると並べ替えます。選手名をタップすると個別の成績と分析を表示します。</p>
+<h1>${S.statsAvailable ? '選手一覧・成績表' : '所属選手一覧'}</h1>
+<p class="lead">${S.statsAvailable ? '名前（漢字・ひらがな・カタカナ）で検索し、球団・守備位置・年度で絞り込めます。表の見出しをタップすると並べ替えます。選手名をタップすると個別の成績と分析を表示します。' : '登録名で検索し、球団・守備位置で絞り込めます。見出しをタップすると並べ替えます。個人成績は、規約上利用できる取得元がないため掲載していません。'}</p>
 <div id="plist" data-src="${root}data/players.json">
   <div class="tabs" role="tablist" aria-label="野手と投手の切り替え">
     <button type="button" role="tab" data-tab="bat" aria-selected="true">野手</button>
@@ -77,5 +81,22 @@ export function renderList(ctx) {
 <noscript><div class="notice info"><strong>JavaScript が無効のため、検索・並べ替えは使えません。</strong>以下の一覧から選手ページへ移動できます。</div>${noscript}</noscript>
 <script src="${root}assets/players.js" defer></script>
 `;
-  return page({ title: '選手一覧・成績表', root, current: 'players', body, ctx });
+  return page({ title: S.statsAvailable ? '選手一覧・成績表' : '所属選手一覧', root, current: 'players', body, ctx, pageMeta: { pageType: 'list' } });
+}
+
+/** 選手一覧に出す「記事の最新年度」の成績（個人成績の取得元が無いシーズン用） */
+function latestOf(H, p, isCurrent) {
+  if (!H || !isCurrent) return {};
+  const h = H.per.get(p.id);
+  if (!h) return {};
+  const years = p.isPitcher ? h.pit : h.bat;
+  if (!years.size) return {};
+  const y = Math.max(...years.keys());
+  const t = years.get(y).tot;
+  if (p.isPitcher) {
+    const era = t.outs > 0 && t.ER !== null ? Math.round(((t.ER * 27) / t.outs) * 100) / 100 : t.outs === 0 ? 'z' : null;
+    return { ly: y, sz: t.outs, km: era };
+  }
+  const o = battingRates(t).OPS;
+  return { ly: y, sz: t.PA, km: o.v === null ? (o.why === 'zero' ? 'z' : null) : Math.round(o.v * 1000) / 1000 };
 }

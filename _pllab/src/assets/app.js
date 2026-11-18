@@ -108,6 +108,32 @@
     });
   });
 
+  // ---- 計測（アクセス解析が設定されている場合のみ送信） ----
+  function track(name, params) {
+    try {
+      if (typeof window.gtag === 'function') window.gtag('event', name, Object.assign({ transport_type: 'beacon' }, params));
+      if (window.umami && typeof window.umami.track === 'function') window.umami.track(name, params);
+    } catch (e) {}
+  }
+  // note へのクリック
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.note-link');
+    if (!a) return;
+    track('note_click', {
+      note_id: a.getAttribute('data-note-id'),
+      note_type: a.getAttribute('data-note-type'),
+      page_type: a.getAttribute('data-page-type'),
+      player_id: a.getAttribute('data-player-id') || '',
+      team_id: a.getAttribute('data-team-id') || ''
+    });
+  });
+  // 選手ページの閲覧（ページビューに加え、選手IDつきのイベントを送って集計しやすくする）
+  var b = document.body;
+  if (b && b.getAttribute('data-page-type') === 'player') {
+    var sendPV = function () { track('player_view', { player_id: b.getAttribute('data-player-id'), player_name: b.getAttribute('data-player-name') }); };
+    if (window.umami) sendPV(); else window.addEventListener('load', sendPV);
+  }
+
   // ---- データの鮮度チェック（更新処理そのものが止まった場合にも気づけるように） ----
   var el = document.querySelector('[data-last-success]');
   if (el) {

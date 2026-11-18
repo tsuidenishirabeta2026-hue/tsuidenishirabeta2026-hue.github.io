@@ -1,1 +1,1 @@
-player_id,team_id,name,name_kana,number,position,throws,bats,birth_date,from_date,to_date
+player_id,team_id,name,name_kana,number,position,throws,bats,birth_date,from_date,to_date,wiki_title,roster_type

@@ -6,6 +6,8 @@ import { splitLabel } from '../schema.js';
 import { page, term, teamChip, playerLink } from './layout.js';
 import { BAT_COLS, PIT_COLS, td, headCells } from './cols.js';
 import { indexBars, trendLine } from './charts.js';
+import { noteBlock } from './notes.js';
+import { insightSection } from './insight.js';
 
 const SECTION_TITLES = [
   ['type', 'どのようなタイプの選手か'],
@@ -223,7 +225,8 @@ export function renderPlayer(ctx, entries, sameNameMap) {
   const same = (sameNameMap.get(`${S.meta.season}|${p.name}`) || []).filter((x) => x.id !== p.id);
   const sameNote = same.length ? `<p class="notice info small" style="margin:10px 0 0"><strong>同じ登録名の選手がいます</strong>${same.map((x) => `${playerLink(x, root)}（${esc(S.teams.get(x.info.team_id).short_name)}・${esc(x.info.position)}・背番号${esc(x.info.number || '—')}）`).join('、')}。このページは選手ID ${esc(p.id)} の選手です。</p>` : '';
 
-  const A = p.isPitcher ? analyzePitcher(S, p, th) : analyzeBatter(S, p, th);
+  const A = S.statsAvailable ? (p.isPitcher ? analyzePitcher(S, p, th) : analyzeBatter(S, p, th)) : null;
+  const statsBody = S.statsAvailable ? statsSections(ctx, S, p, A, entries, root) : noStatsSections(ctx, S, p, root);
   const body = `
 <p class="breadcrumb"><a href="${root}index.html">トップ</a> › <a href="${root}players/index.html">選手一覧</a> › ${esc(p.name)}</p>
 <div class="card player-head">
@@ -231,7 +234,7 @@ export function renderPlayer(ctx, entries, sameNameMap) {
   ${p.kana ? `<div class="kana">${esc(p.kana)}</div>` : ''}
   <ul class="facts">
     <li><span>所属</span>${teamChip(t, root, { short: false })}${cur ? '' : `（${S.meta.season}年時点）`}</li>
-    <li><span>背番号</span>${esc(p.info.number || 'データなし')}</li>
+    <li><span>背番号</span>${esc(p.info.number || 'データなし')}${p.info.roster_type ? `（${esc(p.info.roster_type)}）` : ''}</li>
     <li><span>守備位置</span>${esc(p.info.position)}${p.isPitcher && p.role !== '投手' ? `（主に${esc(p.role)}）` : ''}</li>
     <li><span>投打</span>${esc(tb)}</li>
     <li><span>年齢</span>${age !== null ? `${age}歳（基準日 ${dateShort(S.meta.as_of_date)} 時点）` : 'データなし'}</li>
@@ -243,7 +246,15 @@ export function renderPlayer(ctx, entries, sameNameMap) {
 </div>
 ${cur ? '' : `<p class="notice info">この選手は最新シーズン（${ctx.S.meta.season}年）のデータに所属記録がありません。${S.meta.season}年の情報を表示しています。</p>`}
 
-<h2>分析</h2>
+${statsBody}
+${noteBlock(ctx, { pageType: 'player', playerId: p.id, teamId: p.info.team_id, heading: `${p.name}選手・${t.short_name}の解説記事（note）` })}
+`;
+  return page({ title: `${p.name}（${t.short_name}）`, root, current: 'players', body, ctx, teamColor: t.color, description: `${p.name}選手（${t.name}）の成績と分析（非公式）`, pageMeta: { pageType: 'player', playerId: p.id, playerName: p.name } });
+}
+
+function statsSections(ctx, S, p, A, entries, root) {
+  const { th } = ctx;
+  return `<h2>分析</h2>
 ${analysisBlock(A, `${S.meta.season}年の成績から読み取れること`)}
 
 <h2>${S.meta.season}年の成績</h2>
@@ -258,7 +269,18 @@ ${p.isPitcher ? pitTrend(S, p) : batTrend(S, p)}
 ${splitsBlock(S, p)}
 
 <h2>年度別成績</h2>
-${yearByYear(entries, p, root)}
-`;
-  return page({ title: `${p.name}（${t.short_name}）`, root, current: 'players', body, ctx, teamColor: t.color, description: `${p.name}選手（${t.name}）の成績と分析（非公式）` });
+${yearByYear(entries, p, root)}`;
+}
+
+/** 個人成績の取得元が無い場合: 推測で埋めず、分かる情報（タイトル・最近の動き・外部リンク）だけを出す */
+function noStatsSections(ctx, S, p, root) {
+  const titles = S.titles.filter((t) => t.player_id === p.id);
+  const moves = ctx.moves ? ctx.moves.events.filter((e) => e.teams.includes(p.info.team_id) && e.text.includes(p.name.replace(/\s/g, ''))) : [];
+  const wiki = p.info.wiki_title ? `https://ja.wikipedia.org/wiki/${encodeURIComponent(p.info.wiki_title)}` : null;
+  const ins = insightSection(ctx, p);
+  return `<h2>数字で見る${esc(p.name)}</h2>
+${ins ? ins.html : '<div class="notice info"><strong>個人成績は掲載していません。</strong>規約上利用できる個人成績の取得元がないため、打率・防御率などの個人成績と、それに基づく分析は表示していません（推測で作ることはしません）。</div>'}
+${titles.length ? `<h2>${S.meta.season}年の個人タイトル</h2><ul>${titles.map((t) => `<li>${esc(t.title)}${t.value ? `（${esc(t.value)}）` : ''}</li>`).join('')}</ul>` : ''}
+${moves.length ? `<h2>この選手に関する最近の動き</h2><ul>${moves.slice(0, 5).map((e) => `<li>${esc(dateShort(e.date))}: ${esc(e.text)}</li>`).join('')}</ul><p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）。<a href="${root}moves.html">移籍・契約の一覧</a></p>` : ''}
+${wiki ? `<p>経歴・過去の成績: <a href="${esc(wiki)}" rel="noopener">Wikipedia「${esc(p.info.wiki_title)}」</a>（外部サイト）</p>` : ''}`;
 }

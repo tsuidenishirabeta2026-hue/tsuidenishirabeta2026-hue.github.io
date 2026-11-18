@@ -37,7 +37,9 @@ export async function runUpdate({ config = loadConfig(), env = process.env, now 
         e.details = res.errors.slice(0, 50).map((x) => `[${season}] ${x}`);
         throw e;
       }
-      const comp = checkCompleteness(prev?.data?.seasons?.[season], res.data, { allowRollback });
+      // 取得元を切り替えた直後は前回データと比較できないため、同じ取得元のときだけ比較する
+      const sameSource = prev?.data?.source?.id === src.id;
+      const comp = checkCompleteness(sameSource ? prev.data.seasons?.[season] : null, res.data, { allowRollback });
       if (comp.length) {
         const e = new Error(`${season}年データが不完全な可能性があるため保存を中止しました`);
         e.details = comp.map((x) => `[${season}] ${x}`);

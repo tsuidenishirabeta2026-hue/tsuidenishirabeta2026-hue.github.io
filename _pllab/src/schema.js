@@ -28,6 +28,21 @@ export const FILES = {
       C('source_name', 'source_name', 'str', 'データの出典名（画面に表示）', { need: 'val' }),
       C('source_url', 'source_url', 'str', '出典URL（任意）'),
       C('note', 'note', 'str', '注記（任意。画面に表示）'),
+      C('stats_level', 'stats_level', 'enum', '個人成績の有無（full=あり／none=取得元に個人成績がない。省略時 full）', { values: ['full', 'none', ''] }),
+      C('roster_note', 'roster_note', 'str', '所属選手の基準についての注記（任意）'),
+      C('source_detail', 'source_detail', 'str', '出典の詳細（版番号など。「データと分析の方法」に表示）'),
+    ],
+  },
+  titles: {
+    file: 'titles.csv',
+    required: false,
+    label: '個人タイトル（任意。トップページに表示）',
+    columns: [
+      C('title', 'title', 'str', 'タイトル名（例: 首位打者）', { need: 'val' }),
+      C('player', 'player', 'str', '選手名', { need: 'val' }),
+      C('team_id', 'team_id', 'enum', '球団ID', { need: 'val', values: LEAGUE_TEAMS }),
+      C('value', 'value', 'str', '成績（例: .313、40本）', { need: 'col' }),
+      C('player_id', 'player_id', 'str', '選手ID（players.csv にあればリンク）'),
     ],
   },
   teams: {
@@ -77,6 +92,8 @@ export const FILES = {
       C('birth_date', 'birth_date', 'date', '生年月日（年齢は基準日で計算）', { need: 'col' }),
       C('from_date', 'from_date', 'date', 'この球団への所属開始日（シーズン途中加入時のみ）'),
       C('to_date', 'to_date', 'date', 'この球団の所属終了日（移籍・退団時のみ。空欄=在籍中）'),
+      C('wiki_title', 'wiki_title', 'str', 'Wikipedia 記事名（任意。選手ページからリンク）'),
+      C('roster_type', 'roster_type', 'enum', '支配下／育成（任意）', { values: ['支配下', '育成', ''] }),
     ],
   },
   batting: {

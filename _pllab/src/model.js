@@ -157,6 +157,9 @@ export function buildSeasonModel(d) {
     hasBatLogs,
     hasPitLogs,
     hasSplits: d.splits_batting.length + d.splits_pitching.length > 0,
+    // 取得元に個人成績が無い場合（stats_level=none）、「出場なし」と誤って表示しないために使う
+    statsAvailable: meta.stats_level !== 'none',
+    titles: d.titles || [],
   };
 }
 

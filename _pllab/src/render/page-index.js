@@ -3,12 +3,34 @@ import { has, outsToIp } from '../metrics.js';
 import { leaders, hotPlayers } from '../model.js';
 import { page, term, teamChip, playerLink, PHASE_LABEL } from './layout.js';
 import { movesList, isTransaction } from './page-moves.js';
+import { noteBlock } from './notes.js';
+import { biggestRisers, YOY_MIN_PA, YOY_MIN_OUTS } from '../history.js';
+
+function risersSection(ctx, root) {
+  if (!ctx.history) return '';
+  const R = biggestRisers(ctx.history, ctx.S.players);
+  if (!R) return '';
+  const S = ctx.S;
+  const tbl = (list, isP) =>
+    list.length
+      ? `<div class="table-scroll"><table class="sticky-first"><thead><tr><th class="l">選手</th><th>${R.year - 1}年</th><th>${R.year}年</th><th>${isP ? '改善幅' : '上昇幅'}</th><th>${isP ? '投球回' : '打席'}（${R.year}年）</th></tr></thead><tbody>${list
+          .map(({ p, d, cur, prev, size }) => {
+            const f = (v) => (isP ? v.toFixed(2) : plain(rate3, { v }));
+            return `<tr><td class="l name">${playerLink(p, root)} <span class="muted">${esc(S.teams.get(p.info.team_id)?.short_name || '')}</span></td><td>${f(prev)}</td><td><b>${f(cur)}</b></td><td>${isP ? '−' + d.toFixed(2) : signed(d)}</td><td>${isP ? outsToIp(size) : size}</td></tr>`;
+          })
+          .join('')}</tbody></table></div>`
+      : '<p class="empty">条件を満たす選手がいません。</p>';
+  return `<h2 id="risers">前年から伸びた選手（${R.year - 1}年 → ${R.year}年）</h2>
+<p class="small">比較条件: 両年とも${YOY_MIN_PA}打席以上の野手は OPS の上昇幅、両年とも${YOY_MIN_OUTS / 3}投球回以上の投手は防御率の改善幅の大きい順。対象は現在パ・リーグに所属する選手（${R.year}年まで記事が更新されている選手。更新率 ${Math.round(R.coverage * 100)}%）。</p>
+<div class="grid two"><div><h3>野手（OPS）</h3>${tbl(R.bats, false)}</div><div><h3>投手（防御率）</h3>${tbl(R.pits, true)}</div></div>
+<p class="muted small">出典: Wikipedia 日本語版の各選手記事の年度別成績（CC BY-SA 4.0）。記事の更新状況により、公式記録と異なる場合があります。</p>`;
+}
 
 function movesSection(ctx, root) {
   if (!ctx.moves) return '';
   const ev = ctx.moves.events.filter(isTransaction);
   return `<h2 id="moves">移籍・契約の最新の動き <span class="tag" style="vertical-align:middle">実データ</span></h2>
-<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）ほか。成績のデモ表示とは別に、実際の出来事を掲載しています。</p>
+<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）ほか。${ctx.demo ? '成績のデモ表示とは別に、実際の出来事を掲載しています。' : ''}</p>
 ${movesList(ev, ctx.S, root, { limit: 6 })}
 <p><a href="${root}moves.html"><b>移籍・契約の一覧へ（球団・分類で絞り込み）</b></a></p>`;
 }
@@ -157,22 +179,37 @@ export function renderIndex(ctx) {
     .join('');
   const body = `
 <h1>パ・リーグ ${S.meta.season}年 成績</h1>
-<p class="lead">順位表・主要ランキング・最近好調な選手をまとめて確認できます。各指標名をタップすると説明が表示されます。</p>
+<p class="lead">${S.statsAvailable ? '順位表・主要ランキング・最近好調な選手をまとめて確認できます。' : '順位表・個人タイトル・移籍や契約の動きをまとめて確認できます。'}各指標名をタップすると説明が表示されます。</p>
 ${statusBlock(ctx)}
 <h2 id="standings">順位表</h2>
 ${standingsTable(S, root)}
 ${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? movesSection(ctx, root) : ''}
-<h2 id="games">試合結果と日程</h2>
-${gamesSection(S, root)}
-<h2 id="leaders">主要ランキング</h2>
+${S.games.length ? `<h2 id="games">試合結果と日程</h2>
+${gamesSection(S, root)}` : ''}
+${S.statsAvailable ? `<h2 id="leaders">主要ランキング</h2>
 ${leadersSection(S, root, th)}
 <h2 id="hot">最近好調な選手</h2>
-${hotSection(S, root, th)}
+${hotSection(S, root, th)}` : titlesSection(S, root) + risersSection(ctx, root)}
 ${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? '' : movesSection(ctx, root)}
+${noteBlock(ctx, { pageType: 'top', heading: 'note で読む解説記事' })}
 <h2 id="teams">球団別ページ</h2>
 <div class="team-cards">${teamCards}</div>
 <h2>選手を探す</h2>
-<p><a href="players/index.html"><b>選手一覧・成績表へ</b></a>（名前検索、球団・守備位置・年度の絞り込み、並べ替え）</p>
+<p><a href="players/index.html"><b>${S.statsAvailable ? '選手一覧・成績表へ' : '所属選手一覧へ'}</b></a>（名前検索、球団・守備位置${S.statsAvailable ? '・年度の絞り込み、並べ替え' : 'の絞り込み'}）</p>
 `;
-  return page({ title: '', root, current: 'index', body, ctx });
+  return page({ title: '', root, current: 'index', body, ctx, pageMeta: { pageType: 'top' } });
+}
+
+export function titlesSection(S, root) {
+  const rows = S.titles
+    .map((t) => {
+      const team = S.teams.get(t.team_id);
+      const pl = t.player_id && S.players.get(t.player_id);
+      return `<tr><td class="l">${esc(t.title)}</td><td class="l name" style="white-space:nowrap">${pl ? playerLink(pl, root) : esc(t.player)}</td><td class="l" style="white-space:nowrap">${teamChip(team, root)}</td><td style="white-space:nowrap">${esc(t.value || '')}</td></tr>`;
+    })
+    .join('');
+  return `<h2 id="titles">${S.meta.season}年 パ・リーグ個人タイトル</h2>
+${rows ? `<div class="table-scroll"><table class="wrap"><thead><tr><th class="l">タイトル</th><th class="l">選手</th><th class="l">球団</th><th>成績</th></tr></thead><tbody>${rows}</tbody></table></div>
+<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0）の記載。同じタイトルに複数の選手がいる場合は同時受賞です。正式な記録は NPB の発表をご確認ください。</p>` : '<p class="empty">個人タイトルのデータはまだありません。</p>'}
+<p class="notice info small"><strong>個人成績のランキング・最近好調な選手は表示していません。</strong>リーグ全選手の成績や試合別の成績を、規約上利用できる形で取得できないためです。選手ごとの年度別成績・前年比・平均との差は、各選手ページで確認できます（<a href="${root}about.html#history">比較の方法</a>）。</p>`;
 }
