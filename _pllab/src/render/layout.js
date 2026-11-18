@@ -71,7 +71,7 @@ ${body}
 </main>
 <footer class="site-footer"><div class="wrap">
   <p><strong>${esc(site.name)}</strong> は個人が運営する<strong>非公式</strong>のファンサイトです。日本野球機構（NPB）、パシフィックリーグマーケティング株式会社、各球団とは関係ありません。球団名・選手名等の権利は各権利者に帰属します。球団ロゴ・選手写真は使用していません。</p>
-  <p>${realPage ? '成績データ' : 'データ'}の出典: ${esc(S.meta.source_name)}${S.meta.source_url ? `（<a href="${esc(S.meta.source_url)}" rel="noopener">出典</a>）` : ''}。対象シーズン ${S.meta.season}年／基準日 ${esc(dateJa(S.meta.as_of_date))}／最終取得成功 ${esc(dateTimeJst(status.last_success_at))}</p>
+  <p>${realPage && ctx.demo ? '成績データ' : 'データ'}の出典: ${esc(S.meta.source_name)}${/CC BY-SA/.test(S.meta.source_name) ? '（<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" rel="license noopener">ライセンス</a>。Wikipedia 由来の文章・表は同ライセンスで提供します）' : ''}${S.meta.source_url ? `（<a href="${esc(S.meta.source_url)}" rel="noopener">出典</a>）` : ''}。対象シーズン ${S.meta.season}年／基準日 ${esc(dateJa(S.meta.as_of_date))}／最終取得成功 ${esc(dateTimeJst(status.last_success_at))}</p>
   <p>掲載内容の正確性には注意していますが、公式記録は各公式発表をご確認ください。分析文は成績データから機械的に作成したもので、将来の成績を保証するものではありません。 <a href="${root}about.html">データと分析の方法</a></p>
 </div></footer>
 <script src="${root}assets/glossary.js"></script>

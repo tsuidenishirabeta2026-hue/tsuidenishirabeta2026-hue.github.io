@@ -8,7 +8,7 @@ function movesSection(ctx, root) {
   if (!ctx.moves) return '';
   const ev = ctx.moves.events.filter(isTransaction);
   return `<h2 id="moves">移籍・契約の最新の動き <span class="tag" style="vertical-align:middle">実データ</span></h2>
-<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）ほか。成績のデモ表示とは別に、実際の出来事を掲載しています。</p>
+<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）ほか。${ctx.demo ? '成績のデモ表示とは別に、実際の出来事を掲載しています。' : ''}</p>
 ${movesList(ev, ctx.S, root, { limit: 6 })}
 <p><a href="${root}moves.html"><b>移籍・契約の一覧へ（球団・分類で絞り込み）</b></a></p>`;
 }
@@ -162,8 +162,8 @@ ${statusBlock(ctx)}
 <h2 id="standings">順位表</h2>
 ${standingsTable(S, root)}
 ${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? movesSection(ctx, root) : ''}
-<h2 id="games">試合結果と日程</h2>
-${gamesSection(S, root)}
+${S.games.length ? `<h2 id="games">試合結果と日程</h2>
+${gamesSection(S, root)}` : ''}
 ${S.statsAvailable ? `<h2 id="leaders">主要ランキング</h2>
 ${leadersSection(S, root, th)}
 <h2 id="hot">最近好調な選手</h2>
@@ -182,11 +182,11 @@ export function titlesSection(S, root) {
     .map((t) => {
       const team = S.teams.get(t.team_id);
       const pl = t.player_id && S.players.get(t.player_id);
-      return `<tr><td class="l">${esc(t.title)}</td><td class="l name">${pl ? playerLink(pl, root) : esc(t.player)}</td><td class="l">${teamChip(team, root)}</td><td>${esc(t.value || '')}</td></tr>`;
+      return `<tr><td class="l">${esc(t.title)}</td><td class="l name">${pl ? playerLink(pl, root) : esc(t.player)}</td><td class="l" style="white-space:nowrap">${teamChip(team, root)}</td><td style="white-space:nowrap">${esc(t.value || '')}</td></tr>`;
     })
     .join('');
   return `<h2 id="titles">${S.meta.season}年 パ・リーグ個人タイトル</h2>
-${rows ? `<div class="table-scroll"><table class="sticky-first wrap"><thead><tr><th class="l">タイトル</th><th class="l">選手</th><th class="l">球団</th><th>成績</th></tr></thead><tbody>${rows}</tbody></table></div>
+${rows ? `<div class="table-scroll"><table class="wrap"><thead><tr><th class="l">タイトル</th><th class="l">選手</th><th class="l">球団</th><th>成績</th></tr></thead><tbody>${rows}</tbody></table></div>
 <p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0）の記載。同じタイトルに複数の選手がいる場合は同時受賞です。正式な記録は NPB の発表をご確認ください。</p>` : '<p class="empty">個人タイトルのデータはまだありません。</p>'}
 <p class="notice info small"><strong>個人成績のランキング・好調な選手は表示していません。</strong>規約上利用できる、全選手の個人成績の取得元がないためです（<a href="${root}about.html#source">詳しく</a>）。</p>`;
 }

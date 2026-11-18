@@ -272,3 +272,5 @@ li.move p { margin: 4px 0 0; }
 .move-head a { text-decoration: none; }
 li.move details.more { margin: 6px 0 0; padding: 4px 8px; }
 li.move details.more ul { padding-left: 1.2em; margin: 4px 0; }
+
+[hidden] { display: none !important; }

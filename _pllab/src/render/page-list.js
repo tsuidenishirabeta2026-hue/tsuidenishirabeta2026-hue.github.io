@@ -53,8 +53,8 @@ export function renderList(ctx) {
     .join('');
   const body = `
 <p class="breadcrumb"><a href="${root}index.html">トップ</a> › 選手一覧</p>
-<h1>選手一覧・成績表</h1>
-<p class="lead">名前（漢字・ひらがな・カタカナ）で検索し、球団・守備位置・年度で絞り込めます。表の見出しをタップすると並べ替えます。選手名をタップすると個別の成績と分析を表示します。</p>
+<h1>${S.statsAvailable ? '選手一覧・成績表' : '所属選手一覧'}</h1>
+<p class="lead">${S.statsAvailable ? '名前（漢字・ひらがな・カタカナ）で検索し、球団・守備位置・年度で絞り込めます。表の見出しをタップすると並べ替えます。選手名をタップすると個別の成績と分析を表示します。' : '登録名で検索し、球団・守備位置で絞り込めます。見出しをタップすると並べ替えます。個人成績は、規約上利用できる取得元がないため掲載していません。'}</p>
 <div id="plist" data-src="${root}data/players.json">
   <div class="tabs" role="tablist" aria-label="野手と投手の切り替え">
     <button type="button" role="tab" data-tab="bat" aria-selected="true">野手</button>
@@ -79,5 +79,5 @@ export function renderList(ctx) {
 <noscript><div class="notice info"><strong>JavaScript が無効のため、検索・並べ替えは使えません。</strong>以下の一覧から選手ページへ移動できます。</div>${noscript}</noscript>
 <script src="${root}assets/players.js" defer></script>
 `;
-  return page({ title: '選手一覧・成績表', root, current: 'players', body, ctx });
+  return page({ title: S.statsAvailable ? '選手一覧・成績表' : '所属選手一覧', root, current: 'players', body, ctx });
 }

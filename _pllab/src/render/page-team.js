@@ -104,8 +104,8 @@ ${S.statsAvailable ? `<h2>チームの強みと課題</h2>
 <p class="muted small">リーグ平均の率（打率・防御率など）はリーグ全体の合計値から計算しています（各球団の率の単純平均ではありません）。</p>
 
 ` : ''}
-<h2>直近の試合と日程</h2>
-${gamesSection(S, root, { teamId: tid, recentN: 5, upcomingDays: 3 })}
+${S.games.length ? `<h2>直近の試合と日程</h2>
+${gamesSection(S, root, { teamId: tid, recentN: 5, upcomingDays: 3 })}` : ''}
 
 ${ctx.moves ? `<h2 id="moves">最近の動き（移籍・契約など） <span class="tag" style="vertical-align:middle">実データ</span></h2>
 <p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）ほか。${ctx.demo ? '下の成績・所属選手はデモデータです。' : ''}</p>
@@ -135,13 +135,18 @@ function ratesFor(row, kind) {
 function simpleRoster(S, roster, tid, root) {
   const groups = ['投手', '捕手', '内野手', '外野手'];
   const num = (p) => p.stints.find((s) => s.team_id === tid)?.number ?? '';
-  const byNum = (a, b) => (Number(num(a)) || 999) - (Number(num(b)) || 999);
+  const nv = (p) => {
+    const n = num(p);
+    if (n === '' || Number.isNaN(Number(n))) return 9999;
+    return Number(n) - (n.length > 1 && n[0] === '0' ? 0.5 : 0); // "0" と "00" を区別
+  };
+  const byNum = (a, b) => nv(a) - nv(b);
   const rows = groups
     .map((g) => {
       const ps = roster.filter((p) => p.info.position === g).sort(byNum);
       if (!ps.length) return '';
       return `<h3>${g}（${ps.length}人）</h3><div class="table-scroll"><table class="sticky-first"><thead><tr><th class="l">選手</th><th>背番号</th><th class="l">守備位置</th></tr></thead><tbody>${ps
-        .map((p) => `<tr><td class="l name">${playerLink(p, root)}${stintNote(p, tid)}</td><td>${esc(num(p))}</td><td class="l">${esc(p.info.position)}</td></tr>`)
+        .map((p) => `<tr><td class="l name">${playerLink(p, root)}${p.info.roster_type === '育成' ? ' <span class="tag">育成</span>' : ''}${stintNote(p, tid)}</td><td>${esc(num(p))}</td><td class="l">${esc(p.info.position)}</td></tr>`)
         .join('')}</tbody></table></div>`;
     })
     .join('');

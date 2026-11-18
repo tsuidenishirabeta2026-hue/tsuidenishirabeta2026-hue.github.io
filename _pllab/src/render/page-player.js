@@ -232,7 +232,7 @@ export function renderPlayer(ctx, entries, sameNameMap) {
   ${p.kana ? `<div class="kana">${esc(p.kana)}</div>` : ''}
   <ul class="facts">
     <li><span>所属</span>${teamChip(t, root, { short: false })}${cur ? '' : `（${S.meta.season}年時点）`}</li>
-    <li><span>背番号</span>${esc(p.info.number || 'データなし')}</li>
+    <li><span>背番号</span>${esc(p.info.number || 'データなし')}${p.info.roster_type ? `（${esc(p.info.roster_type)}）` : ''}</li>
     <li><span>守備位置</span>${esc(p.info.position)}${p.isPitcher && p.role !== '投手' ? `（主に${esc(p.role)}）` : ''}</li>
     <li><span>投打</span>${esc(tb)}</li>
     <li><span>年齢</span>${age !== null ? `${age}歳（基準日 ${dateShort(S.meta.as_of_date)} 時点）` : 'データなし'}</li>

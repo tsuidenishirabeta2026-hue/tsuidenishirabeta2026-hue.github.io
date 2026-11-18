@@ -34,7 +34,7 @@ pl-lab/            ← 生成されたサイト（公開される。手で編集
 
 ```bash
 cd _pllab
-node src/update.js      # 取得 → 検証 → 保存（config の source。初期値は demo）
+node src/update.js      # 取得 → 検証 → 保存（config の source。現在は wikipedia。プロキシ環境では NODE_USE_ENV_PROXY=1）
 node src/update-moves.js  # 移籍・契約（Wikipedia）。プロキシ環境では NODE_USE_ENV_PROXY=1 を付ける
 node src/build.js       # ../pl-lab/ にサイトを生成
 node scripts/serve.js   # http://localhost:8080/pl-lab/ で確認
@@ -50,15 +50,24 @@ node --test test/*.test.js   # テスト
 |---|---|---|---|---|
 | NPB公式サイト（npb.jp） | 可 | サイトのフッターに「掲載の情報、画像、映像等の二次利用および無断転載を固く禁じます」。公開APIなし | 無料 | 使用しない |
 | パ・リーグ.com（pacificleague.com） | 可 | 利用規約 第10条で「本サービスを通じて入手したすべてのデータ…を複製、送信可能化、配信すること」を禁止。robots.txt で /api/ 等を disallow | 無料（動画は有料） | 使用しない |
-| NPB の法人向けデータ提供・民間データ会社 | — | 契約により可能 | 有料（個別見積もり。公開価格は確認できず） | 必要なら運営者が問い合わせ |
+| NPB BIP（NPB の法人向けデータ提供） | — | 契約により可能 | 月3万円〜（研究・試用向け。商用は別契約） | 予算（月1,000円）超過のため不採用 |
+| 海外の NPB 対応 API（Entitysport、Goalserve など） | — | 契約により可能 | 月250ドル前後 | 予算超過のため不採用 |
+| **Wikipedia 日本語版** | 可 | **可**（CC BY-SA 4.0。出典・ライセンス表示、改変の明示が条件。API 利用可） | 無料 | **採用**（順位表・所属選手・個人タイトル・移籍などの動き） |
 
 公開閲覧できることと、自動取得・再配布できることは別のため、公式サイトからのスクレイピングは実装していません。
-実データは **CSV 取り込み**で反映します（運営者が自分で入力したデータ、または利用許諾を得たデータ）。
+
+**現在の取得元は Wikipedia（`"source": "wikipedia"`）**です。順位表（勝敗・引分・順位・優勝）、6球団の所属選手（背番号・守備位置・支配下/育成）、
+個人タイトルを毎日 1 リクエストで取得します。全選手の個人成績（打率・防御率など）・得点/失点・試合日程は取得元に無いため、
+画面では「掲載していません」と表示し、推測で埋めません（`meta.csv` の `stats_level=none`）。
+所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載のため、公式発表からの反映に遅れがありえます。
+
+個人成績を載せたい場合は、利用許諾を得たデータを **CSV 取り込み**（`csv-dir` / `csv-url`）で反映できます。
+動作確認用の架空データは `"source": "demo"` で表示できます。
 
 ## 実データへの切り替え
 
 1. `data/input/<年>/` に CSV を置く（形式は `docs/CSV_FORMAT.md`、ひな形は `data/input/_template/`）。
-2. `config/site.json` の `"source"` を `"demo"` から `"csv-dir"` に変更（または GitHub の Repository variables に `PLLAB_SOURCE=csv-dir`）。
+2. `config/site.json` の `"source"` を `"csv-dir"` に変更（または GitHub の Repository variables に `PLLAB_SOURCE=csv-dir`）。
 3. `node src/update.js && node src/build.js` で確認し、コミット・プッシュ。
 
 CSV を Web 上（自分のスプレッドシートの CSV 公開 URL、契約先の配布 URL など）から取得する場合は、
