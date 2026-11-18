@@ -157,22 +157,36 @@ export function renderIndex(ctx) {
     .join('');
   const body = `
 <h1>パ・リーグ ${S.meta.season}年 成績</h1>
-<p class="lead">順位表・主要ランキング・最近好調な選手をまとめて確認できます。各指標名をタップすると説明が表示されます。</p>
+<p class="lead">${S.statsAvailable ? '順位表・主要ランキング・最近好調な選手をまとめて確認できます。' : '順位表・個人タイトル・移籍や契約の動きをまとめて確認できます。'}各指標名をタップすると説明が表示されます。</p>
 ${statusBlock(ctx)}
 <h2 id="standings">順位表</h2>
 ${standingsTable(S, root)}
 ${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? movesSection(ctx, root) : ''}
 <h2 id="games">試合結果と日程</h2>
 ${gamesSection(S, root)}
-<h2 id="leaders">主要ランキング</h2>
+${S.statsAvailable ? `<h2 id="leaders">主要ランキング</h2>
 ${leadersSection(S, root, th)}
 <h2 id="hot">最近好調な選手</h2>
-${hotSection(S, root, th)}
+${hotSection(S, root, th)}` : titlesSection(S, root)}
 ${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? '' : movesSection(ctx, root)}
 <h2 id="teams">球団別ページ</h2>
 <div class="team-cards">${teamCards}</div>
 <h2>選手を探す</h2>
-<p><a href="players/index.html"><b>選手一覧・成績表へ</b></a>（名前検索、球団・守備位置・年度の絞り込み、並べ替え）</p>
+<p><a href="players/index.html"><b>${S.statsAvailable ? '選手一覧・成績表へ' : '所属選手一覧へ'}</b></a>（名前検索、球団・守備位置${S.statsAvailable ? '・年度の絞り込み、並べ替え' : 'の絞り込み'}）</p>
 `;
   return page({ title: '', root, current: 'index', body, ctx });
+}
+
+export function titlesSection(S, root) {
+  const rows = S.titles
+    .map((t) => {
+      const team = S.teams.get(t.team_id);
+      const pl = t.player_id && S.players.get(t.player_id);
+      return `<tr><td class="l">${esc(t.title)}</td><td class="l name">${pl ? playerLink(pl, root) : esc(t.player)}</td><td class="l">${teamChip(team, root)}</td><td>${esc(t.value || '')}</td></tr>`;
+    })
+    .join('');
+  return `<h2 id="titles">${S.meta.season}年 パ・リーグ個人タイトル</h2>
+${rows ? `<div class="table-scroll"><table class="sticky-first wrap"><thead><tr><th class="l">タイトル</th><th class="l">選手</th><th class="l">球団</th><th>成績</th></tr></thead><tbody>${rows}</tbody></table></div>
+<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0）の記載。同じタイトルに複数の選手がいる場合は同時受賞です。正式な記録は NPB の発表をご確認ください。</p>` : '<p class="empty">個人タイトルのデータはまだありません。</p>'}
+<p class="notice info small"><strong>個人成績のランキング・好調な選手は表示していません。</strong>規約上利用できる、全選手の個人成績の取得元がないためです（<a href="${root}about.html#source">詳しく</a>）。</p>`;
 }

@@ -19,6 +19,7 @@
       ['与四球率', 'BB9', 'f2'], ['K/BB', 'KBB', 'f2']
     ]
   };
+  // 個人成績が無いシーズン（stats_level=none）は背番号だけを表示する
   var LOWER = { ERA: 1, WHIP: 1, BB9: 1, L: 1, ER: 1 };
   var DEFAULT_SORT = { bat: 'PA', pit: 'outs' };
 
@@ -80,27 +81,35 @@
 
   function render() {
     var tab = state.tab;
-    var cols = COLS[tab];
     var season = Number(state.season || DATA.current);
+    var noStats = DATA.noStats.indexOf(season) >= 0;
+    var cols = noStats ? [['背番号', 'num', 'text']] : COLS[tab];
+    el('f-qual').closest('label').hidden = noStats;
+    if (noStats) state.qual = false;
     var q = norm(state.q);
-    var sortKey = state.sort || DEFAULT_SORT[tab];
+    var sortKey = state.sort || (noStats ? 'num' : DEFAULT_SORT[tab]);
     var rows = DATA.players.filter(function (r) {
       if (r.s !== season) return false;
       if (tab === 'bat' ? r.pos === '投手' : r.pos !== '投手') return false;
       if (state.team && r.ts.indexOf(state.team) < 0) return false;
       if (state.pos) {
         if (tab === 'bat' && r.pos !== state.pos) return false;
-        if (tab === 'pit' && r.role !== state.pos) return false;
+        if (tab === 'pit' && !noStats && r.role !== state.pos) return false;
       }
       if (state.qual && !(tab === 'bat' ? r.qb : r.qp)) return false;
       if (q && norm(r.n).indexOf(q) < 0 && norm(r.k).indexOf(q) < 0) return false;
       return true;
     });
-    var asc = state.sort ? state.asc : !!LOWER[sortKey];
+    var asc = state.sort ? state.asc : !!LOWER[sortKey] || sortKey === 'num';
     rows.sort(function (a, b) {
       var sa = tab === 'bat' ? a.b : a.p;
       var sb = tab === 'bat' ? b.b : b.p;
       if (sortKey === 'name') return asc ? a.k.localeCompare(b.k, 'ja') : b.k.localeCompare(a.k, 'ja');
+      if (sortKey === 'num') {
+        var na = a.num === '' ? 9999 : Number(a.num) + (a.num.length > 1 && a.num[0] === '0' ? -0.5 : 0);
+        var nb = b.num === '' ? 9999 : Number(b.num) + (b.num.length > 1 && b.num[0] === '0' ? -0.5 : 0);
+        return asc ? na - nb : nb - na;
+      }
       var x = sa ? num(sa[sortKey]) : null;
       var y = sb ? num(sb[sortKey]) : null;
       if (x === null && y === null) return 0;
@@ -117,12 +126,19 @@
     var body = rows.map(function (r) {
       var st = tab === 'bat' ? r.b : r.p;
       var lead = '<td class="l name"><a href="' + esc(r.id) + '.html">' + esc(r.n) + '</a>' + ((tab === 'bat' ? r.qb : r.qp) ? ' <span class="tag" title="規定到達">規定</span>' : '') + '</td><td class="l">' + esc(r.tn) + '</td><td class="l">' + esc(tab === 'bat' ? r.pos : r.role) + '</td>';
+      if (noStats) return '<tr>' + lead + '<td>' + esc(r.num) + '</td></tr>';
       if (!st) return '<tr>' + lead + '<td class="l" colspan="' + cols.length + '"><span class="na">今季の' + (tab === 'bat' ? '出場' : '登板') + '記録なし</span></td></tr>';
       return '<tr>' + lead + cols.map(function (c) { return '<td>' + fmt(st[c[1]], c[2]) + '</td>'; }).join('') + '</tr>';
     }).join('');
     el('p-thead').innerHTML = thead;
     el('p-tbody').innerHTML = body || '<tr><td class="l" colspan="' + (cols.length + 3) + '">条件に合う選手がいません。</td></tr>';
     var lbl = cols.filter(function (c) { return c[1] === sortKey; })[0];
+    if (noStats) {
+      el('p-count').textContent = season + '年・' + (tab === 'bat' ? '野手' : '投手') + ' ' + rows.length + '人（個人成績は未取得のため、所属選手の一覧のみ）';
+      document.querySelectorAll('.tabs button').forEach(function (b) { b.setAttribute('aria-selected', b.getAttribute('data-tab') === tab ? 'true' : 'false'); });
+      writeHash();
+      return;
+    }
     el('p-count').textContent = season + '年・' + (tab === 'bat' ? '野手' : '投手') + ' ' + rows.length + '人' + (state.qual ? '（規定' + (tab === 'bat' ? '打席' : '投球回') + '到達者のみ）' : '（全選手）') + '／並び順: ' + (sortKey === 'name' ? '読み' : lbl ? lbl[0] : sortKey) + (asc ? '（昇順）' : '（降順）');
     document.querySelectorAll('.tabs button').forEach(function (b) { b.setAttribute('aria-selected', b.getAttribute('data-tab') === tab ? 'true' : 'false'); });
     el('f-qual-label').textContent = tab === 'bat' ? '規定打席到達者のみ' : '規定投球回到達者のみ';

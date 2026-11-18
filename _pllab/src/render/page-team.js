@@ -63,7 +63,7 @@ export function renderTeam(ctx, tid, history) {
       const ts = H.teamStats[tid];
       if (!ts) return '';
       const s = ts.standing;
-      return `<tr${H.meta.season === S.meta.season ? ' class="highlight"' : ''}><td class="l">${H.meta.season}</td><td>${s.rank}${s.tied ? '<span class="tag tie">同率</span>' : ''}</td><td>${s.G}</td><td>${s.W}</td><td>${s.L}</td><td>${s.T}</td><td>${rate3(s.pct)}</td><td>${has(s.RS) && s.G ? (s.RS / s.G).toFixed(2) : '<span class="na">データなし</span>'}</td><td>${has(s.RA) && s.G ? (s.RA / s.G).toFixed(2) : '<span class="na">データなし</span>'}</td><td>${rate3(ts.batRates.OPS)}</td><td>${fixed(ts.pitRates.ERA)}</td></tr>`;
+      return `<tr${H.meta.season === S.meta.season ? ' class="highlight"' : ''}><td class="l">${H.meta.season}</td><td>${s.rank}${s.tied ? '<span class="tag tie">同率</span>' : ''}</td><td>${s.G}</td><td>${s.W}</td><td>${s.L}</td><td>${s.T}</td><td>${rate3(s.pct)}</td><td>${has(s.RS) && s.G ? (s.RS / s.G).toFixed(2) : '<span class="na">データなし</span>'}</td><td>${has(s.RA) && s.G ? (s.RA / s.G).toFixed(2) : '<span class="na">データなし</span>'}</td>${S.statsAvailable ? `<td>${rate3(ts.batRates.OPS)}</td><td>${fixed(ts.pitRates.ERA)}</td>` : ''}</tr>`;
     })
     .join('');
 
@@ -82,7 +82,7 @@ export function renderTeam(ctx, tid, history) {
 ${standingsTable(S, root, { highlight: tid })}
 ${A.pyth ? `<div class="card analysis"><ul><li><span class="kind k-${A.pyth.kind}">${A.pyth.kind}</span>${esc(A.pyth.text)}<span class="basis">根拠: ${esc(A.pyth.basis)}</span></li></ul></div>` : ''}
 
-<h2>チームの強みと課題</h2>
+${S.statsAvailable ? `<h2>チームの強みと課題</h2>
 <div class="grid two analysis">
   <div class="card"><h3 style="margin-top:0">強み（リーグ上位2球団の指標）</h3>${analysisList(A.strengths)}</div>
   <div class="card"><h3 style="margin-top:0">課題（リーグ下位2球団の指標）</h3>${analysisList(A.weaknesses)}</div>
@@ -103,14 +103,15 @@ ${A.pyth ? `<div class="card analysis"><ul><li><span class="kind k-${A.pyth.kind
 </tbody></table></div>
 <p class="muted small">リーグ平均の率（打率・防御率など）はリーグ全体の合計値から計算しています（各球団の率の単純平均ではありません）。</p>
 
+` : ''}
 <h2>直近の試合と日程</h2>
 ${gamesSection(S, root, { teamId: tid, recentN: 5, upcomingDays: 3 })}
 
 ${ctx.moves ? `<h2 id="moves">最近の動き（移籍・契約など） <span class="tag" style="vertical-align:middle">実データ</span></h2>
-<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）ほか。下の成績・所属選手はデモデータです。</p>
+<p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）ほか。${ctx.demo ? '下の成績・所属選手はデモデータです。' : ''}</p>
 ${movesList(ctx.moves.events.filter((e) => e.teams.includes(tid) && isTransaction(e)), S, root, { limit: 8 })}
 <p><a href="${root}moves.html#team=${esc(tid)}">${esc(t.short_name)}の動きをすべて見る</a></p>` : ''}
-<h2 id="roster">所属選手 — 野手</h2>
+${S.statsAvailable ? `<h2 id="roster">所属選手 — 野手</h2>
 ${termHelp(BAT_COLS)}
 <div class="table-scroll"><table class="sticky-first sortable"><thead><tr><th class="l" scope="col">選手</th><th scope="col">背番号</th><th class="l" scope="col">守備</th>${headCells(BAT_COLS, { terms: false })}</tr></thead><tbody>${batters.sort(byPA).map(rowB).join('')}</tbody></table></div>
 <h2>所属選手 — 投手</h2>
@@ -118,8 +119,9 @@ ${termHelp(PIT_COLS)}
 <div class="table-scroll"><table class="sticky-first sortable"><thead><tr><th class="l" scope="col">選手</th><th scope="col">背番号</th><th class="l" scope="col">役割</th>${headCells(PIT_COLS, { terms: false })}</tr></thead><tbody>${pitchers.sort(byOuts).map(rowP).join('')}</tbody></table></div>
 <p class="muted small">シーズン途中に移籍した選手は、この球団に在籍中の成績のみを表示しています。見出しをタップすると並べ替えできます。</p>
 
+` : simpleRoster(S, roster, tid, root)}
 <h2>過去シーズンとの比較</h2>
-${history.length > 1 ? `<div class="table-scroll"><table class="sticky-first"><thead><tr><th class="l">年度</th><th>順位</th><th>${term('試合')}</th><th>${term('勝利')}</th><th>${term('敗戦')}</th><th>${term('引分')}</th><th>${term('勝率')}</th><th>1試合あたり得点</th><th>1試合あたり失点</th><th>${term('OPS')}</th><th>${term('防御率')}</th></tr></thead><tbody>${hist}</tbody></table></div>` : '<p class="empty">比較できる過去シーズンのデータがありません。</p>'}
+${history.length > 1 ? `<div class="table-scroll"><table class="sticky-first"><thead><tr><th class="l">年度</th><th>順位</th><th>${term('試合')}</th><th>${term('勝利')}</th><th>${term('敗戦')}</th><th>${term('引分')}</th><th>${term('勝率')}</th><th>1試合あたり得点</th><th>1試合あたり失点</th>${S.statsAvailable ? `<th>${term('OPS')}</th><th>${term('防御率')}</th>` : ''}</tr></thead><tbody>${hist}</tbody></table></div>` : '<p class="empty">比較できる過去シーズンのデータがありません。</p>'}
 `;
   return page({ title: t.name, root, current: 'teams', body, ctx, teamColor: t.color, description: `${t.name}の${S.meta.season}年チーム成績・所属選手・強みと課題（非公式）` });
 }
@@ -127,4 +129,25 @@ ${history.length > 1 ? `<div class="table-scroll"><table class="sticky-first"><t
 import { battingRates, pitchingRates } from '../metrics.js';
 function ratesFor(row, kind) {
   return kind === 'bat' ? battingRates(row) : pitchingRates(row);
+}
+
+/** 個人成績が無い場合の所属選手一覧（背番号・守備位置のみ） */
+function simpleRoster(S, roster, tid, root) {
+  const groups = ['投手', '捕手', '内野手', '外野手'];
+  const num = (p) => p.stints.find((s) => s.team_id === tid)?.number ?? '';
+  const byNum = (a, b) => (Number(num(a)) || 999) - (Number(num(b)) || 999);
+  const rows = groups
+    .map((g) => {
+      const ps = roster.filter((p) => p.info.position === g).sort(byNum);
+      if (!ps.length) return '';
+      return `<h3>${g}（${ps.length}人）</h3><div class="table-scroll"><table class="sticky-first"><thead><tr><th class="l">選手</th><th>背番号</th><th class="l">守備位置</th></tr></thead><tbody>${ps
+        .map((p) => `<tr><td class="l name">${playerLink(p, root)}${stintNote(p, tid)}</td><td>${esc(num(p))}</td><td class="l">${esc(p.info.position)}</td></tr>`)
+        .join('')}</tbody></table></div>`;
+    })
+    .join('');
+  return `<h2 id="roster">所属選手（${roster.length}人）</h2>
+${S.meta.roster_note ? `<p class="muted small">${esc(S.meta.roster_note)}</p>` : ''}
+${rows || '<p class="empty">所属選手のデータがありません。</p>'}
+<p class="muted small">個人成績は、規約上利用できる取得元がないため掲載していません。</p>
+`;
 }

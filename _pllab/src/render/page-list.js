@@ -21,6 +21,7 @@ export function playersJson(models, current) {
         ts,
         tn: ts.map((t) => S.teams.get(t)?.short_name || t).join('→'),
         pos: p.info.position,
+        num: p.info.number || '',
         role: p.role,
         qb: p.qualifiedBat,
         qp: p.qualifiedPit,
@@ -33,6 +34,7 @@ export function playersJson(models, current) {
   return {
     current,
     seasons: models.map((m) => m.meta.season).sort((a, b) => b - a),
+    noStats: models.filter((m) => !m.statsAvailable).map((m) => m.meta.season),
     teams: [...cur.teams.values()].map((t) => ({ id: t.team_id, name: t.short_name })),
     players: rows,
   };
