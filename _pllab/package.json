@@ -1,0 +1,15 @@
+{
+  "name": "pl-lab",
+  "private": true,
+  "description": "パ・リーグ成績ラボ（非公式）: データ取得・検証・保存・静的サイト生成",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "demo:generate": "node scripts/generate-demo.js",
+    "update": "node src/update.js",
+    "build": "node src/build.js",
+    "all": "node src/update.js; node src/build.js",
+    "test": "node --test test/*.test.js",
+    "serve": "node scripts/serve.js"
+  }
+}

@@ -1,0 +1,90 @@
+# パ・リーグ成績ラボ: データ取得 → 検証 → 保存 → サイト生成 → コミット
+#
+# - 毎日 日本時間 7:00（UTC 22:00）に実行。GitHub の混雑で開始が数十分遅れることがある。
+# - 予約実行（schedule）はデフォルトブランチ（main）にこのファイルがある場合のみ動く。
+# - 取得・検証に失敗した場合は前回の正常データを維持してサイトを再生成し（「取得失敗」を表示）、
+#   最後にジョブを失敗扱いにして GitHub から通知が届くようにする。
+name: pllab-update
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      allow_rollback:
+        description: "基準日の逆戻り・件数減少を許可（訂正データを反映するとき）"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - "_pllab/data/input/**"
+      - "_pllab/config/**"
+      - "_pllab/src/**"
+
+# 同じ更新処理を重複実行しない（後から起動した方は前の完了を待つ）
+concurrency:
+  group: pllab-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: _pllab
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: テスト
+        run: node --test test/*.test.js
+
+      - name: データ取得・検証・保存
+        id: update
+        env:
+          # 取得元（未設定なら config/site.json の source）。Settings > Secrets and variables > Actions で設定
+          PLLAB_SOURCE: ${{ vars.PLLAB_SOURCE }}
+          PLLAB_CSV_BASE_URL: ${{ secrets.PLLAB_CSV_BASE_URL }}
+          PLLAB_CSV_TOKEN: ${{ secrets.PLLAB_CSV_TOKEN }}
+        run: |
+          set +e
+          if [ "${{ inputs.allow_rollback }}" = "true" ]; then node src/update.js --allow-rollback; else node src/update.js; fi
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: サイト生成
+        run: node src/build.js
+
+      - name: 変更をコミット
+        working-directory: .
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pl-lab _pllab/data/store _pllab/data/logs
+          if git diff --cached --quiet; then
+            echo "変更なし"
+            exit 0
+          fi
+          git commit -m "データ更新: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')"
+          for i in 1 2 3 4; do
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((i * 5))
+            git pull --rebase origin main
+          done
+          exit 1
+
+      - name: 更新失敗を通知
+        if: steps.update.outputs.code != '0'
+        run: |
+          echo "::error::データの取得・検証に失敗しました。前回の正常データを表示中です。_pllab/data/store/status.json と _pllab/data/logs/update-log.jsonl を確認してください。"
+          cat data/store/status.json
+          exit 1
