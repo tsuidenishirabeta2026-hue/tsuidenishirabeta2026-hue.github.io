@@ -1,0 +1,79 @@
+import { esc, dateJa, dateTimeJst } from '../format.js';
+
+export const PHASE_LABEL = { preseason: '開幕前', regular: 'レギュラーシーズン中', postseason: 'ポストシーズン', offseason: 'シーズン終了' };
+
+export function term(label, key = label) {
+  return `<button type="button" class="term" data-term="${esc(key)}" title="${esc(key)}の説明">${esc(label)}</button>`;
+}
+
+export function teamChip(t, root, { link = true, short = true } = {}) {
+  if (!t) return '';
+  const name = esc(short ? t.short_name : t.name);
+  const inner = `<span class="team-chip" style="--tc:${esc(t.color || 'var(--accent)')}">${name}</span>`;
+  return link ? `<a href="${root}teams/${esc(t.team_id)}.html">${inner}</a>` : inner;
+}
+
+export function playerLink(p, root) {
+  return `<a href="${root}players/${esc(p.id)}.html">${esc(p.name)}</a>`;
+}
+
+/** 全ページ共通の注意表示（デモ・更新失敗・シーズン状態） */
+export function notices(ctx) {
+  const { status, S, demo, site } = ctx;
+  const out = [];
+  if (demo) {
+    out.push(`<div class="notice demo" role="note"><span class="demo-tag">デモ</span><strong style="display:inline">この画面はデモデータで表示しています。</strong>
+      選手名・成績・試合結果はすべて乱数で作った架空のものです。実在の選手・試合とは関係ありません。球団名のみ実在のものを使用しています。</div>`);
+  }
+  if (status.last_result === 'failed') {
+    out.push(`<div class="notice stale" role="alert"><strong>最新データの取得に失敗しました（${esc(dateTimeJst(status.last_attempt_at))}）</strong>
+      前回取得に成功したデータ（基準日 ${esc(dateJa(S.meta.as_of_date))}、取得 ${esc(dateTimeJst(status.last_success_at))}）を表示しています。内容が古い可能性があります。</div>`);
+  }
+  out.push(`<div class="notice stale" id="stale-client" hidden><strong>データが古くなっている可能性があります</strong>最終取得成功日時から${site.staleHours}時間以上たっています。表示中の成績は ${esc(dateJa(S.meta.as_of_date))} 時点のものです。</div>`);
+  return out.join('\n');
+}
+
+export function page({ title, root, current, body, ctx, teamColor, description }) {
+  const { site, status, S } = ctx;
+  const nav = [
+    ['index', 'トップ', 'index.html'],
+    ['standings', '順位表', 'index.html#standings'],
+    ['teams', '球団', 'index.html#teams'],
+    ['players', '選手一覧', 'players/index.html'],
+    ['about', 'データと分析の方法', 'about.html'],
+  ];
+  const fullTitle = title ? `${title}｜${site.name}` : `${site.name}（非公式）`;
+  return `<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(fullTitle)}</title>
+<meta name="description" content="${esc(description || 'パ・リーグ6球団のチーム成績と選手成績・分析をスマートフォンで確認できる非公式サイト。')}">
+${ctx.demo ? '<meta name="robots" content="noindex">' : ''}
+<link rel="stylesheet" href="${root}assets/style.css">
+${teamColor ? `<style>:root{--team:${esc(teamColor)}}</style>` : ''}
+</head>
+<body>
+<a class="sr-only" href="#main">本文へ移動</a>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="${root}index.html">${esc(site.name)}</a><span class="badge-unofficial">非公式</span>${ctx.demo ? '<span class="badge-unofficial" style="border-color:var(--demo-line);color:var(--demo-line);font-weight:800">デモ</span>' : ''}
+  <nav class="nav" aria-label="サイト内">${nav.map(([k, l, h]) => `<a href="${root}${h}"${current === k ? ' aria-current="page"' : ''}>${l}</a>`).join('')}</nav>
+</div></header>
+<div class="wrap" data-last-success="${esc(status.last_success_at || '')}" data-stale-hours="${site.staleHours}" data-phase="${esc(S.meta.phase)}">
+${notices(ctx)}
+</div>
+<main id="main" class="wrap">
+${body}
+</main>
+<footer class="site-footer"><div class="wrap">
+  <p><strong>${esc(site.name)}</strong> は個人が運営する<strong>非公式</strong>のファンサイトです。日本野球機構（NPB）、パシフィックリーグマーケティング株式会社、各球団とは関係ありません。球団名・選手名等の権利は各権利者に帰属します。球団ロゴ・選手写真は使用していません。</p>
+  <p>データの出典: ${esc(S.meta.source_name)}${S.meta.source_url ? `（<a href="${esc(S.meta.source_url)}" rel="noopener">出典</a>）` : ''}。対象シーズン ${S.meta.season}年／基準日 ${esc(dateJa(S.meta.as_of_date))}／最終取得成功 ${esc(dateTimeJst(status.last_success_at))}</p>
+  <p>掲載内容の正確性には注意していますが、公式記録は各公式発表をご確認ください。分析文は成績データから機械的に作成したもので、将来の成績を保証するものではありません。 <a href="${root}about.html">データと分析の方法</a></p>
+</div></footer>
+<script src="${root}assets/glossary.js"></script>
+<script src="${root}assets/app.js"></script>
+</body>
+</html>
+`;
+}

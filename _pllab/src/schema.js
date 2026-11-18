@@ -1,0 +1,249 @@
+// CSV 取り込み形式の定義（docs/CSV_FORMAT.md もこの定義から生成する）
+//
+// type:
+//   str   文字列
+//   int   0 以上の整数（空欄 = データなし）
+//   date  YYYY-MM-DD
+//   ip    投球回（"123.1" 形式。端数 .1=1/3回, .2=2/3回）
+//   enum  values のいずれか
+// need: 'col' = 列が必須（値は空欄可）, 'val' = 列も値も必須, なし = 列自体が任意
+
+export const LEAGUE_TEAMS = ['F', 'E', 'L', 'M', 'B', 'H'];
+export const PHASES = ['preseason', 'regular', 'postseason', 'offseason'];
+export const POSITIONS = ['投手', '捕手', '内野手', '外野手'];
+
+const C = (csv, key, type, label, opts = {}) => ({ csv, key, type, label, ...opts });
+
+export const FILES = {
+  meta: {
+    file: 'meta.csv',
+    required: true,
+    label: 'シーズン情報（key,value の2列）',
+    keyValue: true,
+    columns: [
+      C('season', 'season', 'int', '対象シーズン（西暦）', { need: 'val' }),
+      C('as_of_date', 'as_of_date', 'date', 'データの基準日（この日の試合終了時点の成績）', { need: 'val' }),
+      C('phase', 'phase', 'enum', '期間区分', { need: 'val', values: PHASES }),
+      C('champion_team_id', 'champion_team_id', 'str', 'リーグ優勝が公式に決定した球団ID（未決定なら空欄）'),
+      C('source_name', 'source_name', 'str', 'データの出典名（画面に表示）', { need: 'val' }),
+      C('source_url', 'source_url', 'str', '出典URL（任意）'),
+      C('note', 'note', 'str', '注記（任意。画面に表示）'),
+    ],
+  },
+  teams: {
+    file: 'teams.csv',
+    required: true,
+    label: '球団',
+    unique: ['team_id'],
+    columns: [
+      C('team_id', 'team_id', 'enum', '球団ID', { need: 'val', values: LEAGUE_TEAMS }),
+      C('name', 'name', 'str', '球団名', { need: 'val' }),
+      C('short_name', 'short_name', 'str', '略称', { need: 'val' }),
+      C('home', 'home', 'str', '本拠地（都道府県・地域）', { need: 'col' }),
+      C('stadium', 'stadium', 'str', '本拠地球場', { need: 'col' }),
+      C('color', 'color', 'str', 'チームカラー（#RRGGBB。アクセントに使用）', { need: 'col' }),
+    ],
+  },
+  standings: {
+    file: 'standings.csv',
+    required: true,
+    label: '順位表（基準日時点）',
+    unique: ['team_id'],
+    columns: [
+      C('team_id', 'team_id', 'enum', '球団ID', { need: 'val', values: LEAGUE_TEAMS }),
+      C('g', 'G', 'int', '試合', { need: 'val' }),
+      C('w', 'W', 'int', '勝利', { need: 'val' }),
+      C('l', 'L', 'int', '敗戦', { need: 'val' }),
+      C('t', 'T', 'int', '引き分け', { need: 'val' }),
+      C('rs', 'RS', 'int', '得点', { need: 'col' }),
+      C('ra', 'RA', 'int', '失点', { need: 'col' }),
+      C('official_rank', 'official_rank', 'int', '公式発表の順位（同率時の決定や確定順位。空欄なら勝率順で算出）'),
+    ],
+  },
+  players: {
+    file: 'players.csv',
+    required: true,
+    label: '所属選手（1選手1球団1行。シーズン途中の移籍は行を分ける）',
+    unique: ['player_id', 'team_id'],
+    columns: [
+      C('player_id', 'player_id', 'str', '選手ID（シーズン・移籍・改名をまたいで不変）', { need: 'val' }),
+      C('team_id', 'team_id', 'enum', '球団ID', { need: 'val', values: LEAGUE_TEAMS }),
+      C('name', 'name', 'str', '登録名', { need: 'val' }),
+      C('name_kana', 'name_kana', 'str', '読み（ひらがな/カタカナ。検索用）', { need: 'col' }),
+      C('number', 'number', 'str', '背番号（"00" 等があるため文字列）', { need: 'col' }),
+      C('position', 'position', 'enum', '守備位置', { need: 'val', values: POSITIONS }),
+      C('throws', 'throws', 'enum', '投', { need: 'col', values: ['右', '左', ''] }),
+      C('bats', 'bats', 'enum', '打', { need: 'col', values: ['右', '左', '両', ''] }),
+      C('birth_date', 'birth_date', 'date', '生年月日（年齢は基準日で計算）', { need: 'col' }),
+      C('from_date', 'from_date', 'date', 'この球団への所属開始日（シーズン途中加入時のみ）'),
+      C('to_date', 'to_date', 'date', 'この球団の所属終了日（移籍・退団時のみ。空欄=在籍中）'),
+    ],
+  },
+  batting: {
+    file: 'batting.csv',
+    required: true,
+    label: '打撃成績（シーズン累計。選手×球団ごと）',
+    unique: ['player_id', 'team_id'],
+    columns: [
+      C('player_id', 'player_id', 'str', '選手ID', { need: 'val' }),
+      C('team_id', 'team_id', 'enum', '球団ID', { need: 'val', values: LEAGUE_TEAMS }),
+      C('g', 'G', 'int', '試合', { need: 'col' }),
+      C('pa', 'PA', 'int', '打席', { need: 'col' }),
+      C('ab', 'AB', 'int', '打数', { need: 'col' }),
+      C('r', 'R', 'int', '得点', { need: 'col' }),
+      C('h', 'H', 'int', '安打', { need: 'col' }),
+      C('2b', 'D', 'int', '二塁打', { need: 'col' }),
+      C('3b', 'T', 'int', '三塁打', { need: 'col' }),
+      C('hr', 'HR', 'int', '本塁打', { need: 'col' }),
+      C('rbi', 'RBI', 'int', '打点', { need: 'col' }),
+      C('sb', 'SB', 'int', '盗塁', { need: 'col' }),
+      C('cs', 'CS', 'int', '盗塁死'),
+      C('bb', 'BB', 'int', '四球（故意四球を含む）', { need: 'col' }),
+      C('ibb', 'IBB', 'int', '故意四球'),
+      C('hbp', 'HBP', 'int', '死球', { need: 'col' }),
+      C('so', 'SO', 'int', '三振', { need: 'col' }),
+      C('sh', 'SH', 'int', '犠打'),
+      C('sf', 'SF', 'int', '犠飛（出塁率の計算に必要）', { need: 'col' }),
+      C('gdp', 'GDP', 'int', '併殺打'),
+    ],
+  },
+  pitching: {
+    file: 'pitching.csv',
+    required: true,
+    label: '投手成績（シーズン累計。選手×球団ごと）',
+    unique: ['player_id', 'team_id'],
+    columns: [
+      C('player_id', 'player_id', 'str', '選手ID', { need: 'val' }),
+      C('team_id', 'team_id', 'enum', '球団ID', { need: 'val', values: LEAGUE_TEAMS }),
+      C('g', 'G', 'int', '登板', { need: 'col' }),
+      C('gs', 'GS', 'int', '先発', { need: 'col' }),
+      C('w', 'W', 'int', '勝利', { need: 'col' }),
+      C('l', 'L', 'int', '敗戦', { need: 'col' }),
+      C('hld', 'HLD', 'int', 'ホールド', { need: 'col' }),
+      C('sv', 'SV', 'int', 'セーブ', { need: 'col' }),
+      C('ip', 'outs', 'ip', '投球回（例: 123.1）', { need: 'col' }),
+      C('bf', 'BF', 'int', '打者（対戦打者数）'),
+      C('h', 'H', 'int', '被安打', { need: 'col' }),
+      C('hr', 'HR', 'int', '被本塁打', { need: 'col' }),
+      C('bb', 'BB', 'int', '与四球（故意四球を含む）', { need: 'col' }),
+      C('hbp', 'HBP', 'int', '与死球', { need: 'col' }),
+      C('so', 'SO', 'int', '奪三振', { need: 'col' }),
+      C('r', 'R', 'int', '失点'),
+      C('er', 'ER', 'int', '自責点', { need: 'col' }),
+    ],
+  },
+  games: {
+    file: 'games.csv',
+    required: false,
+    label: '試合日程・結果（任意。直近の結果・今後の日程に使用）',
+    unique: ['game_id'],
+    columns: [
+      C('game_id', 'game_id', 'str', '試合ID（一意）', { need: 'val' }),
+      C('date', 'date', 'date', '試合日', { need: 'val' }),
+      C('start_time', 'start_time', 'str', '開始時刻（HH:MM）', { need: 'col' }),
+      C('away_team', 'away', 'str', 'ビジター球団（パ・リーグ外は球団名をそのまま記入）', { need: 'val' }),
+      C('home_team', 'home', 'str', 'ホーム球団', { need: 'val' }),
+      C('stadium', 'stadium', 'str', '球場', { need: 'col' }),
+      C('status', 'status', 'enum', '状態', { need: 'val', values: ['scheduled', 'final', 'postponed', 'cancelled'] }),
+      C('away_score', 'away_score', 'int', 'ビジター得点（final のとき必須）', { need: 'col' }),
+      C('home_score', 'home_score', 'int', 'ホーム得点（final のとき必須）', { need: 'col' }),
+    ],
+  },
+  batting_games: {
+    file: 'batting_games.csv',
+    required: false,
+    label: '打撃の試合別成績（任意。月別・直近成績・好調判定に使用）',
+    unique: ['game_id', 'player_id'],
+    columns: [
+      C('game_id', 'game_id', 'str', '試合ID', { need: 'val' }),
+      C('date', 'date', 'date', '試合日', { need: 'val' }),
+      C('player_id', 'player_id', 'str', '選手ID', { need: 'val' }),
+      C('team_id', 'team_id', 'enum', '球団ID', { need: 'val', values: LEAGUE_TEAMS }),
+      C('pa', 'PA', 'int', '打席', { need: 'val' }),
+      C('ab', 'AB', 'int', '打数', { need: 'val' }),
+      C('r', 'R', 'int', '得点', { need: 'col' }),
+      C('h', 'H', 'int', '安打', { need: 'val' }),
+      C('2b', 'D', 'int', '二塁打', { need: 'val' }),
+      C('3b', 'T', 'int', '三塁打', { need: 'val' }),
+      C('hr', 'HR', 'int', '本塁打', { need: 'val' }),
+      C('rbi', 'RBI', 'int', '打点', { need: 'col' }),
+      C('sb', 'SB', 'int', '盗塁', { need: 'col' }),
+      C('bb', 'BB', 'int', '四球', { need: 'val' }),
+      C('hbp', 'HBP', 'int', '死球', { need: 'val' }),
+      C('so', 'SO', 'int', '三振', { need: 'col' }),
+      C('sf', 'SF', 'int', '犠飛', { need: 'val' }),
+    ],
+  },
+  pitching_games: {
+    file: 'pitching_games.csv',
+    required: false,
+    label: '投手の試合別成績（任意。月別・直近成績・好調判定に使用）',
+    unique: ['game_id', 'player_id'],
+    columns: [
+      C('game_id', 'game_id', 'str', '試合ID', { need: 'val' }),
+      C('date', 'date', 'date', '試合日', { need: 'val' }),
+      C('player_id', 'player_id', 'str', '選手ID', { need: 'val' }),
+      C('team_id', 'team_id', 'enum', '球団ID', { need: 'val', values: LEAGUE_TEAMS }),
+      C('gs', 'GS', 'int', '先発なら1', { need: 'val' }),
+      C('ip', 'outs', 'ip', '投球回', { need: 'val' }),
+      C('bf', 'BF', 'int', '打者'),
+      C('h', 'H', 'int', '被安打', { need: 'val' }),
+      C('hr', 'HR', 'int', '被本塁打', { need: 'val' }),
+      C('bb', 'BB', 'int', '与四球', { need: 'val' }),
+      C('hbp', 'HBP', 'int', '与死球', { need: 'col' }),
+      C('so', 'SO', 'int', '奪三振', { need: 'val' }),
+      C('er', 'ER', 'int', '自責点', { need: 'val' }),
+    ],
+  },
+  splits_batting: {
+    file: 'splits_batting.csv',
+    required: false,
+    label: '打撃の状況別成績（任意。左右別・得点圏・球場別など）',
+    unique: ['player_id', 'split'],
+    columns: [
+      C('player_id', 'player_id', 'str', '選手ID', { need: 'val' }),
+      C('split', 'split', 'str', '区分（vs_lhp=対左投手, vs_rhp=対右投手, risp=得点圏, stadium:球場名）', { need: 'val' }),
+      C('pa', 'PA', 'int', '打席', { need: 'col' }),
+      C('ab', 'AB', 'int', '打数', { need: 'col' }),
+      C('h', 'H', 'int', '安打', { need: 'col' }),
+      C('2b', 'D', 'int', '二塁打', { need: 'col' }),
+      C('3b', 'T', 'int', '三塁打', { need: 'col' }),
+      C('hr', 'HR', 'int', '本塁打', { need: 'col' }),
+      C('bb', 'BB', 'int', '四球', { need: 'col' }),
+      C('hbp', 'HBP', 'int', '死球', { need: 'col' }),
+      C('so', 'SO', 'int', '三振', { need: 'col' }),
+      C('sf', 'SF', 'int', '犠飛', { need: 'col' }),
+    ],
+  },
+  splits_pitching: {
+    file: 'splits_pitching.csv',
+    required: false,
+    label: '投手の状況別成績（任意。対左打者・対右打者・得点圏など）',
+    unique: ['player_id', 'split'],
+    columns: [
+      C('player_id', 'player_id', 'str', '選手ID', { need: 'val' }),
+      C('split', 'split', 'str', '区分（vs_lhb=対左打者, vs_rhb=対右打者, risp=得点圏, stadium:球場名）', { need: 'val' }),
+      C('bf', 'BF', 'int', '打者', { need: 'col' }),
+      C('ab', 'AB', 'int', '打数', { need: 'col' }),
+      C('h', 'H', 'int', '被安打', { need: 'col' }),
+      C('hr', 'HR', 'int', '被本塁打', { need: 'col' }),
+      C('bb', 'BB', 'int', '与四球', { need: 'col' }),
+      C('hbp', 'HBP', 'int', '与死球', { need: 'col' }),
+      C('so', 'SO', 'int', '奪三振', { need: 'col' }),
+    ],
+  },
+};
+
+export const SPLIT_LABELS = {
+  vs_lhp: '対左投手',
+  vs_rhp: '対右投手',
+  vs_lhb: '対左打者',
+  vs_rhb: '対右打者',
+  risp: '得点圏',
+};
+
+export function splitLabel(s) {
+  if (SPLIT_LABELS[s]) return SPLIT_LABELS[s];
+  if (s.startsWith('stadium:')) return `球場別: ${s.slice(8)}`;
+  return s;
+}

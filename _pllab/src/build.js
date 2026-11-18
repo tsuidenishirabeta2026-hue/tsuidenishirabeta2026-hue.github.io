@@ -1,0 +1,129 @@
+// 画面生成: 保存済みの正常データ（data/store/current.json）と更新状態から静的サイトを生成する
+//
+//   node src/build.js
+//
+// 取得・検証は行わない（update.js の役割）。保存データが無い場合は「準備中」ページを出す。
+import { mkdir, readFile, rm, writeFile, copyFile, readdir, stat } from 'node:fs/promises';
+import { basename, dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { loadConfig } from './config.js';
+import { paths, readJson } from './store.js';
+import { buildSeasonModel } from './model.js';
+import { GLOSSARY } from './render/glossary.js';
+import { renderIndex } from './render/page-index.js';
+import { renderTeam } from './render/page-team.js';
+import { renderPlayer } from './render/page-player.js';
+import { renderList, playersJson } from './render/page-list.js';
+import { renderAbout } from './render/page-about.js';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+const MARKER = '.pllab-generated';
+
+async function safeClean(dir) {
+  // 生成物のディレクトリだけを消す（誤って別の場所を消さないよう、目印ファイルを確認）
+  try {
+    await stat(join(dir, MARKER));
+  } catch {
+    try {
+      const items = await readdir(dir);
+      if (items.length > 0) throw new Error(`出力先 ${dir} に生成物ではないファイルがあります。削除しないで中止します。`);
+    } catch (e) {
+      if (e.code !== 'ENOENT') throw e;
+    }
+  }
+  await rm(dir, { recursive: true, force: true });
+  await mkdir(dir, { recursive: true });
+  await writeFile(join(dir, MARKER), 'このディレクトリは _pllab/src/build.js が生成します。手で編集しないでください。\n');
+}
+
+async function out(dir, rel, content) {
+  const p = join(dir, rel);
+  await mkdir(dirname(p), { recursive: true });
+  await writeFile(p, content);
+}
+
+async function readLogTail(file, n = 10) {
+  try {
+    const lines = (await readFile(file, 'utf8')).trim().split('\n').filter(Boolean);
+    return lines.slice(-n).map((l) => JSON.parse(l));
+  } catch {
+    return [];
+  }
+}
+
+export async function runBuild({ config = loadConfig() } = {}) {
+  const p = paths(config.storeDir);
+  const store = await readJson(p.current);
+  const status = (await readJson(p.status)) || {};
+  const dir = config.outDir;
+  if (basename(dir) === '' || dir === '/' ) throw new Error('出力先が不正です');
+  await safeClean(dir);
+
+  for (const f of ['style.css', 'app.js', 'players.js']) await copyFile(join(HERE, 'assets', f), join(dir, 'assets', f)).catch(async () => {
+    await mkdir(join(dir, 'assets'), { recursive: true });
+    await copyFile(join(HERE, 'assets', f), join(dir, 'assets', f));
+  });
+  await out(dir, 'assets/glossary.js', `window.PL_GLOSSARY=${JSON.stringify(GLOSSARY)};\n`);
+
+  if (!store) {
+    await out(
+      dir,
+      'index.html',
+      `<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${config.siteName}（準備中）</title><link rel="stylesheet" href="assets/style.css"></head><body><main class="wrap"><h1>${config.siteName}</h1><p class="notice stale">まだ正常に取得できたデータがありません。${status.last_error ? `最後の取得エラー: ${String(status.last_error).replace(/</g, '&lt;')}` : ''}</p><p>非公式のファンサイトです。</p></main></body></html>`,
+    );
+    return { pages: 1, empty: true };
+  }
+
+  const data = store.data;
+  const seasons = Object.keys(data.seasons).map(Number).sort((a, b) => a - b);
+  const models = seasons.map((s) => buildSeasonModel(data.seasons[s]));
+  const S = models[models.length - 1];
+  const ctx = {
+    site: { name: config.siteName, staleHours: config.staleHours },
+    status,
+    S,
+    demo: data.source.isDemo,
+    sourceLabel: data.source.label,
+    th: config.thresholds,
+  };
+  let pages = 0;
+  const write = async (rel, html) => {
+    await out(dir, rel, html);
+    pages++;
+  };
+
+  await write('index.html', renderIndex(ctx));
+  await write('about.html', renderAbout(ctx, await readLogTail(config.logFile)));
+  for (const tid of S.teams.keys()) await write(`teams/${tid}.html`, renderTeam(ctx, tid, models));
+  await write('players/index.html', renderList(ctx));
+  await out(dir, 'data/players.json', JSON.stringify(playersJson(models, S.meta.season)));
+  await out(dir, 'data/status.json', JSON.stringify({ ...status, season: S.meta.season, as_of_date: S.meta.as_of_date, phase: S.meta.phase, demo: ctx.demo }, null, 1));
+
+  // 同姓同名の検出（シーズン×登録名）
+  const sameName = new Map();
+  for (const M of models) {
+    for (const pl of M.players.values()) {
+      const k = `${M.meta.season}|${pl.name}`;
+      if (!sameName.has(k)) sameName.set(k, []);
+      sameName.get(k).push(pl);
+    }
+  }
+  // 選手IDごとに全シーズンの記録をまとめ、1選手1ページ
+  const byId = new Map();
+  for (const M of models) {
+    for (const pl of M.players.values()) {
+      if (!byId.has(pl.id)) byId.set(pl.id, []);
+      byId.get(pl.id).push({ S: M, p: pl });
+    }
+  }
+  for (const [id, entries] of byId) {
+    if (!/^[A-Za-z0-9_-]+$/.test(id)) throw new Error(`選手ID "${id}" にファイル名に使えない文字が含まれています`);
+    await write(`players/${id}.html`, renderPlayer(ctx, entries, sameName));
+  }
+  return { pages, players: byId.size, season: S.meta.season };
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const r = await runBuild();
+  console.log(`✔ サイトを生成しました: ${JSON.stringify(r)}`);
+}

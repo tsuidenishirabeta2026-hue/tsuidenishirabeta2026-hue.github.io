@@ -1,0 +1,23 @@
+{
+  "siteName": "パ・リーグ成績ラボ",
+  "source": "demo",
+  "seasons": null,
+  "inputDir": "data/input",
+  "demoDir": "data/demo",
+  "storeDir": "data/store",
+  "cacheDir": "data/cache",
+  "logFile": "data/logs/update-log.jsonl",
+  "outDir": "../pl-lab",
+  "basePath": "/pl-lab/",
+  "staleHours": 30,
+  "thresholds": {
+    "smallSamplePA": 50,
+    "smallSampleOuts": 60,
+    "compareMinPA": 100,
+    "compareMinOuts": 90,
+    "hotMinPA": 25,
+    "hotMinOuts": 15,
+    "hotGames": 10,
+    "rankingRows": 5
+  }
+}
