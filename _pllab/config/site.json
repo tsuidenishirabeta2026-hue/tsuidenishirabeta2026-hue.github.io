@@ -21,8 +21,8 @@
     "rankingRows": 5
   },
   "analytics": {
-    "provider": "",
-    "id": "",
+    "provider": "ga4",
+    "id": "G-WSNC046WSL",
     "umamiScript": "https://cloud.umami.is/script.js",
     "_説明": "provider は ga4 / umami / 空（無効）。id は GA4 の測定ID（G-XXXX）または Umami の Website ID。公開して問題ない値です。"
   },
