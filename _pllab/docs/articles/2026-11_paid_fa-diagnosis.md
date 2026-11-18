@@ -139,4 +139,4 @@
 
 **出典**: Wikipedia 日本語版の各選手記事（年度別打撃成績・年度別投手成績）、「2026年の日本プロ野球」（FA権行使の表明・発表日、ゴールデン・グラブ賞）。いずれも CC BY-SA 4.0。数値は記事の記録から再計算しています。正式な記録・発表は NPB と各球団をご確認ください。
 
-**各選手の最新の数字**（毎日更新・無料）: https://tsuidenishirabeta2026-hue.github.io/pl-lab/players/index.html
+**各選手の最新の数字**（毎日更新・無料）: https://pacific-labo.com/players/index.html
