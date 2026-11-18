@@ -111,6 +111,17 @@ date,team_id,category,text,source_name,source_url
   `team_id` は F/E/L/M/B/H（複数は `/` 区切り）、`category` は トレード / FA / ポスティング・海外 / 戦力外・退団 / 現役引退 / 獲得・入団・契約 / 契約更改 / 首脳陣 / ドラフト / 背番号 / その他。
   文章は自分の言葉で事実のみを書き、報道記事の文章を転載しないでください。
 
+## 独自ドメイン・Cloudflare Pages・広告（AdSense）
+
+- 公開先を Cloudflare Pages（無料・商用利用可）に移すと、独自ドメインのルートで公開でき、AdSense に必要な `ads.txt` を置ける
+- Cloudflare Pages の設定: リポジトリを接続し、本番ブランチ `main`、ビルドコマンドなし、出力ディレクトリ `pl-lab`
+  （サイトは GitHub Actions が生成してコミットするため、Cloudflare 側でのビルドは不要）
+- `config/site.json`
+  - `siteUrl`: 例 `https://example.com`。入れると、全ページに正規URL（canonical）、`sitemap.xml`・`robots.txt` を出力し、
+    旧URL（github.io/pl-lab/…）を開いた人を新しいURLへ転送する
+  - `adsense.client`: `ca-pub-` で始まる運営者ID。`siteUrl` と両方そろったときだけ、自動広告のコードと `ads.txt` を出力し、
+    プライバシーポリシーに広告の項を表示する（デモ表示中は出さない）
+
 ## 自動更新（GitHub Actions）
 
 `.github/workflows/pllab-update.yml` が以下を行います。
