@@ -20,7 +20,13 @@ ${ga ? '<p>Google アナリティクスは Cookie を使用します。データ
 <h2>外部サイトへのリンク</h2>
 <p>note・Wikipedia・報道機関などの外部サイトへのリンクがあります。note へのリンクには、このサイトからの訪問であることが分かるパラメータ（utm_source=pl-lab など）を付けています。リンク先での情報の取り扱いは各サイトのポリシーに従います。</p>
 <h2>広告</h2>
-<p>現在、広告は掲載していません。掲載する場合は、配信事業者と送信される情報をこのページでお知らせします。</p>
+${
+  ctx.siteUrl && /^ca-pub-\d{16}$/.test(ctx.adsense?.client || '')
+    ? `<p>このサイトは、第三者配信の広告サービス「Google AdSense」を利用しています。Google などの第三者配信事業者は Cookie を使用して、利用者がこのサイトや他のサイトに過去にアクセスした際の情報に基づいて広告を配信します。</p>
+<p>Google が広告 Cookie を使用することにより、Google やそのパートナーは、このサイトや他のサイトへのアクセス情報に基づいて適切な広告を表示できます。パーソナライズ広告は <a href="https://adssettings.google.com/" rel="noopener">広告設定</a> で無効にできます。詳しくは <a href="https://policies.google.com/technologies/ads?hl=ja" rel="noopener">Google の広告に関するポリシー</a> をご覧ください。</p>
+<p>広告の表示により送信される主な情報: 閲覧したページのURL、ブラウザ・端末の種類、IPアドレス、Cookie の識別子。送信先: Google LLC。</p>`
+    : '<p>現在、広告は掲載していません。掲載する場合は、配信事業者と送信される情報をこのページでお知らせします。</p>'
+}
 <h2>お問い合わせ</h2>
 <p>このサイトは個人が運営する非公式のファンサイトです。お問い合わせは<a href="https://github.com/${esc(ctx.repoSlug || '')}" rel="noopener">GitHub リポジトリ</a>からお願いします。</p>
 `;

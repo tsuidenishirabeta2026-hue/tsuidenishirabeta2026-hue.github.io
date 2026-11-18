@@ -90,6 +90,8 @@ export async function runBuild({ config = loadConfig() } = {}) {
     sourceLabel: data.source.label,
     th: config.thresholds,
     analytics: config.analytics || {},
+    siteUrl: (config.siteUrl || '').replace(/\/+$/, ''),
+    adsense: config.adsense || {},
     noteProfileUrl: config.note?.profileUrl || '',
     repoSlug: config.repo || '',
     moves: await readJson(join(config.storeDir, 'moves.json')),
@@ -101,8 +103,12 @@ export async function runBuild({ config = loadConfig() } = {}) {
   const ps = await readJson(join(config.storeDir, 'player-stats.json'));
   ctx.history = ps ? buildHistory(ps, [...S.players.values()], S.meta.season) : null;
   let pages = 0;
+  const pageList = [];
+  const base = ctx.siteUrl || 'https://tsuidenishirabeta2026-hue.github.io/pl-lab';
   const write = async (rel, html) => {
-    await out(dir, rel, html);
+    const url = `${base}/${rel.replace(/(^|\/)index\.html$/, '$1')}`;
+    await out(dir, rel, html.replace('<!--PL_CANONICAL-->', `<link rel="canonical" href="${url}">`));
+    pageList.push(url);
     pages++;
   };
 
@@ -136,6 +142,13 @@ export async function runBuild({ config = loadConfig() } = {}) {
     if (!/^[A-Za-z0-9_-]+$/.test(id)) throw new Error(`選手ID "${id}" にファイル名に使えない文字が含まれています`);
     await write(`players/${id}.html`, renderPlayer(ctx, entries, sameName));
   }
+  // 検索エンジン向け（独自ドメインのルートに置かれたときに有効）
+  const today = new Date().toISOString().slice(0, 10);
+  await out(dir, 'sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pageList.map((u) => `<url><loc>${u}</loc><lastmod>${today}</lastmod></url>`).join('\n')}\n</urlset>\n`);
+  await out(dir, 'robots.txt', `User-agent: *\nAllow: /\nSitemap: ${base}/sitemap.xml\n`);
+  // AdSense の ads.txt（独自ドメインのルートに必要）
+  const ac = ctx.adsense?.client || '';
+  if (ctx.siteUrl && /^ca-pub-\d{16}$/.test(ac)) await out(dir, 'ads.txt', `google.com, ${ac.replace('ca-', '')}, DIRECT, f08c47fec0942fa0\n`);
   return { pages, players: byId.size, season: S.meta.season };
 }
 

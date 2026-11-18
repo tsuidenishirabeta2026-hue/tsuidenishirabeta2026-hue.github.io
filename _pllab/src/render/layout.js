@@ -48,6 +48,21 @@ export function analyticsTag(ctx, pageMeta = {}) {
   return '';
 }
 
+/** 独自ドメインへの移転後: 正規URL（ビルド時に置換）と、旧URL（github.io）からの転送 */
+export function siteTags(ctx) {
+  const url = ctx.siteUrl;
+  if (!url) return '';
+  return `<!--PL_CANONICAL-->
+<script>(function(){if(/github\\.io$/.test(location.hostname)){location.replace(${JSON.stringify(url)}+location.pathname.replace(/^\\/pl-lab/,'')+location.search+location.hash);}})();</script>`;
+}
+
+/** Google AdSense（自動広告）。独自ドメインと運営者IDがそろい、デモ表示でないときだけ出す */
+export function adsTag(ctx) {
+  const c = ctx.adsense?.client || '';
+  if (!ctx.siteUrl || ctx.demo || !/^ca-pub-\d{16}$/.test(c)) return '';
+  return `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${c}" crossorigin="anonymous"></script>`;
+}
+
 export function page({ title, root, current, body, ctx, teamColor, description, realPage = false, pageMeta = {} }) {
   const { site, status, S } = ctx;
   const nav = [
@@ -68,7 +83,9 @@ export function page({ title, root, current, body, ctx, teamColor, description, 
 <meta name="description" content="${esc(description || 'パ・リーグ6球団のチーム成績と選手成績・分析をスマートフォンで確認できる非公式サイト。')}">
 ${ctx.demo && !realPage ? '<meta name="robots" content="noindex">' : ''}
 <link rel="stylesheet" href="${root}assets/style.css">
+${siteTags(ctx)}
 ${analyticsTag(ctx, pageMeta)}
+${adsTag(ctx)}
 ${teamColor ? `<style>:root{--team:${esc(teamColor)}}</style>` : ''}
 </head>
 <body data-page-type="${esc(pageMeta.pageType || 'other')}"${pageMeta.playerId ? ` data-player-id="${esc(pageMeta.playerId)}" data-player-name="${esc(pageMeta.playerName || '')}"` : ''}>
@@ -86,7 +103,7 @@ ${body}
 <footer class="site-footer"><div class="wrap">
   <p><strong>${esc(site.name)}</strong> は個人が運営する<strong>非公式</strong>のファンサイトです。日本野球機構（NPB）、パシフィックリーグマーケティング株式会社、各球団とは関係ありません。球団名・選手名等の権利は各権利者に帰属します。球団ロゴ・選手写真は使用していません。</p>
   <p>${realPage && ctx.demo ? '成績データ' : 'データ'}の出典: ${esc(S.meta.source_name)}${/CC BY-SA/.test(S.meta.source_name) ? '（<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" rel="license noopener">ライセンス</a>。Wikipedia 由来の文章・表は同ライセンスで提供します）' : ''}${S.meta.source_url ? `（<a href="${esc(S.meta.source_url)}" rel="noopener">出典</a>）` : ''}。対象シーズン ${S.meta.season}年／基準日 ${esc(dateJa(S.meta.as_of_date))}／最終取得成功 ${esc(dateTimeJst(status.last_success_at))}</p>
-  <p>掲載内容の正確性には注意していますが、公式記録は各公式発表をご確認ください。分析文は成績データから機械的に作成したもので、将来の成績を保証するものではありません。 <a href="${root}about.html">データと分析の方法</a>／<a href="${root}privacy.html">プライバシーポリシー</a></p>
+  <p>掲載内容の正確性には注意していますが、公式記録は各公式発表をご確認ください。分析文は成績データから機械的に作成したもので、将来の成績を保証するものではありません。 <a href="${root}about.html">データと分析の方法</a>／<a href="${root}privacy.html">プライバシーポリシー</a>${adsTag(ctx) ? '（このサイトは Google AdSense による広告を掲載しています）' : ''}</p>
 </div></footer>
 <script src="${root}assets/glossary.js"></script>
 <script src="${root}assets/app.js"></script>
