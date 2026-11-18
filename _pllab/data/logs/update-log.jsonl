@@ -1,4 +1,5 @@
 {"at":"2026-11-18T01:52:58.765Z","result":"updated","source":"demo","season":2026,"as_of":"2026-09-30","warnings":0}
+{"at":"2026-11-18T05:18:14.664Z","result":"unchanged","source":"demo","season":2026,"as_of":"2026-09-30","warnings":0}
 {"at":"2026-11-18T05:53:51.323Z","kind":"moves","result":"updated","events":225,"revids":[0]}
 {"at":"2026-11-18T05:53:57.393Z","kind":"moves","result":"failed","error":"Wikipedia「2026年の日本プロ野球」の取得に失敗しました: fetch failed","details":[]}
 {"at":"2026-11-18T05:54:21.134Z","kind":"moves","result":"updated","events":225,"revids":[111811228]}
