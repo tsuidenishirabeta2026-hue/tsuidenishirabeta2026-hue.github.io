@@ -16,6 +16,9 @@ import { renderPlayer } from './render/page-player.js';
 import { renderList, playersJson } from './render/page-list.js';
 import { renderAbout } from './render/page-about.js';
 import { renderMoves } from './render/page-moves.js';
+import { renderPrivacy } from './render/page-privacy.js';
+import { loadNotes } from './notes.js';
+import { buildHistory } from './history.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const MARKER = '.pllab-generated';
@@ -86,9 +89,17 @@ export async function runBuild({ config = loadConfig() } = {}) {
     demo: data.source.isDemo,
     sourceLabel: data.source.label,
     th: config.thresholds,
+    analytics: config.analytics || {},
+    noteProfileUrl: config.note?.profileUrl || '',
+    repoSlug: config.repo || '',
     moves: await readJson(join(config.storeDir, 'moves.json')),
     movesStatus: await readJson(join(config.storeDir, 'moves-status.json')),
   };
+  const nl = await loadNotes(join(config.inputDir, 'notes.csv'));
+  for (const e of nl.errors) console.warn(`⚠ ${e}`);
+  ctx.notes = nl.notes;
+  const ps = await readJson(join(config.storeDir, 'player-stats.json'));
+  ctx.history = ps ? buildHistory(ps, [...S.players.values()], S.meta.season) : null;
   let pages = 0;
   const write = async (rel, html) => {
     await out(dir, rel, html);
@@ -98,9 +109,10 @@ export async function runBuild({ config = loadConfig() } = {}) {
   await write('index.html', renderIndex(ctx));
   await write('about.html', renderAbout(ctx, await readLogTail(config.logFile)));
   if (ctx.moves) await write('moves.html', renderMoves(ctx, ctx.moves, ctx.movesStatus));
+  await write('privacy.html', renderPrivacy(ctx));
   for (const tid of S.teams.keys()) await write(`teams/${tid}.html`, renderTeam(ctx, tid, models));
   await write('players/index.html', renderList(ctx));
-  await out(dir, 'data/players.json', JSON.stringify(playersJson(models, S.meta.season)));
+  await out(dir, 'data/players.json', JSON.stringify(playersJson(models, S.meta.season, ctx.history)));
   await out(dir, 'data/status.json', JSON.stringify({ ...status, season: S.meta.season, as_of_date: S.meta.as_of_date, phase: S.meta.phase, demo: ctx.demo }, null, 1));
 
   // 同姓同名の検出（シーズン×登録名）

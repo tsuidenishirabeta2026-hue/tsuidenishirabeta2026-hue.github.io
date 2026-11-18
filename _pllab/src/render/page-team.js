@@ -5,6 +5,7 @@ import { page, term, teamChip, playerLink } from './layout.js';
 import { BAT_COLS, PIT_COLS, td, headCells, termHelp } from './cols.js';
 import { standingsTable, gamesSection } from './page-index.js';
 import { movesList, isTransaction } from './page-moves.js';
+import { noteBlock } from './notes.js';
 
 function analysisList(items) {
   return `<ul>${items.map((x) => `<li><span class="kind k-${esc(x.kind)}">${esc(x.kind)}</span>${esc(x.text)}<span class="basis">根拠: ${esc(x.basis)}</span></li>`).join('')}</ul>`;
@@ -120,10 +121,11 @@ ${termHelp(PIT_COLS)}
 <p class="muted small">シーズン途中に移籍した選手は、この球団に在籍中の成績のみを表示しています。見出しをタップすると並べ替えできます。</p>
 
 ` : simpleRoster(S, roster, tid, root)}
+${noteBlock(ctx, { pageType: 'team', teamId: tid, heading: `${t.short_name}の解説記事（note）` })}
 <h2>過去シーズンとの比較</h2>
 ${history.length > 1 ? `<div class="table-scroll"><table class="sticky-first"><thead><tr><th class="l">年度</th><th>順位</th><th>${term('試合')}</th><th>${term('勝利')}</th><th>${term('敗戦')}</th><th>${term('引分')}</th><th>${term('勝率')}</th><th>1試合あたり得点</th><th>1試合あたり失点</th>${S.statsAvailable ? `<th>${term('OPS')}</th><th>${term('防御率')}</th>` : ''}</tr></thead><tbody>${hist}</tbody></table></div>` : '<p class="empty">比較できる過去シーズンのデータがありません。</p>'}
 `;
-  return page({ title: t.name, root, current: 'teams', body, ctx, teamColor: t.color, description: `${t.name}の${S.meta.season}年チーム成績・所属選手・強みと課題（非公式）` });
+  return page({ title: t.name, root, current: 'teams', body, ctx, teamColor: t.color, description: `${t.name}の${S.meta.season}年チーム成績・所属選手・強みと課題（非公式）`, pageMeta: { pageType: 'team' } });
 }
 
 import { battingRates, pitchingRates } from '../metrics.js';

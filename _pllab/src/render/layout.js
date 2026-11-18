@@ -35,7 +35,20 @@ export function notices(ctx, { realPage = false } = {}) {
   return out.join('\n');
 }
 
-export function page({ title, root, current, body, ctx, teamColor, description, realPage = false }) {
+/** アクセス解析タグ（設定が無ければ何も出さない） */
+export function analyticsTag(ctx, pageMeta = {}) {
+  const a = ctx.analytics || {};
+  if (a.provider === 'ga4' && /^G-[A-Z0-9]+$/.test(a.id || '')) {
+    return `<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(a.id)}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${esc(a.id)}',${JSON.stringify({ page_type: pageMeta.pageType || 'other', ...(pageMeta.playerId ? { player_id: pageMeta.playerId } : {}) }).replace(/</g, '\\u003c')});</script>`;
+  }
+  if (a.provider === 'umami' && /^[0-9a-f-]{36}$/i.test(a.id || '')) {
+    return `<script defer src="${esc(a.umamiScript)}" data-website-id="${esc(a.id)}"></script>`;
+  }
+  return '';
+}
+
+export function page({ title, root, current, body, ctx, teamColor, description, realPage = false, pageMeta = {} }) {
   const { site, status, S } = ctx;
   const nav = [
     ['index', 'トップ', 'index.html'],
@@ -55,9 +68,10 @@ export function page({ title, root, current, body, ctx, teamColor, description, 
 <meta name="description" content="${esc(description || 'パ・リーグ6球団のチーム成績と選手成績・分析をスマートフォンで確認できる非公式サイト。')}">
 ${ctx.demo && !realPage ? '<meta name="robots" content="noindex">' : ''}
 <link rel="stylesheet" href="${root}assets/style.css">
+${analyticsTag(ctx, pageMeta)}
 ${teamColor ? `<style>:root{--team:${esc(teamColor)}}</style>` : ''}
 </head>
-<body>
+<body data-page-type="${esc(pageMeta.pageType || 'other')}"${pageMeta.playerId ? ` data-player-id="${esc(pageMeta.playerId)}" data-player-name="${esc(pageMeta.playerName || '')}"` : ''}>
 <a class="sr-only" href="#main">本文へ移動</a>
 <header class="site-header"><div class="wrap">
   <a class="brand" href="${root}index.html">${esc(site.name)}</a><span class="badge-unofficial">非公式</span>${ctx.demo && !realPage ? '<span class="badge-unofficial" style="border-color:var(--demo-line);color:var(--demo-line);font-weight:800">デモ</span>' : ''}
@@ -72,7 +86,7 @@ ${body}
 <footer class="site-footer"><div class="wrap">
   <p><strong>${esc(site.name)}</strong> は個人が運営する<strong>非公式</strong>のファンサイトです。日本野球機構（NPB）、パシフィックリーグマーケティング株式会社、各球団とは関係ありません。球団名・選手名等の権利は各権利者に帰属します。球団ロゴ・選手写真は使用していません。</p>
   <p>${realPage && ctx.demo ? '成績データ' : 'データ'}の出典: ${esc(S.meta.source_name)}${/CC BY-SA/.test(S.meta.source_name) ? '（<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" rel="license noopener">ライセンス</a>。Wikipedia 由来の文章・表は同ライセンスで提供します）' : ''}${S.meta.source_url ? `（<a href="${esc(S.meta.source_url)}" rel="noopener">出典</a>）` : ''}。対象シーズン ${S.meta.season}年／基準日 ${esc(dateJa(S.meta.as_of_date))}／最終取得成功 ${esc(dateTimeJst(status.last_success_at))}</p>
-  <p>掲載内容の正確性には注意していますが、公式記録は各公式発表をご確認ください。分析文は成績データから機械的に作成したもので、将来の成績を保証するものではありません。 <a href="${root}about.html">データと分析の方法</a></p>
+  <p>掲載内容の正確性には注意していますが、公式記録は各公式発表をご確認ください。分析文は成績データから機械的に作成したもので、将来の成績を保証するものではありません。 <a href="${root}about.html">データと分析の方法</a>／<a href="${root}privacy.html">プライバシーポリシー</a></p>
 </div></footer>
 <script src="${root}assets/glossary.js"></script>
 <script src="${root}assets/app.js"></script>

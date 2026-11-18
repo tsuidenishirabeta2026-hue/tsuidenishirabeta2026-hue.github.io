@@ -274,3 +274,12 @@ li.move details.more { margin: 6px 0 0; padding: 4px 8px; }
 li.move details.more ul { padding-left: 1.2em; margin: 4px 0; }
 
 [hidden] { display: none !important; }
+
+/* note への導線 */
+.note-cta { margin: 28px 0; }
+.note-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.note-link { display: grid; gap: 2px; background: var(--surface); border: 1px solid var(--line); border-left: 6px solid #41c9b4; border-radius: 10px; padding: 10px 12px; text-decoration: none; color: var(--ink); }
+.note-link:hover b { text-decoration: underline; }
+.note-badge { justify-self: start; font-size: .72rem; font-weight: 800; border-radius: 4px; padding: 0 6px; border: 1px solid var(--line); }
+.note-badge.paid { border-color: var(--warn-line); background: var(--warn-bg); }
+.note-badge.free { border-color: var(--good); color: var(--good); }

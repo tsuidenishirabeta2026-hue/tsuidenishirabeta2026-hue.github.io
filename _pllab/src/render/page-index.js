@@ -3,6 +3,28 @@ import { has, outsToIp } from '../metrics.js';
 import { leaders, hotPlayers } from '../model.js';
 import { page, term, teamChip, playerLink, PHASE_LABEL } from './layout.js';
 import { movesList, isTransaction } from './page-moves.js';
+import { noteBlock } from './notes.js';
+import { biggestRisers, YOY_MIN_PA, YOY_MIN_OUTS } from '../history.js';
+
+function risersSection(ctx, root) {
+  if (!ctx.history) return '';
+  const R = biggestRisers(ctx.history, ctx.S.players);
+  if (!R) return '';
+  const S = ctx.S;
+  const tbl = (list, isP) =>
+    list.length
+      ? `<div class="table-scroll"><table class="sticky-first"><thead><tr><th class="l">選手</th><th>${R.year - 1}年</th><th>${R.year}年</th><th>${isP ? '改善幅' : '上昇幅'}</th><th>${isP ? '投球回' : '打席'}（${R.year}年）</th></tr></thead><tbody>${list
+          .map(({ p, d, cur, prev, size }) => {
+            const f = (v) => (isP ? v.toFixed(2) : plain(rate3, { v }));
+            return `<tr><td class="l name">${playerLink(p, root)} <span class="muted">${esc(S.teams.get(p.info.team_id)?.short_name || '')}</span></td><td>${f(prev)}</td><td><b>${f(cur)}</b></td><td>${isP ? '−' + d.toFixed(2) : signed(d)}</td><td>${isP ? outsToIp(size) : size}</td></tr>`;
+          })
+          .join('')}</tbody></table></div>`
+      : '<p class="empty">条件を満たす選手がいません。</p>';
+  return `<h2 id="risers">前年から伸びた選手（${R.year - 1}年 → ${R.year}年）</h2>
+<p class="small">比較条件: 両年とも${YOY_MIN_PA}打席以上の野手は OPS の上昇幅、両年とも${YOY_MIN_OUTS / 3}投球回以上の投手は防御率の改善幅の大きい順。対象は現在パ・リーグに所属する選手（${R.year}年まで記事が更新されている選手。更新率 ${Math.round(R.coverage * 100)}%）。</p>
+<div class="grid two"><div><h3>野手（OPS）</h3>${tbl(R.bats, false)}</div><div><h3>投手（防御率）</h3>${tbl(R.pits, true)}</div></div>
+<p class="muted small">出典: Wikipedia 日本語版の各選手記事の年度別成績（CC BY-SA 4.0）。記事の更新状況により、公式記録と異なる場合があります。</p>`;
+}
 
 function movesSection(ctx, root) {
   if (!ctx.moves) return '';
@@ -167,14 +189,15 @@ ${gamesSection(S, root)}` : ''}
 ${S.statsAvailable ? `<h2 id="leaders">主要ランキング</h2>
 ${leadersSection(S, root, th)}
 <h2 id="hot">最近好調な選手</h2>
-${hotSection(S, root, th)}` : titlesSection(S, root)}
+${hotSection(S, root, th)}` : titlesSection(S, root) + risersSection(ctx, root)}
 ${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? '' : movesSection(ctx, root)}
+${noteBlock(ctx, { pageType: 'top', heading: 'note で読む解説記事' })}
 <h2 id="teams">球団別ページ</h2>
 <div class="team-cards">${teamCards}</div>
 <h2>選手を探す</h2>
 <p><a href="players/index.html"><b>${S.statsAvailable ? '選手一覧・成績表へ' : '所属選手一覧へ'}</b></a>（名前検索、球団・守備位置${S.statsAvailable ? '・年度の絞り込み、並べ替え' : 'の絞り込み'}）</p>
 `;
-  return page({ title: '', root, current: 'index', body, ctx });
+  return page({ title: '', root, current: 'index', body, ctx, pageMeta: { pageType: 'top' } });
 }
 
 export function titlesSection(S, root) {

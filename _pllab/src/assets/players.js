@@ -83,7 +83,9 @@
     var tab = state.tab;
     var season = Number(state.season || DATA.current);
     var noStats = DATA.noStats.indexOf(season) >= 0;
-    var cols = noStats ? [['背番号', 'num', 'text']] : COLS[tab];
+    var cols = noStats
+      ? [['背番号', 'num', 'text'], ['年度', 'ly', 'int'], tab === 'bat' ? ['打席', 'sz', 'int'] : ['投球回', 'sz', 'ip'], tab === 'bat' ? ['OPS', 'km', 'rate'] : ['防御率', 'km', 'f2']]
+      : COLS[tab];
     el('f-qual').closest('label').hidden = noStats;
     if (noStats) state.qual = false;
     var q = norm(state.q);
@@ -110,8 +112,8 @@
         var nb = b.num === '' ? 9999 : Number(b.num) + (b.num.length > 1 && b.num[0] === '0' ? -0.5 : 0);
         return asc ? na - nb : nb - na;
       }
-      var x = sa ? num(sa[sortKey]) : null;
-      var y = sb ? num(sb[sortKey]) : null;
+      var x = noStats ? num(a[sortKey]) : sa ? num(sa[sortKey]) : null;
+      var y = noStats ? num(b[sortKey]) : sb ? num(sb[sortKey]) : null;
       if (x === null && y === null) return 0;
       if (x === null) return 1;
       if (y === null) return -1;
@@ -126,7 +128,7 @@
     var body = rows.map(function (r) {
       var st = tab === 'bat' ? r.b : r.p;
       var lead = '<td class="l name"><a href="' + esc(r.id) + '.html">' + esc(r.n) + '</a>' + ((tab === 'bat' ? r.qb : r.qp) ? ' <span class="tag" title="規定到達">規定</span>' : '') + '</td><td class="l">' + esc(r.tn) + '</td><td class="l">' + esc(tab === 'bat' ? r.pos : r.role) + '</td>';
-      if (noStats) return '<tr>' + lead + '<td>' + esc(r.num) + '</td></tr>';
+      if (noStats) return '<tr>' + lead + '<td>' + esc(r.num) + '</td>' + (r.ly ? '<td>' + r.ly + '</td><td>' + fmt(r.sz, tab === 'bat' ? 'int' : 'ip') + '</td><td>' + fmt(r.km, tab === 'bat' ? 'rate' : 'f2') + '</td>' : '<td colspan="3" class="l"><span class="na">年度別成績なし</span></td>') + '</tr>';
       if (!st) return '<tr>' + lead + '<td class="l" colspan="' + cols.length + '"><span class="na">今季の' + (tab === 'bat' ? '出場' : '登板') + '記録なし</span></td></tr>';
       return '<tr>' + lead + cols.map(function (c) { return '<td>' + fmt(st[c[1]], c[2]) + '</td>'; }).join('') + '</tr>';
     }).join('');
@@ -134,7 +136,7 @@
     el('p-tbody').innerHTML = body || '<tr><td class="l" colspan="' + (cols.length + 3) + '">条件に合う選手がいません。</td></tr>';
     var lbl = cols.filter(function (c) { return c[1] === sortKey; })[0];
     if (noStats) {
-      el('p-count').textContent = season + '年・' + (tab === 'bat' ? '野手' : '投手') + ' ' + rows.length + '人（個人成績は未取得のため、所属選手の一覧のみ）';
+      el('p-count').textContent = season + '年・' + (tab === 'bat' ? '野手' : '投手') + ' ' + rows.length + '人。成績は Wikipedia の選手記事に載っている最新年度のもの（年度は選手により異なります）';
       document.querySelectorAll('.tabs button').forEach(function (b) { b.setAttribute('aria-selected', b.getAttribute('data-tab') === tab ? 'true' : 'false'); });
       writeHash();
       return;
@@ -163,7 +165,7 @@
       var b = e.target.closest('button.sort');
       if (!b) return;
       var k = b.getAttribute('data-k');
-      var defAsc = k === 'name' || !!LOWER[k];
+      var defAsc = k === 'name' || k === 'num' || !!LOWER[k] || (k === 'km' && state.tab === 'pit');
       if (state.sort === k) state.asc = !state.asc;
       else { state.sort = k; state.asc = defAsc; }
       render();

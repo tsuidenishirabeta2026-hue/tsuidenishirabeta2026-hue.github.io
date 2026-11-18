@@ -76,5 +76,5 @@ ${groups}
 ${licenseNote(moves, root)}
 <script src="${root}assets/moves.js" defer></script>
 `;
-  return page({ title: '移籍・契約・去就', root, current: 'moves', body, ctx, realPage: true, description: 'パ・リーグ6球団のトレード・FA・戦力外・引退・入団などの動き（非公式）' });
+  return page({ title: '移籍・契約・去就', root, current: 'moves', body, ctx, pageMeta: { pageType: 'moves' }, realPage: true, description: 'パ・リーグ6球団のトレード・FA・戦力外・引退・入団などの動き（非公式）' });
 }

@@ -1,9 +1,10 @@
 import { esc } from '../format.js';
+import { battingRates } from '../metrics.js';
 import { page, term, teamChip, playerLink } from './layout.js';
 import { BAT_COLS, PIT_COLS, termHelp } from './cols.js';
 
 /** 選手一覧ページ用の JSON（全シーズン分） */
-export function playersJson(models, current) {
+export function playersJson(models, current, history = null) {
   const enc = (x) => {
     if (x && typeof x === 'object' && 'v' in x) return x.v === null ? (x.why === 'zero' ? 'z' : null) : Math.round(x.v * 10000) / 10000;
     return Number.isFinite(x) ? x : null;
@@ -22,6 +23,7 @@ export function playersJson(models, current) {
         tn: ts.map((t) => S.teams.get(t)?.short_name || t).join('→'),
         pos: p.info.position,
         num: p.info.number || '',
+        ...latestOf(history, p, S.meta.season === current),
         role: p.role,
         qb: p.qualifiedBat,
         qp: p.qualifiedPit,
@@ -79,5 +81,22 @@ export function renderList(ctx) {
 <noscript><div class="notice info"><strong>JavaScript が無効のため、検索・並べ替えは使えません。</strong>以下の一覧から選手ページへ移動できます。</div>${noscript}</noscript>
 <script src="${root}assets/players.js" defer></script>
 `;
-  return page({ title: S.statsAvailable ? '選手一覧・成績表' : '所属選手一覧', root, current: 'players', body, ctx });
+  return page({ title: S.statsAvailable ? '選手一覧・成績表' : '所属選手一覧', root, current: 'players', body, ctx, pageMeta: { pageType: 'list' } });
+}
+
+/** 選手一覧に出す「記事の最新年度」の成績（個人成績の取得元が無いシーズン用） */
+function latestOf(H, p, isCurrent) {
+  if (!H || !isCurrent) return {};
+  const h = H.per.get(p.id);
+  if (!h) return {};
+  const years = p.isPitcher ? h.pit : h.bat;
+  if (!years.size) return {};
+  const y = Math.max(...years.keys());
+  const t = years.get(y).tot;
+  if (p.isPitcher) {
+    const era = t.outs > 0 && t.ER !== null ? Math.round(((t.ER * 27) / t.outs) * 100) / 100 : t.outs === 0 ? 'z' : null;
+    return { ly: y, sz: t.outs, km: era };
+  }
+  const o = battingRates(t).OPS;
+  return { ly: y, sz: t.PA, km: o.v === null ? (o.why === 'zero' ? 'z' : null) : Math.round(o.v * 1000) / 1000 };
 }
