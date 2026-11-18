@@ -1,11 +1,11 @@
 {
- "hash": "1ca855e43c73e51d8302d3f11c26f664683a5ccd32c1d4af5479d56ffe1af23f",
- "saved_at": "2026-11-18T05:54:21.134Z",
+ "hash": "1ee65c8be14a86763d0dabd3bd02d60deb26551da00042adf171cbb75f1f25aa",
+ "saved_at": "2026-11-18T09:35:22.895Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111811228,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111811228",
+   "revid": 111813190,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111813190",
    "count": 225
   }
  ],
@@ -1360,7 +1360,7 @@
   },
   {
    "date": "2026-10-12",
-   "text": "NPBは、オリックス・バファローズのルイス・ペルドモをウェイバー不請求とし、自由契約選手として公示。",
+   "text": "NPBは、オリックス・バファローズのルイス・ペルドモをウエイバー不請求とし、自由契約選手として公示。",
    "details": [],
    "teams": [
     "B"

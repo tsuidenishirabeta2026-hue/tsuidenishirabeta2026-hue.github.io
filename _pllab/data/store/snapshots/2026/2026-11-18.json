@@ -1,6 +1,6 @@
 {
- "hash": "b971a9f0437d636d3471ae667f0df2ebf9c21831f9e07196ac3abb83968e43e1",
- "saved_at": "2026-11-18T06:54:24.622Z",
+ "hash": "cc63ec0bf2a7ce9447c0f74986d0ee5dde89f808727548d40fcda57eeb636b34",
+ "saved_at": "2026-11-18T09:34:51.675Z",
  "season": 2026,
  "data": {
   "meta": {
@@ -13,7 +13,7 @@
    "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
    "stats_level": "none",
    "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-18 取得、支配下・育成を含む）です。",
-   "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111690956）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111810738）、Template:埼玉西武ライオンズの選手・スタッフ（版 111577600）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111573919）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111803878）、2026年の日本プロ野球（版 111811228）"
+   "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111813750）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111813875）、Template:埼玉西武ライオンズの選手・スタッフ（版 111577600）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111813745）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111803878）、2026年の日本プロ野球（版 111813190）"
   },
   "titles": [
    {
@@ -1383,6 +1383,21 @@
     "roster_type": "育成"
    },
    {
+    "player_id": "w23c2e56b57",
+    "team_id": "F",
+    "name": "郡拓也",
+    "name_kana": null,
+    "number": "160",
+    "position": "捕手",
+    "throws": null,
+    "bats": null,
+    "birth_date": null,
+    "from_date": null,
+    "to_date": null,
+    "wiki_title": "郡拓也",
+    "roster_type": "育成"
+   },
+   {
     "player_id": "w8780ddcae6",
     "team_id": "F",
     "name": "濵田泰希",
@@ -1803,21 +1818,6 @@
     "roster_type": "支配下"
    },
    {
-    "player_id": "waf4c1aa247",
-    "team_id": "E",
-    "name": "古賀康誠",
-    "name_kana": null,
-    "number": "61",
-    "position": "投手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "古賀康誠",
-    "roster_type": "支配下"
-   },
-   {
     "player_id": "w4eab8476cd",
     "team_id": "E",
     "name": "西口直人",
@@ -1830,21 +1830,6 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "西口直人",
-    "roster_type": "支配下"
-   },
-   {
-    "player_id": "wd01607e917",
-    "team_id": "E",
-    "name": "林優樹",
-    "name_kana": null,
-    "number": "64",
-    "position": "投手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "林優樹",
     "roster_type": "支配下"
    },
    {
@@ -2025,21 +2010,6 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "石原彪",
-    "roster_type": "支配下"
-   },
-   {
-    "player_id": "w718c89bf1e",
-    "team_id": "E",
-    "name": "大栄利哉",
-    "name_kana": null,
-    "number": "72",
-    "position": "捕手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "大栄利哉",
     "roster_type": "支配下"
    },
    {
@@ -2280,21 +2250,6 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "陽柏翔",
-    "roster_type": "支配下"
-   },
-   {
-    "player_id": "w22c56e8734",
-    "team_id": "E",
-    "name": "金子京介",
-    "name_kana": null,
-    "number": "98",
-    "position": "内野手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "金子京介",
     "roster_type": "支配下"
    },
    {
@@ -4605,21 +4560,6 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "吉川悠斗",
-    "roster_type": "支配下"
-   },
-   {
-    "player_id": "w206be8b0d5",
-    "team_id": "M",
-    "name": "森遼大朗",
-    "name_kana": null,
-    "number": "92",
-    "position": "投手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "森遼大朗",
     "roster_type": "支配下"
    },
    {

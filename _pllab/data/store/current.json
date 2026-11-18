@@ -1,6 +1,6 @@
 {
- "hash": "b971a9f0437d636d3471ae667f0df2ebf9c21831f9e07196ac3abb83968e43e1",
- "saved_at": "2026-11-18T06:54:24.622Z",
+ "hash": "cc63ec0bf2a7ce9447c0f74986d0ee5dde89f808727548d40fcda57eeb636b34",
+ "saved_at": "2026-11-18T09:34:51.675Z",
  "data": {
   "schema": 1,
   "source": {
@@ -10,6 +10,141 @@
   },
   "current_season": 2026,
   "seasons": {
+   "2024": {
+    "meta": {
+     "season": 2024,
+     "as_of_date": "2024-10-31",
+     "phase": "offseason",
+     "champion_team_id": null,
+     "source_name": "Wikipedia 日本語版（CC BY-SA 4.0）",
+     "source_url": "https://ja.wikipedia.org/wiki/2024%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83",
+     "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
+     "stats_level": "none",
+     "roster_note": null,
+     "source_detail": "Template:2024年のパシフィック・リーグ順位表（版 107319742）"
+    },
+    "titles": [],
+    "teams": [
+     {
+      "team_id": "F",
+      "name": "北海道日本ハムファイターズ",
+      "short_name": "日本ハム",
+      "home": "北海道",
+      "stadium": "エスコンフィールドHOKKAIDO",
+      "color": "#0b4ea2"
+     },
+     {
+      "team_id": "E",
+      "name": "東北楽天ゴールデンイーグルス",
+      "short_name": "楽天",
+      "home": "宮城県",
+      "stadium": "楽天モバイル 最強パーク宮城",
+      "color": "#85002a"
+     },
+     {
+      "team_id": "L",
+      "name": "埼玉西武ライオンズ",
+      "short_name": "西武",
+      "home": "埼玉県",
+      "stadium": "ベルーナドーム",
+      "color": "#1f3f80"
+     },
+     {
+      "team_id": "M",
+      "name": "千葉ロッテマリーンズ",
+      "short_name": "ロッテ",
+      "home": "千葉県",
+      "stadium": "ZOZOマリンスタジアム",
+      "color": "#333333"
+     },
+     {
+      "team_id": "B",
+      "name": "オリックス・バファローズ",
+      "short_name": "オリックス",
+      "home": "大阪府・兵庫県",
+      "stadium": "京セラドーム大阪",
+      "color": "#9a7b2f"
+     },
+     {
+      "team_id": "H",
+      "name": "福岡ソフトバンクホークス",
+      "short_name": "ソフトバンク",
+      "home": "福岡県",
+      "stadium": "みずほPayPayドーム福岡",
+      "color": "#c98a00"
+     }
+    ],
+    "standings": [
+     {
+      "team_id": "H",
+      "G": 143,
+      "W": 91,
+      "L": 49,
+      "T": 3,
+      "RS": null,
+      "RA": null,
+      "official_rank": 1
+     },
+     {
+      "team_id": "F",
+      "G": 143,
+      "W": 75,
+      "L": 60,
+      "T": 8,
+      "RS": null,
+      "RA": null,
+      "official_rank": 2
+     },
+     {
+      "team_id": "M",
+      "G": 143,
+      "W": 71,
+      "L": 66,
+      "T": 6,
+      "RS": null,
+      "RA": null,
+      "official_rank": 3
+     },
+     {
+      "team_id": "E",
+      "G": 143,
+      "W": 67,
+      "L": 72,
+      "T": 4,
+      "RS": null,
+      "RA": null,
+      "official_rank": 4
+     },
+     {
+      "team_id": "B",
+      "G": 143,
+      "W": 63,
+      "L": 77,
+      "T": 3,
+      "RS": null,
+      "RA": null,
+      "official_rank": 5
+     },
+     {
+      "team_id": "L",
+      "G": 143,
+      "W": 49,
+      "L": 91,
+      "T": 3,
+      "RS": null,
+      "RA": null,
+      "official_rank": 6
+     }
+    ],
+    "players": [],
+    "batting": [],
+    "pitching": [],
+    "games": [],
+    "batting_games": [],
+    "pitching_games": [],
+    "splits_batting": [],
+    "splits_pitching": []
+   },
    "2025": {
     "meta": {
      "season": 2025,
@@ -156,7 +291,7 @@
      "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
      "stats_level": "none",
      "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-18 取得、支配下・育成を含む）です。",
-     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111690956）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111810738）、Template:埼玉西武ライオンズの選手・スタッフ（版 111577600）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111573919）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111803878）、2026年の日本プロ野球（版 111811228）"
+     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111813750）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111813875）、Template:埼玉西武ライオンズの選手・スタッフ（版 111577600）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111813745）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111803878）、2026年の日本プロ野球（版 111813190）"
     },
     "titles": [
      {
@@ -1526,6 +1661,21 @@
       "roster_type": "育成"
      },
      {
+      "player_id": "w23c2e56b57",
+      "team_id": "F",
+      "name": "郡拓也",
+      "name_kana": null,
+      "number": "160",
+      "position": "捕手",
+      "throws": null,
+      "bats": null,
+      "birth_date": null,
+      "from_date": null,
+      "to_date": null,
+      "wiki_title": "郡拓也",
+      "roster_type": "育成"
+     },
+     {
       "player_id": "w8780ddcae6",
       "team_id": "F",
       "name": "濵田泰希",
@@ -1946,21 +2096,6 @@
       "roster_type": "支配下"
      },
      {
-      "player_id": "waf4c1aa247",
-      "team_id": "E",
-      "name": "古賀康誠",
-      "name_kana": null,
-      "number": "61",
-      "position": "投手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "古賀康誠",
-      "roster_type": "支配下"
-     },
-     {
       "player_id": "w4eab8476cd",
       "team_id": "E",
       "name": "西口直人",
@@ -1973,21 +2108,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "西口直人",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "wd01607e917",
-      "team_id": "E",
-      "name": "林優樹",
-      "name_kana": null,
-      "number": "64",
-      "position": "投手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "林優樹",
       "roster_type": "支配下"
      },
      {
@@ -2168,21 +2288,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "石原彪",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "w718c89bf1e",
-      "team_id": "E",
-      "name": "大栄利哉",
-      "name_kana": null,
-      "number": "72",
-      "position": "捕手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "大栄利哉",
       "roster_type": "支配下"
      },
      {
@@ -2423,21 +2528,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "陽柏翔",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "w22c56e8734",
-      "team_id": "E",
-      "name": "金子京介",
-      "name_kana": null,
-      "number": "98",
-      "position": "内野手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "金子京介",
       "roster_type": "支配下"
      },
      {
@@ -4748,21 +4838,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "吉川悠斗",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "w206be8b0d5",
-      "team_id": "M",
-      "name": "森遼大朗",
-      "name_kana": null,
-      "number": "92",
-      "position": "投手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "森遼大朗",
       "roster_type": "支配下"
      },
      {
