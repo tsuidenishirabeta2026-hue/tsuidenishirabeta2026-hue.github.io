@@ -31,7 +31,7 @@
     "_説明": "note のクリエイターページURL（例: https://note.com/xxxx）。関連記事が無いページではここへの導線を出します。"
   },
   "repo": "tsuidenishirabeta2026-hue/tsuidenishirabeta2026-hue.github.io",
-  "siteUrl": "",
+  "siteUrl": "https://pacific-labo.com",
   "_siteUrl説明": "独自ドメインで公開したら https://example.com のように入れる（末尾の / なし）。正規URL・サイトマップ・旧URLからの転送に使う",
   "adsense": {
     "client": "",

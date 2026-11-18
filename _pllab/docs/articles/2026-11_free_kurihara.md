@@ -69,6 +69,6 @@
 
 **出典**: Wikipedia 日本語版「栗原陵矢」の年度別打撃成績、「2026年の日本プロ野球」の個人タイトル（いずれも CC BY-SA 4.0）。数値は記事の記録から再計算しています。正式な記録は NPB の発表をご確認ください。
 
-**選手ページ**（前年比・平均との差・短評を毎日更新）: https://tsuidenishirabeta2026-hue.github.io/pl-lab/players/wf1e30ef86b.html
+**選手ページ**（前年比・平均との差・短評を毎日更新）: https://pacific-labo.com/players/wf1e30ef86b.html
 
 **有料記事のご案内**: FA権を行使したパ・リーグ5選手を、3〜4年分の数字で診断した記事を公開しています →（公開後にURLを記入）

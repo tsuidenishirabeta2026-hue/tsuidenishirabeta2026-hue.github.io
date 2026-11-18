@@ -53,7 +53,7 @@ export function siteTags(ctx) {
   const url = ctx.siteUrl;
   if (!url) return '';
   return `<!--PL_CANONICAL-->
-<script>(function(){if(/github\\.io$/.test(location.hostname)){location.replace(${JSON.stringify(url)}+location.pathname.replace(/^\\/pl-lab/,'')+location.search+location.hash);}})();</script>`;
+<script>(function(){if(/(github\\.io|pages\\.dev)$/.test(location.hostname)){location.replace(${JSON.stringify(url)}+location.pathname.replace(/^\\/pl-lab/,'')+location.search+location.hash);}})();</script>`;
 }
 
 /** Google AdSense（自動広告）。独自ドメインと運営者IDがそろい、デモ表示でないときだけ出す */
