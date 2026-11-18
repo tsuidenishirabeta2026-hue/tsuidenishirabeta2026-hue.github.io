@@ -8,6 +8,7 @@ import { BAT_COLS, PIT_COLS, td, headCells } from './cols.js';
 import { indexBars, trendLine } from './charts.js';
 import { noteBlock } from './notes.js';
 import { insightSection } from './insight.js';
+import { columnsFor, columnCards } from './page-columns.js';
 
 const SECTION_TITLES = [
   ['type', 'どのようなタイプの選手か'],
@@ -247,6 +248,7 @@ export function renderPlayer(ctx, entries, sameNameMap) {
 ${cur ? '' : `<p class="notice info">この選手は最新シーズン（${ctx.S.meta.season}年）のデータに所属記録がありません。${S.meta.season}年の情報を表示しています。</p>`}
 
 ${statsBody}
+${columnsFor(ctx, { playerId: p.id }).length ? `<h2>この選手のコラム</h2>${columnCards(ctx, columnsFor(ctx, { playerId: p.id }), root)}` : ''}
 ${noteBlock(ctx, { pageType: 'player', playerId: p.id, teamId: p.info.team_id, heading: `${p.name}選手・${t.short_name}の解説記事（note）` })}
 `;
   return page({ title: `${p.name}（${t.short_name}）`, root, current: 'players', body, ctx, teamColor: t.color, description: `${p.name}選手（${t.name}）の成績と分析（非公式）`, pageMeta: { pageType: 'player', playerId: p.id, playerName: p.name } });

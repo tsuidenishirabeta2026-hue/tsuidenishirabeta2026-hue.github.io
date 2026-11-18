@@ -283,3 +283,17 @@ li.move details.more ul { padding-left: 1.2em; margin: 4px 0; }
 .note-badge { justify-self: start; font-size: .72rem; font-weight: 800; border-radius: 4px; padding: 0 6px; border: 1px solid var(--line); }
 .note-badge.paid { border-color: var(--warn-line); background: var(--warn-bg); }
 .note-badge.free { border-color: var(--good); color: var(--good); }
+
+/* コラム */
+.column-link { display: grid; gap: 2px; background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--accent); border-radius: 10px; padding: 10px 12px; text-decoration: none; color: var(--ink); }
+.column-link:hover b { text-decoration: underline; }
+article.column { font-size: 1.02rem; line-height: 1.9; }
+article.column h2 { margin-top: 32px; }
+article.column p { margin: 12px 0; }
+article.column ul { padding-left: 1.3em; }
+article.column li { margin: 6px 0; }
+article.column hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+article.column .table-scroll { margin: 12px 0; }
+article.column th, article.column td { white-space: normal; }
+article.column td.l, article.column th.l { min-width: 7em; }
+article.column table { font-size: .86rem; }

@@ -4,6 +4,7 @@ import { leaders, hotPlayers } from '../model.js';
 import { page, term, teamChip, playerLink, PHASE_LABEL } from './layout.js';
 import { movesList, isTransaction } from './page-moves.js';
 import { noteBlock } from './notes.js';
+import { columnCards } from './page-columns.js';
 import { biggestRisers, YOY_MIN_PA, YOY_MIN_OUTS } from '../history.js';
 
 function risersSection(ctx, root) {
@@ -191,6 +192,7 @@ ${leadersSection(S, root, th)}
 <h2 id="hot">最近好調な選手</h2>
 ${hotSection(S, root, th)}` : titlesSection(S, root) + risersSection(ctx, root)}
 ${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? '' : movesSection(ctx, root)}
+${ctx.columns?.length ? `<h2 id="columns">コラム</h2>${columnCards(ctx, ctx.columns, root, { limit: 3 })}<p><a href="${root}columns/index.html">コラムの一覧へ</a></p>` : ''}
 ${noteBlock(ctx, { pageType: 'top', heading: 'note で読む解説記事' })}
 <h2 id="teams">球団別ページ</h2>
 <div class="team-cards">${teamCards}</div>
