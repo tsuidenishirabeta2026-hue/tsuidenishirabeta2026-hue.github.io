@@ -71,6 +71,7 @@ export function page({ title, root, current, body, ctx, teamColor, description, 
     ['teams', '球団', 'index.html#teams'],
     ['players', '選手一覧', 'players/index.html'],
     ['moves', '移籍・契約', 'moves.html'],
+    ['columns', 'コラム', 'columns/index.html'],
     ['about', 'データと分析の方法', 'about.html'],
   ];
   const fullTitle = title ? `${title}｜${site.name}` : `${site.name}（非公式）`;

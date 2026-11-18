@@ -93,6 +93,13 @@ CSV を Web 上（自分のスプレッドシートの CSV 公開 URL、契約�
   Umami を使う場合は `"provider": "umami", "id": "<Website ID>"`。設定が無ければ何も送信しない
 - 記事の下書き: `docs/articles/`。利用条件: `docs/DATA_RIGHTS.md`
 
+## コラム（独自記事）
+
+- `content/columns/*.md` に1記事1ファイルで書く。先頭に `slug`（URL 用の半角英数字とハイフン）・`title`・`date`・`description`・`teams`（F/E/L/M/B/H を / 区切り）・`players`（選手ID を / 区切り）を書く
+- `draft: true` にすると公開しない。公開すると `/columns/<slug>.html`、一覧、トップの新着、関係する選手ページに表示される
+- 使える書式: 見出し（#）、段落、箇条書き（-）、表、**太字**、[リンク](URL)、区切り線（---）
+- Wikipedia の文章・表は貼らず、数値（事実）を自分の表と言葉でまとめ、出典を明記する（`docs/DATA_RIGHTS.md`）
+
 ## 移籍・契約ページ（実データ）
 
 `/pl-lab/moves.html` と、トップ・球団ページの「最近の動き」は実際の出来事を表示します。

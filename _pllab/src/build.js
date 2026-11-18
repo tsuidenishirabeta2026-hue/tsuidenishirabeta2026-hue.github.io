@@ -19,6 +19,8 @@ import { renderMoves } from './render/page-moves.js';
 import { renderPrivacy } from './render/page-privacy.js';
 import { loadNotes } from './notes.js';
 import { buildHistory } from './history.js';
+import { loadColumns, renderColumnIndex, renderColumn } from './render/page-columns.js';
+import { ROOT } from './config.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const MARKER = '.pllab-generated';
@@ -100,6 +102,7 @@ export async function runBuild({ config = loadConfig() } = {}) {
   const nl = await loadNotes(join(config.inputDir, 'notes.csv'));
   for (const e of nl.errors) console.warn(`⚠ ${e}`);
   ctx.notes = nl.notes;
+  ctx.columns = await loadColumns(join(ROOT, 'content', 'columns'));
   const ps = await readJson(join(config.storeDir, 'player-stats.json'));
   ctx.history = ps ? buildHistory(ps, [...S.players.values()], S.meta.season) : null;
   let pages = 0;
@@ -116,6 +119,8 @@ export async function runBuild({ config = loadConfig() } = {}) {
   await write('about.html', renderAbout(ctx, await readLogTail(config.logFile)));
   if (ctx.moves) await write('moves.html', renderMoves(ctx, ctx.moves, ctx.movesStatus));
   await write('privacy.html', renderPrivacy(ctx));
+  await write('columns/index.html', renderColumnIndex(ctx));
+  for (const c of ctx.columns) await write(`columns/${c.slug}.html`, renderColumn(ctx, c));
   for (const tid of S.teams.keys()) await write(`teams/${tid}.html`, renderTeam(ctx, tid, models));
   await write('players/index.html', renderList(ctx));
   await out(dir, 'data/players.json', JSON.stringify(playersJson(models, S.meta.season, ctx.history)));
