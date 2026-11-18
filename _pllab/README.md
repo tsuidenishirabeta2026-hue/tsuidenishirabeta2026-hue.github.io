@@ -77,6 +77,22 @@ CSV を Web 上（自分のスプレッドシートの CSV 公開 URL、契約�
 新しい取得元を追加する場合は `src/sources/` にアダプタを作り、`fetchSeason(season)` が
 `{ 'meta.csv': '...', ... }`（CSV 形式のテキスト）を返すようにすれば、検証以降は共通です。
 
+## 選手ページの前年比・平均との差・短評
+
+- 取得: `node src/update-player-stats.js`（所属選手の Wikipedia 記事の「年度別打撃成績／年度別投手成績」表。初回は全件、以降は版番号が変わった記事だけ。50件/リクエスト）
+- 保存: `data/store/player-stats.json`。検算（打席数・塁打・防御率）が合わない行は使わない
+- 比較の決まり（`src/history.js`）: 前年比は両年とも100打席／30投球回以上で判定。リーグ平均は「現所属のパ・リーグ選手で、その年まで記事が更新されているもの」の合計。更新率70%未満の年は計算しない
+- 記事用の数値の書き出し: `node scripts/article-data.js 選手名 …`
+
+## note への導線と計測
+
+- `data/input/notes.csv` に記事を登録（`status=published` の行だけ表示）。選手 → 球団 → 全体の順に関連記事を出す。リンクには `utm_source=pl-lab` などを付ける
+- `config/site.json` の `note.profileUrl` を入れると、関連記事が無いページにもプロフィールへの導線を出す
+- 計測: `config/site.json` の `analytics` に `"provider": "ga4", "id": "G-XXXXXXX"`（Google アナリティクス 4）を入れると、全ページのページビューと、
+  `player_view`（選手ページの閲覧。player_id・player_name 付き）、`note_click`（note へのクリック。note_id・page_type・player_id 付き）を送信する。
+  Umami を使う場合は `"provider": "umami", "id": "<Website ID>"`。設定が無ければ何も送信しない
+- 記事の下書き: `docs/articles/`。利用条件: `docs/DATA_RIGHTS.md`
+
 ## 移籍・契約ページ（実データ）
 
 `/pl-lab/moves.html` と、トップ・球団ページの「最近の動き」は実際の出来事を表示します。

@@ -68,7 +68,7 @@ export function parseRoster(wikitext, team_id) {
     if (!type) continue;
     const groups = {};
     for (const m of b.matchAll(/\|\s*group(\d+)\s*=\s*([^\n|]+)/g)) groups[m[1]] = m[2].trim();
-    const listRe = /\|\s*list(\d+)\s*=([\s\S]*?)(?=\n\|\s*(?:group|list)\d+\s*=|\n\}\})/g;
+    const listRe = /\|\s*list(\d+)\s*=([\s\S]*?)(?=\n\s*\|\s*(?:group|list)\d+\s*=|\n\s*\}\})/g;
     for (const m of b.matchAll(listRe)) {
       const position = groups[m[1]];
       if (!['投手', '捕手', '内野手', '外野手'].includes(position)) continue;

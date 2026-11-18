@@ -165,7 +165,7 @@
       var b = e.target.closest('button.sort');
       if (!b) return;
       var k = b.getAttribute('data-k');
-      var defAsc = k === 'name' || !!LOWER[k];
+      var defAsc = k === 'name' || k === 'num' || !!LOWER[k] || (k === 'km' && state.tab === 'pit');
       if (state.sort === k) state.asc = !state.asc;
       else { state.sort = k; state.asc = defAsc; }
       render();

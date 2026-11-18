@@ -42,9 +42,10 @@ export async function runPlayerStatsUpdate({ config = loadConfig(), env = proces
       if (pg) {
         const r = parseArticle(pg.text, season);
         const yearsSeen = [...(r.batting || []), ...(r.pitching || [])].map((x) => x.year);
-        const noted = /(\d{4})年(?:度)?(?:シーズン)?終了時/.exec(pg.text);
-        // 記事が何年のシーズン終了時点まで更新されているか（注記 → 表の最新年の順に判断）
-        const updatedThrough = noted ? Number(noted[1]) : yearsSeen.length ? Math.max(...yearsSeen) : null;
+        // 記事が何年のシーズン終了時点まで更新されているか（「○年度シーズン終了時」の注記と表の最新年のうち新しい方）
+        const noted = [...pg.text.matchAll(/(\d{4})年(?:度)?(?:シーズン)?終了時/g)].map((m) => Number(m[1])).filter((y) => y <= season);
+        const cands = [...noted, ...yearsSeen.filter((y) => y <= season)];
+        const updatedThrough = cands.length ? Math.max(...cands) : null;
         articles[t] = { revid: pg.revid, title: pg.title, updatedThrough, batting: r.batting, pitching: r.pitching };
       } else if (prev.articles[t] && latest.get(t)?.revid === prev.articles[t].revid) {
         articles[t] = prev.articles[t];

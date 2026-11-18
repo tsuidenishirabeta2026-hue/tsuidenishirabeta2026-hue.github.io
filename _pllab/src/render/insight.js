@@ -53,23 +53,25 @@ export function insightSection(ctx, p) {
   }
   const isP = I.isPitcher;
   const li = (x) => `<li><span class="kind k-${esc(x.kind)}">${esc(x.kind)}</span>${esc(x.text)}${x.basis ? `<span class="basis">根拠: ${esc(x.basis)}</span>` : ''}</li>`;
-  const short = `<div class="card analysis"><h3 style="margin-top:0">短評（${I.latest}年）</h3><ul>${I.comment.map(li).join('')}</ul>
+  const skipped = (h.invalidYears || []).filter((y) => y > I.latest);
+  const skipNote = skipped.length ? `<div class="notice info small"><strong>${skipped.join('・')}年の成績は使っていません。</strong>記事の数値が検算（打席数 = 打数＋四球＋死球＋犠打＋犠飛、塁打、防御率）と合わないためです。記事が修正されると自動で反映されます。</div>` : '';
+  const short = `${skipNote}<div class="card analysis"><h3 style="margin-top:0">短評（${I.latest}年）</h3><ul>${I.comment.map(li).join('')}</ul>
 <p class="muted small">成績の数字だけから機械的に作成しています。故障・調子の原因・フォームなど数字から分からないことには触れず、将来の成績を保証するものではありません。</p></div>`;
 
   const yoy = I.prev
     ? `<h3>前年から伸びた指標（${I.latest - 1}年 → ${I.latest}年）</h3>
 <p class="small">比較条件: ${I.latest - 1}年 <b>${sizeText(isP, I.prevSize)}</b> → ${I.latest}年 <b>${sizeText(isP, I.curSize)}</b>。両年とも ${isP ? `${YOY_MIN_OUTS / 3}投球回` : `${YOY_MIN_PA}打席`}以上のときだけ「伸びた／下がった」を判定し、それ未満は「参考」としています。</p>
 <p class="muted small">↓ の付いた指標は低いほど良い指標です。</p>
-<div class="table-scroll"><table class="wrap"><thead><tr><th class="l">指標</th><th>${I.latest - 1}年</th><th>${I.latest}年</th><th>差</th><th>判定</th></tr></thead><tbody>${I.yoy
-        .map((m) => `<tr><td class="l">${term(m.label.replace(/（.*）/, ''), m.key === 'ISO' ? 'ISO' : m.label.replace(/（.*）/, ''))}${m.higher ? '' : '<sup aria-label="低いほど良い">↓</sup>'}</td><td>${esc(m.prev)}</td><td><b>${esc(m.cur)}</b></td><td>${m.diff === null ? '' : esc(fmtDiff(m.key, m.diff))}</td><td>${judge(m, I.enough)}</td></tr>`)
+<div class="table-scroll"><table class="wrap"><thead><tr><th class="l">指標</th><th>${I.latest - 1}年</th><th>${I.latest}年</th><th>差・判定</th></tr></thead><tbody>${I.yoy
+        .map((m) => `<tr><td class="l">${term(m.label.replace(/（.*）/, ''), m.key === 'ISO' ? 'ISO' : m.label.replace(/（.*）/, ''))}${m.higher ? '' : '<sup aria-label="低いほど良い">↓</sup>'}</td><td>${esc(m.prev)}</td><td><b>${esc(m.cur)}</b></td><td>${m.diff === null ? '' : `${esc(fmtDiff(m.key, m.diff))}<br>`}${judge(m, I.enough)}</td></tr>`)
         .join('')}</tbody></table></div>`
     : `<h3>前年から伸びた指標</h3><p class="empty">${I.latest - 1}年の成績が記事に無いため、前年比は表示できません（${I.latest}年が初出場の年など）。</p>`;
 
   const lg = I.league
     ? `<h3>リーグ平均との差（${I.league.year}年）</h3>
 <p class="small">比較条件: 本人 <b>${sizeText(isP, I.league.size)}</b>。比較対象は「現在パ・リーグ6球団に所属し、Wikipedia の記事が${I.league.year}年まで更新されている${isP ? '投手' : '野手'}${I.league.population}人」の、${I.league.year}年のパ・リーグ球団での成績の合計から計算した平均です（記事の更新率 ${Math.round(I.league.coverage * 100)}%）。退団・引退した選手を含まないため、公式のリーグ平均とは異なります。</p>
-<div class="table-scroll"><table class="wrap"><thead><tr><th class="l">指標</th><th>本人</th><th>平均</th><th>差</th><th>判定</th></tr></thead><tbody>${I.league.rows
-        .map((r) => `<tr><td class="l">${term(r.label.replace(/（.*）/, ''), r.key === 'ISO' ? 'ISO' : r.label.replace(/（.*）/, ''))}${r.higher ? '' : '<sup aria-label="低いほど良い">↓</sup>'}</td><td><b>${esc(r.me)}</b></td><td>${esc(r.lg)}</td><td>${r.diff === null ? '' : esc(fmtDiff(r.key, r.diff))}</td><td>${judgeLg(r)}</td></tr>`)
+<div class="table-scroll"><table class="wrap"><thead><tr><th class="l">指標</th><th>本人</th><th>平均</th><th>差・判定</th></tr></thead><tbody>${I.league.rows
+        .map((r) => `<tr><td class="l">${term(r.label.replace(/（.*）/, ''), r.key === 'ISO' ? 'ISO' : r.label.replace(/（.*）/, ''))}${r.higher ? '' : '<sup aria-label="低いほど良い">↓</sup>'}</td><td><b>${esc(r.me)}</b></td><td>${esc(r.lg)}</td><td>${r.diff === null ? '' : `${esc(fmtDiff(r.key, r.diff))}<br>`}${judgeLg(r)}</td></tr>`)
         .join('')}</tbody></table></div>
 ${I.league.year !== I.latest ? `<p class="muted small">${esc(I.coverageNote || `${I.latest}年のリーグ平均は計算できないため`)}、${I.league.year}年で比較しています。</p>` : ''}`
     : `<h3>リーグ平均との差</h3><p class="empty">比較できる年がありません。${esc(I.coverageNote || '')}（記事の更新率が${MIN_COVERAGE * 100}%以上の年だけ計算します）</p>`;

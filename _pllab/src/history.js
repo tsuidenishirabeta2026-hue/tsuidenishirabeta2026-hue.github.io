@@ -63,6 +63,8 @@ export function buildHistory(store, players, currentSeason) {
       batPL: yearTotals(a.batting, BAT_SUM, true),
       pitPL: yearTotals(a.pitching, PIT_SUM, true),
       updatedThrough: a.updatedThrough,
+      // 記事にあるが検算が合わず使わなかった年（画面で理由を示すため）
+      invalidYears: [...new Set([...(a.batting || []), ...(a.pitching || [])].filter((r) => !r.valid).map((r) => r.year))].sort(),
       hasTables: !!(a.batting?.length || a.pitching?.length),
       revid: a.revid,
     });

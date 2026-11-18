@@ -205,11 +205,11 @@ export function titlesSection(S, root) {
     .map((t) => {
       const team = S.teams.get(t.team_id);
       const pl = t.player_id && S.players.get(t.player_id);
-      return `<tr><td class="l">${esc(t.title)}</td><td class="l name">${pl ? playerLink(pl, root) : esc(t.player)}</td><td class="l" style="white-space:nowrap">${teamChip(team, root)}</td><td style="white-space:nowrap">${esc(t.value || '')}</td></tr>`;
+      return `<tr><td class="l">${esc(t.title)}</td><td class="l name" style="white-space:nowrap">${pl ? playerLink(pl, root) : esc(t.player)}</td><td class="l" style="white-space:nowrap">${teamChip(team, root)}</td><td style="white-space:nowrap">${esc(t.value || '')}</td></tr>`;
     })
     .join('');
   return `<h2 id="titles">${S.meta.season}年 パ・リーグ個人タイトル</h2>
 ${rows ? `<div class="table-scroll"><table class="wrap"><thead><tr><th class="l">タイトル</th><th class="l">選手</th><th class="l">球団</th><th>成績</th></tr></thead><tbody>${rows}</tbody></table></div>
 <p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0）の記載。同じタイトルに複数の選手がいる場合は同時受賞です。正式な記録は NPB の発表をご確認ください。</p>` : '<p class="empty">個人タイトルのデータはまだありません。</p>'}
-<p class="notice info small"><strong>個人成績のランキング・好調な選手は表示していません。</strong>規約上利用できる、全選手の個人成績の取得元がないためです（<a href="${root}about.html#source">詳しく</a>）。</p>`;
+<p class="notice info small"><strong>個人成績のランキング・最近好調な選手は表示していません。</strong>リーグ全選手の成績や試合別の成績を、規約上利用できる形で取得できないためです。選手ごとの年度別成績・前年比・平均との差は、各選手ページで確認できます（<a href="${root}about.html#history">比較の方法</a>）。</p>`;
 }

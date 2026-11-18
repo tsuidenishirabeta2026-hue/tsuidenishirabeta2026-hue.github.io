@@ -1,2 +1,3 @@
 note_id,status,type,price,title,url,published_at,teams,players,summary
-pl2026-free-01,draft,free,0,（下書き）docs/articles/ を参照,,,,,公開時に status を published にし、url を入れてください
+kurihara-2026,draft,free,0,栗原陵矢の「長打力」は2倍になった──数字で見る2026年の二冠,,,H,wf1e30ef86b,下書き: docs/articles/2026-11_free_kurihara.md。公開したら status=published、url と published_at を入れる
+fa-diagnosis-2026,draft,paid,300,FA権を行使したパ・リーグ5選手を、4年分の数字で診断する【2026年オフ】,,,E/M/L/B,wc556b7924d/w9d48a91b49/w38a395665d/w00ecce47b3/wd7b8b85ed3,下書き: docs/articles/2026-11_paid_fa-diagnosis.md。公開したら status=published、url と published_at を入れる
