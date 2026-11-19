@@ -173,3 +173,13 @@ FA権の行使を表明した小島和哉（ロッテ）。
 https://pacific-labo.com/players/w38a395665d.html?utm_source=x&utm_medium=social
 #パリーグ #プロ野球 #chibalotte
 ```
+
+### 13. note 記事の紹介: 平良海馬（2026年11月19日 公開）
+```
+noteを始めました。1本目は平良海馬。
+
+先発で防御率1.36。2023年の先発（2.40）と比べると、奪三振率はむしろ下がり、良くなったのは「四球」と「被本塁打」でした。表つきで解説しています（無料）。
+
+https://note.com/pacific_labo/n/n92d025467792
+#パリーグ #プロ野球 #seibulions
+```

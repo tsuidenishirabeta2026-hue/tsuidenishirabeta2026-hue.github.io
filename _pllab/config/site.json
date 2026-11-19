@@ -27,7 +27,7 @@
     "_説明": "provider は ga4 / umami / 空（無効）。id は GA4 の測定ID（G-XXXX）または Umami の Website ID。公開して問題ない値です。"
   },
   "note": {
-    "profileUrl": "",
+    "profileUrl": "https://note.com/pacific_labo",
     "_説明": "note のクリエイターページURL（例: https://note.com/xxxx）。関連記事が無いページではここへの導線を出します。"
   },
   "repo": "tsuidenishirabeta2026-hue/tsuidenishirabeta2026-hue.github.io",
