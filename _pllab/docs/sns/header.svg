@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="500" viewBox="0 0 1500 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d2747"/>
+      <stop offset="1" stop-color="#1c5cab"/>
+    </linearGradient>
+  </defs>
+  <rect width="1500" height="500" fill="url(#bg)"/>
+  <!-- 右側の棒グラフ -->
+  <g fill="#ffffff" opacity="0.14">
+    <rect x="1220" y="330" width="44" height="170" rx="8"/>
+    <rect x="1280" y="270" width="44" height="230" rx="8"/>
+    <rect x="1340" y="210" width="44" height="290" rx="8"/>
+    <rect x="1400" y="140" width="44" height="360" rx="8"/>
+  </g>
+  <path d="M1210 300 L 1290 240 L 1350 255 L 1440 110" fill="none" stroke="#f2b01e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 文字（左下はアイコンと重なるため、中央より上・右寄りに配置） -->
+  <text x="330" y="190" font-family="IPAGothic, sans-serif" font-size="84" font-weight="700" fill="#ffffff">パ・リーグ成績ラボ</text>
+  <text x="334" y="262" font-family="IPAGothic, sans-serif" font-size="34" fill="#cfe0f5">順位・前年比・移籍の動きを、数字でわかりやすく</text>
+  <text x="334" y="330" font-family="IPAGothic, sans-serif" font-size="34" fill="#f2b01e" font-weight="700">pacific-labo.com</text>
+  <text x="334" y="380" font-family="IPAGothic, sans-serif" font-size="26" fill="#9db7d8">毎朝自動更新・非公式のファンサイト</text>
+</svg>
