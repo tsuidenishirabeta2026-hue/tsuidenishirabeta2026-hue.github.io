@@ -12,7 +12,7 @@ test('Markdown: 見出し・表・箇条書き・太字・リンク、HTML は�
   assert.match(h, /<strong>太字<\/strong>/);
   assert.doesNotMatch(h, /<script>/);
   assert.match(h, /<ul><li>a<\/li><li>b<\/li><\/ul>/);
-  assert.match(h, /<td class="l">OPS<\/td><td>\.922<\/td>/);
+  assert.match(h, /<td class="l">OPS<\/td><td class="n">\.922<\/td>/);
   assert.match(h, /<a href="\.\.\/players\/a\.html">選手<\/a>/);
   assert.match(h, /<a href="https:\/\/example\.com" rel="noopener">外部<\/a>/);
   assert.doesNotMatch(h, /href="javascript/);

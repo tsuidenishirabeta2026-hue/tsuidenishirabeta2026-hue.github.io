@@ -25,6 +25,9 @@ export function parseFrontMatter(src) {
   return { meta, body: src.slice(m[0].length) };
 }
 
+// 数値だけのセル（.286、+1.04、12.0%、80 / 332 など）は改行させない
+const isNum = (c) => /^[\s*]*[-+−]?[\d.,]+(?:\s*\/\s*[\d.,]+)?[%本回]*[\s*]*$/.test(c) || /^[-+−][\d.]+(?:ポイント)?$/.test(c);
+
 export function markdownToHtml(md) {
   const lines = md.replace(/\r/g, '').split('\n');
   const out = [];
@@ -73,7 +76,7 @@ export function markdownToHtml(md) {
       const rows = [];
       while (i < lines.length && /^\|.*\|\s*$/.test(lines[i])) rows.push(cells(lines[i++]));
       i--;
-      out.push(`<div class="table-scroll"><table class="wrap"><thead><tr>${head.map((c, k) => `<th${k === 0 ? ' class="l"' : ''}>${inline(c)}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr>${r.map((c, k) => `<td${k === 0 ? ' class="l"' : ''}>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+      out.push(`<div class="table-scroll"><table class="wrap"><thead><tr>${head.map((c, k) => `<th${k === 0 ? ' class="l"' : ''}>${inline(c)}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr>${r.map((c, k) => `<td${k === 0 ? ' class="l"' : isNum(c) ? ' class="n"' : ''}>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
       continue;
     }
     flushList();
