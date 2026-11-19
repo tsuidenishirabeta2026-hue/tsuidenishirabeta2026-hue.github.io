@@ -1,6 +1,6 @@
 {
- "hash": "950cef0db497882d3284f9b946b79a90ac25f914044b2c1a61bc6502272ea393",
- "saved_at": "2026-11-18T22:40:22.870Z",
+ "hash": "2bbbce643c5a2dac2c539beb9fee0179d1f7f0982ea81c24a1c175a43a311fbd",
+ "saved_at": "2026-11-19T14:35:45.304Z",
  "data": {
   "schema": 1,
   "source": {
@@ -291,7 +291,7 @@
      "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
      "stats_level": "none",
      "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-19 取得、支配下・育成を含む）です。",
-     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111816484）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111813875）、Template:埼玉西武ライオンズの選手・スタッフ（版 111577600）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111813745）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111816559）、2026年の日本プロ野球（版 111819708）"
+     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111816484）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111823378）、Template:埼玉西武ライオンズの選手・スタッフ（版 111824825）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111824796）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111828073）、2026年の日本プロ野球（版 111825158）"
     },
     "titles": [
      {
@@ -2951,21 +2951,6 @@
       "roster_type": "支配下"
      },
      {
-      "player_id": "w642cd61539",
-      "team_id": "L",
-      "name": "青山美夏人",
-      "name_kana": null,
-      "number": "29",
-      "position": "投手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "青山美夏人",
-      "roster_type": "支配下"
-     },
-     {
       "player_id": "w02539944e4",
       "team_id": "L",
       "name": "甲斐野央",
@@ -3293,21 +3278,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "柘植世那",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "w7e2860a66c",
-      "team_id": "L",
-      "name": "牧野翔矢",
-      "name_kana": null,
-      "number": "53",
-      "position": "捕手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "牧野翔矢",
       "roster_type": "支配下"
      },
      {
@@ -3683,21 +3653,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "秋山俊",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "wf9209b4dc9",
-      "team_id": "L",
-      "name": "林冠臣",
-      "name_kana": null,
-      "number": "44",
-      "position": "外野手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "林冠臣",
       "roster_type": "支配下"
      },
      {
@@ -6926,21 +6881,6 @@
       "roster_type": "支配下"
      },
      {
-      "player_id": "w6275ece5cf",
-      "team_id": "H",
-      "name": "岩井俊介",
-      "name_kana": null,
-      "number": "27",
-      "position": "投手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "岩井俊介",
-      "roster_type": "支配下"
-     },
-     {
       "player_id": "wd4ebaaa537",
       "team_id": "H",
       "name": "安德駿",
@@ -6953,21 +6893,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "安德駿",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "w2a6b14b824",
-      "team_id": "H",
-      "name": "大江竜聖",
-      "name_kana": null,
-      "number": "29",
-      "position": "投手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "大江竜聖",
       "roster_type": "支配下"
      },
      {
