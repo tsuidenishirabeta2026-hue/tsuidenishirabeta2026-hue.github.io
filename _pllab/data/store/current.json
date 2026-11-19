@@ -1,6 +1,6 @@
 {
- "hash": "25b5ce053f4f09582ccd2f6afbcd287e19de8b7dad583957ef7f546e15527141",
- "saved_at": "2026-11-19T15:25:27.178Z",
+ "hash": "5ce1efe2183ea0ce043f3b22c77a77ecab37a1be1706f781007856d6528a9b99",
+ "saved_at": "2026-11-19T22:36:56.203Z",
  "data": {
   "schema": 1,
   "source": {
@@ -291,7 +291,7 @@
      "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
      "stats_level": "none",
      "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-20 取得、支配下・育成を含む）です。",
-     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111816484）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111823378）、Template:埼玉西武ライオンズの選手・スタッフ（版 111829607）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111824796）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111828073）、2026年の日本プロ野球（版 111825158）"
+     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111816484）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111823378）、Template:埼玉西武ライオンズの選手・スタッフ（版 111829607）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111830946）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111828073）、2026年の日本プロ野球（版 111825158）"
     },
     "titles": [
      {
@@ -4328,21 +4328,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "東妻勇輔",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "w238bf766ef",
-      "team_id": "M",
-      "name": "菊地吏玖",
-      "name_kana": null,
-      "number": "28",
-      "position": "投手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "菊地吏玖",
       "roster_type": "支配下"
      },
      {

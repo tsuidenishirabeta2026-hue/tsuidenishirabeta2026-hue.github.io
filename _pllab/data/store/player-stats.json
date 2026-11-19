@@ -1,6 +1,6 @@
 {
- "hash": "ca61414a6a7e7ad34611de3c91b7d1530155c11649ba04ec89e929bc228227a7",
- "saved_at": "2026-11-19T15:25:27.821Z",
+ "hash": "a5ff7e47990a3827801e2ef220765ffc6c310073390aa6defdb17ebb3966acb7",
+ "saved_at": "2026-11-19T22:36:56.880Z",
  "season": 2026,
  "articles": {
   "矢澤宏太": {
@@ -10974,7 +10974,7 @@
    ]
   },
   "前田健太": {
-   "revid": 111697673,
+   "revid": 111831610,
    "title": "前田健太",
    "updatedThrough": 2026,
    "batting": null,
@@ -31948,95 +31948,6 @@
     }
    ]
   },
-  "菊地吏玖": {
-   "revid": 111811038,
-   "title": "菊地吏玖",
-   "updatedThrough": 2025,
-   "batting": null,
-   "pitching": [
-    {
-     "year": 2023,
-     "team": "ロッテ",
-     "team_id": "M",
-     "G": 1,
-     "GS": 1,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 0,
-     "L": 1,
-     "SV": 0,
-     "HLD": 0,
-     "BF": 22,
-     "outs": 12,
-     "H": 7,
-     "HR": 1,
-     "BB": 3,
-     "IBB": 0,
-     "HBP": 0,
-     "SO": 0,
-     "WP": 2,
-     "BK": 0,
-     "R": 4,
-     "ER": 1,
-     "valid": true
-    },
-    {
-     "year": 2024,
-     "team": "ロッテ",
-     "team_id": "M",
-     "G": 20,
-     "GS": 0,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 1,
-     "L": 0,
-     "SV": 1,
-     "HLD": 2,
-     "BF": 97,
-     "outs": 72,
-     "H": 21,
-     "HR": 3,
-     "BB": 5,
-     "IBB": 2,
-     "HBP": 2,
-     "SO": 27,
-     "WP": 0,
-     "BK": 0,
-     "R": 6,
-     "ER": 6,
-     "valid": true
-    },
-    {
-     "year": 2025,
-     "team": "ロッテ",
-     "team_id": "M",
-     "G": 21,
-     "GS": 0,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 0,
-     "L": 1,
-     "SV": 0,
-     "HLD": 0,
-     "BF": 108,
-     "outs": 71,
-     "H": 24,
-     "HR": 6,
-     "BB": 13,
-     "IBB": 0,
-     "HBP": 0,
-     "SO": 19,
-     "WP": 2,
-     "BK": 0,
-     "R": 14,
-     "ER": 14,
-     "valid": true
-    }
-   ]
-  },
   "西野勇士": {
    "revid": 110337504,
    "title": "西野勇士",
@@ -45446,7 +45357,7 @@
    ]
   },
   "川瀬堅斗": {
-   "revid": 111825172,
+   "revid": 111831916,
    "title": "川瀬堅斗",
    "updatedThrough": 2025,
    "batting": null,
