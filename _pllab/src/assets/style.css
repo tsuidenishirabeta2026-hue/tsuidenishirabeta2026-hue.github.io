@@ -295,5 +295,6 @@ article.column li { margin: 6px 0; }
 article.column hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
 article.column .table-scroll { margin: 12px 0; }
 article.column th, article.column td { white-space: normal; }
-article.column td.l, article.column th.l { min-width: 7em; }
+article.column td.l, article.column th.l { min-width: 6.5em; }
+article.column td.n { white-space: nowrap; }
 article.column table { font-size: .86rem; }
