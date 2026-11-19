@@ -37,7 +37,7 @@
 確認方法: Google アナリティクスの「レポート」→「集客」→「トラフィック獲得」で、「x / social」の行を見る。
 
 ## ハッシュタグ
-1投稿に1〜2個まで。
+毎回 `#パリーグ` `#プロ野球` を付け、選手・球団の話題ならその球団のタグも足す（1投稿に2〜3個まで）。
 - 全体: `#パリーグ` `#プロ野球`
 - 球団（公式に使われているもの）: 西武 `#seibulions`／日本ハム `#lovefighters`／楽天 `#RakutenEagles`／ロッテ `#chibalotte`／ソフトバンク `#sbhawks`／オリックス `#Bs2026`（年が変わったら更新）
 
@@ -55,7 +55,7 @@
 
 コラムで数字を並べました👇
 https://pacific-labo.com/columns/2026-11-taira.html?utm_source=x&utm_medium=social
-#seibulions
+#パリーグ #プロ野球 #seibulions
 ```
 
 ### 2. コラム紹介: 栗原陵矢
@@ -65,7 +65,7 @@ https://pacific-labo.com/columns/2026-11-taira.html?utm_source=x&utm_medium=soci
 40本塁打・118打点の二冠は「長打だけが上乗せされた」結果でした。
 
 https://pacific-labo.com/columns/2026-11-kurihara.html?utm_source=x&utm_medium=social
-#sbhawks
+#パリーグ #プロ野球 #sbhawks
 ```
 
 ### 3. サイト紹介（固定ポスト向け）
@@ -83,7 +83,7 @@ https://pacific-labo.com/?utm_source=x&utm_medium=social
 
 それぞれの直近4年の数字は、選手ページで見られます👇
 https://pacific-labo.com/players/index.html?utm_source=x&utm_medium=social
-#パリーグ
+#パリーグ #プロ野球
 ```
 
 ### 5. 数字ネタ: レイエス
@@ -95,7 +95,7 @@ OPS .861 → .946
 
 本塁打は2年続けて32本。三振を減らして、打率を大きく上げました。
 https://pacific-labo.com/players/w31415d9ae2.html?utm_source=x&utm_medium=social
-#lovefighters
+#パリーグ #プロ野球 #lovefighters
 ```
 
 ### 6. 数字ネタ: 北山亘基
@@ -105,7 +105,7 @@ https://pacific-labo.com/players/w31415d9ae2.html?utm_source=x&utm_medium=social
 一方で防御率は1.63→2.56、被本塁打は7本→14本に増えました。
 
 https://pacific-labo.com/players/w09c6dbb67a.html?utm_source=x&utm_medium=social
-#lovefighters
+#パリーグ #プロ野球 #lovefighters
 ```
 
 ### 7. 数字ネタ: 宗佑磨
@@ -115,7 +115,7 @@ FA権の行使を表明した宗佑磨（オリックス）。
 打席数も541と4年で最多でした。
 
 https://pacific-labo.com/players/w00ecce47b3.html?utm_source=x&utm_medium=social
-#Bs2026
+#パリーグ #プロ野球 #Bs2026
 ```
 
 ### 8. 数字ネタ: 髙橋光成
@@ -125,7 +125,7 @@ https://pacific-labo.com/players/w00ecce47b3.html?utm_source=x&utm_medium=social
 WHIP 1.08は直近4年で最も良い数字でした。
 
 https://pacific-labo.com/players/w9d48a91b49.html?utm_source=x&utm_medium=social
-#seibulions
+#パリーグ #プロ野球 #seibulions
 ```
 
 ### 9. 2026年の個人タイトル
@@ -138,7 +138,7 @@ https://pacific-labo.com/players/w9d48a91b49.html?utm_source=x&utm_medium=social
 最多勝 北山亘基・エスピノーザ 13勝
 
 https://pacific-labo.com/?utm_source=x&utm_medium=social
-#パリーグ
+#パリーグ #プロ野球
 ```
 
 ### 10. 最終順位
@@ -152,7 +152,7 @@ https://pacific-labo.com/?utm_source=x&utm_medium=social
 6 楽天 58勝84敗1分
 
 https://pacific-labo.com/?utm_source=x&utm_medium=social
-#パリーグ
+#パリーグ #プロ野球
 ```
 
 ### 11. 移籍・契約ページの紹介
@@ -161,7 +161,7 @@ https://pacific-labo.com/?utm_source=x&utm_medium=social
 パ・リーグ6球団のオフの動きを、球団別・種類別に絞り込めるページを毎朝更新しています。
 
 https://pacific-labo.com/moves.html?utm_source=x&utm_medium=social
-#パリーグ
+#パリーグ #プロ野球
 ```
 
 ### 12. 数字ネタ: 小島和哉
@@ -171,5 +171,5 @@ FA権の行使を表明した小島和哉（ロッテ）。
 一方で投球回は163.1→145.0→117.1と2年続けて減っています。
 
 https://pacific-labo.com/players/w38a395665d.html?utm_source=x&utm_medium=social
-#chibalotte
+#パリーグ #プロ野球 #chibalotte
 ```
