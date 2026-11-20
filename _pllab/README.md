@@ -156,7 +156,7 @@ CSV を Web 上（自分のスプレッドシートの CSV 公開 URL、契約�
 - 計測: `config/site.json` の `analytics` に `"provider": "ga4", "id": "G-XXXXXXX"`（Google アナリティクス 4）を入れると、全ページのページビューと、
   `player_view`（選手ページの閲覧。player_id・player_name 付き）、`note_click`（note へのクリック。note_id・page_type・player_id 付き）を送信する。
   Umami を使う場合は `"provider": "umami", "id": "<Website ID>"`。設定が無ければ何も送信しない
-- 記事の下書き: `docs/articles/`。利用条件: `docs/DATA_RIGHTS.md`
+- 記事の下書き: 非公開リポジトリ `pacific-labo-analytics` の `drafts/`（有料部分を含むため、このリポジトリには置かない）。利用条件: `docs/DATA_RIGHTS.md`
 
 ## コラム（独自記事）
 
