@@ -1,14 +1,14 @@
 {
- "last_attempt_at": "2026-11-19T22:36:56.203Z",
- "last_success_at": "2026-11-19T22:36:56.203Z",
+ "last_attempt_at": "2026-11-20T15:09:42.871Z",
+ "last_success_at": "2026-11-20T15:09:42.871Z",
  "last_result": "updated",
  "last_error": null,
  "last_error_details": [],
  "warnings": [],
- "data_hash": "5ce1efe2183ea0ce043f3b22c77a77ecab37a1be1706f781007856d6528a9b99",
+ "data_hash": "af59d92dd2c616ec7f33f9c1be2814d16782dacbd75915231b248bc7f2cdcedf",
  "consecutive_failures": 0,
  "season": 2026,
- "as_of_date": "2026-11-20",
+ "as_of_date": "2026-11-21",
  "phase": "offseason",
  "demo": false
 }

@@ -1,6 +1,6 @@
 {
- "hash": "a5ff7e47990a3827801e2ef220765ffc6c310073390aa6defdb17ebb3966acb7",
- "saved_at": "2026-11-19T22:36:56.880Z",
+ "hash": "6a472bb106300ef90c740c8446d7d389447dd9c58cd57fbb2fb97a7fcbf1afea",
+ "saved_at": "2026-11-20T15:09:43.226Z",
  "season": 2026,
  "articles": {
   "矢澤宏太": {
@@ -10384,7 +10384,7 @@
    "pitching": null
   },
   "岸孝之": {
-   "revid": 111749080,
+   "revid": 111837232,
    "title": "岸孝之",
    "updatedThrough": 2025,
    "batting": null,
@@ -13040,11 +13040,39 @@
    ]
   },
   "九谷瑠": {
-   "revid": 111782457,
+   "revid": 111840451,
    "title": "九谷瑠",
-   "updatedThrough": null,
+   "updatedThrough": 2026,
    "batting": null,
-   "pitching": null
+   "pitching": [
+    {
+     "year": 2026,
+     "team": "楽天",
+     "team_id": "E",
+     "G": 39,
+     "GS": 0,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 2,
+     "L": 1,
+     "SV": 0,
+     "HLD": 18,
+     "BF": 168,
+     "outs": 125,
+     "H": 27,
+     "HR": 2,
+     "BB": 15,
+     "IBB": 2,
+     "HBP": 2,
+     "SO": 44,
+     "WP": 3,
+     "BK": 0,
+     "R": 13,
+     "ER": 9,
+     "valid": true
+    }
+   ]
   },
   "藤平尚真": {
    "revid": 111210804,
@@ -16962,7 +16990,7 @@
    "pitching": null
   },
   "宗山塁": {
-   "revid": 111801983,
+   "revid": 111833176,
    "title": "宗山塁",
    "updatedThrough": 2026,
    "batting": [
@@ -17020,7 +17048,7 @@
    "pitching": null
   },
   "浅村栄斗": {
-   "revid": 111778740,
+   "revid": 111836251,
    "title": "浅村栄斗",
    "updatedThrough": 2025,
    "batting": [
@@ -19892,9 +19920,9 @@
    "pitching": null
   },
   "小郷裕哉": {
-   "revid": 110310545,
+   "revid": 111840311,
    "title": "小郷裕哉",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2019,
@@ -20069,6 +20097,31 @@
      "HBP": 1,
      "SO": 54,
      "GDP": 0,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "楽天",
+     "team_id": "E",
+     "G": 59,
+     "PA": 178,
+     "AB": 163,
+     "R": 13,
+     "H": 37,
+     "D": 6,
+     "T": 1,
+     "HR": 1,
+     "TB": 48,
+     "RBI": 9,
+     "SB": 8,
+     "CS": 0,
+     "SH": 1,
+     "SF": 0,
+     "BB": 13,
+     "IBB": 0,
+     "HBP": 1,
+     "SO": 45,
+     "GDP": 5,
      "valid": true
     }
    ],
@@ -26344,7 +26397,7 @@
    "pitching": null
   },
   "横田蒼和": {
-   "revid": 111746088,
+   "revid": 111839799,
    "title": "横田蒼和",
    "updatedThrough": null,
    "batting": null,
@@ -29120,7 +29173,7 @@
    "pitching": null
   },
   "岸潤一郎": {
-   "revid": 111648991,
+   "revid": 111832252,
    "title": "岸潤一郎",
    "updatedThrough": 2026,
    "batting": [
@@ -32548,7 +32601,7 @@
    ]
   },
   "高野脩汰": {
-   "revid": 111655687,
+   "revid": 111837933,
    "title": "高野脩汰",
    "updatedThrough": 2026,
    "batting": null,
@@ -34789,41 +34842,6 @@
      "BK": 0,
      "R": 9,
      "ER": 6,
-     "valid": true
-    }
-   ]
-  },
-  "早坂響": {
-   "revid": 111501016,
-   "title": "早坂響",
-   "updatedThrough": 2026,
-   "batting": null,
-   "pitching": [
-    {
-     "year": 2025,
-     "team": "ロッテ",
-     "team_id": "M",
-     "G": 9,
-     "GS": 0,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 0,
-     "L": 0,
-     "SV": 0,
-     "HLD": 0,
-     "BF": 51,
-     "outs": 33,
-     "H": 12,
-     "HR": 1,
-     "BB": 8,
-     "IBB": 0,
-     "HBP": 0,
-     "SO": 4,
-     "WP": 2,
-     "BK": 0,
-     "R": 9,
-     "ER": 9,
      "valid": true
     }
    ]
@@ -37145,7 +37163,7 @@
    "pitching": null
   },
   "櫻井ユウヤ": {
-   "revid": 111425711,
+   "revid": 111834146,
    "title": "櫻井ユウヤ",
    "updatedThrough": null,
    "batting": null,
@@ -45357,7 +45375,7 @@
    ]
   },
   "川瀬堅斗": {
-   "revid": 111831916,
+   "revid": 111835035,
    "title": "川瀬堅斗",
    "updatedThrough": 2025,
    "batting": null,
@@ -45578,9 +45596,9 @@
    ]
   },
   "若月健矢": {
-   "revid": 111731076,
+   "revid": 111839744,
    "title": "若月健矢",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2015,
@@ -45855,6 +45873,31 @@
      "HBP": 7,
      "SO": 61,
      "GDP": 7,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "オリックス",
+     "team_id": "B",
+     "G": 114,
+     "PA": 342,
+     "AB": 298,
+     "R": 21,
+     "H": 66,
+     "D": 15,
+     "T": 1,
+     "HR": 2,
+     "TB": 89,
+     "RBI": 19,
+     "SB": 0,
+     "CS": 0,
+     "SH": 19,
+     "SF": 1,
+     "BB": 23,
+     "IBB": 2,
+     "HBP": 1,
+     "SO": 64,
+     "GDP": 8,
      "valid": true
     }
    ],
@@ -47974,7 +48017,7 @@
    "pitching": null
   },
   "紅林弘太郎": {
-   "revid": 111764165,
+   "revid": 111839506,
    "title": "紅林弘太郎",
    "updatedThrough": 2026,
    "batting": [
@@ -58101,7 +58144,7 @@
    "pitching": null
   },
   "緒方理貢": {
-   "revid": 111714750,
+   "revid": 111836026,
    "title": "緒方理貢",
    "updatedThrough": 2025,
    "batting": [
@@ -58474,7 +58517,7 @@
    "pitching": null
   },
   "ジョナサン・モレノ": {
-   "revid": 111827691,
+   "revid": 111837014,
    "title": "福岡ソフトバンクホークスの選手一覧",
    "updatedThrough": null,
    "batting": null,
