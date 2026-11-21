@@ -1,6 +1,6 @@
 {
- "hash": "081d107d5e10a0b6be4893c9a7bb917d75a35a9c63ca002082c4445f5db60b47",
- "saved_at": "2026-11-21T13:05:29.016Z",
+ "hash": "a5a79309ff96e637f4b14a7f3b24bf7cc316a7e4507c05cc348a5d4c51466107",
+ "saved_at": "2026-11-21T22:26:07.181Z",
  "data": {
   "schema": 1,
   "source": {
@@ -283,14 +283,14 @@
    "2026": {
     "meta": {
      "season": 2026,
-     "as_of_date": "2026-11-21",
+     "as_of_date": "2026-11-22",
      "phase": "offseason",
      "champion_team_id": "H",
      "source_name": "Wikipedia 日本語版（CC BY-SA 4.0）",
      "source_url": "https://ja.wikipedia.org/wiki/2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83",
      "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
      "stats_level": "none",
-     "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-21 取得、支配下・育成を含む）です。",
+     "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-22 取得、支配下・育成を含む）です。",
      "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111848086）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111823378）、Template:埼玉西武ライオンズの選手・スタッフ（版 111829607）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111835881）、Template:オリックス・バファローズの選手・スタッフ（版 111845223）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111828073）、2026年の日本プロ野球（版 111848070）"
     },
     "titles": [
