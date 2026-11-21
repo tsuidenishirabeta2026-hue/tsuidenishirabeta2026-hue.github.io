@@ -298,3 +298,13 @@ article.column th, article.column td { white-space: normal; }
 article.column td.l, article.column th.l { min-width: 6.5em; }
 article.column td.n { white-space: nowrap; }
 article.column table { font-size: .86rem; }
+
+/* トップの「今日の数字」 */
+.today-card a { display: grid; gap: 2px; margin: 12px 0; padding: 12px 14px; border: 2px solid #f2b01e; background: #fff7e0; border-radius: 14px; text-decoration: none; color: var(--ink); }
+.today-kicker { font-size: .8rem; font-weight: 800; color: #9a6a00; }
+.today-name { font-size: .95rem; }
+.today-num { font-size: 1.3rem; font-weight: 800; }
+.today-num b { color: var(--good); }
+.today-sub { font-size: .82rem; color: var(--ink-3); }
+.today-sub u { color: var(--accent); }
+@media (prefers-color-scheme: dark) { .today-card a { background: #3a2f12; border-color: #b07800; } .today-kicker { color: #f2c14e; } }

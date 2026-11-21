@@ -127,6 +127,11 @@
       team_id: a.getAttribute('data-team-id') || ''
     });
   });
+  // トップの「今日の数字」「新着の記事」のクリック（top_today_click / top_new_click）
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-top-slot]');
+    if (a) track('top_' + a.getAttribute('data-top-slot') + '_click', {});
+  });
   // 選手ページの閲覧（ページビューに加え、選手IDつきのイベントを送って集計しやすくする）
   var b = document.body;
   if (b && b.getAttribute('data-page-type') === 'player') {
