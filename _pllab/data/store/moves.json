@@ -1,15 +1,76 @@
 {
- "hash": "99d7c9a645728bdd367245052d83f69a88dc3a9bef5ecf3afbdff68bd970610e",
- "saved_at": "2026-11-20T15:10:14.072Z",
+ "hash": "86e67acd8603ca7b02daa971cc4ea9ff2c0764ff06cec1f285bc9f280502d2b1",
+ "saved_at": "2026-11-21T13:06:05.489Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111839107,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111839107",
-   "count": 236
+   "revid": 111848070,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111848070",
+   "count": 239
   }
  ],
  "events": [
+  {
+   "date": "2026-11-21",
+   "text": "オリックス・バファローズは、ゼネラルマネージャーを務めていた福良淳一が、12月31日付で退任すると発表。",
+   "details": [],
+   "teams": [
+    "B"
+   ],
+   "categories": [
+    "その他"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611210000447.html",
+     "site": "日刊スポーツ",
+     "date": "2026-11-21"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "横浜DeNAベイスターズは、オリックスから国内FA権を行使していた宗佑磨を獲得したことを発表。",
+   "details": [],
+   "teams": [
+    "B"
+   ],
+   "categories": [
+    "FA",
+    "獲得・入団・契約"
+   ],
+   "sources": [
+    {
+     "url": "https://www.sponichi.co.jp/baseball/news/2026/11/21/articles/20261121s00001173085000c.html",
+     "site": "スポニチアネックス",
+     "date": "2026-11-21"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "北海道日本ハムファイターズは、水野達稀の背番号を43→6に、田宮裕涼の背番号を64→9に変更することを発表。",
+   "details": [],
+   "teams": [
+    "F"
+   ],
+   "categories": [
+    "背番号"
+   ],
+   "sources": [
+    {
+     "url": "https://baseballking.jp/ns/713204/",
+     "site": "BASEBALL KING",
+     "date": "2026-11-21"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
   {
    "date": "2026-11-20",
    "text": "北海道日本ハムファイターズから戦力外通告を受けていた山口アタルが、今季限りでの現役引退を表明。今後は、フィラデルフィア・フィリーズのスカウトに就任する予定。",

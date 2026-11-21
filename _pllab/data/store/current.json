@@ -1,6 +1,6 @@
 {
- "hash": "af59d92dd2c616ec7f33f9c1be2814d16782dacbd75915231b248bc7f2cdcedf",
- "saved_at": "2026-11-20T15:09:42.871Z",
+ "hash": "081d107d5e10a0b6be4893c9a7bb917d75a35a9c63ca002082c4445f5db60b47",
+ "saved_at": "2026-11-21T13:05:29.016Z",
  "data": {
   "schema": 1,
   "source": {
@@ -291,7 +291,7 @@
      "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
      "stats_level": "none",
      "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-21 取得、支配下・育成を含む）です。",
-     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111816484）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111823378）、Template:埼玉西武ライオンズの選手・スタッフ（版 111829607）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111835881）、Template:オリックス・バファローズの選手・スタッフ（版 111704887）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111828073）、2026年の日本プロ野球（版 111839107）"
+     "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111848086）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111823378）、Template:埼玉西武ライオンズの選手・スタッフ（版 111829607）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111835881）、Template:オリックス・バファローズの選手・スタッフ（版 111845223）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111828073）、2026年の日本プロ野球（版 111848070）"
     },
     "titles": [
      {
@@ -1076,6 +1076,21 @@
       "roster_type": "支配下"
      },
      {
+      "player_id": "w209fc01126",
+      "team_id": "F",
+      "name": "田宮裕涼",
+      "name_kana": null,
+      "number": "9",
+      "position": "捕手",
+      "throws": null,
+      "bats": null,
+      "birth_date": null,
+      "from_date": null,
+      "to_date": null,
+      "wiki_title": "田宮裕涼",
+      "roster_type": "支配下"
+     },
+     {
       "player_id": "w50b8f8678e",
       "team_id": "F",
       "name": "清水優心",
@@ -1151,21 +1166,6 @@
       "roster_type": "支配下"
      },
      {
-      "player_id": "w209fc01126",
-      "team_id": "F",
-      "name": "田宮裕涼",
-      "name_kana": null,
-      "number": "64",
-      "position": "捕手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "田宮裕涼",
-      "roster_type": "支配下"
-     },
-     {
       "player_id": "w0dec3596d5",
       "team_id": "F",
       "name": "上川畑大悟",
@@ -1193,6 +1193,21 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "野村佑希",
+      "roster_type": "支配下"
+     },
+     {
+      "player_id": "w3b421b4ff2",
+      "team_id": "F",
+      "name": "水野達稀",
+      "name_kana": null,
+      "number": "6",
+      "position": "内野手",
+      "throws": null,
+      "bats": null,
+      "birth_date": null,
+      "from_date": null,
+      "to_date": null,
+      "wiki_title": "水野達稀",
       "roster_type": "支配下"
      },
      {
@@ -1238,21 +1253,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "有薗直輝",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "w3b421b4ff2",
-      "team_id": "F",
-      "name": "水野達稀",
-      "name_kana": null,
-      "number": "43",
-      "position": "内野手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "水野達稀",
       "roster_type": "支配下"
      },
      {
@@ -6128,21 +6128,6 @@
       "from_date": null,
       "to_date": null,
       "wiki_title": "西野真弘",
-      "roster_type": "支配下"
-     },
-     {
-      "player_id": "w00ecce47b3",
-      "team_id": "B",
-      "name": "宗佑磨",
-      "name_kana": null,
-      "number": "6",
-      "position": "内野手",
-      "throws": null,
-      "bats": null,
-      "birth_date": null,
-      "from_date": null,
-      "to_date": null,
-      "wiki_title": "宗佑磨",
       "roster_type": "支配下"
      },
      {
