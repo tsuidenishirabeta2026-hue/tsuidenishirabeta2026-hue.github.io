@@ -6,6 +6,8 @@ import { movesList, isTransaction } from './page-moves.js';
 import { noteBlock } from './notes.js';
 import { columnCards } from './page-columns.js';
 import { biggestRisers, YOY_MIN_PA, YOY_MIN_OUTS } from '../history.js';
+import { pickToday, feedItems } from '../today.js';
+import { trackedUrl } from '../notes.js';
 
 function risersSection(ctx, root) {
   if (!ctx.history) return '';
@@ -181,6 +183,8 @@ export function renderIndex(ctx) {
   const body = `
 <h1>パ・リーグ ${S.meta.season}年 成績</h1>
 <p class="lead">${S.statsAvailable ? '順位表・主要ランキング・最近好調な選手をまとめて確認できます。' : '順位表・個人タイトル・移籍や契約の動きをまとめて確認できます。'}各指標名をタップすると説明が表示されます。</p>
+${todayCard(ctx, root)}
+${newsSection(ctx, root)}
 ${statusBlock(ctx)}
 <h2 id="standings">順位表</h2>
 ${standingsTable(S, root)}
@@ -192,7 +196,6 @@ ${leadersSection(S, root, th)}
 <h2 id="hot">最近好調な選手</h2>
 ${hotSection(S, root, th)}` : titlesSection(S, root) + risersSection(ctx, root)}
 ${S.meta.phase === 'offseason' || S.meta.phase === 'preseason' ? '' : movesSection(ctx, root)}
-${ctx.columns?.length ? `<h2 id="columns">コラム</h2>${columnCards(ctx, ctx.columns, root, { limit: 3 })}<p><a href="${root}columns/index.html">コラムの一覧へ</a></p>` : ''}
 ${noteBlock(ctx, { pageType: 'top', heading: 'note で読む解説記事' })}
 <h2 id="teams">球団別ページ</h2>
 <div class="team-cards">${teamCards}</div>
@@ -200,6 +203,33 @@ ${noteBlock(ctx, { pageType: 'top', heading: 'note で読む解説記事' })}
 <p><a href="players/index.html"><b>${S.statsAvailable ? '選手一覧・成績表へ' : '所属選手一覧へ'}</b></a>（名前検索、球団・守備位置${S.statsAvailable ? '・年度の絞り込み、並べ替え' : 'の絞り込み'}）</p>
 `;
   return page({ title: '', root, current: 'index', body, ctx, pageMeta: { pageType: 'top' } });
+}
+
+/** トップの「今日の数字」（押された回数を top_today_click として計測） */
+export function todayCard(ctx, root) {
+  const t = pickToday(ctx, ctx.todayPicks || []);
+  if (!t) return '';
+  const team = ctx.S.teams.get(t.player.info.team_id);
+  return `<section class="today-card" aria-label="今日の数字"><a href="${root}players/${esc(t.player.id)}.html" data-top-slot="today">
+<span class="today-kicker">今日の数字</span>
+<span class="today-name">${esc(t.player.name)}（${esc(team?.short_name || '')}）</span>
+<span class="today-num">${esc(t.label)} ${esc(t.from)} → <b>${esc(t.to)}</b></span>
+<span class="today-sub">${t.comment ? `${esc(t.comment)} ` : ''}<u>選手ページへ</u></span>
+</a></section>`;
+}
+
+/** トップの「新着の記事」（コラムと note。押された回数を top_new_click として計測） */
+export function newsSection(ctx, root) {
+  const items = feedItems(ctx).slice(0, 3);
+  if (!items.length) return '';
+  const li = items
+    .map((x) =>
+      x.kind === 'column'
+        ? `<li><a class="column-link" href="${root}columns/${esc(x.slug)}.html" data-top-slot="new"><span class="small muted">${esc(dateJa(x.date))}・コラム</span><b>${esc(x.title)}</b></a></li>`
+        : `<li><a class="column-link note-link" href="${esc(trackedUrl(x.note.url, { pageType: 'top' }))}" rel="noopener" target="_blank" data-top-slot="new" data-note-id="${esc(x.note.id)}" data-note-type="${esc(x.note.type)}" data-page-type="top"><span class="small muted">${esc(dateJa(x.date))}・note ${x.note.type === 'paid' ? `（有料 ${x.note.price.toLocaleString('ja-JP')}円）` : '（無料）'}</span><b>${esc(x.title)}</b></a></li>`,
+    )
+    .join('');
+  return `<h2 id="columns">新着の記事</h2><ul class="note-list">${li}</ul><p><a href="${root}columns/index.html">コラムの一覧へ</a></p>`;
 }
 
 export function titlesSection(S, root) {

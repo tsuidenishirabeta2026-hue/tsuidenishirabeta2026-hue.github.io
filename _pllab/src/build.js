@@ -18,6 +18,7 @@ import { renderAbout } from './render/page-about.js';
 import { renderMoves } from './render/page-moves.js';
 import { renderPrivacy } from './render/page-privacy.js';
 import { loadNotes } from './notes.js';
+import { loadTodayPicks } from './today.js';
 import { buildHistory } from './history.js';
 import { loadColumns, renderColumnIndex, renderColumn } from './render/page-columns.js';
 import { ROOT } from './config.js';
@@ -103,6 +104,7 @@ export async function runBuild({ config = loadConfig() } = {}) {
   for (const e of nl.errors) console.warn(`⚠ ${e}`);
   ctx.notes = nl.notes;
   ctx.columns = await loadColumns(join(ROOT, 'content', 'columns'));
+  ctx.todayPicks = await loadTodayPicks(join(config.inputDir, 'today.csv'));
   const ps = await readJson(join(config.storeDir, 'player-stats.json'));
   ctx.history = ps ? buildHistory(ps, [...S.players.values()], S.meta.season) : null;
   let pages = 0;

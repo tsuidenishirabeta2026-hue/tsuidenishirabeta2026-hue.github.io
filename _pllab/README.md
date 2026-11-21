@@ -158,6 +158,12 @@ CSV を Web 上（自分のスプレッドシートの CSV 公開 URL、契約�
   Umami を使う場合は `"provider": "umami", "id": "<Website ID>"`。設定が無ければ何も送信しない
 - 記事の下書き: 非公開リポジトリ `pacific-labo-analytics` の `drafts/`（有料部分を含むため、このリポジトリには置かない）。利用条件: `docs/DATA_RIGHTS.md`
 
+## トップの「今日の数字」と「新着の記事」
+
+- `data/input/today.csv`（`date,player_id,label,from,to,comment`）に1日1行。今日（日本時間）以前で最も新しい行を、トップの「今日の数字」に出す。3日以上前の行しかなければ、最新の記事の選手から前年比で最も伸びた指標を自動で選ぶ
+- 「新着の記事」は、コラムと公開済みの note 記事を日付順に3件（同じ題名ならコラムを優先）
+- 計測: 「今日の数字」のクリックは `top_today_click`、「新着の記事」のクリックは `top_new_click` を送る
+
 ## コラム（独自記事）
 
 - `content/columns/*.md` に1記事1ファイルで書く。先頭に `slug`（URL 用の半角英数字とハイフン）・`title`・`date`・`description`・`teams`（F/E/L/M/B/H を / 区切り）・`players`（選手ID を / 区切り）を書く
