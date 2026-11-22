@@ -1,15 +1,36 @@
 {
- "hash": "86e67acd8603ca7b02daa971cc4ea9ff2c0764ff06cec1f285bc9f280502d2b1",
- "saved_at": "2026-11-21T13:06:05.489Z",
+ "hash": "2a2c46c261c29765470e9c5c898c8730a96704c8d9673cc879f12fee3538831f",
+ "saved_at": "2026-11-22T22:31:07.919Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111848070,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111848070",
-   "count": 239
+   "revid": 111865943,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111865943",
+   "count": 240
   }
  ],
  "events": [
+  {
+   "date": "2026-11-22",
+   "text": "東北楽天ゴールデンイーグルスは、DeNAを戦力外となっていた堀岡隼人を育成契約で獲得したことを発表。",
+   "details": [],
+   "teams": [
+    "E"
+   ],
+   "categories": [
+    "戦力外・退団",
+    "獲得・入団・契約"
+   ],
+   "sources": [
+    {
+     "url": "https://news.ntv.co.jp/category/sports/30d0de5abdd0465f844932e4fa911597",
+     "site": "日テレNEWS NNN",
+     "date": "2026-11-22"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
   {
    "date": "2026-11-21",
    "text": "オリックス・バファローズは、ゼネラルマネージャーを務めていた福良淳一が、12月31日付で退任すると発表。",
