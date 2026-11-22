@@ -10,6 +10,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { FILES } from '../schema.js';
+import { LEAGUE } from '../league.js';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -27,7 +28,7 @@ export function csvUrlSource({ baseUrl, token, cacheDir, fetchImpl = globalThis.
       cached = JSON.parse(await readFile(metaPath, 'utf8'));
     } catch {}
 
-    const headers = { 'User-Agent': 'pl-lab-updater/1.0 (+unofficial fan site)' };
+    const headers = { 'User-Agent': `${LEAGUE.updaterName}/1.0 (+unofficial fan site)` };
     if (token) headers.Authorization = `Bearer ${token}`;
     if (cached?.etag) headers['If-None-Match'] = cached.etag;
     if (cached?.lastModified) headers['If-Modified-Since'] = cached.lastModified;

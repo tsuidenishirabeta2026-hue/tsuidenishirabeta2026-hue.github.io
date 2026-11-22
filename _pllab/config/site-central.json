@@ -1,0 +1,42 @@
+{
+  "siteName": "セ・リーグ成績ラボ",
+  "league": "central",
+  "source": "wikipedia",
+  "seasons": null,
+  "inputDir": "data/central/input",
+  "demoDir": "data/central/demo",
+  "storeDir": "data/central/store",
+  "cacheDir": "data/central/cache",
+  "logFile": "data/central/logs/update-log.jsonl",
+  "columnsDir": "content/central/columns",
+  "outDir": "../cl-lab",
+  "basePath": "/cl-lab/",
+  "staleHours": 30,
+  "thresholds": {
+    "smallSamplePA": 50,
+    "smallSampleOuts": 60,
+    "compareMinPA": 100,
+    "compareMinOuts": 90,
+    "hotMinPA": 25,
+    "hotMinOuts": 15,
+    "hotGames": 10,
+    "rankingRows": 5
+  },
+  "analytics": {
+    "provider": "ga4",
+    "id": "",
+    "umamiScript": "https://cloud.umami.is/script.js",
+    "_説明": "セ・リーグ版専用の GA4 測定ID（G-XXXX）を入れる。パ・リーグ版（G-WSNC046WSL）とは別のプロパティにする。空なら計測しない"
+  },
+  "note": {
+    "profileUrl": "",
+    "_説明": "セ・リーグ版専用の note のクリエイターページURL。空なら note への導線は出さない"
+  },
+  "repo": "tsuidenishirabeta2026-hue/tsuidenishirabeta2026-hue.github.io",
+  "siteUrl": "https://central-labo.com",
+  "_siteUrl説明": "セ・リーグ版の独自ドメイン（末尾の / なし）",
+  "adsense": {
+    "client": "ca-pub-4831721034846373",
+    "_説明": "運営者IDはパ・リーグ版と同じ。新しいドメインは AdSense の「サイト」で追加して審査を受ける必要がある"
+  }
+}

@@ -2,3 +2,4 @@ data/cache/
 node_modules/
 *.tmp-*
 .update.lock
+data/central/cache/

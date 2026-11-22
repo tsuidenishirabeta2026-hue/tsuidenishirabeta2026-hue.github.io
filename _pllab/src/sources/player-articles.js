@@ -6,26 +6,18 @@
 // 各行は検算（打席 = 打数+四球+死球+犠打+犠飛+打撃妨害等、防御率の再計算）を行い、合わない行は使わない。
 import { parseWikitable, firstLinkTarget } from './wikitable.js';
 import { ipToOuts } from '../metrics.js';
+import { LEAGUE } from '../league.js';
 
 const BAT_KEYS = ['G', 'PA', 'AB', 'R', 'H', 'D', 'T', 'HR', 'TB', 'RBI', 'SB', 'CS', 'SH', 'SF', 'BB', 'IBB', 'HBP', 'SO', 'GDP'];
 const PIT_KEYS = ['G', 'GS', 'CG', 'SHO', 'NBB', 'W', 'L', 'SV', 'HLD', 'WPCT', 'BF', 'IP', 'H', 'HR', 'BB', 'IBB', 'HBP', 'SO', 'WP', 'BK', 'R', 'ER'];
 
-export const PL_TEAM_NAMES = {
-  F: ['北海道日本ハムファイターズ', '日本ハム'],
-  E: ['東北楽天ゴールデンイーグルス', '楽天'],
-  L: ['埼玉西武ライオンズ', '西武'],
-  M: ['千葉ロッテマリーンズ', 'ロッテ'],
-  B: ['オリックス・バファローズ', 'オリックス'],
-  H: ['福岡ソフトバンクホークス', 'ソフトバンク'],
-};
+// 球団名（正式名・略称・旧称など）はリーグ設定から。完全一致で判定する
+export const PL_TEAM_NAMES = Object.fromEntries(LEAGUE.teams.map((t) => [t.team_id, [t.name, t.short_name, ...(t.aliases || [])]]));
 
-export function teamIdOf(cell) {
+export function teamIdOf(cell, league = LEAGUE) {
   if (!cell) return null;
   const target = firstLinkTarget(cell.raw);
-  for (const [id, names] of Object.entries(PL_TEAM_NAMES)) {
-    if (names.includes(cell.text) || (target && names.includes(target))) return id;
-  }
-  return null;
+  return league.byName.get(cell.text) || (target && league.byName.get(target)) || null;
 }
 
 function num(s) {
@@ -72,7 +64,7 @@ function rowsOf(grid, width) {
   return out;
 }
 
-export function parseBatting(text) {
+export function parseBatting(text, league = LEAGUE) {
   const grid = tableAfter(text, '年度別打撃成績');
   if (!grid) return null;
   const rows = [];
@@ -84,12 +76,12 @@ export function parseBatting(text) {
     // 検算: 打席 ≧ 打数+四球+死球+犠打+犠飛（差は打撃妨害・走塁妨害で通常0〜2）、塁打の一致
     const paDiff = ok ? v.PA - (v.AB + v.BB + v.HBP + v.SH + v.SF) : null;
     const tbOk = ok && v.TB !== null ? v.TB === v.H + v.D + 2 * v.T + 3 * v.HR : false;
-    rows.push({ year: r.year, team, team_id: teamIdOf(r.teamCell), ...v, valid: ok && paDiff >= 0 && paDiff <= 3 && tbOk && v.H <= v.AB });
+    rows.push({ year: r.year, team, team_id: teamIdOf(r.teamCell, league), ...v, valid: ok && paDiff >= 0 && paDiff <= 3 && tbOk && v.H <= v.AB });
   }
   return rows;
 }
 
-export function parsePitching(text) {
+export function parsePitching(text, league = LEAGUE) {
   const grid = tableAfter(text, '年度別投手成績');
   if (!grid) return null;
   const rows = [];
@@ -113,7 +105,7 @@ export function parsePitching(text) {
       if (v.outs === 0) eraOk = era === null;
       else eraOk = era !== null && Math.abs((v.ER * 27) / v.outs - era) < 0.006;
     }
-    rows.push({ year: r.year, team: r.teamCell ? r.teamCell.text : '', team_id: teamIdOf(r.teamCell), ...v, valid: ok && eraOk && v.GS <= v.G });
+    rows.push({ year: r.year, team: r.teamCell ? r.teamCell.text : '', team_id: teamIdOf(r.teamCell, league), ...v, valid: ok && eraOk && v.GS <= v.G });
   }
   return rows;
 }
@@ -124,8 +116,8 @@ export function updatedFor(text, season, batting, pitching) {
   return [...(batting || []), ...(pitching || [])].some((r) => r.year === season);
 }
 
-export function parseArticle(text, season) {
-  const batting = parseBatting(text);
-  const pitching = parsePitching(text);
+export function parseArticle(text, season, league = LEAGUE) {
+  const batting = parseBatting(text, league);
+  const pitching = parsePitching(text, league);
   return { batting, pitching, updated: updatedFor(text, season, batting, pitching) };
 }

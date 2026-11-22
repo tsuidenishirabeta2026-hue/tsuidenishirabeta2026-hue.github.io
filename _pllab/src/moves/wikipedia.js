@@ -5,17 +5,12 @@
 //     改変・追加した文章も CC BY-SA 4.0 で提供する。
 //   - API の利用は可。サーバーに過度な負荷をかけないこと（1日1〜2リクエスト程度）。
 //   - 記事は有志が編集するため、誤り・記載漏れ・遅れがありうる（画面に明記する）。
+import { LEAGUE } from '../league.js';
+
 const API = 'https://ja.wikipedia.org/w/api.php';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-export const PL_TEAMS = [
-  { id: 'F', names: ['北海道日本ハムファイターズ', '日本ハム'] },
-  { id: 'E', names: ['東北楽天ゴールデンイーグルス', '楽天'] },
-  { id: 'L', names: ['埼玉西武ライオンズ', '西武'] },
-  { id: 'M', names: ['千葉ロッテマリーンズ', 'ロッテ'] },
-  { id: 'B', names: ['オリックス・バファローズ', 'オリックス'] },
-  { id: 'H', names: ['福岡ソフトバンクホークス', 'ソフトバンク'] },
-];
+export const PL_TEAMS = LEAGUE.movesTeams;
 
 // 分類（上から順に判定。1件に複数付くことがある）
 export const CATEGORIES = [
@@ -73,8 +68,10 @@ export function extractSources(raw) {
   return out;
 }
 
-export function teamsIn(text) {
-  return PL_TEAMS.filter((t) => t.names.some((n) => text.includes(n))).map((t) => t.id);
+export function teamsIn(text, league = LEAGUE) {
+  // 球団名と紛らわしい語（報道機関名・地名など）を除いてから探す
+  const t2 = (league.movesIgnore || []).reduce((acc, w) => acc.split(w).join(' '), text);
+  return league.movesTeams.filter((t) => t.names.some((n) => t2.includes(n))).map((t) => t.id);
 }
 
 export function categorize(text) {
@@ -83,10 +80,10 @@ export function categorize(text) {
 }
 
 /**
- * 「できごと」節を解析し、パ・リーグ球団に関係する出来事を返す。
+ * 「できごと」節を解析し、対象リーグの球団に関係する出来事を返す。
  * @returns {{ events: Array, months: number }}
  */
-export function parseEvents(wikitext, year) {
+export function parseEvents(wikitext, year, league = LEAGUE) {
   const start = wikitext.search(/^==\s*できごと\s*==/m);
   if (start < 0) return { events: [], months: 0 };
   const rest = wikitext.slice(start);
@@ -102,7 +99,7 @@ export function parseEvents(wikitext, year) {
       const text = cleanWikitext(cur.raw);
       const details = cur.subs.map(cleanWikitext).filter(Boolean);
       const all = [text, ...details].join(' ');
-      const teams = teamsIn(all);
+      const teams = teamsIn(all, league);
       if (text && teams.length) {
         events.push({
           date: `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`,

@@ -2,13 +2,14 @@
 //
 // 比較の決まり（画面にも表示する）
 //   - 前年比: 選手ごとに、記事に載っている最新年度 T と前年 T-1 を比べる
-//   - リーグ平均: 「現在パ・リーグ6球団に所属し、記事がその年まで更新されている選手」の、
-//     その年のパ・リーグ球団での成績を合計して計算（平均の平均ではない）
+//   - リーグ平均: 「現在そのリーグ（パ・リーグ／セ・リーグ）の6球団に所属し、記事がその年まで更新されている選手」の、
+//     その年の同リーグ球団での成績を合計して計算（平均の平均ではない）
 //     → 退団・引退した選手は含まれないため、実際のリーグ全体の平均とは異なる（限界として明示）
 //   - 記事の更新率が MIN_COVERAGE 未満の年は、偏りが大きいためリーグ平均を計算しない
 //   - 前年比の判定は、両年とも 100 打席以上（投手は 30 投球回以上）のときだけ行い、それ未満は参考扱い
 import { battingRates, pitchingRates, sumRows, has, outsToIp } from './metrics.js';
 import { rate3, fixed, pct, plain, signed } from './format.js';
+import { LEAGUE } from './league.js';
 
 export const MIN_COVERAGE = 0.7;
 export const YOY_MIN_PA = 100;
@@ -33,7 +34,7 @@ export const PIT_METRICS = [
   ['KBB', 'K/BB', (x) => plain(fixed, x, 2), true, 0.4],
 ];
 
-/** 選手の年度ごとの合計（同じ年に複数球団なら合算）。teamFilter でパ・リーグ球団分だけに絞れる */
+/** 選手の年度ごとの合計（同じ年に複数球団なら合算）。plOnly で対象リーグの球団分だけに絞れる */
 function yearTotals(rows, keys, plOnly = false) {
   const by = new Map();
   for (const r of rows || []) {
@@ -196,8 +197,8 @@ function shortComment({ isP, latest, cur, prev, enough, yoy, league }) {
     const rows = league.rows.filter((r) => r.better !== null);
     const best = rows.filter((r) => r.better >= r.minDiff).sort((a, b) => b.better / b.minDiff - a.better / a.minDiff)[0];
     const worst = rows.filter((r) => r.better <= -r.minDiff).sort((a, b) => a.better / a.minDiff - b.better / b.minDiff)[0];
-    if (best) out.push({ kind: '計算', text: `${league.year}年の${best.label}（${best.me}）は比較対象の平均（${best.lg}）より良い水準です。`, basis: `${league.year}年・${sizeText(isP, league.size)}。比較対象: 現所属のパ・リーグ選手${league.population}人の合計` });
-    if (worst) out.push({ kind: '計算', text: `${best ? '一方で' : `${league.year}年は`}${worst.label}（${worst.me}）が比較対象の平均（${worst.lg}）より悪く、数字の上での課題です。`, basis: `${league.year}年・${sizeText(isP, league.size)}・差 ${fmtDiff(worst.key, worst.diff)}。比較対象: 現所属のパ・リーグ選手${league.population}人の合計` });
+    if (best) out.push({ kind: '計算', text: `${league.year}年の${best.label}（${best.me}）は比較対象の平均（${best.lg}）より良い水準です。`, basis: `${league.year}年・${sizeText(isP, league.size)}。比較対象: 現所属の${LEAGUE.name}選手${league.population}人の合計` });
+    if (worst) out.push({ kind: '計算', text: `${best ? '一方で' : `${league.year}年は`}${worst.label}（${worst.me}）が比較対象の平均（${worst.lg}）より悪く、数字の上での課題です。`, basis: `${league.year}年・${sizeText(isP, league.size)}・差 ${fmtDiff(worst.key, worst.diff)}。比較対象: 現所属の${LEAGUE.name}選手${league.population}人の合計` });
     if (!best && !worst) out.push({ kind: '解釈', text: `${league.year}年の主要指標は、比較対象の平均から大きく離れていません。`, basis: `${league.year}年・${sizeText(isP, league.size)}` });
   }
   // 3. 下降した指標

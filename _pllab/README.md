@@ -1,12 +1,23 @@
-# パ・リーグ成績ラボ（非公式）— ソースと運用手順
+# 成績ラボ（非公式）— ソースと運用手順
 
-パ・リーグ6球団のチーム成績・選手成績・分析を表示する静的サイトです。
-公開URL: `https://pacific-labo.com/`（Cloudflare Pages。旧URL `https://tsuidenishirabeta2026-hue.github.io/pl-lab/` からは自動で転送）
+同じ生成の仕組みから、リーグごとの設定ファイルで2つのサイトを作っています。
+
+| サイト | 公開URL | 設定 | 生成物 | 自動更新 |
+|---|---|---|---|---|
+| パ・リーグ成績ラボ | `https://pacific-labo.com/` | `config/site.json`（リーグ: `config/leagues/pacific.json`） | `pl-lab/` | `.github/workflows/pllab-update.yml` |
+| セ・リーグ成績ラボ | `https://central-labo.com/` | `config/site-central.json`（リーグ: `config/leagues/central.json`） | `cl-lab/` | `.github/workflows/cl-update.yml` |
+
+公開は Cloudflare Pages（サイトごとに別プロジェクト）。パ・リーグ版の旧URL `https://tsuidenishirabeta2026-hue.github.io/pl-lab/` からは自動で転送（セ・リーグ版の `…/cl-lab/` も同様）。
+以下の説明は、特に断りがなければ両方に共通です（パ・リーグ版を例にしています）。
 
 ```
 _pllab/            ← ソース（先頭が "_" なので GitHub Pages(Jekyll) では公開されない）
-  config/site.json   設定（取得元・しきい値など）
+  config/
+    site.json          パ・リーグ版の設定（取得元・しきい値・計測・広告など）
+    site-central.json  セ・リーグ版の設定
+    leagues/<id>.json  リーグごとの情報（6球団の名前・略称・色、Wikipedia の記事名、画面の文言）
   src/
+    league.js        処理中のリーグ（PLLAB_SITE で選んだサイト設定の "league"）
     sources/         ① 取得（取得元アダプタ。差し替え可能）
     validate.js      ② 検証
     store.js         ③ 保存（原子的書き込み・ロック・ログ）
@@ -16,19 +27,47 @@ _pllab/            ← ソース（先頭が "_" なので GitHub Pages(Jekyll) 
     analysis.js      ルールベースの分析文
     render/, assets/ ④ 画面表示（HTML 生成）
     build.js         ④ をまとめたサイト生成
-  data/
+  data/              パ・リーグ版のデータ
     input/<年>/      本番用 CSV（利用権限のあるデータを置く）
     input/_template/ CSV のひな形
-    demo/<年>/       デモデータ（架空）
+    demo/<年>/       デモデータ（架空。パ・リーグ版のみ）
     store/           検証済みデータ（current.json）・更新状態（status.json）・スナップショット
     logs/            更新ログ（update-log.jsonl）
+    central/         セ・リーグ版のデータ（input/・store/・logs/ の構成は同じ）
+  content/columns/          パ・リーグ版のコラム
+  content/central/columns/  セ・リーグ版のコラム
   docs/CSV_FORMAT.md CSV の項目定義と入力例
+  docs/central/      セ・リーグ版の SNS 方針・画像
   test/              テスト
-pl-lab/            ← 生成されたサイト（公開される。手で編集しない）
-.github/workflows/pllab-update.yml  毎日 7:00 JST の自動更新
+pl-lab/            ← パ・リーグ版の生成物（公開される。手で編集しない）
+cl-lab/            ← セ・リーグ版の生成物（同上）
+.github/workflows/pllab-update.yml  パ・リーグ版 毎日 7:00 JST の自動更新
+.github/workflows/cl-update.yml     セ・リーグ版 毎日 7:00 JST の自動更新
 ```
 
 外部ライブラリは使っていません（Node.js 20 以上のみ）。
+
+## リーグの切り替え（セ・リーグ版）と将来の親サイト
+
+- どのサイトを処理するかは環境変数 `PLLAB_SITE` で選ぶ。未設定なら `pacific`（パ・リーグ版。これまでと同じ動き）、`central` ならセ・リーグ版。
+  ```bash
+  PLLAB_SITE=central node src/update.js
+  PLLAB_SITE=central node src/update-player-stats.js
+  PLLAB_SITE=central node src/update-moves.js
+  PLLAB_SITE=central node src/build.js      # ../cl-lab/ に生成
+  ```
+- リーグに依存するもの（6球団の名前・略称・色・旧称、Wikipedia の順位表テンプレート名、個人タイトル表の列、画面の「パ・リーグ」「セ・リーグ」の文言、
+  フッターの「関係ありません」の団体名、note のリンクに付ける `utm_source`、User-Agent の名前）は `config/leagues/<id>.json` にまとめている。コードには書かない。
+- サイトごとに分けるもの（サイト名、ドメイン、GA4 の測定ID、note の URL、データ・コラム・生成物の置き場所）は `config/site*.json`。AdSense の運営者IDは両方とも同じ。
+- 球団ID: パ・リーグ版 F/E/L/M/B/H、セ・リーグ版 G=巨人・T=阪神・DB=DeNA・C=広島・S=ヤクルト・D=中日（重ならないようにしてある）。
+- セ・リーグ版の入力ファイル: `data/central/input/notes.csv`（note 記事）・`today.csv`（今日の数字）・`moves.csv`（任意）、コラムは `content/central/columns/*.md`（`teams` は G/T/DB/C/S/D）。
+- 取得のときの解析関数（順位表・個人タイトル・選手記事・移籍の出来事）は、リーグを引数でも受け取れる。
+
+### 将来の親サイト（セ・パまとめ）を作るとき
+- 親サイトは、両方の保存データ（`data/store/current.json` と `data/central/store/current.json`）を読んで、両リーグの順位表・新着記事などを並べるページを作る想定。
+  `config/site-<親サイトID>.json` を足し、`src/` に親サイト用の生成処理（`build-portal.js` など）を追加すれば、既存の2サイトの生成には影響しない。
+- 両リーグのデータを1つの処理で読むときは、`loadLeague('pacific')`・`loadLeague('central')` と `loadConfig({}, 'central')` を使う（`PLLAB_SITE` に頼らない）。
+- 公開の形（親サイトのドメインの下にセ・パを置くか、別ドメインのままリンクで結ぶか）は、作るときに決める。いまの2サイトの URL は変えない前提。
 
 ## 収益化の目標（2026年11月19日 設定）
 
@@ -194,6 +233,9 @@ date,team_id,category,text,source_name,source_url
 - 公開先を Cloudflare Pages（無料・商用利用可）に移すと、独自ドメインのルートで公開でき、AdSense に必要な `ads.txt` を置ける
 - Cloudflare Pages の設定: リポジトリを接続し、本番ブランチ `main`、ビルドコマンドなし、出力ディレクトリ `pl-lab`
   （サイトは GitHub Actions が生成してコミットするため、Cloudflare 側でのビルドは不要）
+- セ・リーグ版は、同じリポジトリを接続した**別のプロジェクト**にし、出力ディレクトリを `cl-lab` にする（独自ドメインは central-labo.com）。
+  両プロジェクトとも、すべてのコミットで再デプロイされる。無料プランのビルド回数（月500回）に余裕はあるが、気になる場合は各プロジェクトの
+  「Build watch paths」でパ・リーグ版は `pl-lab/*`、セ・リーグ版は `cl-lab/*` だけを対象にする
 - `config/site.json`
   - `siteUrl`: 例 `https://example.com`。入れると、全ページに正規URL（canonical）、`sitemap.xml`・`robots.txt` を出力し、
     旧URL（github.io/pl-lab/…）を開いた人を新しいURLへ転送する
