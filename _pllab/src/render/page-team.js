@@ -120,7 +120,7 @@ ${termHelp(PIT_COLS)}
 <div class="table-scroll"><table class="sticky-first sortable"><thead><tr><th class="l" scope="col">選手</th><th scope="col">背番号</th><th class="l" scope="col">役割</th>${headCells(PIT_COLS, { terms: false })}</tr></thead><tbody>${pitchers.sort(byOuts).map(rowP).join('')}</tbody></table></div>
 <p class="muted small">シーズン途中に移籍した選手は、この球団に在籍中の成績のみを表示しています。見出しをタップすると並べ替えできます。</p>
 
-` : simpleRoster(S, roster, tid, root) + salaryTop(ctx, roster, tid, root)}
+` : simpleRoster(ctx, S, roster, tid, root) + salaryTop(ctx, roster, tid, root)}
 ${noteBlock(ctx, { pageType: 'team', teamId: tid, heading: `${t.short_name}の解説記事（note）` })}
 <h2>過去シーズンとの比較</h2>
 ${history.length > 1 ? `<div class="table-scroll"><table class="sticky-first"><thead><tr><th class="l">年度</th><th>順位</th><th>${term('試合')}</th><th>${term('勝利')}</th><th>${term('敗戦')}</th><th>${term('引分')}</th><th>${term('勝率')}</th><th>1試合あたり得点</th><th>1試合あたり失点</th>${S.statsAvailable ? `<th>${term('OPS')}</th><th>${term('防御率')}</th>` : ''}</tr></thead><tbody>${hist}</tbody></table></div>` : '<p class="empty">比較できる過去シーズンのデータがありません。</p>'}
@@ -151,7 +151,7 @@ function salaryTop(ctx, roster, tid, root) {
 <p class="muted small">報道による推定の金額です（球団は公表していません）。出典: Wikipedia の各選手記事の基本情報（CC BY-SA 4.0）。ドル表記の選手と、記載のない選手は含みません。<a href="${root}players/index.html#team=${esc(tid)}&amp;sort=sal">全選手を年俸順に見る</a></p>`;
 }
 
-function simpleRoster(S, roster, tid, root) {
+function simpleRoster(ctx, S, roster, tid, root) {
   const groups = ['投手', '捕手', '内野手', '外野手'];
   const num = (p) => p.stints.find((s) => s.team_id === tid)?.number ?? '';
   const nv = (p) => {
@@ -172,6 +172,6 @@ function simpleRoster(S, roster, tid, root) {
   return `<h2 id="roster">所属選手（${roster.length}人）</h2>
 ${S.meta.roster_note ? `<p class="muted small">${esc(S.meta.roster_note)}</p>` : ''}
 ${rows || '<p class="empty">所属選手のデータがありません。</p>'}
-<p class="muted small">個人成績は、規約上利用できる取得元がないため掲載していません。</p>
+${ctx.history ? '<p class="muted small">選手名をタップすると、Wikipedia の選手記事から作った年度別成績・前年比・年俸（推定）を表示します。</p>' : '<p class="muted small">個人成績は、規約上利用できる取得元がないため掲載していません。</p>'}
 `;
 }
