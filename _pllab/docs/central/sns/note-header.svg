@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="670" viewBox="0 0 1280 670">
+  <!-- note のヘッダー用（1280×670）。端が切れても読めるよう、文字は中央にまとめる -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c3a2a"/>
+      <stop offset="1" stop-color="#1b7a4e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="670" fill="url(#bg)"/>
+  <!-- 右下の棒グラフ（飾り） -->
+  <g fill="#ffffff" opacity="0.10">
+    <rect x="1010" y="500" width="40" height="170" rx="8"/>
+    <rect x="1066" y="440" width="40" height="230" rx="8"/>
+    <rect x="1122" y="380" width="40" height="290" rx="8"/>
+    <rect x="1178" y="310" width="40" height="360" rx="8"/>
+  </g>
+  <path d="M1000 470 L 1076 410 L 1132 425 L 1214 290" fill="none" stroke="#f2b01e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <!-- 文字 -->
+  <text x="640" y="270" text-anchor="middle" font-family="IPAGothic, sans-serif" font-size="88" font-weight="700" fill="#ffffff">セ・リーグ成績ラボ</text>
+  <text x="640" y="350" text-anchor="middle" font-family="IPAGothic, sans-serif" font-size="38" fill="#cdeedd">セ・リーグの選手を、数字で読み解く</text>
+  <text x="640" y="420" text-anchor="middle" font-family="IPAGothic, sans-serif" font-size="30" fill="#f2b01e" font-weight="700">前年比・平均との差・移籍とFA</text>
+  <text x="640" y="480" text-anchor="middle" font-family="IPAGothic, sans-serif" font-size="24" fill="#9fd1b8">非公式・個人運営　centrallabo.com</text>
+</svg>
