@@ -24,7 +24,7 @@
   },
   "analytics": {
     "provider": "ga4",
-    "id": "",
+    "id": "G-Y8PW9E6MMS",
     "umamiScript": "https://cloud.umami.is/script.js",
     "_説明": "セ・リーグ版専用の GA4 測定ID（G-XXXX）を入れる。パ・リーグ版（G-WSNC046WSL）とは別のプロパティにする。空なら計測しない"
   },
