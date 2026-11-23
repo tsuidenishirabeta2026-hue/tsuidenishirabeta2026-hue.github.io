@@ -56,7 +56,7 @@ export function renderList(ctx) {
   const body = `
 <p class="breadcrumb"><a href="${root}index.html">トップ</a> › 選手一覧</p>
 <h1>${S.statsAvailable ? '選手一覧・成績表' : '所属選手一覧'}</h1>
-<p class="lead">${S.statsAvailable ? '名前（漢字・ひらがな・カタカナ）で検索し、球団・守備位置・年度で絞り込めます。表の見出しをタップすると並べ替えます。選手名をタップすると個別の成績と分析を表示します。' : '登録名で検索し、球団・守備位置で絞り込めます。見出しをタップすると並べ替えます。個人成績は、規約上利用できる取得元がないため掲載していません。'}</p>
+<p class="lead">${S.statsAvailable ? '名前（漢字・ひらがな・カタカナ）で検索し、球団・守備位置・年度で絞り込めます。表の見出しをタップすると並べ替えます。選手名をタップすると個別の成績と分析を表示します。' : (ctx.history ? '登録名で検索し、球団・守備位置で絞り込めます。見出しをタップすると並べ替えます。成績と年俸（推定）は Wikipedia の選手記事から作っています（成績は記事に載っている最新年度のもの）。選手名をタップすると、前年比・平均との差・短評を表示します。' : '登録名で検索し、球団・守備位置で絞り込めます。見出しをタップすると並べ替えます。個人成績は、規約上利用できる取得元がないため掲載していません。')}</p>
 <div id="plist" data-src="${root}data/players.json">
   <div class="tabs" role="tablist" aria-label="野手と投手の切り替え">
     <button type="button" role="tab" data-tab="bat" aria-selected="true">野手</button>
