@@ -13,3 +13,6 @@
 {"at":"2026-11-23T09:58:28.854Z","result":"unchanged","source":"wikipedia","season":2026,"as_of":"2026-11-23","warnings":0}
 {"at":"2026-11-23T09:58:29.286Z","kind":"player-stats","result":"unchanged","articles":468,"parsed":382,"fetched":0}
 {"at":"2026-11-23T09:59:02.207Z","kind":"moves","result":"unchanged","events":236,"revids":[111875444]}
+{"at":"2026-11-23T10:18:08.545Z","result":"unchanged","source":"wikipedia","season":2026,"as_of":"2026-11-23","warnings":0}
+{"at":"2026-11-23T10:18:09.459Z","kind":"player-stats","result":"updated","articles":468,"parsed":382,"fetched":1}
+{"at":"2026-11-23T10:19:01.139Z","kind":"moves","result":"unchanged","events":236,"revids":[111875444]}
