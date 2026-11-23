@@ -1,12 +1,12 @@
 {
- "hash": "ddd258c8c58d7433b303d6cad79cb67911f4f4318f86faa96dfafee9be3c9ffc",
- "saved_at": "2026-11-23T09:43:02.685Z",
+ "hash": "4da83daf50861637d8400c4638a0d05ca818c2918463f71f965c97d7426085e5",
+ "saved_at": "2026-11-23T22:40:12.839Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111875444,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111875444",
-   "count": 236
+   "revid": 111877239,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111877239",
+   "count": 237
   }
  ],
  "events": [
@@ -78,6 +78,53 @@
     {
      "url": "https://www.carp.co.jp/news/20261123_01",
      "site": "広島東洋カープ",
+     "date": "2026-11-23"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-23",
+   "text": "読売ジャイアンツは、新入団選手の背番号を以下の通り発表。なお、ドラフト1位で指名された織田翔希は、仮契約を済ませておらず、同日の新入団選手発表会を欠席した。また、育成ドラフト5位で指名された関蓮太郎も仮契約を済ませていないが、既に入団の意向を示しており、同日の新入団選手発表会に出席した。",
+   "details": [
+    "平田玲翔：54",
+    "池田聖摩：56",
+    "杉本真滉：64",
+    "伊藤櫂人：59",
+    "松平快聖：68",
+    "谷渕瑛仁：027",
+    "柳井球汰：005",
+    "嶋武仁：055",
+    "松田陸斗：001"
+   ],
+   "teams": [
+    "G"
+   ],
+   "categories": [
+    "獲得・入団・契約",
+    "ドラフト",
+    "背番号"
+   ],
+   "sources": [
+    {
+     "url": "https://www.daily.co.jp/baseball/2026/11/23/0021065732.shtml",
+     "site": "デイリースポーツ",
+     "date": "2026-11-23"
+    },
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611230000777.html",
+     "site": "日刊スポーツ",
+     "date": "2026-11-23"
+    },
+    {
+     "url": "https://www.sponichi.co.jp/baseball/news/2026/11/05/articles/20261104s00001173373000c.html",
+     "site": "スポニチアネックス",
+     "date": "2026-11-05"
+    },
+    {
+     "url": "https://full-count.jp/2026/11/23/post2049284/",
+     "site": "Full-Count",
      "date": "2026-11-23"
     }
    ],

@@ -1,6 +1,6 @@
 {
- "hash": "4a3b713e289154d4e4811ea78b290ca3712f6c2ac6c7ff5420f6719810cb3e7d",
- "saved_at": "2026-11-23T10:18:09.459Z",
+ "hash": "3af4cc3e77aa719b12d19aad44d30208b340f3fdddbbfa5fa8194a182452aad6",
+ "saved_at": "2026-11-23T22:39:45.128Z",
  "season": 2026,
  "articles": {
   "田中将大": {
@@ -26262,9 +26262,9 @@
    }
   },
   "堀岡隼人": {
-   "revid": 111869233,
+   "revid": 111880621,
    "title": "堀岡隼人",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": null,
    "pitching": [
     {
@@ -26400,6 +26400,33 @@
      "BK": 0,
      "R": 6,
      "ER": 5,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "DeNA",
+     "team_id": "DB",
+     "G": 6,
+     "GS": 0,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 0,
+     "L": 0,
+     "SV": 0,
+     "HLD": 0,
+     "BF": 37,
+     "outs": 24,
+     "H": 9,
+     "HR": 1,
+     "BB": 4,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 7,
+     "WP": 2,
+     "BK": 0,
+     "R": 7,
+     "ER": 7,
      "valid": true
     }
    ],
@@ -33903,7 +33930,7 @@
    }
   },
   "髙太一": {
-   "revid": 111868961,
+   "revid": 111876607,
    "title": "髙太一",
    "updatedThrough": 2025,
    "batting": null,
@@ -63557,7 +63584,7 @@
    }
   },
   "上林誠知": {
-   "revid": 111709643,
+   "revid": 111881940,
    "title": "上林誠知",
    "updatedThrough": 2026,
    "batting": [

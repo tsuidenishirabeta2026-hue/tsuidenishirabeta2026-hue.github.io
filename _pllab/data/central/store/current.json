@@ -1,6 +1,6 @@
 {
- "hash": "bbb7beb7ad36f6ec9cd7ceb24a055d843e33a95350b35ecdabbcd51b6d1f3914",
- "saved_at": "2026-11-23T09:42:33.649Z",
+ "hash": "a1a2cafc9838c312dc6f060645729a6d7acfc76c775019eb42f7f6fac595b812",
+ "saved_at": "2026-11-23T22:39:44.804Z",
  "data": {
   "schema": 1,
   "source": {
@@ -283,15 +283,15 @@
    "2026": {
     "meta": {
      "season": 2026,
-     "as_of_date": "2026-11-23",
+     "as_of_date": "2026-11-24",
      "phase": "offseason",
      "champion_team_id": "T",
      "source_name": "Wikipedia 日本語版（CC BY-SA 4.0）",
      "source_url": "https://ja.wikipedia.org/wiki/2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83",
      "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
      "stats_level": "none",
-     "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-23 取得、支配下・育成を含む）です。",
-     "source_detail": "Template:2026年のセントラル・リーグ順位表（版 111317028）、Template:読売ジャイアンツの選手・スタッフ（版 111823300）、Template:阪神タイガースの選手・スタッフ（版 111837291）、Template:横浜DeNAベイスターズの選手・スタッフ（版 111874800）、Template:広島東洋カープの選手・スタッフ（版 111822829）、Template:東京ヤクルトスワローズの選手・スタッフ（版 111824773）、Template:中日ドラゴンズの選手・スタッフ（版 111871117）、2026年の日本プロ野球（版 111875444）"
+     "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-24 取得、支配下・育成を含む）です。",
+     "source_detail": "Template:2026年のセントラル・リーグ順位表（版 111317028）、Template:読売ジャイアンツの選手・スタッフ（版 111823300）、Template:阪神タイガースの選手・スタッフ（版 111837291）、Template:横浜DeNAベイスターズの選手・スタッフ（版 111874800）、Template:広島東洋カープの選手・スタッフ（版 111822829）、Template:東京ヤクルトスワローズの選手・スタッフ（版 111824773）、Template:中日ドラゴンズの選手・スタッフ（版 111871117）、2026年の日本プロ野球（版 111877239）"
     },
     "titles": [
      {
