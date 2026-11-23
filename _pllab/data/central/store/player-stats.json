@@ -1,6 +1,6 @@
 {
- "hash": "074a4d0079bd8c3f04cdcb5e8f0bd8d52ac85c5dcf4e471a99c91b674af6cf2d",
- "saved_at": "2026-11-23T08:12:50.679Z",
+ "hash": "0c3e63dee6b8060d14fe11b2cf027043fbce630ec7e1890624f95a5033efd658",
+ "saved_at": "2026-11-23T08:15:43.126Z",
  "season": 2026,
  "articles": {
   "田中将大": {
@@ -549,7 +549,19 @@
      "ER": 26,
      "valid": false
     }
-   ]
+   ],
+   "salary": {
+    "text": "8000万円",
+    "yen": 80000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "8000万円",
+     "yen": 80000000
+    }
+   }
   },
   "大勢": {
    "revid": 111847492,
@@ -692,7 +704,19 @@
      "ER": 7,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億8000万円",
+    "yen": 180000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億8000万円",
+     "yen": 180000000
+    }
+   }
   },
   "西舘勇陽": {
    "revid": 111847576,
@@ -781,7 +805,19 @@
      "ER": 19,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2800万円",
+    "yen": 28000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "2800万円",
+     "yen": 28000000
+    }
+   }
   },
   "山﨑伊織": {
    "revid": 111847663,
@@ -924,7 +960,19 @@
      "ER": 17,
      "valid": false
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億8000万円",
+    "yen": 180000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億8000万円",
+     "yen": 180000000
+    }
+   }
   },
   "戸郷翔征": {
    "revid": 111850757,
@@ -1148,7 +1196,19 @@
      "ER": 22,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2億4000万円",
+    "yen": 240000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億4000万円",
+     "yen": 240000000
+    }
+   }
   },
   "竹丸和幸": {
    "revid": 111782402,
@@ -1183,7 +1243,19 @@
      "ER": 43,
      "valid": false
     }
-   ]
+   ],
+   "salary": {
+    "text": "1600万円sponichi20251120",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円sponichi20251120",
+     "yen": 16000000
+    }
+   }
   },
   "代木大和": {
    "revid": 111847892,
@@ -1245,7 +1317,19 @@
      "ER": 7,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "620万円",
+    "yen": 6200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "620万円",
+     "yen": 6200000
+    }
+   }
   },
   "フォレスト・ウィットリー": {
    "revid": 111848044,
@@ -1361,7 +1445,9 @@
      "ER": 21,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "スペンサー・ハワード": {
    "revid": 111848154,
@@ -1738,7 +1824,19 @@
      "ER": 8,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億5000万円",
+    "yen": 150000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億5000万円",
+     "yen": 150000000
+    }
+   }
   },
   "田和廉": {
    "revid": 111848216,
@@ -1773,7 +1871,19 @@
      "ER": 6,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1200万円hochi20251122",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円hochi20251122",
+     "yen": 12000000
+    }
+   }
   },
   "赤星優志": {
    "revid": 111848288,
@@ -1916,7 +2026,19 @@
      "ER": 17,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "4800万円",
+    "yen": 48000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4800万円",
+     "yen": 48000000
+    }
+   }
   },
   "山城京平": {
    "revid": 111848324,
@@ -1951,7 +2073,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1000万円daily20251114",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円daily20251114",
+     "yen": 10000000
+    }
+   }
   },
   "中川皓太": {
    "revid": 111849568,
@@ -2229,7 +2363,19 @@
      "ER": 11,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億5000万円",
+    "yen": 150000000,
+    "year": 2026,
+    "note": "※2026年から3年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億5000万円",
+     "yen": 150000000
+    }
+   }
   },
   "ブライアン・マタ": {
    "revid": 111849634,
@@ -2264,7 +2410,9 @@
      "ER": 10,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "則本昂大": {
    "revid": 111849737,
@@ -2650,7 +2798,19 @@
      "ER": 32,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "4億3000万円",
+    "yen": 430000000,
+    "year": 2027,
+    "note": "※2026年から3年契約nikkansports20260119"
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "4億3000万円",
+     "yen": 430000000
+    }
+   }
   },
   "田中瑛斗": {
    "revid": 111723216,
@@ -2820,7 +2980,19 @@
      "ER": 9,
      "valid": false
     }
-   ]
+   ],
+   "salary": {
+    "text": "4650万円",
+    "yen": 46500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4650万円",
+     "yen": 46500000
+    }
+   }
   },
   "又木鉄平": {
    "revid": 111849792,
@@ -2909,7 +3081,19 @@
      "ER": 8,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "970万円",
+    "yen": 9700000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "970万円",
+     "yen": 9700000
+    }
+   }
   },
   "森田駿哉": {
    "revid": 111849866,
@@ -2971,7 +3155,19 @@
      "ER": 15,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1500万円",
+    "yen": 15000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1500万円",
+     "yen": 15000000
+    }
+   }
   },
   "エルビス・ルシアーノ": {
    "revid": 111849947,
@@ -3033,7 +3229,19 @@
      "ER": 7,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "アルベルト・バルドナード": {
    "revid": 111849988,
@@ -3176,7 +3384,19 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億5000万円",
+    "yen": 150000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1億5000万円",
+     "yen": 150000000
+    }
+   }
   },
   "高梨雄平": {
    "revid": 111850049,
@@ -3454,7 +3674,19 @@
      "ER": 3,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億5000万円",
+    "yen": 150000000,
+    "year": 2026,
+    "note": "※2025年から3年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億5000万円",
+     "yen": 150000000
+    }
+   }
   },
   "松浦慶斗": {
    "revid": 111704414,
@@ -3516,7 +3748,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "650万円",
+    "yen": 6500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "650万円",
+     "yen": 6500000
+    }
+   }
   },
   "北浦竜次": {
    "revid": 111850144,
@@ -3740,7 +3984,19 @@
      "ER": 11,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1300万円報知251114_1134",
+    "yen": 13000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1300万円報知251114_1134",
+     "yen": 13000000
+    }
+   }
   },
   "宮原駿介": {
    "revid": 111850912,
@@ -3802,7 +4058,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1000万円hochi20241121",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円hochi20241121",
+     "yen": 10000000
+    }
+   }
   },
   "船迫大雅": {
    "revid": 111860525,
@@ -3918,7 +4186,19 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "9000万円",
+    "yen": 90000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "9000万円",
+     "yen": 90000000
+    }
+   }
   },
   "横川凱": {
    "revid": 111326884,
@@ -4088,7 +4368,19 @@
      "ER": 19,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "泉圭輔": {
    "revid": 111850995,
@@ -4312,7 +4604,19 @@
      "ER": 4,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "4350万円",
+    "yen": 43500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "4350万円",
+     "yen": 43500000
+    }
+   }
   },
   "山田龍聖": {
    "revid": 111851056,
@@ -4374,7 +4678,19 @@
      "ER": 0,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "950万円",
+    "yen": 9500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "950万円",
+     "yen": 9500000
+    }
+   }
   },
   "石川達也 (野球)": {
    "revid": 111851135,
@@ -4517,7 +4833,19 @@
      "ER": 12,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3650万円",
+    "yen": 36500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3650万円",
+     "yen": 36500000
+    }
+   }
   },
   "平内龍太": {
    "revid": 111860601,
@@ -4687,7 +5015,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2700万円",
+    "yen": 27000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2700万円",
+     "yen": 27000000
+    }
+   }
   },
   "堀田賢慎": {
    "revid": 111860670,
@@ -4830,7 +5170,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1500万円",
+    "yen": 15000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1500万円",
+     "yen": 15000000
+    }
+   }
   },
   "ライデル・マルティネス": {
    "revid": 111860771,
@@ -5162,7 +5514,19 @@
      "ER": 8,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "12億5000万円nikkansports20241217",
+    "yen": 1250000000,
+    "year": 2026,
+    "note": "※2025年から4年契約nikkansports20241217"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "12億5000万円nikkansports20241217",
+     "yen": 1250000000
+    }
+   }
   },
   "井上温大": {
    "revid": 111860885,
@@ -5305,7 +5669,19 @@
      "ER": 33,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3800万円",
+    "yen": 38000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3800万円",
+     "yen": 38000000
+    }
+   }
   },
   "小笠原慎之介": {
    "revid": 111861011,
@@ -5610,7 +5986,19 @@
      "ER": 17,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億8000万円",
+    "yen": 180000000,
+    "year": 2026,
+    "note": "※2026年から2年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億8000万円",
+     "yen": 180000000
+    }
+   }
   },
   "小林誠司": {
    "revid": 111861280,
@@ -5943,7 +6331,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4000万円",
+    "yen": 40000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4000万円",
+     "yen": 40000000
+    }
+   }
   },
   "大城卓三": {
    "revid": 111698079,
@@ -6176,7 +6576,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億6000万円",
+    "yen": 160000000,
+    "year": 2026,
+    "note": "※2025年から複数年契約複数年契約を締結していることは公表されているが、契約年数の詳細は明らかにされていない。"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億6000万円",
+     "yen": 160000000
+    }
+   }
   },
   "岸田行倫": {
    "revid": 111861361,
@@ -6384,7 +6796,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "7000万円",
+    "yen": 70000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "7000万円",
+     "yen": 70000000
+    }
+   }
   },
   "郡拓也": {
    "revid": 111815912,
@@ -6592,7 +7016,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "840万円",
+    "yen": 8400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "840万円",
+     "yen": 8400000
+    }
+   }
   },
   "山瀬慎之助": {
    "revid": 111861416,
@@ -6725,7 +7161,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "湯浅大": {
    "revid": 111862377,
@@ -6883,7 +7331,9 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "増田大輝": {
    "revid": 111862357,
@@ -7119,7 +7569,19 @@
      "ER": 0,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2700万円",
+    "yen": 27000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2700万円",
+     "yen": 27000000
+    }
+   }
   },
   "吉川尚輝": {
    "revid": 111862467,
@@ -7377,7 +7839,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2億円",
+    "yen": 200000000,
+    "year": 2027,
+    "note": "※2025年から3年契約"
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "2億円",
+     "yen": 200000000
+    }
+   }
   },
   "門脇誠": {
    "revid": 111862540,
@@ -7485,7 +7959,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4500万円",
+    "yen": 45000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "4500万円",
+     "yen": 45000000
+    }
+   }
   },
   "坂本勇人": {
    "revid": 111873166,
@@ -7993,7 +8479,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2億5000万円",
+    "yen": 250000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "2億5000万円",
+     "yen": 250000000
+    }
+   }
   },
   "石塚裕惺": {
    "revid": 111862735,
@@ -8051,7 +8549,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1230万円",
+    "yen": 12300000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1230万円",
+     "yen": 12300000
+    }
+   }
   },
   "ボビー・ダルベック": {
    "revid": 111862775,
@@ -8234,7 +8744,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億5000万円",
+    "yen": 150000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億5000万円",
+     "yen": 150000000
+    }
+   }
   },
   "浦田俊輔": {
    "revid": 111812291,
@@ -8292,7 +8814,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1300万円",
+    "yen": 13000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1300万円",
+     "yen": 13000000
+    }
+   }
   },
   "小濱佑斗": {
    "revid": 111862999,
@@ -8325,7 +8859,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1000万円hochi20251116",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円hochi20251116",
+     "yen": 10000000
+    }
+   }
   },
   "泉口友汰": {
    "revid": 111865020,
@@ -8408,7 +8954,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "8900万円",
+    "yen": 89000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "8900万円",
+     "yen": 89000000
+    }
+   }
   },
   "砂川リチャード": {
    "revid": 111862902,
@@ -8591,7 +9149,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2600万円",
+    "yen": 26000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2600万円",
+     "yen": 26000000
+    }
+   }
   },
   "荒巻悠": {
    "revid": 111800030,
@@ -8624,7 +9194,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "950万円",
+    "yen": 9500000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "950万円",
+     "yen": 9500000
+    }
+   }
   },
   "増田陸 (野球)": {
    "revid": 111622514,
@@ -8707,7 +9289,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2600万円",
+    "yen": 26000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2600万円",
+     "yen": 26000000
+    }
+   }
   },
   "宇都宮葵星": {
    "revid": 111704230,
@@ -8740,7 +9334,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "440万円",
+    "yen": 4400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "440万円",
+     "yen": 4400000
+    }
+   }
   },
   "平山功太": {
    "revid": 111829116,
@@ -8773,14 +9379,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1250万円",
+    "yen": 12500000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1250万円",
+     "yen": 12500000
+    }
+   }
   },
   "藤井健翔": {
    "revid": 111688150,
    "title": "藤井健翔",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "540万円hochi20251113",
+    "yen": 5400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "540万円hochi20251113",
+     "yen": 5400000
+    }
+   }
   },
   "丸佳浩": {
    "revid": 111827271,
@@ -9213,7 +9843,19 @@
      "valid": false
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億3000万円",
+    "yen": 130000000,
+    "year": 2027,
+    "note": "※2026年から2年契約"
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1億3000万円",
+     "yen": 130000000
+    }
+   }
   },
   "松本剛 (野球)": {
    "revid": 111827325,
@@ -9521,7 +10163,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億2500万円",
+    "yen": 125000000,
+    "year": 2027,
+    "note": "※2026年から2年契約sponichi20251127"
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1億2500万円",
+     "yen": 125000000
+    }
+   }
   },
   "萩尾匡也": {
    "revid": 111280103,
@@ -9604,7 +10258,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1600万円",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円",
+     "yen": 16000000
+    }
+   }
   },
   "トレイ・キャベッジ": {
    "revid": 111038062,
@@ -9687,7 +10353,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2億5000万円",
+    "yen": 250000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億5000万円",
+     "yen": 250000000
+    }
+   }
   },
   "岡田悠希": {
    "revid": 111631349,
@@ -9795,7 +10473,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "850万円",
+    "yen": 8500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "850万円",
+     "yen": 8500000
+    }
+   }
   },
   "皆川岳飛": {
    "revid": 111793981,
@@ -9828,7 +10518,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1030万円",
+    "yen": 10300000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1030万円",
+     "yen": 10300000
+    }
+   }
   },
   "中山礼都": {
    "revid": 111015053,
@@ -9936,7 +10638,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3800万円",
+    "yen": 38000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3800万円",
+     "yen": 38000000
+    }
+   }
   },
   "佐々木俊輔": {
    "revid": 111782557,
@@ -9994,14 +10708,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2300万円",
+    "yen": 23000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2300万円",
+     "yen": 23000000
+    }
+   }
   },
   "フリアン・ティマ": {
    "revid": 111340637,
    "title": "フリアン・ティマ",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "550万円hochi20240215",
+    "yen": 5500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "550万円hochi20240215",
+     "yen": 5500000
+    }
+   }
   },
   "浅野翔吾": {
    "revid": 111516795,
@@ -10084,7 +10822,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1700万円",
+    "yen": 17000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1700万円",
+     "yen": 17000000
+    }
+   }
   },
   "鈴木大和": {
    "revid": 111704090,
@@ -10117,14 +10867,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "440万円",
+    "yen": 4400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "440万円",
+     "yen": 4400000
+    }
+   }
   },
   "知念大成": {
    "revid": 111704082,
    "title": "知念大成",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "400万円",
+    "yen": 4000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "400万円",
+     "yen": 4000000
+    }
+   }
   },
   "笹原操希": {
    "revid": 110407887,
@@ -10157,7 +10931,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "三塚琉生": {
    "revid": 111525604,
@@ -10190,105 +10976,245 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "450万円",
+    "yen": 4500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "450万円",
+     "yen": 4500000
+    }
+   }
   },
   "冨重英二郎": {
    "revid": 110309648,
    "title": "冨重英二郎",
    "updatedThrough": 2025,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "林燦": {
    "revid": 111391801,
    "title": "林燦",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "堀江正太郎": {
    "revid": 111736916,
    "title": "堀江正太郎",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "360万円",
+    "yen": 3600000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "360万円",
+     "yen": 3600000
+    }
+   }
   },
   "鈴木圭晋": {
    "revid": 111685531,
    "title": "鈴木圭晋",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "360万円",
+    "yen": 3600000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "360万円",
+     "yen": 3600000
+    }
+   }
   },
   "千葉隆広": {
    "revid": 110018589,
    "title": "千葉隆広",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "380万円",
+    "yen": 3800000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "380万円",
+     "yen": 3800000
+    }
+   }
   },
   "木下幹也": {
    "revid": 110018729,
    "title": "木下幹也",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "450万円",
+    "yen": 4500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "450万円",
+     "yen": 4500000
+    }
+   }
   },
   "園田純規": {
    "revid": 107962557,
    "title": "園田純規",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "380万円",
+    "yen": 3800000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "380万円",
+     "yen": 3800000
+    }
+   }
   },
   "田村朋輝": {
    "revid": 108067422,
    "title": "田村朋輝",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "390万円",
+    "yen": 3900000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "390万円",
+     "yen": 3900000
+    }
+   }
   },
   "吹田志道": {
    "revid": 111813071,
    "title": "吹田志道",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "370万円",
+    "yen": 3700000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "370万円",
+     "yen": 3700000
+    }
+   }
   },
   "森本哲星": {
    "revid": 111781286,
    "title": "森本哲星",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "黃錦豪": {
    "revid": 106794485,
    "title": "黃錦豪",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "450万円",
+    "yen": 4500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "450万円",
+     "yen": 4500000
+    }
+   }
   },
   "河野優作": {
    "revid": 111685621,
    "title": "河野優作",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "花田侑樹": {
    "revid": 111112184,
    "title": "花田侑樹",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "420万円",
+    "yen": 4200000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "420万円",
+     "yen": 4200000
+    }
+   }
   },
   "石田充冴": {
    "revid": 108103174,
    "title": "石田充冴",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "560万円",
+    "yen": 5600000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "560万円",
+     "yen": 5600000
+    }
+   }
   },
   "京本眞": {
    "revid": 111861063,
@@ -10323,63 +11249,151 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "440万円",
+    "yen": 4400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "440万円",
+     "yen": 4400000
+    }
+   }
   },
   "松井蓮太朗": {
    "revid": 111720556,
    "title": "松井蓮太朗",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "牧原巧汰": {
    "revid": 111869303,
    "title": "牧原巧汰",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "500万円",
+    "yen": 5000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "500万円",
+     "yen": 5000000
+    }
+   }
   },
   "亀田啓太": {
    "revid": 106456498,
    "title": "亀田啓太",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "400万円",
+    "yen": 4000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "400万円",
+     "yen": 4000000
+    }
+   }
   },
   "坂本達也": {
    "revid": 104733343,
    "title": "坂本達也",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "400万円hochi20241126",
+    "yen": 4000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "400万円hochi20241126",
+     "yen": 4000000
+    }
+   }
   },
   "中田歩夢": {
    "revid": 105436132,
    "title": "中田歩夢",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "430万円",
+    "yen": 4300000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "430万円",
+     "yen": 4300000
+    }
+   }
   },
   "勝又琉偉": {
    "revid": 111869273,
    "title": "勝又琉偉",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "村山源": {
    "revid": 104257874,
    "title": "村山源",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "390万円",
+    "yen": 3900000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "390万円",
+     "yen": 3900000
+    }
+   }
   },
   "竹下徠空": {
    "revid": 107924732,
    "title": "竹下徠空",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "360万円",
+    "yen": 3600000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "360万円",
+     "yen": 3600000
+    }
+   }
   },
   "川原田純平": {
    "revid": 111340646,
@@ -10437,14 +11451,28 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "相澤白虎": {
    "revid": 111302840,
    "title": "相澤白虎",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "380万円",
+    "yen": 3800000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "380万円",
+     "yen": 3800000
+    }
+   }
   },
   "岩崎優": {
    "revid": 111690335,
@@ -10803,7 +11831,19 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2億円",
+    "yen": 200000000,
+    "year": 2027,
+    "note": "※2027年から2年契約"
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "2億円",
+     "yen": 200000000
+    }
+   }
   },
   "岩貞祐太": {
    "revid": 111860584,
@@ -11162,7 +12202,9 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "西勇輝": {
    "revid": 111690413,
@@ -11656,7 +12698,9 @@
      "ER": 14,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "伊原陵人": {
    "revid": 111452158,
@@ -11718,7 +12762,19 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3600万円",
+    "yen": 36000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3600万円",
+     "yen": 36000000
+    }
+   }
   },
   "下村海翔": {
    "revid": 111690441,
@@ -11753,7 +12809,19 @@
      "ER": 20,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1100万円",
+    "yen": 11000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1100万円",
+     "yen": 11000000
+    }
+   }
   },
   "大竹耕太郎": {
    "revid": 111854684,
@@ -12004,7 +13072,19 @@
      "ER": 31,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億3000万円",
+    "yen": 130000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億3000万円",
+     "yen": 130000000
+    }
+   }
   },
   "伊藤将司": {
    "revid": 111741352,
@@ -12174,7 +13254,19 @@
      "ER": 20,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億4000万円",
+    "yen": 140000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1億4000万円",
+     "yen": 140000000
+    }
+   }
   },
   "今朝丸裕喜": {
    "revid": 111741387,
@@ -12209,7 +13301,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "720万円sanspo20241118",
+    "yen": 7200000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "720万円sanspo20241118",
+     "yen": 7200000
+    }
+   }
   },
   "髙橋遥人": {
    "revid": 111723253,
@@ -12406,7 +13510,19 @@
      "ER": 33,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "門別啓人": {
    "revid": 111741419,
@@ -12522,7 +13638,19 @@
      "ER": 10,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "870万円",
+    "yen": 8700000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "870万円",
+     "yen": 8700000
+    }
+   }
   },
   "才木浩人": {
    "revid": 111468453,
@@ -12746,7 +13874,19 @@
      "ER": 43,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2億5000万円",
+    "yen": 250000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億5000万円",
+     "yen": 250000000
+    }
+   }
   },
   "及川雅貴": {
    "revid": 111741508,
@@ -12916,7 +14056,19 @@
      "ER": 18,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億円",
+    "yen": 100000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億円",
+     "yen": 100000000
+    }
+   }
   },
   "村上頌樹": {
    "revid": 111854840,
@@ -13059,7 +14211,19 @@
      "ER": 37,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2億3000万円",
+    "yen": 230000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億3000万円",
+     "yen": 230000000
+    }
+   }
   },
   "イーストン・ルーカス": {
    "revid": 111808702,
@@ -13229,14 +14393,28 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "早瀬朔": {
    "revid": 111577785,
    "title": "早瀬朔",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "480万円",
+    "yen": 4800000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "480万円",
+     "yen": 4800000
+    }
+   }
   },
   "桐敷拓馬": {
    "revid": 111837652,
@@ -13379,7 +14557,19 @@
      "ER": 12,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "8800万円",
+    "yen": 88000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "8800万円",
+     "yen": 88000000
+    }
+   }
   },
   "茨木秀俊": {
    "revid": 111741965,
@@ -13441,7 +14631,19 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "500万円",
+    "yen": 5000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "500万円",
+     "yen": 5000000
+    }
+   }
   },
   "工藤泰成": {
    "revid": 111825037,
@@ -13503,7 +14705,19 @@
      "ER": 7,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "840万円",
+    "yen": 8400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "840万円",
+     "yen": 8400000
+    }
+   }
   },
   "富田蓮": {
    "revid": 111416898,
@@ -13619,7 +14833,19 @@
      "ER": 3,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2500万円",
+    "yen": 25000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2500万円",
+     "yen": 25000000
+    }
+   }
   },
   "早川太貴": {
    "revid": 111742029,
@@ -13681,7 +14907,19 @@
      "ER": 14,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "720万円",
+    "yen": 7200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "720万円",
+     "yen": 7200000
+    }
+   }
   },
   "木下里都": {
    "revid": 111789370,
@@ -13743,14 +14981,38 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1200万円sanspo20241111",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円sanspo20241111",
+     "yen": 12000000
+    }
+   }
   },
   "能登嵩都": {
    "revid": 111735684,
    "title": "能登嵩都",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "660万円",
+    "yen": 6600000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "660万円",
+     "yen": 6600000
+    }
+   }
   },
   "石黒佑弥": {
    "revid": 111742163,
@@ -13839,7 +15101,19 @@
      "ER": 10,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "800万円",
+    "yen": 8000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "800万円",
+     "yen": 8000000
+    }
+   }
   },
   "津田淳哉": {
    "revid": 111742276,
@@ -13874,7 +15148,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "720万円",
+    "yen": 7200000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "720万円",
+     "yen": 7200000
+    }
+   }
   },
   "石井大智": {
    "revid": 111742321,
@@ -14044,7 +15330,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2億円",
+    "yen": 200000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億円",
+     "yen": 200000000
+    }
+   }
   },
   "神宮僚介": {
    "revid": 111865604,
@@ -14079,7 +15377,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "420万円nikkansports20251122",
+    "yen": 4200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "420万円nikkansports20251122",
+     "yen": 4200000
+    }
+   }
   },
   "アンダーソン・セベリーノ": {
    "revid": 111742379,
@@ -14141,7 +15451,9 @@
      "ER": 6,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "ラファエル・ドリス": {
    "revid": 111742422,
@@ -14446,7 +15758,19 @@
      "ER": 12,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億円daily20251219",
+    "yen": 100000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億円daily20251219",
+     "yen": 100000000
+    }
+   }
   },
   "梅野隆太郎": {
    "revid": 111829500,
@@ -14779,7 +16103,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億6000万円",
+    "yen": 160000000,
+    "year": 2025,
+    "note": "※2022年から4年契約"
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1億6000万円",
+     "yen": 160000000
+    }
+   }
   },
   "坂本誠志郎": {
    "revid": 111829561,
@@ -15062,7 +16398,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億円",
+    "yen": 100000000,
+    "year": 2026,
+    "note": "2025年から4年契約nikkansports202411130"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億円",
+     "yen": 100000000
+    }
+   }
   },
   "伏見寅威": {
    "revid": 111829603,
@@ -15420,7 +16768,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億円",
+    "yen": 100000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億円",
+     "yen": 100000000
+    }
+   }
   },
   "榮枝裕貴": {
    "revid": 111829613,
@@ -15553,7 +16913,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "780万円",
+    "yen": 7800000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "780万円",
+     "yen": 7800000
+    }
+   }
   },
   "長坂拳弥": {
    "revid": 111829620,
@@ -15761,14 +17133,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "藤田健斗": {
    "revid": 111404641,
    "title": "藤田健斗",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "540万円",
+    "yen": 5400000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "540万円",
+     "yen": 5400000
+    }
+   }
   },
   "中川勇斗": {
    "revid": 111829642,
@@ -15826,7 +17222,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "540万円",
+    "yen": 5400000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "540万円",
+     "yen": 5400000
+    }
+   }
   },
   "嶋村麟士朗": {
    "revid": 111829672,
@@ -15859,7 +17267,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "420万円日刊260312",
+    "yen": 4200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "420万円日刊260312",
+     "yen": 4200000
+    }
+   }
   },
   "元山飛優": {
    "revid": 111840519,
@@ -16017,7 +17437,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "木浪聖也": {
    "revid": 111840573,
@@ -16225,7 +17657,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "5500万円",
+    "yen": 55000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "5500万円",
+     "yen": 55000000
+    }
+   }
   },
   "大山悠輔": {
    "revid": 111780713,
@@ -16483,7 +17927,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3億4000万円",
+    "yen": 340000000,
+    "year": 2026,
+    "note": "※2025年から5年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3億4000万円",
+     "yen": 340000000
+    }
+   }
   },
   "熊谷敬宥": {
    "revid": 111840751,
@@ -16691,7 +18147,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "中野拓夢": {
    "revid": 111765114,
@@ -16849,7 +18317,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3億円",
+    "yen": 300000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3億円",
+     "yen": 300000000
+    }
+   }
   },
   "佐藤輝明": {
    "revid": 111814436,
@@ -17007,7 +18487,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4億5000万円出来高払いを含めると、総額5億円。",
+    "yen": 450000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4億5000万円出来高払いを含めると、総額5億円。",
+     "yen": 450000000
+    }
+   }
   },
   "立石正広": {
    "revid": 111543816,
@@ -17040,7 +18532,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1600万円nikkansports20251121",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円nikkansports20251121",
+     "yen": 16000000
+    }
+   }
   },
   "谷端将伍": {
    "revid": 111844161,
@@ -17073,7 +18577,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "糸原健斗": {
    "revid": 111844508,
@@ -17331,7 +18847,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2200万円",
+    "yen": 22000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "2200万円",
+     "yen": 22000000
+    }
+   }
   },
   "小幡竜平": {
    "revid": 111844577,
@@ -17514,7 +19042,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4000万円",
+    "yen": 40000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4000万円",
+     "yen": 40000000
+    }
+   }
   },
   "百﨑蒼生": {
    "revid": 111844611,
@@ -17547,7 +19087,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "500万円",
+    "yen": 5000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "500万円",
+     "yen": 5000000
+    }
+   }
   },
   "植田海": {
    "revid": 111827326,
@@ -17830,7 +19382,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2500万円",
+    "yen": 25000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2500万円",
+     "yen": 25000000
+    }
+   }
   },
   "髙寺望夢": {
    "revid": 111844710,
@@ -17913,7 +19477,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2000万円",
+    "yen": 20000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2000万円",
+     "yen": 20000000
+    }
+   }
   },
   "森下翔太": {
    "revid": 111870052,
@@ -18021,7 +19597,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2億1000万円",
+    "yen": 210000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億1000万円",
+     "yen": 210000000
+    }
+   }
   },
   "近本光司": {
    "revid": 111814452,
@@ -18229,7 +19817,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "5億円",
+    "yen": 500000000,
+    "year": 2026,
+    "note": "※2026年から5年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "5億円",
+     "yen": 500000000
+    }
+   }
   },
   "濱田太貴": {
    "revid": 111844767,
@@ -18412,7 +20012,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1600万円",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円",
+     "yen": 16000000
+    }
+   }
   },
   "岡城快生": {
    "revid": 111844805,
@@ -18445,7 +20057,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "960万円nikkansports20251111",
+    "yen": 9600000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "960万円nikkansports20251111",
+     "yen": 9600000
+    }
+   }
   },
   "井坪陽生": {
    "revid": 111480225,
@@ -18503,7 +20127,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "700万円",
+    "yen": 7000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "700万円",
+     "yen": 7000000
+    }
+   }
   },
   "島田海吏": {
    "revid": 111816877,
@@ -18736,7 +20372,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "30000万円",
+    "yen": 300000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "30000万円",
+     "yen": 300000000
+    }
+   }
   },
   "前川右京": {
    "revid": 111844838,
@@ -18844,7 +20492,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3100万円",
+    "yen": 31000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3100万円",
+     "yen": 31000000
+    }
+   }
   },
   "小野寺暖": {
    "revid": 111844989,
@@ -19002,7 +20662,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1500万円",
+    "yen": 15000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1500万円",
+     "yen": 15000000
+    }
+   }
   },
   "豊田寛": {
    "revid": 111845050,
@@ -19110,7 +20782,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1130万円",
+    "yen": 11300000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1130万円",
+     "yen": 11300000
+    }
+   }
   },
   "福島圭音": {
    "revid": 111845073,
@@ -19143,7 +20827,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "420万円nikkansports20260331",
+    "yen": 4200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "420万円nikkansports20260331",
+     "yen": 4200000
+    }
+   }
   },
   "デルミス・ガルシア": {
    "revid": 111845103,
@@ -19201,7 +20897,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "6万ドルdaily260721",
+    "yen": null,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "6万ドルdaily260721",
+     "yen": null
+    }
+   }
   },
   "畠世周": {
    "revid": 111854667,
@@ -19452,7 +21160,19 @@
      "ER": 3,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "湯浅京己": {
    "revid": 111814325,
@@ -19595,7 +21315,19 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "4800万円日刊261118",
+    "yen": 48000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "4800万円日刊261118",
+     "yen": 48000000
+    }
+   }
   },
   "岡留英貴": {
    "revid": 111848768,
@@ -19711,7 +21443,19 @@
      "ER": 1,
      "valid": false
     }
-   ]
+   ],
+   "salary": {
+    "text": "2000万円",
+    "yen": 20000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "2000万円",
+     "yen": 20000000
+    }
+   }
   },
   "小川一平 (野球)": {
    "revid": 111742498,
@@ -19800,7 +21544,19 @@
      "ER": 12,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "850万円",
+    "yen": 8500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "850万円",
+     "yen": 8500000
+    }
+   }
   },
   "椎葉剛": {
    "revid": 111848798,
@@ -19862,35 +21618,95 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "町田隼乙": {
    "revid": 111859176,
    "title": "町田隼乙",
    "updatedThrough": 2026,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "680万円",
+    "yen": 6800000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "680万円",
+     "yen": 6800000
+    }
+   }
   },
   "川﨑俊哲": {
    "revid": 105657266,
    "title": "川﨑俊哲",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円nikkansports20241116",
+    "yen": 3000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "300万円nikkansports20241116",
+     "yen": 3000000
+    }
+   }
   },
   "佐野大陽": {
    "revid": 111859088,
    "title": "佐野大陽",
    "updatedThrough": 2026,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "680万円",
+    "yen": 6800000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "680万円",
+     "yen": 6800000
+    }
+   }
   },
   "山田脩也": {
    "revid": 111848778,
    "title": "山田脩也",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "西純矢": {
    "revid": 111845112,
@@ -20107,14 +21923,38 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "山﨑照英": {
    "revid": 109793683,
    "title": "山﨑照英",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "960万円",
+    "yen": 9600000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "960万円",
+     "yen": 9600000
+    }
+   }
   },
   "東克樹": {
    "revid": 111851800,
@@ -20338,7 +22178,19 @@
      "ER": 43,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3億円",
+    "yen": 300000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3億円",
+     "yen": 300000000
+    }
+   }
   },
   "竹田祐": {
    "revid": 111095999,
@@ -20399,7 +22251,19 @@
      "ER": 7,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1600万円nikkansports20241126",
+    "yen": 16000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1600万円nikkansports20241126",
+     "yen": 16000000
+    }
+   }
   },
   "伊勢大夢": {
    "revid": 110953966,
@@ -20569,7 +22433,19 @@
      "ER": 17,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億4000万円",
+    "yen": 140000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億4000万円",
+     "yen": 140000000
+    }
+   }
   },
   "石田健大": {
    "revid": 111147746,
@@ -20847,14 +22723,38 @@
      "ER": 12,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億円",
+    "yen": 100000000,
+    "year": 2025,
+    "note": "2024年から4年契約"
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1億円",
+     "yen": 100000000
+    }
+   }
   },
   "島田舜也": {
    "revid": 111574857,
    "title": "島田舜也",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1200万円nikkansports20251125",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円nikkansports20251125",
+     "yen": 12000000
+    }
+   }
   },
   "大貫晋一": {
    "revid": 111864593,
@@ -21051,7 +22951,19 @@
      "ER": 23,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "6300万円",
+    "yen": 63000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "6300万円",
+     "yen": 63000000
+    }
+   }
   },
   "小園健太": {
    "revid": 111827814,
@@ -21113,7 +23025,19 @@
      "ER": 3,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "660万円",
+    "yen": 6600000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "660万円",
+     "yen": 6600000
+    }
+   }
   },
   "山﨑康晃": {
    "revid": 111424960,
@@ -21418,7 +23342,19 @@
      "ER": 7,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3億円",
+    "yen": 300000000,
+    "year": 2025,
+    "note": "※2023年から6年契約nikkansports20221126"
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "3億円",
+     "yen": 300000000
+    }
+   }
   },
   "坂本裕哉": {
    "revid": 111211211,
@@ -21588,7 +23524,19 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "4400万円",
+    "yen": 44000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4400万円",
+     "yen": 44000000
+    }
+   }
   },
   "入江大生": {
    "revid": 109685204,
@@ -21704,7 +23652,19 @@
      "ER": 16,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "5800万円",
+    "yen": 58000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "5800万円",
+     "yen": 58000000
+    }
+   }
   },
   "吉野光樹": {
    "revid": 111074876,
@@ -21766,7 +23726,19 @@
      "ER": 4,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1100万円",
+    "yen": 11000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1100万円",
+     "yen": 11000000
+    }
+   }
   },
   "篠木健太郎": {
    "revid": 111298422,
@@ -21801,7 +23773,19 @@
      "ER": 6,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "武田陸玖": {
    "revid": 109748470,
@@ -21836,7 +23820,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "560万円",
+    "yen": 5600000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "560万円",
+     "yen": 5600000
+    }
+   }
   },
   "橋本達弥": {
    "revid": 111214927,
@@ -21871,7 +23867,19 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "650万円",
+    "yen": 6500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "650万円",
+     "yen": 6500000
+    }
+   }
   },
   "尾形崇斗": {
    "revid": 111559690,
@@ -22095,7 +24103,19 @@
      "ER": 32,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2700万円",
+    "yen": 27000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2700万円",
+     "yen": 27000000
+    }
+   }
   },
   "松本凌人": {
    "revid": 110263329,
@@ -22157,7 +24177,19 @@
      "ER": 3,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "950万円",
+    "yen": 9500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "950万円",
+     "yen": 9500000
+    }
+   }
   },
   "若松尚輝": {
    "revid": 111311768,
@@ -22192,7 +24224,19 @@
      "ER": 7,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "800万円newsdig20241116",
+    "yen": 8000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "800万円newsdig20241116",
+     "yen": 8000000
+    }
+   }
   },
   "佐々木千隼": {
    "revid": 111806268,
@@ -22443,7 +24487,9 @@
      "ER": 0,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "オスバルド・ビド": {
    "revid": 111864246,
@@ -22586,14 +24632,28 @@
      "ER": 6,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "深沢鳳介": {
    "revid": 110321191,
    "title": "深沢鳳介",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "520万円",
+    "yen": 5200000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "520万円",
+     "yen": 5200000
+    }
+   }
   },
   "森原康平": {
    "revid": 111275487,
@@ -22871,21 +24931,57 @@
      "ER": 8,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億円",
+    "yen": 100000000,
+    "year": 2026,
+    "note": "※2026年から2年契約nikkansports20251126"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億円",
+     "yen": 100000000
+    }
+   }
   },
   "坂口翔颯": {
    "revid": 111595039,
    "title": "坂口翔颯",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "700万円jiji20241126",
+    "yen": 7000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "700万円jiji20241126",
+     "yen": 7000000
+    }
+   }
   },
   "片山皓心": {
    "revid": 111495677,
    "title": "片山皓心",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1000万円nikkansports20251127",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円nikkansports20251127",
+     "yen": 10000000
+    }
+   }
   },
   "ホセ・ルイーズ": {
    "revid": 111563611,
@@ -23190,7 +25286,9 @@
      "ER": 3,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "浜地真澄": {
    "revid": 111417631,
@@ -23387,7 +25485,19 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2800万円",
+    "yen": 28000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2800万円",
+     "yen": 28000000
+    }
+   }
   },
   "中川颯": {
    "revid": 111781883,
@@ -23476,7 +25586,9 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "石田裕太郎": {
    "revid": 111782409,
@@ -23538,7 +25650,19 @@
      "ER": 36,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1300万円",
+    "yen": 13000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1300万円",
+     "yen": 13000000
+    }
+   }
   },
   "平良拳太郎": {
    "revid": 111411899,
@@ -23816,7 +25940,19 @@
      "ER": 39,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "ショーン・レイノルズ (野球)": {
    "revid": 111587189,
@@ -23905,7 +26041,9 @@
      "ER": 11,
      "valid": false
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "中川虎大": {
    "revid": 110385961,
@@ -24102,7 +26240,19 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2300万円",
+    "yen": 23000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2300万円",
+     "yen": 23000000
+    }
+   }
   },
   "宮城滝太": {
    "revid": 109598073,
@@ -24191,7 +26341,19 @@
      "ER": 12,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1280万円",
+    "yen": 12800000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1280万円",
+     "yen": 12800000
+    }
+   }
   },
   "岩田将貴": {
    "revid": 111808241,
@@ -24226,7 +26388,19 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "560万円",
+    "yen": 5600000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "560万円",
+     "yen": 5600000
+    }
+   }
   },
   "堀岡隼人": {
    "revid": 111869233,
@@ -24369,14 +26543,38 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "730万円",
+    "yen": 7300000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "730万円",
+     "yen": 7300000
+    }
+   }
   },
   "庄司陽斗": {
    "revid": 111658304,
    "title": "庄司陽斗",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "馬場皐輔": {
    "revid": 111584317,
@@ -24627,7 +26825,19 @@
      "ER": 4,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1200万円jiji.com20251203",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円jiji.com20251203",
+     "yen": 12000000
+    }
+   }
   },
   "ハンセル・マルセリーノ": {
    "revid": 110437391,
@@ -24662,7 +26872,19 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "870万円",
+    "yen": 8700000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "870万円",
+     "yen": 8700000
+    }
+   }
   },
   "松尾汐恩": {
    "revid": 111782481,
@@ -24745,7 +26967,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2300万円",
+    "yen": 23000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2300万円",
+     "yen": 23000000
+    }
+   }
   },
   "戸柱恭孝": {
    "revid": 111874250,
@@ -25003,7 +27237,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "7500万円",
+    "yen": 75000000,
+    "year": 2026,
+    "note": "※2024年から4年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "7500万円",
+     "yen": 75000000
+    }
+   }
   },
   "古市尊": {
    "revid": 111544855,
@@ -25086,7 +27332,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "800万円",
+    "yen": 8000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "800万円",
+     "yen": 8000000
+    }
+   }
   },
   "九鬼隆平": {
    "revid": 110220899,
@@ -25194,7 +27452,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "650万円",
+    "yen": 6500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "650万円",
+     "yen": 6500000
+    }
+   }
   },
   "嶺井博希": {
    "revid": 111724572,
@@ -25502,7 +27772,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "7500万円",
+    "yen": 75000000,
+    "year": 2026,
+    "note": "※2023年から4年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "7500万円",
+     "yen": 75000000
+    }
+   }
   },
   "林琢真": {
    "revid": 111296436,
@@ -25610,7 +27892,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1900万円",
+    "yen": 19000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1900万円",
+     "yen": 19000000
+    }
+   }
   },
   "牧秀悟": {
    "revid": 111862036,
@@ -25768,7 +28062,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2億5000万円",
+    "yen": 250000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億5000万円",
+     "yen": 250000000
+    }
+   }
   },
   "小田康一郎": {
    "revid": 111754697,
@@ -25801,7 +28107,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1600万円",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円",
+     "yen": 16000000
+    }
+   }
   },
   "森敬斗": {
    "revid": 111453071,
@@ -25984,7 +28302,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2100万円",
+    "yen": 21000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2100万円",
+     "yen": 21000000
+    }
+   }
   },
   "京田陽太": {
    "revid": 111424933,
@@ -26217,7 +28547,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "6000万円",
+    "yen": 60000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "6000万円",
+     "yen": 60000000
+    }
+   }
   },
   "筒香嘉智": {
    "revid": 111866124,
@@ -26675,7 +29017,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3億円",
+    "yen": 300000000,
+    "year": 2026,
+    "note": "※2024年から3年契約nikkansports20240416_02"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3億円",
+     "yen": 300000000
+    }
+   }
   },
   "三森大貴": {
    "revid": 111625682,
@@ -26858,7 +29212,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4300万円",
+    "yen": 43000000,
+    "year": 2024,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2024": {
+     "text": "4300万円",
+     "yen": 43000000
+    }
+   }
   },
   "柴田竜拓": {
    "revid": 111855588,
@@ -27116,7 +29482,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4700万円",
+    "yen": 47000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "4700万円",
+     "yen": 47000000
+    }
+   }
   },
   "宮下朝陽": {
    "revid": 111420715,
@@ -27149,7 +29527,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "900万円nikkansports20251125",
+    "yen": 9000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "900万円nikkansports20251125",
+     "yen": 9000000
+    }
+   }
   },
   "加藤響 (野球)": {
    "revid": 111634813,
@@ -27182,7 +29572,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "750万円",
+    "yen": 7500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "750万円",
+     "yen": 7500000
+    }
+   }
   },
   "井上朋也": {
    "revid": 111560958,
@@ -27265,7 +29667,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1100万円",
+    "yen": 11000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1100万円",
+     "yen": 11000000
+    }
+   }
   },
   "石上泰輝": {
    "revid": 110437405,
@@ -27323,14 +29737,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1500万円",
+    "yen": 15000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1500万円",
+     "yen": 15000000
+    }
+   }
   },
   "成瀬脩人": {
    "revid": 111426374,
    "title": "成瀬脩人",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "850万円nikkansports20251201",
+    "yen": 8500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "850万円nikkansports20251201",
+     "yen": 8500000
+    }
+   }
   },
   "宮﨑敏郎": {
    "revid": 108550307,
@@ -27663,7 +30101,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2億円",
+    "yen": 200000000,
+    "year": 2026,
+    "note": "※2022年から6年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億円",
+     "yen": 200000000
+    }
+   }
   },
   "田内真翔": {
    "revid": 111319106,
@@ -27696,14 +30146,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "520万円",
+    "yen": 5200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "520万円",
+     "yen": 5200000
+    }
+   }
   },
   "高見澤郁魅": {
    "revid": 110509838,
    "title": "高見澤郁魅",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "340万円",
+    "yen": 3400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "340万円",
+     "yen": 3400000
+    }
+   }
   },
   "度会隆輝": {
    "revid": 111787118,
@@ -27786,7 +30260,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3500万円",
+    "yen": 35000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3500万円",
+     "yen": 35000000
+    }
+   }
   },
   "佐野恵太": {
    "revid": 111833958,
@@ -28044,7 +30530,19 @@
      "valid": false
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億7000万円＋出来高",
+    "yen": 170000000,
+    "year": 2025,
+    "note": "※2025年から3年契約"
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1億7000万円＋出来高",
+     "yen": 170000000
+    }
+   }
   },
   "神里和毅": {
    "revid": 111568193,
@@ -28277,7 +30775,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "勝又温史": {
    "revid": 111747928,
@@ -28335,7 +30845,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "620万円",
+    "yen": 6200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "620万円",
+     "yen": 6200000
+    }
+   }
   },
   "井上絢登": {
    "revid": 111512098,
@@ -28393,7 +30915,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "900万円",
+    "yen": 9000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "900万円",
+     "yen": 9000000
+    }
+   }
   },
   "梶原昂希": {
    "revid": 111840647,
@@ -28501,7 +31035,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2300万円",
+    "yen": 23000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "2300万円",
+     "yen": 23000000
+    }
+   }
   },
   "蝦名達夫": {
    "revid": 111863469,
@@ -28659,7 +31205,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "5900万円",
+    "yen": 59000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "5900万円",
+     "yen": 59000000
+    }
+   }
   },
   "関根大気": {
    "revid": 111806300,
@@ -28967,7 +31525,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4040万円",
+    "yen": 40400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4040万円",
+     "yen": 40400000
+    }
+   }
   },
   "濱将乃介": {
    "revid": 111811023,
@@ -29000,7 +31570,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "650万円",
+    "yen": 6500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "650万円",
+     "yen": 6500000
+    }
+   }
   },
   "ヘラル・エンカーナシオン": {
    "revid": 111414623,
@@ -29133,7 +31715,9 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "クーパー・ヒュンメル": {
    "revid": 111864231,
@@ -29294,7 +31878,9 @@
      "ER": 4,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "菊地吏玖": {
    "revid": 111811038,
@@ -29383,35 +31969,95 @@
      "ER": 14,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2000万円",
+    "yen": 20000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2000万円",
+     "yen": 20000000
+    }
+   }
   },
   "清水麻成": {
    "revid": 108064739,
    "title": "清水麻成",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "340万円",
+    "yen": 3400000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "340万円",
+     "yen": 3400000
+    }
+   }
   },
   "金渕光希": {
    "revid": 110620742,
    "title": "金渕光希",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "340万円|経歴=* 八戸工業大学第一高等学校",
+    "yen": 3400000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "340万円|経歴=* 八戸工業大学第一高等学校",
+     "yen": 3400000
+    }
+   }
   },
   "吉岡暖": {
    "revid": 111079236,
    "title": "吉岡暖",
    "updatedThrough": 2026,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "340万円kanaloco20241118",
+    "yen": 3400000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "340万円kanaloco20241118",
+     "yen": 3400000
+    }
+   }
   },
   "森下瑠大": {
    "revid": 110675506,
    "title": "森下瑠大",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "550万円",
+    "yen": 5500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "550万円",
+     "yen": 5500000
+    }
+   }
   },
   "益子京右": {
    "revid": 111811937,
@@ -29519,7 +32165,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "560万円",
+    "yen": 5600000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "560万円",
+     "yen": 5600000
+    }
+   }
   },
   "東妻純平": {
    "revid": 111811109,
@@ -29577,35 +32235,95 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "上甲凌大": {
    "revid": 111004776,
    "title": "上甲凌大",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "460万円",
+    "yen": 4600000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "460万円",
+     "yen": 4600000
+    }
+   }
   },
   "清水詩太": {
    "revid": 109606334,
    "title": "清水詩太",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "340万円",
+    "yen": 3400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "340万円",
+     "yen": 3400000
+    }
+   }
   },
   "小針大輝": {
    "revid": 111078619,
    "title": "小針大輝",
    "updatedThrough": 2026,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "340万円",
+    "yen": 3400000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "340万円",
+     "yen": 3400000
+    }
+   }
   },
   "齊藤汰直": {
    "revid": 109975521,
    "title": "齊藤汰直",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1200万円nikkansports20251112",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円nikkansports20251112",
+     "yen": 12000000
+    }
+   }
   },
   "東浜巨": {
    "revid": 111823693,
@@ -29964,7 +32682,19 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億1000万円",
+    "yen": 110000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億1000万円",
+     "yen": 110000000
+    }
+   }
   },
   "森浦大輔": {
    "revid": 107967838,
@@ -30107,7 +32837,19 @@
      "ER": 10,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億1000万円",
+    "yen": 110000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億1000万円",
+     "yen": 110000000
+    }
+   }
   },
   "大瀬良大地": {
    "revid": 111865311,
@@ -30466,7 +33208,19 @@
      "ER": 11,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2億円",
+    "yen": 200000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億円",
+     "yen": 200000000
+    }
+   }
   },
   "森翔平": {
    "revid": 111089564,
@@ -30582,7 +33336,19 @@
      "ER": 52,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3800万円",
+    "yen": 38000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3800万円",
+     "yen": 38000000
+    }
+   }
   },
   "常廣羽也斗": {
    "revid": 111101640,
@@ -30644,7 +33410,19 @@
      "ER": 23,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1400万円",
+    "yen": 14000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1400万円",
+     "yen": 14000000
+    }
+   }
   },
   "森下暢仁": {
    "revid": 111650277,
@@ -30841,7 +33619,19 @@
      "ER": 55,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2億円",
+    "yen": 200000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億円",
+     "yen": 200000000
+    }
+   }
   },
   "床田寛樹": {
    "revid": 111871085,
@@ -31092,7 +33882,19 @@
      "ER": 44,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億8500万円",
+    "yen": 185000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億8500万円",
+     "yen": 185000000
+    }
+   }
   },
   "栗林良吏": {
    "revid": 111621547,
@@ -31262,7 +34064,19 @@
      "ER": 39,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億8000万円",
+    "yen": 180000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億8000万円",
+     "yen": 180000000
+    }
+   }
   },
   "中﨑翔太": {
    "revid": 109558906,
@@ -31648,7 +34462,19 @@
      "ER": 11,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "6200万円",
+    "yen": 62000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "6200万円",
+     "yen": 62000000
+    }
+   }
   },
   "髙太一": {
    "revid": 111868961,
@@ -31710,7 +34536,19 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1800万円",
+    "yen": 18000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1800万円",
+     "yen": 18000000
+    }
+   }
   },
   "黒原拓未": {
    "revid": 111679424,
@@ -31799,7 +34637,19 @@
      "ER": 14,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2100万円",
+    "yen": 21000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "2100万円",
+     "yen": 21000000
+    }
+   }
   },
   "益田武尚": {
    "revid": 110395783,
@@ -31888,7 +34738,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "佐藤柳之介": {
    "revid": 111362703,
@@ -31923,7 +34785,19 @@
      "ER": 10,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "ケムナ誠": {
    "revid": 111500585,
@@ -32093,7 +34967,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1600万円",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円",
+     "yen": 16000000
+    }
+   }
   },
   "滝田一希": {
    "revid": 111784538,
@@ -32155,7 +35041,19 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "800万円",
+    "yen": 8000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "800万円",
+     "yen": 8000000
+    }
+   }
   },
   "高橋昂也": {
    "revid": 108128979,
@@ -32271,14 +35169,38 @@
      "ER": 10,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1400万円",
+    "yen": 14000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1400万円",
+     "yen": 14000000
+    }
+   }
   },
   "工藤泰己": {
    "revid": 111297721,
    "title": "工藤泰己",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "800万円",
+    "yen": 8000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "800万円",
+     "yen": 8000000
+    }
+   }
   },
   "塹江敦哉": {
    "revid": 108129090,
@@ -32502,14 +35424,38 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3500万円",
+    "yen": 35000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3500万円",
+     "yen": 35000000
+    }
+   }
   },
   "赤木晴哉": {
    "revid": 111479631,
    "title": "赤木晴哉",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "700万円",
+    "yen": 7000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "700万円",
+     "yen": 7000000
+    }
+   }
   },
   "長谷部銀次": {
    "revid": 111818439,
@@ -32571,7 +35517,9 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "鈴木健矢": {
    "revid": 111076377,
@@ -32741,7 +35689,19 @@
      "ER": 7,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "フレディ・ターノック": {
    "revid": 111589944,
@@ -32803,7 +35763,9 @@
      "ER": 8,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "島内颯太郎": {
    "revid": 110428343,
@@ -33000,7 +35962,19 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億3000万円",
+    "yen": 130000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億3000万円",
+     "yen": 130000000
+    }
+   }
   },
   "松本竜也 (右投手)": {
    "revid": 111502370,
@@ -33143,14 +36117,38 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1100万円",
+    "yen": 11000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1100万円",
+     "yen": 11000000
+    }
+   }
   },
   "髙木快大": {
    "revid": 111199474,
    "title": "髙木快大",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "斉藤優汰": {
    "revid": 111679463,
@@ -33185,7 +36183,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "アドゥワ誠": {
    "revid": 110639409,
@@ -33328,14 +36338,38 @@
      "ER": 11,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2900万円",
+    "yen": 29000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2900万円",
+     "yen": 29000000
+    }
+   }
   },
   "杉田健": {
    "revid": 110988961,
    "title": "杉田健",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "岡本駿": {
    "revid": 111632240,
@@ -33370,7 +36404,19 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2000万円",
+    "yen": 20000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2000万円",
+     "yen": 20000000
+    }
+   }
   },
   "玉村昇悟": {
    "revid": 108160555,
@@ -33513,7 +36559,19 @@
      "ER": 38,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3300万円",
+    "yen": 33000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3300万円",
+     "yen": 33000000
+    }
+   }
   },
   "遠藤淳志": {
    "revid": 111838999,
@@ -33737,7 +36795,19 @@
      "ER": 15,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1800万円",
+    "yen": 18000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1800万円",
+     "yen": 18000000
+    }
+   }
   },
   "菊地ハルン": {
    "revid": 111679431,
@@ -33772,7 +36842,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "800万円",
+    "yen": 8000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "800万円",
+     "yen": 8000000
+    }
+   }
   },
   "テイラー・ハーン": {
    "revid": 111343690,
@@ -34023,14 +37105,38 @@
      "ER": 19,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億1600万円",
+    "yen": 116000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億1600万円",
+     "yen": 116000000
+    }
+   }
   },
   "日髙暖己": {
    "revid": 111833153,
    "title": "日髙暖己",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "450万円",
+    "yen": 4500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "450万円",
+     "yen": 4500000
+    }
+   }
   },
   "會澤翼": {
    "revid": 111734961,
@@ -34463,7 +37569,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "5000万円",
+    "yen": 50000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "5000万円",
+     "yen": 50000000
+    }
+   }
   },
   "坂倉将吾": {
    "revid": 111847614,
@@ -34721,7 +37839,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億4000万円",
+    "yen": 140000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億4000万円",
+     "yen": 140000000
+    }
+   }
   },
   "石原貴規": {
    "revid": 111858859,
@@ -34829,7 +37959,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2000万円",
+    "yen": 20000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2000万円",
+     "yen": 20000000
+    }
+   }
   },
   "持丸泰輝": {
    "revid": 111679523,
@@ -34862,7 +38004,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1500万円",
+    "yen": 15000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1500万円",
+     "yen": 15000000
+    }
+   }
   },
   "清水叶人": {
    "revid": 108147352,
@@ -34895,14 +38049,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "550万円",
+    "yen": 5500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "550万円",
+     "yen": 5500000
+    }
+   }
   },
   "髙木翔斗": {
    "revid": 107126564,
    "title": "髙木翔斗",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "500万円",
+    "yen": 5000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "500万円",
+     "yen": 5000000
+    }
+   }
   },
   "勝田成": {
    "revid": 111679978,
@@ -34935,7 +38113,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2000万円",
+    "yen": 20000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "2000万円",
+     "yen": 20000000
+    }
+   }
   },
   "矢野雅哉": {
    "revid": 111791862,
@@ -35068,7 +38258,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4800万円",
+    "yen": 48000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4800万円",
+     "yen": 48000000
+    }
+   }
   },
   "小園海斗": {
    "revid": 111866502,
@@ -35251,7 +38453,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "推定1億5000万円",
+    "yen": 150000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "推定1億5000万円",
+     "yen": 150000000
+    }
+   }
   },
   "堂林翔太": {
    "revid": 111822386,
@@ -35609,7 +38823,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4800万円",
+    "yen": 48000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4800万円",
+     "yen": 48000000
+    }
+   }
   },
   "佐々木泰": {
    "revid": 111782506,
@@ -35642,7 +38868,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1800万円",
+    "yen": 18000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1800万円",
+     "yen": 18000000
+    }
+   }
   },
   "菊池涼介": {
    "revid": 111778809,
@@ -36000,7 +39238,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億7000万円",
+    "yen": 170000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億7000万円",
+     "yen": 170000000
+    }
+   }
   },
   "林晃汰": {
    "revid": 111158211,
@@ -36133,7 +39383,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "渡邉悠斗": {
    "revid": 110757184,
@@ -36166,7 +39428,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "800万円hochi20241129",
+    "yen": 8000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "800万円hochi20241129",
+     "yen": 8000000
+    }
+   }
   },
   "西川篤夢": {
    "revid": 111333576,
@@ -36199,7 +39473,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "450万円",
+    "yen": 4500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "450万円",
+     "yen": 4500000
+    }
+   }
   },
   "仲田侑仁": {
    "revid": 109245785,
@@ -36232,7 +39518,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "500万円",
+    "yen": 5000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "500万円",
+     "yen": 5000000
+    }
+   }
   },
   "内田湘大": {
    "revid": 108147446,
@@ -36290,7 +39588,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "辰見鴻之介": {
    "revid": 111825810,
@@ -36348,7 +39658,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "470万円",
+    "yen": 4700000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "470万円",
+     "yen": 4700000
+    }
+   }
   },
   "前川誠太": {
    "revid": 111846871,
@@ -36381,7 +39703,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "700万円",
+    "yen": 7000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "700万円",
+     "yen": 7000000
+    }
+   }
   },
   "佐藤啓介 (野球)": {
    "revid": 110774942,
@@ -36439,7 +39773,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "700万円",
+    "yen": 7000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "700万円",
+     "yen": 7000000
+    }
+   }
   },
   "エレフリス・モンテロ": {
    "revid": 111340419,
@@ -36547,7 +39893,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億1700万円",
+    "yen": 117000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億1700万円",
+     "yen": 117000000
+    }
+   }
   },
   "二俣翔一": {
    "revid": 110557874,
@@ -36605,7 +39963,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1400万円",
+    "yen": 14000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1400万円",
+     "yen": 14000000
+    }
+   }
   },
   "秋山翔吾": {
    "revid": 111834076,
@@ -37013,7 +40383,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億3000万円",
+    "yen": 130000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億3000万円",
+     "yen": 130000000
+    }
+   }
   },
   "野間峻祥": {
    "revid": 110266003,
@@ -37296,7 +40678,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "8000万円",
+    "yen": 80000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "8000万円",
+     "yen": 80000000
+    }
+   }
   },
   "平川蓮": {
    "revid": 111764083,
@@ -37329,7 +40723,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1600万円sponichi20251128",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円sponichi20251128",
+     "yen": 16000000
+    }
+   }
   },
   "末包昇大": {
    "revid": 110357037,
@@ -37437,7 +40843,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3600万円",
+    "yen": 36000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "3600万円",
+     "yen": 36000000
+    }
+   }
   },
   "久保修": {
    "revid": 110898728,
@@ -37495,14 +40913,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "700万円",
+    "yen": 7000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "700万円",
+     "yen": 7000000
+    }
+   }
   },
   "名原典彦": {
    "revid": 111650058,
    "title": "名原典彦",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "大盛穂": {
    "revid": 111727843,
@@ -37660,7 +41102,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3100万円",
+    "yen": 31000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3100万円",
+     "yen": 31000000
+    }
+   }
   },
   "田村俊介": {
    "revid": 111802001,
@@ -37743,7 +41197,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "サンドロ・ファビアン": {
    "revid": 111584629,
@@ -37801,7 +41267,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億8490万円",
+    "yen": 184900000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億8490万円",
+     "yen": 184900000
+    }
+   }
   },
   "中村奨成": {
    "revid": 111747864,
@@ -37984,7 +41462,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2700万円",
+    "yen": 27000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "2700万円",
+     "yen": 27000000
+    }
+   }
   },
   "中村貴浩": {
    "revid": 111501126,
@@ -38042,7 +41532,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "700万円",
+    "yen": 7000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "700万円",
+     "yen": 7000000
+    }
+   }
   },
   "辻大雅": {
    "revid": 111822021,
@@ -38077,21 +41579,57 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "800万円",
+    "yen": 8000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "800万円",
+     "yen": 8000000
+    }
+   }
   },
   "小船翼": {
    "revid": 109425631,
    "title": "小船翼",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   },
   "竹下海斗": {
    "revid": 109425798,
    "title": "竹下海斗",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   },
   "河野佳": {
    "revid": 107406625,
@@ -38153,42 +41691,114 @@
      "ER": 4,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1100万円",
+    "yen": 11000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1100万円",
+     "yen": 11000000
+    }
+   }
   },
   "杉原望来": {
    "revid": 109425851,
    "title": "杉原望来",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "350万円",
+    "yen": 3500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "350万円",
+     "yen": 3500000
+    }
+   }
   },
   "デベルソン・アリア": {
    "revid": 111517745,
    "title": "デベルソン・アリア",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "230万円",
+    "yen": 2300000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "230万円",
+     "yen": 2300000
+    }
+   }
   },
   "安竹俊喜": {
    "revid": 108300441,
    "title": "安竹俊喜",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円hochi20241125",
+    "yen": 3000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "300万円hochi20241125",
+     "yen": 3000000
+    }
+   }
   },
   "モイセス・ラミレス (野球)": {
    "revid": 111568971,
    "title": "モイセス・ラミレス (野球)",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   },
   "ネルソン・ロベルト": {
    "revid": 111762813,
    "title": "ネルソン・ロベルト",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   },
   "ホセ・キハダ": {
    "revid": 111327005,
@@ -38412,7 +42022,9 @@
      "ER": 16,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "石山泰稚": {
    "revid": 111642494,
@@ -38771,7 +42383,19 @@
      "ER": 10,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億2000万円",
+    "yen": 120000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億2000万円",
+     "yen": 120000000
+    }
+   }
   },
   "西舘昂汰": {
    "revid": 111327054,
@@ -38806,7 +42430,19 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1100万円nikkansports20260723",
+    "yen": 11000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1100万円nikkansports20260723",
+     "yen": 11000000
+    }
+   }
   },
   "中村優斗": {
    "revid": 111327038,
@@ -38868,7 +42504,19 @@
      "ER": 2,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1700万円",
+    "yen": 17000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1700万円",
+     "yen": 17000000
+    }
+   }
   },
   "清水昇 (野球)": {
    "revid": 111327085,
@@ -39092,7 +42740,19 @@
      "ER": 18,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "9000万円",
+    "yen": 90000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "9000万円",
+     "yen": 90000000
+    }
+   }
   },
   "奥川恭伸": {
    "revid": 111658607,
@@ -39262,7 +42922,19 @@
      "ER": 50,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2100万円",
+    "yen": 21000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "2100万円",
+     "yen": 21000000
+    }
+   }
   },
   "石川雅規": {
    "revid": 111713648,
@@ -39945,7 +43617,9 @@
      "ER": 6,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "木澤尚文": {
    "revid": 111327236,
@@ -40088,7 +43762,19 @@
      "ER": 3,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "6300万円",
+    "yen": 63000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "6300万円",
+     "yen": 63000000
+    }
+   }
   },
   "吉村貢司郎": {
    "revid": 111424822,
@@ -40204,7 +43890,19 @@
      "ER": 61,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "7500万円",
+    "yen": 75000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "7500万円",
+     "yen": 75000000
+    }
+   }
   },
   "星知弥": {
    "revid": 111327343,
@@ -40482,7 +44180,19 @@
      "ER": 14,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "5600万円",
+    "yen": 56000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "5600万円",
+     "yen": 56000000
+    }
+   }
   },
   "山野太一": {
    "revid": 111658843,
@@ -40625,7 +44335,19 @@
      "ER": 42,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2300万円",
+    "yen": 23000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2300万円",
+     "yen": 23000000
+    }
+   }
   },
   "松本健吾": {
    "revid": 111782450,
@@ -40714,7 +44436,19 @@
      "ER": 48,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2000万円",
+    "yen": 20000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2000万円",
+     "yen": 20000000
+    }
+   }
   },
   "小川泰弘": {
    "revid": 111778978,
@@ -41100,7 +44834,19 @@
      "ER": 25,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "8900万円",
+    "yen": 89000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "8900万円",
+     "yen": 89000000
+    }
+   }
   },
   "荘司宏太": {
    "revid": 111327533,
@@ -41162,14 +44908,38 @@
      "ER": 14,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "4200万円",
+    "yen": 42000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4200万円",
+     "yen": 42000000
+    }
+   }
   },
   "山崎太陽": {
    "revid": 111787268,
    "title": "山崎太陽",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "900万円sanspo20251126",
+    "yen": 9000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "900万円sanspo20251126",
+     "yen": 9000000
+    }
+   }
   },
   "田口麗斗": {
    "revid": 111567624,
@@ -41501,7 +45271,9 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "石原勇輝": {
    "revid": 111327624,
@@ -41590,7 +45362,19 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "800万円",
+    "yen": 8000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "800万円",
+     "yen": 8000000
+    }
+   }
   },
   "岩井俊介": {
    "revid": 111826467,
@@ -41679,7 +45463,19 @@
      "ER": 0,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1500万円",
+    "yen": 15000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1500万円",
+     "yen": 15000000
+    }
+   }
   },
   "高梨裕稔": {
    "revid": 111655112,
@@ -42011,7 +45807,19 @@
      "ER": 25,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "矢崎拓也": {
    "revid": 111791816,
@@ -42262,7 +46070,19 @@
      "ER": 10,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "4800万円",
+    "yen": 48000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "4800万円",
+     "yen": 48000000
+    }
+   }
   },
   "増居翔太": {
    "revid": 111327772,
@@ -42297,7 +46117,9 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "大西広樹": {
    "revid": 111327814,
@@ -42494,7 +46316,19 @@
      "ER": 14,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "9000万円",
+    "yen": 90000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "9000万円",
+     "yen": 90000000
+    }
+   }
   },
   "小澤怜史": {
    "revid": 111527273,
@@ -42664,7 +46498,19 @@
      "ER": 8,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "5200万円",
+    "yen": 52000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "5200万円",
+     "yen": 52000000
+    }
+   }
   },
   "大道温貴": {
    "revid": 111327912,
@@ -42834,7 +46680,19 @@
      "ER": 3,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1850万円",
+    "yen": 18500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1850万円",
+     "yen": 18500000
+    }
+   }
   },
   "高橋奎二": {
    "revid": 111327971,
@@ -43085,14 +46943,38 @@
      "ER": 46,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "4600万円",
+    "yen": 46000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4600万円",
+     "yen": 46000000
+    }
+   }
   },
   "鈴木蓮吾": {
    "revid": 109239803,
    "title": "鈴木蓮吾",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "500万円ntv20251112",
+    "yen": 5000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "500万円ntv20251112",
+     "yen": 5000000
+    }
+   }
   },
   "長谷川宙輝": {
    "revid": 111538738,
@@ -43262,7 +47144,9 @@
      "ER": 3,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "飯田琉斗": {
    "revid": 111328094,
@@ -43297,7 +47181,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "800万円sanspo20251110",
+    "yen": 8000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "800万円sanspo20251110",
+     "yen": 8000000
+    }
+   }
   },
   "ヘスース・リランソ": {
    "revid": 111328131,
@@ -43332,7 +47228,19 @@
      "ER": 6,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "9400万sponichi20251128",
+    "yen": null,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "9400万sponichi20251128",
+     "yen": null
+    }
+   }
   },
   "阪口皓亮": {
    "revid": 111328176,
@@ -43556,7 +47464,19 @@
      "ER": 11,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "丸山翔大": {
    "revid": 111398786,
@@ -43672,7 +47592,19 @@
      "ER": 18,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1250万円",
+    "yen": 12500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1250万円",
+     "yen": 12500000
+    }
+   }
   },
   "下川隼佑": {
    "revid": 111389577,
@@ -43734,7 +47666,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "300万円niigatanippo20241117",
+    "yen": 3000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "300万円niigatanippo20241117",
+     "yen": 3000000
+    }
+   }
   },
   "廣澤優": {
    "revid": 111328266,
@@ -43769,7 +47713,19 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "300万円newsdig20241024",
+    "yen": 3000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "300万円newsdig20241024",
+     "yen": 3000000
+    }
+   }
   },
   "沼田翔平": {
    "revid": 111202476,
@@ -43858,7 +47814,19 @@
      "ER": 4,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "青柳晃洋": {
    "revid": 111749459,
@@ -44136,7 +48104,19 @@
      "ER": 12,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "5000万円",
+    "yen": 50000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "5000万円",
+     "yen": 50000000
+    }
+   }
   },
   "古賀優大": {
    "revid": 111322862,
@@ -44344,7 +48324,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "中村悠平": {
    "revid": 111334634,
@@ -44802,7 +48794,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億5000万円＋出来高",
+    "yen": 150000000,
+    "year": 2025,
+    "note": "※2025年から3年契約"
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1億5000万円＋出来高",
+     "yen": 150000000
+    }
+   }
   },
   "松本直樹": {
    "revid": 111334669,
@@ -45010,7 +49014,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1900万円",
+    "yen": 19000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1900万円",
+     "yen": 19000000
+    }
+   }
   },
   "柿沼友哉": {
    "revid": 111334688,
@@ -45243,7 +49259,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "橋本星哉": {
    "revid": 111334733,
@@ -45326,7 +49354,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "650万円",
+    "yen": 6500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "650万円",
+     "yen": 6500000
+    }
+   }
   },
   "矢野泰二郎": {
    "revid": 111334761,
@@ -45359,7 +49399,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "700万円",
+    "yen": 7000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "700万円",
+     "yen": 7000000
+    }
+   }
   },
   "鈴木叶": {
    "revid": 111655046,
@@ -45442,7 +49494,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円",
+    "yen": 6000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "600万円",
+     "yen": 6000000
+    }
+   }
   },
   "赤羽由紘": {
    "revid": 111532832,
@@ -45575,7 +49639,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "900万円",
+    "yen": 9000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "900万円",
+     "yen": 9000000
+    }
+   }
   },
   "山田哲人": {
    "revid": 111809456,
@@ -45958,7 +50034,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "5億円＋出来高",
+    "yen": 500000000,
+    "year": 2026,
+    "note": "※2021年から7年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "5億円＋出来高",
+     "yen": 500000000
+    }
+   }
   },
   "内山壮真": {
    "revid": 111336218,
@@ -46116,7 +50204,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2200万円",
+    "yen": 22000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "2200万円",
+     "yen": 22000000
+    }
+   }
   },
   "松下歩叶": {
    "revid": 111336262,
@@ -46149,7 +50249,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1600万円",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円",
+     "yen": 16000000
+    }
+   }
   },
   "長岡秀樹": {
    "revid": 111602911,
@@ -46332,7 +50444,19 @@
      "valid": false
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "7500万円",
+    "yen": 75000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "7500万円",
+     "yen": 75000000
+    }
+   }
   },
   "茂木栄五郎": {
    "revid": 111798148,
@@ -46615,7 +50739,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "7000万円",
+    "yen": 70000000,
+    "year": 2026,
+    "note": "※2025年から2年契約sponichi20251204"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "7000万円",
+     "yen": 70000000
+    }
+   }
   },
   "宮本丈": {
    "revid": 111336386,
@@ -46848,7 +50984,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2300万円",
+    "yen": 23000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "2300万円",
+     "yen": 23000000
+    }
+   }
   },
   "ホセ・オスナ": {
    "revid": 111336469,
@@ -47161,7 +51309,19 @@
      "ER": 0,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "4億円",
+    "yen": 400000000,
+    "year": 2026,
+    "note": "※2025年から3年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4億円",
+     "yen": 400000000
+    }
+   }
   },
   "山野辺翔": {
    "revid": 111525502,
@@ -47394,7 +51554,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1100万円",
+    "yen": 11000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1100万円",
+     "yen": 11000000
+    }
+   }
   },
   "石井巧": {
    "revid": 111568822,
@@ -47427,14 +51599,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "800万円chunichi20251118",
+    "yen": 8000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "800万円chunichi20251118",
+     "yen": 8000000
+    }
+   }
   },
   "松川玲央": {
    "revid": 111177588,
    "title": "松川玲央",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "北村恵吾": {
    "revid": 111527729,
@@ -47517,7 +51713,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "850万円",
+    "yen": 8500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "850万円",
+     "yen": 8500000
+    }
+   }
   },
   "田中陽翔": {
    "revid": 111617818,
@@ -47575,7 +51783,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "650万円",
+    "yen": 6500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "650万円",
+     "yen": 6500000
+    }
+   }
   },
   "武岡龍世": {
    "revid": 111336715,
@@ -47758,7 +51978,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1500万円",
+    "yen": 15000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1500万円",
+     "yen": 15000000
+    }
+   }
   },
   "伊藤琉偉": {
    "revid": 111336787,
@@ -47841,7 +52073,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "750万円",
+    "yen": 7500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "750万円",
+     "yen": 7500000
+    }
+   }
   },
   "並木秀尊": {
    "revid": 111336842,
@@ -47999,7 +52243,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1400万円",
+    "yen": 14000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1400万円",
+     "yen": 14000000
+    }
+   }
   },
   "丸山和郁": {
    "revid": 111336884,
@@ -48132,7 +52388,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2200万円",
+    "yen": 22000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2200万円",
+     "yen": 22000000
+    }
+   }
   },
   "塩見泰隆": {
    "revid": 111336945,
@@ -48365,7 +52633,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "5700万円",
+    "yen": 57000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "5700万円",
+     "yen": 57000000
+    }
+   }
   },
   "ドミンゴ・サンタナ": {
    "revid": 111873773,
@@ -48723,7 +53003,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4億7700万円",
+    "yen": 477000000,
+    "year": 2025,
+    "note": "※2025年から3年契約"
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "4億7700万円",
+     "yen": 477000000
+    }
+   }
   },
   "モイセエフ・ニキータ": {
    "revid": 111337053,
@@ -48756,7 +53048,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "650万円",
+    "yen": 6500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "650万円",
+     "yen": 6500000
+    }
+   }
   },
   "西村瑠伊斗": {
    "revid": 111337030,
@@ -48839,7 +53143,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "700万円",
+    "yen": 7000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "700万円",
+     "yen": 7000000
+    }
+   }
   },
   "澤井廉": {
    "revid": 111430153,
@@ -48947,7 +53263,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "増田珠": {
    "revid": 111686129,
@@ -49105,7 +53433,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1600万円",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円",
+     "yen": 16000000
+    }
+   }
   },
   "岩田幸宏": {
    "revid": 111833912,
@@ -49188,7 +53528,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2700万円",
+    "yen": 27000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2700万円",
+     "yen": 27000000
+    }
+   }
   },
   "日隈モンテル": {
    "revid": 111725879,
@@ -49246,7 +53598,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "470万円",
+    "yen": 4700000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "470万円",
+     "yen": 4700000
+    }
+   }
   },
   "竹山日向": {
    "revid": 109992209,
@@ -49281,21 +53645,57 @@
      "ER": 0,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "400万円",
+    "yen": 4000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "400万円",
+     "yen": 4000000
+    }
+   }
   },
   "小宮悠瞳": {
    "revid": 111179509,
    "title": "小宮悠瞳",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "290万円",
+    "yen": 2900000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "290万円",
+     "yen": 2900000
+    }
+   }
   },
   "髙橋翔聖": {
    "revid": 110564304,
    "title": "髙橋翔聖",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "510万円",
+    "yen": 5100000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "510万円",
+     "yen": 5100000
+    }
+   }
   },
   "坂本拓己": {
    "revid": 111822521,
@@ -49330,28 +53730,76 @@
      "ER": 0,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "500万円",
+    "yen": 5000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "500万円",
+     "yen": 5000000
+    }
+   }
   },
   "松本龍之介": {
    "revid": 111311865,
    "title": "松本龍之介",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   },
   "村上喬一朗": {
    "revid": 111824886,
    "title": "村上喬一朗",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "250万円",
+    "yen": 2500000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "250万円",
+     "yen": 2500000
+    }
+   }
   },
   "遠藤成": {
    "revid": 111566716,
    "title": "遠藤成",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "500万円",
+    "yen": 5000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "500万円",
+     "yen": 5000000
+    }
+   }
   },
   "津田啓史": {
    "revid": 111848093,
@@ -49384,14 +53832,28 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "髙野颯太": {
    "revid": 110340830,
    "title": "髙野颯太",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   },
   "中西聖輝": {
    "revid": 111651013,
@@ -49426,7 +53888,19 @@
      "ER": 27,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1600万円nikkansports20251127",
+    "yen": 16000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1600万円nikkansports20251127",
+     "yen": 16000000
+    }
+   }
   },
   "橋本侑樹 (野球)": {
    "revid": 111741676,
@@ -49596,7 +54070,19 @@
      "ER": 15,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3900万円",
+    "yen": 39000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3900万円",
+     "yen": 39000000
+    }
+   }
   },
   "草加勝": {
    "revid": 111088389,
@@ -49631,7 +54117,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1100万円",
+    "yen": 11000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1100万円",
+     "yen": 11000000
+    }
+   }
   },
   "櫻井頼之介": {
    "revid": 111651070,
@@ -49666,7 +54164,19 @@
      "ER": 34,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1200万円chunichi20251112|nikkansports20251112",
+    "yen": 12000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1200万円chunichi20251112|nikkansports20251112",
+     "yen": 12000000
+    }
+   }
   },
   "柳裕也": {
    "revid": 111722041,
@@ -49944,7 +54454,19 @@
      "ER": 39,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2億円＋出来高(3年契約)",
+    "yen": 200000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億円＋出来高(3年契約)",
+     "yen": 200000000
+    }
+   }
   },
   "髙橋宏斗": {
    "revid": 111782428,
@@ -50087,7 +54609,19 @@
      "ER": 36,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2億円",
+    "yen": 200000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2億円",
+     "yen": 200000000
+    }
+   }
   },
   "涌井秀章": {
    "revid": 111851036,
@@ -50689,7 +55223,19 @@
      "ER": 28,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "7000万円",
+    "yen": 70000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "7000万円",
+     "yen": 70000000
+    }
+   }
   },
   "金丸夢斗": {
    "revid": 111782436,
@@ -50751,7 +55297,19 @@
      "ER": 52,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2500万円",
+    "yen": 25000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2500万円",
+     "yen": 25000000
+    }
+   }
   },
   "大野雄大": {
    "revid": 111637458,
@@ -51191,7 +55749,19 @@
      "ER": 39,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億7000万円",
+    "yen": 170000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億7000万円",
+     "yen": 170000000
+    }
+   }
   },
   "仲地礼亜": {
    "revid": 109367401,
@@ -51280,7 +55850,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "900万円",
+    "yen": 9000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "900万円",
+     "yen": 9000000
+    }
+   }
   },
   "根尾昂": {
    "revid": 111254548,
@@ -51572,7 +56154,19 @@
      "ER": 5,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1050万円",
+    "yen": 10500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1050万円",
+     "yen": 10500000
+    }
+   }
   },
   "伊藤茉央": {
    "revid": 111803568,
@@ -51661,7 +56255,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "杉浦稔大": {
    "revid": 111153575,
@@ -51993,7 +56599,19 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "6000万円",
+    "yen": 60000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "6000万円",
+     "yen": 60000000
+    }
+   }
   },
   "福敬登": {
    "revid": 111240713,
@@ -52271,7 +56889,19 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "松葉貴大": {
    "revid": 111570928,
@@ -52657,7 +57287,19 @@
      "ER": 44,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億円",
+    "yen": 100000000,
+    "year": 2027,
+    "note": "※2026年から複数年契約"
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1億円",
+     "yen": 100000000
+    }
+   }
   },
   "勝野昌慶": {
    "revid": 111236403,
@@ -52854,7 +57496,19 @@
      "ER": 15,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "3300万円",
+    "yen": 33000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3300万円",
+     "yen": 33000000
+    }
+   }
   },
   "梅野雄吾": {
    "revid": 111201506,
@@ -53105,7 +57759,19 @@
      "ER": 12,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "2500万円",
+    "yen": 25000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2500万円",
+     "yen": 25000000
+    }
+   }
   },
   "吉田聖弥": {
    "revid": 111782398,
@@ -53167,7 +57833,19 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1150万円",
+    "yen": 11500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1150万円",
+     "yen": 11500000
+    }
+   }
   },
   "清水達也 (投手)": {
    "revid": 111617830,
@@ -53391,14 +58069,38 @@
      "ER": 13,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億2500万円",
+    "yen": 125000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億2500万円",
+     "yen": 125000000
+    }
+   }
   },
   "篠﨑国忠": {
    "revid": 110133361,
    "title": "篠﨑国忠",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "宮内春輝": {
    "revid": 110294808,
@@ -53433,7 +58135,19 @@
      "ER": 12,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "770万円",
+    "yen": 7700000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "770万円",
+     "yen": 7700000
+    }
+   }
   },
   "藤嶋健人": {
    "revid": 111154218,
@@ -53657,7 +58371,19 @@
      "ER": 19,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億2000万円",
+    "yen": 120000000,
+    "year": 2026,
+    "note": "※2026年から3年契約"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億2000万円",
+     "yen": 120000000
+    }
+   }
   },
   "齋藤綱記": {
    "revid": 111459411,
@@ -53962,14 +58688,38 @@
      "ER": 14,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "5500万円",
+    "yen": 55000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "5500万円",
+     "yen": 55000000
+    }
+   }
   },
   "高橋幸佑": {
    "revid": 108485913,
    "title": "高橋幸佑",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "540万円",
+    "yen": 5400000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "540万円",
+     "yen": 5400000
+    }
+   }
   },
   "森博人": {
    "revid": 110895346,
@@ -54031,7 +58781,19 @@
      "ER": 9,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "400万円",
+    "yen": 4000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "400万円",
+     "yen": 4000000
+    }
+   }
   },
   "三浦瑞樹": {
    "revid": 111811151,
@@ -54093,7 +58855,19 @@
      "ER": 17,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "900万円",
+    "yen": 9000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "900万円",
+     "yen": 9000000
+    }
+   }
   },
   "近藤廉": {
    "revid": 111596168,
@@ -54182,7 +58956,19 @@
      "ER": 4,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "900万円",
+    "yen": 9000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "900万円",
+     "yen": 9000000
+    }
+   }
   },
   "松山晋也": {
    "revid": 111317702,
@@ -54298,7 +59084,19 @@
      "ER": 8,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "1億2500万円",
+    "yen": 125000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億2500万円",
+     "yen": 125000000
+    }
+   }
   },
   "石伊雄太": {
    "revid": 111329713,
@@ -54356,7 +59154,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2600万円",
+    "yen": 26000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2600万円",
+     "yen": 26000000
+    }
+   }
   },
   "木下拓哉": {
    "revid": 111350079,
@@ -54639,7 +59449,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "7000万円",
+    "yen": 70000000,
+    "year": 2026,
+    "note": "※2025年から2年契約nikkansports20241126"
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "7000万円",
+     "yen": 70000000
+    }
+   }
   },
   "宇佐見真吾": {
    "revid": 111516064,
@@ -54922,7 +59744,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3000万円",
+    "yen": 30000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3000万円",
+     "yen": 30000000
+    }
+   }
   },
   "味谷大誠": {
    "revid": 109470498,
@@ -55005,7 +59839,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "610万円",
+    "yen": 6100000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "610万円",
+     "yen": 6100000
+    }
+   }
   },
   "加藤匠馬": {
    "revid": 110905467,
@@ -55263,7 +60109,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2250万円",
+    "yen": 22500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2250万円",
+     "yen": 22500000
+    }
+   }
   },
   "石橋康太": {
    "revid": 111504779,
@@ -55446,7 +60304,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1060万円",
+    "yen": 10600000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1060万円",
+     "yen": 10600000
+    }
+   }
   },
   "辻本倫太郎": {
    "revid": 111734921,
@@ -55504,7 +60374,9 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "田中幹也": {
    "revid": 111725805,
@@ -55587,7 +60459,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3600万円",
+    "yen": 36000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3600万円",
+     "yen": 36000000
+    }
+   }
   },
   "高橋周平": {
    "revid": 111851396,
@@ -55945,7 +60829,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "6000万円",
+    "yen": 60000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "6000万円",
+     "yen": 60000000
+    }
+   }
   },
   "村松開人": {
    "revid": 111694897,
@@ -56053,7 +60949,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2800万円",
+    "yen": 28000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2800万円",
+     "yen": 28000000
+    }
+   }
   },
   "福永裕基": {
    "revid": 111767640,
@@ -56161,7 +61069,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2700万円",
+    "yen": 27000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2700万円",
+     "yen": 27000000
+    }
+   }
   },
   "ミゲル・サノー": {
    "revid": 111874604,
@@ -56419,7 +61339,9 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "石川昂弥": {
    "revid": 111329683,
@@ -56577,7 +61499,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2300万円",
+    "yen": 23000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2300万円",
+     "yen": 23000000
+    }
+   }
   },
   "森駿太 (野球)": {
    "revid": 111335299,
@@ -56635,7 +61569,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "620万円",
+    "yen": 6200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "620万円",
+     "yen": 6200000
+    }
+   }
   },
   "土田龍空": {
    "revid": 111329824,
@@ -56793,7 +61739,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1300万円",
+    "yen": 13000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1300万円",
+     "yen": 13000000
+    }
+   }
   },
   "阿部寿樹": {
    "revid": 111565574,
@@ -57076,14 +62034,38 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1500万円",
+    "yen": 15000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1500万円",
+     "yen": 15000000
+    }
+   }
   },
   "新保茉良": {
    "revid": 111687896,
    "title": "新保茉良",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "720万円",
+    "yen": 7200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "720万円",
+     "yen": 7200000
+    }
+   }
   },
   "山本泰寛": {
    "revid": 111176376,
@@ -57291,7 +62273,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "3500万円",
+    "yen": 35000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "3500万円",
+     "yen": 35000000
+    }
+   }
   },
   "板山祐太郎": {
    "revid": 111693891,
@@ -57549,7 +62543,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "2200万円",
+    "yen": 22000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2200万円",
+     "yen": 22000000
+    }
+   }
   },
   "知野直人": {
    "revid": 111515564,
@@ -57682,7 +62688,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   }
   },
   "クリスチャン・ロドリゲス": {
    "revid": 109367262,
@@ -57740,7 +62758,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1500万円",
+    "yen": 15000000,
+    "year": 2025,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2025": {
+     "text": "1500万円",
+     "yen": 15000000
+    }
+   }
   },
   "樋口正修": {
    "revid": 110508813,
@@ -57823,7 +62853,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "800万円",
+    "yen": 8000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "800万円",
+     "yen": 8000000
+    }
+   }
   },
   "尾田剛樹": {
    "revid": 111810612,
@@ -57881,7 +62923,9 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "岡林勇希": {
    "revid": 111859072,
@@ -58064,7 +63108,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億5000万円",
+    "yen": 150000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億5000万円",
+     "yen": 150000000
+    }
+   }
   },
   "大島洋平": {
    "revid": 111395272,
@@ -58497,7 +63553,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "6000万円＋出来高",
+    "yen": 60000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "6000万円＋出来高",
+     "yen": 60000000
+    }
+   }
   },
   "ジェイソン・ボスラー": {
    "revid": 111676236,
@@ -58683,7 +63751,9 @@
      "ER": 1,
      "valid": true
     }
-   ]
+   ],
+   "salary": null,
+   "salaryHistory": {}
   },
   "福元悠真": {
    "revid": 111329783,
@@ -58741,7 +63811,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "420万円",
+    "yen": 4200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "420万円",
+     "yen": 4200000
+    }
+   }
   },
   "ブライト健太": {
    "revid": 111651099,
@@ -58849,7 +63931,9 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {}
   },
   "川越誠司": {
    "revid": 111679951,
@@ -59032,7 +64116,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1400万円",
+    "yen": 14000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1400万円",
+     "yen": 14000000
+    }
+   }
   },
   "上林誠知": {
    "revid": 111709643,
@@ -59340,7 +64436,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "4600万円",
+    "yen": 46000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "4600万円",
+     "yen": 46000000
+    }
+   }
   },
   "細川成也": {
    "revid": 111786776,
@@ -59598,7 +64706,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1億3000万円",
+    "yen": 130000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1億3000万円",
+     "yen": 130000000
+    }
+   }
   },
   "花田旭": {
    "revid": 111329799,
@@ -59631,7 +64751,19 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "720万円chunichi20251128",
+    "yen": 7200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "720万円chunichi20251128",
+     "yen": 7200000
+    }
+   }
   },
   "鵜飼航丞": {
    "revid": 111695034,
@@ -59764,21 +64896,57 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1050万円",
+    "yen": 10500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1050万円",
+     "yen": 10500000
+    }
+   }
   },
   "能戸輝夢": {
    "revid": 111428921,
    "title": "能戸輝夢",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "600万円chunichi20251113",
+    "yen": 6000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "600万円chunichi20251113",
+     "yen": 6000000
+    }
+   }
   },
   "井上剣也": {
    "revid": 111631515,
    "title": "井上剣也",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   },
   "梅津晃大": {
    "revid": 111340153,
@@ -59921,14 +65089,38 @@
      "ER": 35,
      "valid": true
     }
-   ]
+   ],
+   "salary": {
+    "text": "400万円",
+    "yen": 4000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "400万円",
+     "yen": 4000000
+    }
+   }
   },
   "森山暁生": {
    "revid": 109971101,
    "title": "森山暁生",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "420万円",
+    "yen": 4200000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "420万円",
+     "yen": 4200000
+    }
+   }
   },
   "山浅龍之介": {
    "revid": 109645451,
@@ -59986,21 +65178,57 @@
      "valid": true
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "400万円",
+    "yen": 4000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "400万円",
+     "yen": 4000000
+    }
+   }
   },
   "中村奈一輝": {
    "revid": 111413620,
    "title": "中村奈一輝",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   },
   "石川大峨": {
    "revid": 111397211,
    "title": "石川大峨",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   },
   "緒方理貢": {
    "revid": 111836026,
@@ -60058,14 +65286,38 @@
      "valid": false
     }
    ],
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "1200万円",
+    "yen": 12000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1200万円",
+     "yen": 12000000
+    }
+   }
   },
   "三上愛介": {
    "revid": 109280040,
    "title": "三上愛介",
    "updatedThrough": null,
    "batting": null,
-   "pitching": null
+   "pitching": null,
+   "salary": {
+    "text": "300万円",
+    "yen": 3000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "300万円",
+     "yen": 3000000
+    }
+   }
   }
  }
 }
