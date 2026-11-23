@@ -71,6 +71,7 @@ test('サイト設定: パ・リーグ版の URL・出力先は変えず、セ�
   // 計測・note・データ置き場はパ・リーグ版と共有しない
   assert.notEqual(cc.analytics.id, pc.analytics.id);
   assert.equal(cc.analytics.id, 'G-Y8PW9E6MMS');
+  assert.equal(cc.note.profileUrl, 'https://note.com/central_labo');
   assert.notEqual(cc.note.profileUrl || '', pc.note.profileUrl);
   for (const k of ['inputDir', 'storeDir', 'logFile', 'columnsDir', 'outDir']) assert.notEqual(cc[k], pc[k], k);
   // AdSense の運営者IDは同じでよい

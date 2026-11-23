@@ -29,7 +29,7 @@
     "_説明": "セ・リーグ版専用の GA4 測定ID（G-XXXX）を入れる。パ・リーグ版（G-WSNC046WSL）とは別のプロパティにする。空なら計測しない"
   },
   "note": {
-    "profileUrl": "",
+    "profileUrl": "https://note.com/central_labo",
     "_説明": "セ・リーグ版専用の note のクリエイターページURL。空なら note への導線は出さない"
   },
   "repo": "tsuidenishirabeta2026-hue/tsuidenishirabeta2026-hue.github.io",
