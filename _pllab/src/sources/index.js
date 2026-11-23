@@ -17,6 +17,7 @@
 import { csvDirSource } from './csv-dir.js';
 import { csvUrlSource } from './csv-url.js';
 import { wikipediaSource } from './wikipedia.js';
+import { LEAGUE } from '../league.js';
 
 export function createSource(config, env = process.env) {
   const id = env.PLLAB_SOURCE || config.source;
@@ -32,7 +33,7 @@ export function createSource(config, env = process.env) {
         cacheDir: config.cacheDir,
       });
     case 'wikipedia':
-      return wikipediaSource({ userAgent: `pl-lab-updater/1.0 (unofficial baseball fan site${env.PLLAB_UA_CONTACT ? `; ${env.PLLAB_UA_CONTACT}` : ''})` });
+      return wikipediaSource({ userAgent: `${LEAGUE.updaterName}/1.0 (unofficial baseball fan site${env.PLLAB_UA_CONTACT ? `; ${env.PLLAB_UA_CONTACT}` : ''})` });
     default:
       throw new Error(`未知のデータ取得元です: ${id}（wikipedia / csv-dir / csv-url / demo）`);
   }

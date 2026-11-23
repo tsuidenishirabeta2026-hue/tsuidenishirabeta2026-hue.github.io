@@ -3,6 +3,7 @@
 
 import { parseCsv } from './csv.js';
 import { FILES, LEAGUE_TEAMS } from './schema.js';
+import { LEAGUE } from './league.js';
 import { ipToOuts, sumRows, BAT_COUNT_KEYS, PIT_COUNT_KEYS } from './metrics.js';
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
@@ -137,7 +138,7 @@ export function validateSeason(season, texts) {
     warnings.push(`基準日 ${meta.as_of_date} がシーズン ${meta.season} の年と異なります`);
   }
   if (meta.champion_team_id && !LEAGUE_TEAMS.includes(meta.champion_team_id)) {
-    errors.push(`meta.csv の champion_team_id "${meta.champion_team_id}" はパ・リーグの球団IDではありません`);
+    errors.push(`meta.csv の champion_team_id "${meta.champion_team_id}" は${LEAGUE.name}の球団IDではありません`);
   }
 
   // 球団・順位表: 6球団そろっていること
@@ -197,7 +198,7 @@ export function validateSeason(season, texts) {
   const teamIds = new Set(LEAGUE_TEAMS);
   for (const g of data.games) {
     const w = `games.csv ${g.__line}行目`;
-    if (!teamIds.has(g.home) && !teamIds.has(g.away)) errors.push(`${w}: パ・リーグ球団が含まれていません`);
+    if (!teamIds.has(g.home) && !teamIds.has(g.away)) errors.push(`${w}: ${LEAGUE.name}球団が含まれていません`);
     if (g.status === 'final' && (!nn(g.home_score) || !nn(g.away_score))) errors.push(`${w}: 試合終了(final) のスコアが空欄です`);
     if (g.status === 'final' && g.date > meta.as_of_date) errors.push(`${w}: 基準日(${meta.as_of_date}) より後の試合が final になっています`);
   }

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c3a2a"/>
+      <stop offset="1" stop-color="#1b7a4e"/>
+    </linearGradient>
+    <clipPath id="ball"><circle cx="500" cy="430" r="250"/></clipPath>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <!-- ボール -->
+  <circle cx="500" cy="430" r="250" fill="#ffffff"/>
+  <!-- 縫い目 -->
+  <g fill="none" stroke="#d93a3a" stroke-width="10" stroke-linecap="round" clip-path="url(#ball)">
+    <path d="M300 230 C 390 330, 390 530, 300 630"/>
+    <path d="M700 230 C 610 330, 610 530, 700 630"/>
+  </g>
+  <g stroke="#d93a3a" stroke-width="8" stroke-linecap="round">
+    <line x1="318" y1="270" x2="346" y2="258"/><line x1="337" y1="320" x2="366" y2="312"/><line x1="346" y1="372" x2="376" y2="368"/>
+    <line x1="348" y1="426" x2="378" y2="426"/><line x1="346" y1="480" x2="376" y2="484"/><line x1="337" y1="532" x2="366" y2="540"/><line x1="318" y1="582" x2="346" y2="594"/>
+    <line x1="682" y1="270" x2="654" y2="258"/><line x1="663" y1="320" x2="634" y2="312"/><line x1="654" y1="372" x2="624" y2="368"/>
+    <line x1="652" y1="426" x2="622" y2="426"/><line x1="654" y1="480" x2="624" y2="484"/><line x1="663" y1="532" x2="634" y2="540"/><line x1="682" y1="582" x2="654" y2="594"/>
+  </g>
+  <!-- 棒グラフ（伸びる指標） -->
+  <g fill="#1b7a4e">
+    <rect x="410" y="450" width="44" height="100" rx="8"/>
+    <rect x="478" y="380" width="44" height="170" rx="8"/>
+    <rect x="546" y="300" width="44" height="250" rx="8"/>
+  </g>
+  <path d="M400 400 L 470 340 L 520 360 L 600 270" fill="none" stroke="#f2b01e" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M570 262 L 606 262 L 606 298" fill="none" stroke="#f2b01e" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 文字 -->
+  <text x="500" y="790" text-anchor="middle" font-family="IPAGothic, sans-serif" font-size="110" font-weight="700" fill="#ffffff" letter-spacing="6">成績ラボ</text>
+  <text x="500" y="905" text-anchor="middle" font-family="IPAGothic, sans-serif" font-size="72" font-weight="700" fill="#f2b01e" letter-spacing="4">セ・リーグ</text>
+</svg>

@@ -5,6 +5,7 @@ import { esc, dateJa } from '../format.js';
 import { markdownToHtml, parseFrontMatter } from '../markdown.js';
 import { page, teamChip, playerLink } from './layout.js';
 import { noteBlock } from './notes.js';
+import { LEAGUE } from '../league.js';
 
 export async function loadColumns(dir) {
   let files = [];
@@ -58,7 +59,7 @@ export function renderColumnIndex(ctx) {
 ${columnCards(ctx, ctx.columns || [], root)}
 ${noteBlock(ctx, { pageType: 'column-index', heading: 'note で読む解説記事' })}
 `;
-  return page({ title: 'コラム', root, current: 'columns', body, ctx, realPage: true, pageMeta: { pageType: 'column-index' }, description: 'パ・リーグの選手・チームを数字で読み解くコラム（非公式）' });
+  return page({ title: 'コラム', root, current: 'columns', body, ctx, realPage: true, pageMeta: { pageType: 'column-index' }, description: `${LEAGUE.name}の選手・チームを数字で読み解くコラム（非公式）` });
 }
 
 export function renderColumn(ctx, c) {
@@ -72,7 +73,7 @@ export function renderColumn(ctx, c) {
 <p class="breadcrumb"><a href="${root}index.html">トップ</a> › <a href="${root}columns/index.html">コラム</a> › 記事</p>
 <article class="column">
 <h1>${esc(c.title)}</h1>
-<p class="muted small">${esc(dateJa(c.date))}　パ・リーグ成績ラボ${teams.length ? `　${teams.map((t) => teamChip(t, root)).join(' ')}` : ''}</p>
+<p class="muted small">${esc(dateJa(c.date))}　${esc(ctx.site.name)}${teams.length ? `　${teams.map((t) => teamChip(t, root)).join(' ')}` : ''}</p>
 ${c.html}
 </article>
 ${players.length ? `<h2>この記事の選手</h2><p>${players.map((p) => playerLink(p, root)).join('、')}</p>` : ''}

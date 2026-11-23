@@ -1,6 +1,7 @@
 import { esc, dateJa, dateShort, dateTimeJst } from '../format.js';
 import { page, teamChip } from './layout.js';
 import { CATEGORIES } from '../moves/wikipedia.js';
+import { LEAGUE } from '../league.js';
 
 export const CAT_ORDER = [...CATEGORIES.map(([c]) => c), 'その他'];
 // 既定で表示する分類（その他・背番号のみの出来事は既定では隠す）
@@ -30,7 +31,7 @@ export function movesList(events, S, root, { limit = null } = {}) {
 
 export function licenseNote(moves, root) {
   const arts = moves.articles.map((a) => `<a href="${esc(a.url)}" rel="noopener">Wikipedia「${esc(a.title)}」（版 ${esc(a.revid)}）</a>`).join('、');
-  return `<p class="muted small">出来事の文章は ${arts} の「できごと」節から、パ・リーグ球団に関係する項目を抽出し、記法・脚注を除去するなどの改変を加えたものです。ライセンス: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" rel="noopener license">CC BY-SA 4.0</a>（この部分の文章も同ライセンスで提供します）。執筆者は記事の履歴をご覧ください。分類（トレード・FA など）は文中の語句から機械的に付けたもので、誤る場合があります。</p>`;
+  return `<p class="muted small">出来事の文章は ${arts} の「できごと」節から、${LEAGUE.name}球団に関係する項目を抽出し、記法・脚注を除去するなどの改変を加えたものです。ライセンス: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" rel="noopener license">CC BY-SA 4.0</a>（この部分の文章も同ライセンスで提供します）。執筆者は記事の履歴をご覧ください。分類（トレード・FA など）は文中の語句から機械的に付けたもので、誤る場合があります。</p>`;
 }
 
 export function renderMoves(ctx, moves, movesStatus) {
@@ -55,7 +56,7 @@ export function renderMoves(ctx, moves, movesStatus) {
   const body = `
 <p class="breadcrumb"><a href="${root}index.html">トップ</a> › 移籍・契約</p>
 <h1>移籍・契約・去就</h1>
-<p class="lead">パ・リーグ6球団に関係する、トレード・FA・戦力外・引退・入団・契約・首脳陣人事などの動きを新しい順にまとめています。</p>
+<p class="lead">${LEAGUE.name}6球団に関係する、トレード・FA・戦力外・引退・入団・契約・首脳陣人事などの動きを新しい順にまとめています。</p>
 ${failed ? `<div class="notice stale" role="alert"><strong>最新情報の取得に失敗しました（${esc(dateTimeJst(movesStatus.last_attempt_at))}）</strong>前回取得に成功した内容（${esc(dateTimeJst(movesStatus.last_success_at))}）を表示しています。</div>` : ''}
 <div class="card">
 <dl class="meta-list">
@@ -67,7 +68,7 @@ ${failed ? `<div class="notice stale" role="alert"><strong>最新情報の取得
 </div>
 
 <div class="filters" id="move-filters">
-  <label>球団<select id="mv-team"><option value="">パ・リーグ全球団</option>${[...S.teams.values()].map((t) => `<option value="${esc(t.team_id)}">${esc(t.short_name)}</option>`).join('')}</select></label>
+  <label>球団<select id="mv-team"><option value="">${LEAGUE.name}全球団</option>${[...S.teams.values()].map((t) => `<option value="${esc(t.team_id)}">${esc(t.short_name)}</option>`).join('')}</select></label>
   <label>分類<select id="mv-cat"><option value="">すべての分類</option>${CAT_ORDER.filter((c) => catCounts[c]).map((c) => `<option value="${esc(c)}">${esc(c)}（${catCounts[c]}）</option>`).join('')}</select></label>
   <label class="check full"><input id="mv-other" type="checkbox"><span>試合結果・記録などの「その他」も表示</span></label>
 </div>
@@ -76,5 +77,5 @@ ${groups}
 ${licenseNote(moves, root)}
 <script src="${root}assets/moves.js" defer></script>
 `;
-  return page({ title: '移籍・契約・去就', root, current: 'moves', body, ctx, pageMeta: { pageType: 'moves' }, realPage: true, description: 'パ・リーグ6球団のトレード・FA・戦力外・引退・入団などの動き（非公式）' });
+  return page({ title: '移籍・契約・去就', root, current: 'moves', body, ctx, pageMeta: { pageType: 'moves' }, realPage: true, description: `${LEAGUE.name}6球団のトレード・FA・戦力外・引退・入団などの動き（非公式）` });
 }

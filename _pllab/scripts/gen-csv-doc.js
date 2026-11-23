@@ -34,7 +34,7 @@ _pllab/data/input/<シーズン>/meta.csv
 - シーズン途中の移籍は、players.csv・batting.csv・pitching.csv に球団ごとの行を分けて入力します（移籍前の行に \`to_date\`、移籍後の行に \`from_date\`）。
 - 新しいシーズンのフォルダを追加すると、そのシーズンが「最新」として表示されます。過去シーズンのフォルダは残しておくと年度別成績・過去比較に使われます。
 - 入力例は \`data/input/_template/\` と \`data/demo/\`（デモデータ）を参照してください。
-- 球団IDは F=日本ハム, E=楽天, L=西武, M=ロッテ, B=オリックス, H=ソフトバンク。
+- 球団IDは、パ・リーグ版が F=日本ハム, E=楽天, L=西武, M=ロッテ, B=オリックス, H=ソフトバンク、セ・リーグ版が G=巨人, T=阪神, DB=DeNA, C=広島, S=ヤクルト, D=中日（\`config/leagues/\` の設定）。下の表の球団IDの一覧は、パ・リーグ版で生成したものです。
 
 `;
 await mkdir(join(ROOT, 'data/input/_template'), { recursive: true });

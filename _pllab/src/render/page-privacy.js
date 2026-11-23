@@ -1,5 +1,6 @@
 import { esc } from '../format.js';
 import { page } from './layout.js';
+import { LEAGUE } from '../league.js';
 
 export function renderPrivacy(ctx) {
   const root = './';
@@ -9,7 +10,7 @@ export function renderPrivacy(ctx) {
   const ga = a.provider === 'ga4';
   const body = `
 <h1>プライバシーポリシー</h1>
-<p class="muted small">対象: パ・リーグ成績ラボ（/pl-lab/ 以下のページ）</p>
+<p class="muted small">対象: ${esc(ctx.site.name)}（${esc(ctx.basePath)} 以下のページ）</p>
 <h2>アクセス解析</h2>
 ${
   enabled
@@ -18,7 +19,7 @@ ${ga ? '<p>Google アナリティクスは Cookie を使用します。データ
     : '<p>現在、アクセス解析は使用していません。使用を開始する場合は、このページで送信先と内容をお知らせします。</p>'
 }
 <h2>外部サイトへのリンク</h2>
-<p>note・Wikipedia・報道機関などの外部サイトへのリンクがあります。note へのリンクには、このサイトからの訪問であることが分かるパラメータ（utm_source=pl-lab など）を付けています。リンク先での情報の取り扱いは各サイトのポリシーに従います。</p>
+<p>note・Wikipedia・報道機関などの外部サイトへのリンクがあります。note へのリンクには、このサイトからの訪問であることが分かるパラメータ（utm_source=${esc(LEAGUE.utmSource)} など）を付けています。リンク先での情報の取り扱いは各サイトのポリシーに従います。</p>
 <h2>広告</h2>
 ${
   ctx.siteUrl && /^ca-pub-\d{16}$/.test(ctx.adsense?.client || '')

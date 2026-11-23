@@ -2,6 +2,7 @@ import { esc, dateJa, dateTimeJst } from '../format.js';
 import { RULES } from '../analysis.js';
 import { GLOSSARY } from './glossary.js';
 import { page } from './layout.js';
+import { LEAGUE } from '../league.js';
 
 const RESULT_LABEL = { updated: '更新あり', unchanged: '変更なし', failed: '失敗（前回データを維持）', skipped: 'スキップ（重複起動）' };
 
@@ -25,7 +26,7 @@ export function renderAbout(ctx, logTail) {
 <h1>データと分析の方法</h1>
 
 <h2 id="site">このサイトについて</h2>
-<p>「パ・リーグ成績ラボ」は、パ・リーグ6球団のチーム成績と選手成績を、スマートフォンで読みやすく整理し、数字から読み取れる特徴を説明する<strong>非公式</strong>のファンサイトです。NPB・パシフィックリーグマーケティング・各球団とは関係ありません。球団ロゴ・選手写真は、使用許諾を確認できていないため使用していません。</p>
+<p>「${esc(ctx.site.name)}」は、${LEAGUE.name}6球団のチーム成績と選手成績を、スマートフォンで読みやすく整理し、数字から読み取れる特徴を説明する<strong>非公式</strong>のファンサイトです。${esc(LEAGUE.notRelatedOrgsAbout)}とは関係ありません。球団ロゴ・選手写真は、使用許諾を確認できていないため使用していません。</p>
 
 <h2 id="source">データの出典と利用条件</h2>
 <div class="card">
@@ -39,14 +40,14 @@ export function renderAbout(ctx, logTail) {
 </div>
 <p>このサイトは、データを「取得 → 検証 → 保存 → 画面生成」の順に処理します。取得元は差し替え可能で、<strong>Wikipedia 日本語版</strong>（順位表・所属選手・個人タイトル・移籍などの動き）と<strong>CSV取り込み</strong>（リポジトリ内のCSV、または利用権限のあるURLのCSV）に対応しています。</p>
 <p>Wikipedia の文章・表は CC BY-SA 4.0 で、出典の表示とライセンスの表示を条件に再利用が認められています（Wikimedia 財団の利用規約で確認）。順位表の勝敗や所属選手などの事実情報を、記事の版番号つきで取得しています。全選手の個人成績（打率・防御率など）は Wikipedia にまとまった形で無く、月額1,000円以内で利用・掲載できる有料データも見つからなかったため、掲載していません（NPB の法人向けデータ提供は月3万円〜、海外のNPB対応APIは月250ドル前後）。</p>
-<p>公式サイト（NPB公式サイト、パ・リーグ.com）の成績ページは誰でも閲覧できますが、それぞれのサイトポリシー・利用規約で、掲載情報の二次利用・無断転載・複製・配信が禁止されています。閲覧できることと、自動取得して再配布できることは別のため、このサイトは公式サイトからの自動取得（スクレイピング）を行いません。実際の成績を掲載する場合は、運営者が利用許諾を得たデータ、または自ら作成・入力したデータをCSVで取り込みます。</p>
+<p>公式サイト（${esc(LEAGUE.officialSitesText)}）の成績ページは誰でも閲覧できますが、それぞれのサイトポリシー・利用規約で、掲載情報の二次利用・無断転載・複製・配信が禁止されています。閲覧できることと、自動取得して再配布できることは別のため、このサイトは公式サイトからの自動取得（スクレイピング）を行いません。実際の成績を掲載する場合は、運営者が利用許諾を得たデータ、または自ら作成・入力したデータをCSVで取り込みます。</p>
 ${demo ? '<p class="notice demo"><span class="demo-tag">デモ</span>現在表示しているデータは、動作確認用に乱数の試合シミュレーションで作った架空のデータです。球団名のみ実在のものを使用しています。</p>' : ''}
 
 <h2 id="rights">取得元ごとの利用条件</h2>
 <div class="table-scroll"><table class="wrap"><thead><tr><th class="l">取得元</th><th class="l">自動取得</th><th class="l">サイト掲載</th><th class="l">広告付き</th><th class="l">有料記事</th></tr></thead><tbody>
 <tr><td class="l">Wikipedia 日本語版</td><td class="l">可（負荷をかけない）</td><td class="l">可（出典・CC BY-SA 4.0・改変の表示）</td><td class="l">可</td><td class="l">数値（事実）は利用、文章・表は転載しない</td></tr>
 <tr><td class="l">NPB 公式サイト</td><td class="l">不可</td><td class="l">不可（二次利用・無断転載の禁止）</td><td class="l">不可</td><td class="l">不可</td></tr>
-<tr><td class="l">パ・リーグ.com</td><td class="l">不可</td><td class="l">不可（規約 第10条）</td><td class="l">不可（第11条）</td><td class="l">不可</td></tr>
+${(LEAGUE.extraRightsRows || []).map((r) => `<tr>${r.map((c) => `<td class="l">${esc(c)}</td>`).join('')}</tr>`).join('')}
 <tr><td class="l">報道機関の記事</td><td class="l">取得しない</td><td class="l">出典リンクのみ</td><td class="l">出典リンクのみ</td><td class="l">本文は転載しない</td></tr>
 </tbody></table></div>
 <p class="muted small">2026年11月18日時点の確認内容です。詳しくはリポジトリの <code>_pllab/docs/DATA_RIGHTS.md</code> を参照してください。法的な助言ではありません。</p>
@@ -55,12 +56,12 @@ ${demo ? '<p class="notice demo"><span class="demo-tag">デモ</span>現在表�
 <ul>
   <li>選手ページの「前年から伸びた指標」「リーグ平均との差」「短評」は、Wikipedia の各選手記事の「年度別打撃成績」「年度別投手成績」の表を元に計算しています。表の打席数・塁打・防御率を検算し、合わない行は使いません。</li>
   <li>前年比は、記事に載っている最新年度とその前年を比べます。両年とも100打席以上（投手は30投球回以上）のときだけ「伸びた／下がった」と判定します。</li>
-  <li>リーグ平均は「現在パ・リーグ6球団に所属し、記事がその年まで更新されている選手」の、その年のパ・リーグ球団での成績を合計して計算します。退団・引退した選手を含まないため、公式のリーグ平均とは異なります。記事の更新率が70%未満の年は偏りが大きいため計算しません。</li>
+  <li>リーグ平均は「現在${LEAGUE.name}6球団に所属し、記事がその年まで更新されている選手」の、その年の${LEAGUE.name}球団での成績を合計して計算します。退団・引退した選手を含まないため、公式のリーグ平均とは異なります。記事の更新率が70%未満の年は偏りが大きいため計算しません。</li>
 </ul>
 
 <h2 id="moves">移籍・契約ページのデータ</h2>
 <ul>
-  <li>Wikipedia 日本語版の「<年>年の日本プロ野球」の「できごと」節から、パ・リーグ6球団の名前を含む出来事を毎日1回、API で取得しています（1〜6月は前年の記事も対象）。</li>
+  <li>Wikipedia 日本語版の「<年>年の日本プロ野球」の「できごと」節から、${LEAGUE.name}6球団の名前を含む出来事を毎日1回、API で取得しています（1〜6月は前年の記事も対象）。</li>
   <li>Wikipedia の文章は CC BY-SA 4.0 で再利用が許可されています。記事へのリンク・ライセンス表示・改変の明示を行い、このページの該当部分も同ライセンスで提供します。</li>
   <li>分類（トレード・FA・戦力外など）は文中の語句から機械的に付けています。Wikipedia は誰でも編集できるため、誤り・遅れがありえます。正式な情報は各項目の出典（球団発表・報道）をご確認ください。</li>
   <li>記事の書式が読めない・件数が急減したなどの場合は保存せず、前回の内容を表示し続けます。</li>
@@ -107,7 +108,7 @@ ${logs ? `<h3>最近の更新ログ</h3><div class="table-scroll"><table><thead>
 <h2 id="analysis">分析の方法</h2>
 <p>選手ページの分析文は、外部AIを使わず、以下の決まったルールで成績データから自動作成しています。各文には「事実（記録そのもの）」「計算（記録から計算した値や比較）」「解釈（数字から読み取れる傾向）」の区別と、根拠となる数値・対象期間を表示しています。</p>
 <ul>
-  <li><b>比較対象</b>: リーグ平均（${S.meta.season}年・パ・リーグ全選手の合計から計算）。同じ役割の比較は、野手は守備位置（捕手／内野手／外野手）ごとに${th.compareMinPA}打席以上、投手は先発／救援ごとに${th.compareMinOuts / 3}投球回以上の選手が対象。</li>
+  <li><b>比較対象</b>: リーグ平均（${S.meta.season}年・${LEAGUE.name}全選手の合計から計算）。同じ役割の比較は、野手は守備位置（捕手／内野手／外野手）ごとに${th.compareMinPA}打席以上、投手は先発／救援ごとに${th.compareMinOuts / 3}投球回以上の選手が対象。</li>
   <li><b>サンプルが少ない場合</b>: ${th.smallSamplePA}打席未満、または${th.smallSampleOuts / 3}投球回未満の選手は「サンプル少」と明記し、タイプ判定を行いません。</li>
   <li><b>最近の状態</b>: 野手は本人の直近${r.recentGames.bat}試合、先発投手は直近${r.recentGames.pitSP}登板、救援投手は直近${r.recentGames.pitRP}登板。直近OPSと通算OPSの差が±${r.recentDiffOPS.toFixed(3).slice(1)}以上（打席${r.recentMinPA}以上）、直近防御率と通算防御率の差が±${r.recentDiffERA.toFixed(2)}以上（${r.recentMinOuts / 3}投球回以上）で「上向き／落ち込み」と表現します。</li>
   <li><b>最近好調な選手（トップページ）</b>: 基準日以前で試合記録のある最終日までの14日間で、打者は${th.hotMinPA}打席以上のOPS上位、投手は${th.hotMinOuts / 3}投球回以上の防御率上位。</li>

@@ -1,7 +1,7 @@
 {
   "name": "pl-lab",
   "private": true,
-  "description": "パ・リーグ成績ラボ（非公式）: データ取得・検証・保存・静的サイト生成",
+  "description": "パ・リーグ成績ラボ／セ・リーグ成績ラボ（非公式）: データ取得・検証・保存・静的サイト生成（リーグごとの設定で切り替え）",
   "type": "module",
   "engines": { "node": ">=20" },
   "scripts": {
@@ -10,6 +10,8 @@
     "build": "node src/build.js",
     "all": "node src/update.js; node src/build.js",
     "test": "node --test test/*.test.js",
-    "serve": "node scripts/serve.js"
+    "serve": "node scripts/serve.js",
+    "central:update": "PLLAB_SITE=central node src/update.js; PLLAB_SITE=central node src/update-player-stats.js; PLLAB_SITE=central node src/update-moves.js",
+    "central:build": "PLLAB_SITE=central node src/build.js"
   }
 }

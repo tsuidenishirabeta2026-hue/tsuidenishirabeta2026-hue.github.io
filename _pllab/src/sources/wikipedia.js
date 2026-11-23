@@ -1,7 +1,7 @@
 // 取得元: Wikipedia 日本語版（CC BY-SA 4.0）
 //
 // 取得するもの（1日1回、1リクエストにまとめて取得）:
-//   - Template:<年>年のパシフィック・リーグ順位表   … 勝利・敗戦・引分・順位（得点・失点は無し）
+//   - Template:<年>年の<リーグ名>順位表（パシフィック・リーグ／セントラル・リーグ）   … 勝利・敗戦・引分・順位（得点・失点は無し）
 //   - Template:<球団名>の選手・スタッフ             … 所属選手（背番号・登録名・守備位置・支配下/育成）
 //   - <年>年の日本プロ野球                          … 個人タイトル
 // 個人成績（打率・防御率など）は含まれないため stats_level=none とし、画面では「未取得」と表示する。
@@ -12,21 +12,16 @@ import { toCsv } from '../csv.js';
 import { cleanWikitext } from '../moves/wikipedia.js';
 import { parseWikitable, firstLinkTarget } from './wikitable.js';
 import { FILES } from '../schema.js';
+import { LEAGUE } from '../league.js';
 
 const API = 'https://ja.wikipedia.org/w/api.php';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-export const TEAMS = [
-  { team_id: 'F', name: '北海道日本ハムファイターズ', short_name: '日本ハム', home: '北海道', stadium: 'エスコンフィールドHOKKAIDO', color: '#0b4ea2' },
-  { team_id: 'E', name: '東北楽天ゴールデンイーグルス', short_name: '楽天', home: '宮城県', stadium: '楽天モバイル 最強パーク宮城', color: '#85002a' },
-  { team_id: 'L', name: '埼玉西武ライオンズ', short_name: '西武', home: '埼玉県', stadium: 'ベルーナドーム', color: '#1f3f80' },
-  { team_id: 'M', name: '千葉ロッテマリーンズ', short_name: 'ロッテ', home: '千葉県', stadium: 'ZOZOマリンスタジアム', color: '#333333' },
-  { team_id: 'B', name: 'オリックス・バファローズ', short_name: 'オリックス', home: '大阪府・兵庫県', stadium: '京セラドーム大阪', color: '#9a7b2f' },
-  { team_id: 'H', name: '福岡ソフトバンクホークス', short_name: 'ソフトバンク', home: '福岡県', stadium: 'みずほPayPayドーム福岡', color: '#c98a00' },
-];
-const BY_NAME = new Map(TEAMS.flatMap((t) => [[t.name, t.team_id], [t.short_name, t.team_id]]));
+// 球団の一覧はリーグ設定（config/leagues/<id>.json）から読む
+const teamRow = ({ team_id, name, short_name, home, stadium, color }) => ({ team_id, name, short_name, home, stadium, color });
+export const TEAMS = LEAGUE.teams.map(teamRow);
 
-export const standingsTitle = (y) => `Template:${y}年のパシフィック・リーグ順位表`;
+export const standingsTitle = (y, league = LEAGUE) => `Template:${y}年の${league.wikiName}順位表`;
 export const rosterTitle = (t) => `Template:${t.name}の選手・スタッフ`;
 export const yearTitle = (y) => `${y}年の日本プロ野球`;
 
@@ -40,7 +35,7 @@ export function playerIdFor(key) {
 }
 
 /** 順位表テンプレート {{NPB順位表 |チーム名|勝|敗|分|監督 ...}} */
-export function parseStandings(wikitext) {
+export function parseStandings(wikitext, league = LEAGUE) {
   const rows = [];
   let champion = null;
   const resultMarks = {};
@@ -48,7 +43,7 @@ export function parseStandings(wikitext) {
   for (const line of wikitext.split('\n')) {
     const m = /^\|([^|=]+)\|(\d+)\|(\d+)\|(\d+)(?:\||$)/.exec(line.trim());
     if (!m) continue;
-    const team_id = BY_NAME.get(m[1].trim());
+    const team_id = league.byName.get(m[1].trim());
     if (!team_id) continue;
     const rank = rows.length + 1;
     rows.push({ team_id, w: Number(m[2]), l: Number(m[3]), t: Number(m[4]), g: Number(m[2]) + Number(m[3]) + Number(m[4]), official_rank: rank });
@@ -84,15 +79,15 @@ export function parseRoster(wikitext, team_id) {
   return out;
 }
 
-/** 年の記事の「個人タイトル」表から、パ・リーグ側の受賞者を取り出す */
-export function parseTitles(wikitext) {
+/** 年の記事の「個人タイトル」表から、対象リーグ側の受賞者を取り出す */
+export function parseTitles(wikitext, league = LEAGUE) {
   const at = wikitext.search(/^=+\s*個人タイトル\s*=+/m);
   if (at < 0) return [];
   const grid = parseWikitable(wikitext, at);
   if (!grid || grid.length < 3) return [];
-  // 1行目: リーグ見出し、2行目: 列見出し。パ・リーグの「選手・球団・成績」列を探す
+  // 1行目: リーグ見出し、2行目: 列見出し。対象リーグの「選手・球団・成績」列を探す
   const head = grid[0].map((c) => c?.text || '');
-  const plCol = head.findIndex((h) => h.includes('パシフィック'));
+  const plCol = head.findIndex((h) => h.includes(league.titleColumnKeyword));
   if (plCol < 0) return [];
   const out = [];
   const seen = new Set();
@@ -102,7 +97,7 @@ export function parseTitles(wikitext) {
     const team = row[plCol + 1]?.text;
     const value = row[plCol + 2]?.text || '';
     if (!title || !pl || !pl.text || !team) continue;
-    const team_id = BY_NAME.get(team);
+    const team_id = league.byName.get(team);
     if (!team_id) continue;
     const k = `${title}|${pl.text}`;
     if (seen.has(k)) continue;
@@ -167,18 +162,20 @@ export function phaseFor(dateStr, season) {
   return 'regular';
 }
 
-export function wikipediaSource({ fetchImpl = globalThis.fetch, userAgent = 'pl-lab-updater/1.0 (unofficial baseball fan site)', now = () => new Date(), retryDelayMs = 5000 } = {}) {
+export function wikipediaSource({ league = LEAGUE, fetchImpl = globalThis.fetch, userAgent = `${LEAGUE.updaterName}/1.0 (unofficial baseball fan site)`, now = () => new Date(), retryDelayMs = 5000 } = {}) {
   let cache = null;
   async function load() {
     if (cache) return cache;
     const today = jstToday(now());
     const y = Number(today.slice(0, 4));
     // 今年と前年の順位表・今年の記事・6球団の選手一覧を 1 リクエストで取得
-    const titles = [standingsTitle(y), standingsTitle(y - 1), standingsTitle(y - 2), yearTitle(y), yearTitle(y - 1), ...TEAMS.map(rosterTitle)];
+    const teams = league.teams.map(teamRow);
+    const stTitle = (s) => standingsTitle(s, league);
+    const titles = [stTitle(y), stTitle(y - 1), stTitle(y - 2), yearTitle(y), yearTitle(y - 1), ...teams.map(rosterTitle)];
     const pages = await apiQuery(titles, { fetchImpl, userAgent, retryDelayMs });
-    const seasons = [y, y - 1, y - 2].filter((s) => pages[standingsTitle(s)]).sort();
+    const seasons = [y, y - 1, y - 2].filter((s) => pages[stTitle(s)]).sort();
     if (!seasons.length) throw new Error('順位表のテンプレートが見つかりません');
-    cache = { pages, seasons, today, current: seasons[seasons.length - 1] };
+    cache = { pages, seasons, today, current: seasons[seasons.length - 1], teams, stTitle };
     return cache;
   }
   return {
@@ -189,14 +186,14 @@ export function wikipediaSource({ fetchImpl = globalThis.fetch, userAgent = 'pl-
       return (await load()).seasons;
     },
     async fetchSeason(season) {
-      const { pages, today, current } = await load();
-      const st = parseStandings(pages[standingsTitle(season)].text);
+      const { pages, today, current, teams, stTitle } = await load();
+      const st = parseStandings(pages[stTitle(season)].text, league);
       const isCurrent = season === current;
       const out = {};
-      const revs = [`${standingsTitle(season)}（版 ${pages[standingsTitle(season)].revid}）`];
+      const revs = [`${stTitle(season)}（版 ${pages[stTitle(season)].revid}）`];
       let players = [];
       if (isCurrent) {
-        for (const t of TEAMS) {
+        for (const t of teams) {
           const pg = pages[rosterTitle(t)];
           if (!pg) throw new Error(`${rosterTitle(t)} が見つかりません`);
           revs.push(`${rosterTitle(t)}（版 ${pg.revid}）`);
@@ -208,7 +205,7 @@ export function wikipediaSource({ fetchImpl = globalThis.fetch, userAgent = 'pl-
         players = players.filter((p) => !seen.has(p.player_id) && seen.add(p.player_id));
       }
       const yt = pages[yearTitle(season)];
-      const titles = isCurrent && yt ? linkTitles(parseTitles(yt.text), players) : [];
+      const titles = isCurrent && yt ? linkTitles(parseTitles(yt.text, league), players) : [];
       if (yt && isCurrent) revs.push(`${yearTitle(season)}（版 ${yt.revid}）`);
       const asOf = isCurrent ? today : `${season}-10-31`;
       const meta = [
@@ -224,7 +221,7 @@ export function wikipediaSource({ fetchImpl = globalThis.fetch, userAgent = 'pl-
         { key: 'roster_note', value: isCurrent ? `所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（${today} 取得、支配下・育成を含む）です。` : '' },
       ];
       out['meta.csv'] = toCsv(['key', 'value'], meta);
-      out['teams.csv'] = toCsv(['team_id', 'name', 'short_name', 'home', 'stadium', 'color'], TEAMS);
+      out['teams.csv'] = toCsv(['team_id', 'name', 'short_name', 'home', 'stadium', 'color'], teams);
       out['standings.csv'] = toCsv(['team_id', 'g', 'w', 'l', 't', 'rs', 'ra', 'official_rank'], st.rows);
       out['players.csv'] = toCsv(['player_id', 'team_id', 'name', 'name_kana', 'number', 'position', 'throws', 'bats', 'birth_date', 'roster_type', 'wiki_title'], players.map((p) => ({ ...p, name_kana: '', throws: '', bats: '', birth_date: '' })));
       out['batting.csv'] = FILES.batting.columns.filter((c) => c.need).map((c) => c.csv).join(',') + '\n';

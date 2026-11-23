@@ -3,11 +3,12 @@
 // 列: note_id,status,type,price,title,url,published_at,teams,players,summary
 //   status: published（表示）/ draft（表示しない）
 //   type:   free / paid
-//   teams:  F/E/L/M/B/H を / 区切り（空欄=全体向け）
+//   teams:  球団ID（パ: F/E/L/M/B/H、セ: G/T/DB/C/S/D）を / 区切り（空欄=全体向け）
 //   players: 選手ID を / 区切り
 import { readFile } from 'node:fs/promises';
 import { parseCsv } from './csv.js';
 import { LEAGUE_TEAMS } from './schema.js';
+import { LEAGUE } from './league.js';
 
 export async function loadNotes(file) {
   let text;
@@ -31,7 +32,7 @@ export async function loadNotes(file) {
     if (!['free', 'paid'].includes(r.type)) errs.push('type は free か paid');
     if (r.type === 'paid' && !/^\d+$/.test(r.price || '')) errs.push('有料記事の price は整数（円）');
     if (!r.title) errs.push('title は必須');
-    if (teams.some((t) => !LEAGUE_TEAMS.includes(t))) errs.push('teams は F/E/L/M/B/H');
+    if (teams.some((t) => !LEAGUE_TEAMS.includes(t))) errs.push(`teams は ${LEAGUE.teamIdsText}`);
     if (errs.length) {
       errors.push(`${w}: ${errs.join('、')}（この行は表示しません）`);
       continue;
@@ -56,7 +57,7 @@ export function relatedNotes(notes, { playerId = null, teamId = null, limit = 3 
 /** note への導線 URL（流入元が分かるよう utm パラメータを付ける） */
 export function trackedUrl(url, { pageType, playerId, teamId }) {
   const u = new URL(url);
-  u.searchParams.set('utm_source', 'pl-lab');
+  u.searchParams.set('utm_source', LEAGUE.utmSource);
   u.searchParams.set('utm_medium', 'referral');
   u.searchParams.set('utm_campaign', pageType);
   if (playerId || teamId) u.searchParams.set('utm_content', playerId || teamId);

@@ -12,6 +12,7 @@ import { acquireLock, appendLog, hashOf, readJson, redact, writeJsonAtomic } fro
 import { parseCsv } from './csv.js';
 import { articleTitle, fetchArticle, parseEvents, CATEGORIES } from './moves/wikipedia.js';
 import { LEAGUE_TEAMS } from './schema.js';
+import { LEAGUE } from './league.js';
 
 const CAT_NAMES = [...CATEGORIES.map(([c]) => c), 'その他'];
 
@@ -38,7 +39,7 @@ async function readManual(file, errors) {
     const w = `moves.csv ${r.__line}行目`;
     if (!/^\d{4}-\d{2}-\d{2}$/.test(r.date)) errors.push(`${w}: date は YYYY-MM-DD`);
     const teams = r.team_id.split(/[ /|]+/).filter(Boolean);
-    if (!teams.length || teams.some((t) => !LEAGUE_TEAMS.includes(t))) errors.push(`${w}: team_id は F/E/L/M/B/H（複数は / 区切り）`);
+    if (!teams.length || teams.some((t) => !LEAGUE_TEAMS.includes(t))) errors.push(`${w}: team_id は ${LEAGUE.teamIdsText}（複数は / 区切り）`);
     if (!CAT_NAMES.includes(r.category)) errors.push(`${w}: category は ${CAT_NAMES.join(' / ')} のいずれか`);
     if (!r.text) errors.push(`${w}: text は必須`);
     if (r.source_url && !/^https?:\/\//.test(r.source_url)) errors.push(`${w}: source_url は http(s) の URL`);
@@ -68,7 +69,7 @@ export async function runMovesUpdate({ config = loadConfig(), env = process.env,
   const status = (await readJson(statusFile)) || {};
   const prev = await readJson(storeFile);
   // Wikimedia の User-Agent 方針: 連絡先を含めることが推奨。設定されていなければ一般名のみ
-  const ua = `pl-lab-updater/1.0 (unofficial baseball fan site${env.PLLAB_UA_CONTACT ? `; ${env.PLLAB_UA_CONTACT}` : ''})`;
+  const ua = `${LEAGUE.updaterName}/1.0 (unofficial baseball fan site${env.PLLAB_UA_CONTACT ? `; ${env.PLLAB_UA_CONTACT}` : ''})`;
   let entry;
   try {
     const errors = [];
