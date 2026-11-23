@@ -65,7 +65,7 @@ test('サイト設定: パ・リーグ版の URL・出力先は変えず、セ�
   assert.equal(pc.analytics.id, 'G-WSNC046WSL');
   assert.equal(cc.league, 'central');
   assert.equal(cc.siteName, 'セ・リーグ成績ラボ');
-  assert.equal(cc.siteUrl, 'https://central-labo.com');
+  assert.equal(cc.siteUrl, 'https://centrallabo.com');
   assert.equal(cc.basePath, '/cl-lab/');
   assert.equal(cc.outDir, join(ROOT, '..', 'cl-lab'));
   // 計測・note・データ置き場はパ・リーグ版と共有しない
@@ -173,7 +173,7 @@ test('セ・リーグ版の取得 → 検証 → 保存 → サイト生成（PL
   assert.match(idx, /<title>セ・リーグ成績ラボ（非公式）<\/title>/);
   assert.match(idx, /<h1>セ・リーグ 2026年 成績<\/h1>/);
   assert.match(idx, /2026年 セ・リーグ個人タイトル/);
-  assert.match(idx, /<link rel="canonical" href="https:\/\/central-labo\.com\/">/);
+  assert.match(idx, /<link rel="canonical" href="https:\/\/centrallabo\.com\/">/);
   // 旧URL（github.io/cl-lab/）からの転送は /cl-lab を取り除く
   assert.match(idx, /location\.pathname\.replace\(\/\^\\\/cl-lab\/,''\)/);
   assert.doesNotMatch(idx, /パ・リーグ|パシフィック|pacific-labo|G-WSNC046WSL/);
@@ -183,5 +183,5 @@ test('セ・リーグ版の取得 → 検証 → 保存 → サイト生成（PL
   const priv = await readFile(join(out, 'privacy.html'), 'utf8');
   assert.match(priv, /対象: セ・リーグ成績ラボ（\/cl-lab\/ 以下のページ）/);
   assert.equal(await readFile(join(out, 'ads.txt'), 'utf8'), 'google.com, pub-4831721034846373, DIRECT, f08c47fec0942fa0\n');
-  assert.match(await readFile(join(out, 'robots.txt'), 'utf8'), /Sitemap: https:\/\/central-labo\.com\/sitemap\.xml/);
+  assert.match(await readFile(join(out, 'robots.txt'), 'utf8'), /Sitemap: https:\/\/centrallabo\.com\/sitemap\.xml/);
 });

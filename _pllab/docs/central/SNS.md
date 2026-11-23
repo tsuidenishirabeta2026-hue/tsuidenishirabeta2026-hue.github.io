@@ -10,7 +10,7 @@
 - 名前: `セ・リーグ成績ラボ（非公式）`
 - ユーザー名の例: `@central_labo`（空いていなければ `@central_labo_jp` など）
 - プロフィール文（案）:
-  > セ・リーグ6球団の順位・選手の前年比・移籍の動きを、数字でわかりやすく。毎朝自動更新。非公式のファンサイトです。 https://central-labo.com
+  > セ・リーグ6球団の順位・選手の前年比・移籍の動きを、数字でわかりやすく。毎朝自動更新。非公式のファンサイトです。 https://centrallabo.com
 - アイコン・ヘッダー: `docs/central/sns/icon.png`（1000×1000）・`header.png`（1500×500）。文字と図形だけで作っており、球団ロゴ・選手写真は使っていない。
   元の SVG も同じ場所にある（パ・リーグ版と区別できるよう緑系の色）
 
@@ -32,7 +32,7 @@
 ```
 セ・リーグ6球団の順位表、所属選手の「前年から伸びた指標」「平均との差」、移籍・契約の動きを毎朝自動でまとめる非公式サイトを作りました。
 
-https://central-labo.com/?utm_source=x&utm_medium=social
+https://centrallabo.com/?utm_source=x&utm_medium=social
 #セリーグ #プロ野球
 ```
 
@@ -41,6 +41,6 @@ https://central-labo.com/?utm_source=x&utm_medium=social
 戦力外・FA・トレード・契約延長…
 セ・リーグ6球団のオフの動きを、球団別・種類別に絞り込めるページを毎朝更新しています。
 
-https://central-labo.com/moves.html?utm_source=x&utm_medium=social
+https://centrallabo.com/moves.html?utm_source=x&utm_medium=social
 #セリーグ #プロ野球
 ```

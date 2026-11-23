@@ -5,7 +5,7 @@
 | サイト | 公開URL | 設定 | 生成物 | 自動更新 |
 |---|---|---|---|---|
 | パ・リーグ成績ラボ | `https://pacific-labo.com/` | `config/site.json`（リーグ: `config/leagues/pacific.json`） | `pl-lab/` | `.github/workflows/pllab-update.yml` |
-| セ・リーグ成績ラボ | `https://central-labo.com/` | `config/site-central.json`（リーグ: `config/leagues/central.json`） | `cl-lab/` | `.github/workflows/cl-update.yml` |
+| セ・リーグ成績ラボ | `https://centrallabo.com/` | `config/site-central.json`（リーグ: `config/leagues/central.json`） | `cl-lab/` | `.github/workflows/cl-update.yml` |
 
 公開は Cloudflare Pages（サイトごとに別プロジェクト）。パ・リーグ版の旧URL `https://tsuidenishirabeta2026-hue.github.io/pl-lab/` からは自動で転送（セ・リーグ版の `…/cl-lab/` も同様）。
 以下の説明は、特に断りがなければ両方に共通です（パ・リーグ版を例にしています）。
@@ -240,7 +240,7 @@ date,team_id,category,text,source_name,source_url
 - 公開先を Cloudflare Pages（無料・商用利用可）に移すと、独自ドメインのルートで公開でき、AdSense に必要な `ads.txt` を置ける
 - Cloudflare Pages の設定: リポジトリを接続し、本番ブランチ `main`、ビルドコマンドなし、出力ディレクトリ `pl-lab`
   （サイトは GitHub Actions が生成してコミットするため、Cloudflare 側でのビルドは不要）
-- セ・リーグ版は、同じリポジトリを接続した**別のプロジェクト**にし、出力ディレクトリを `cl-lab` にする（独自ドメインは central-labo.com）。
+- セ・リーグ版は、同じリポジトリを接続した**別のプロジェクト**にし、出力ディレクトリを `cl-lab` にする（独自ドメインは centrallabo.com）。
   両プロジェクトとも、すべてのコミットで再デプロイされる。無料プランのビルド回数（月500回）に余裕はあるが、気になる場合は各プロジェクトの
   「Build watch paths」でパ・リーグ版は `pl-lab/*`、セ・リーグ版は `cl-lab/*` だけを対象にする
 - `config/site.json`

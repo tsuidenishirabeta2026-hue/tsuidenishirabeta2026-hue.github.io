@@ -33,7 +33,7 @@
     "_説明": "セ・リーグ版専用の note のクリエイターページURL。空なら note への導線は出さない"
   },
   "repo": "tsuidenishirabeta2026-hue/tsuidenishirabeta2026-hue.github.io",
-  "siteUrl": "https://central-labo.com",
+  "siteUrl": "https://centrallabo.com",
   "_siteUrl説明": "セ・リーグ版の独自ドメイン（末尾の / なし）",
   "adsense": {
     "client": "ca-pub-4831721034846373",
