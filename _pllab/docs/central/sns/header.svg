@@ -17,6 +17,6 @@
   <!-- 文字（左下はアイコンと重なるため、中央より上・右寄りに配置） -->
   <text x="330" y="190" font-family="IPAGothic, sans-serif" font-size="84" font-weight="700" fill="#ffffff">セ・リーグ成績ラボ</text>
   <text x="334" y="262" font-family="IPAGothic, sans-serif" font-size="34" fill="#cdeedd">順位・前年比・移籍の動きを、数字でわかりやすく</text>
-  <text x="334" y="330" font-family="IPAGothic, sans-serif" font-size="34" fill="#f2b01e" font-weight="700">central-labo.com</text>
+  <text x="334" y="330" font-family="IPAGothic, sans-serif" font-size="34" fill="#f2b01e" font-weight="700">centrallabo.com</text>
   <text x="334" y="380" font-family="IPAGothic, sans-serif" font-size="26" fill="#9fd1b8">毎朝自動更新・非公式のファンサイト</text>
 </svg>
