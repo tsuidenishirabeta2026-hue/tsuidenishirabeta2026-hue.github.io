@@ -8,6 +8,7 @@ import { columnCards } from './page-columns.js';
 import { biggestRisers, YOY_MIN_PA, YOY_MIN_OUTS } from '../history.js';
 import { pickToday, feedItems } from '../today.js';
 import { trackedUrl } from '../notes.js';
+import { LEAGUE } from '../league.js';
 
 function risersSection(ctx, root) {
   if (!ctx.history) return '';
@@ -24,7 +25,7 @@ function risersSection(ctx, root) {
           .join('')}</tbody></table></div>`
       : '<p class="empty">条件を満たす選手がいません。</p>';
   return `<h2 id="risers">前年から伸びた選手（${R.year - 1}年 → ${R.year}年）</h2>
-<p class="small">比較条件: 両年とも${YOY_MIN_PA}打席以上の野手は OPS の上昇幅、両年とも${YOY_MIN_OUTS / 3}投球回以上の投手は防御率の改善幅の大きい順。対象は現在パ・リーグに所属する選手（${R.year}年まで記事が更新されている選手。更新率 ${Math.round(R.coverage * 100)}%）。</p>
+<p class="small">比較条件: 両年とも${YOY_MIN_PA}打席以上の野手は OPS の上昇幅、両年とも${YOY_MIN_OUTS / 3}投球回以上の投手は防御率の改善幅の大きい順。対象は現在${LEAGUE.name}に所属する選手（${R.year}年まで記事が更新されている選手。更新率 ${Math.round(R.coverage * 100)}%）。</p>
 <div class="grid two"><div><h3>野手（OPS）</h3>${tbl(R.bats, false)}</div><div><h3>投手（防御率）</h3>${tbl(R.pits, true)}</div></div>
 <p class="muted small">出典: Wikipedia 日本語版の各選手記事の年度別成績（CC BY-SA 4.0）。記事の更新状況により、公式記録と異なる場合があります。</p>`;
 }
@@ -68,7 +69,7 @@ export function standingsTable(S, root, { highlight } = {}) {
     })
     .join('');
   return `<div class="table-scroll"><table class="sticky-first">
-<caption class="sr-only">パ・リーグ順位表</caption>
+<caption class="sr-only">${LEAGUE.name}順位表</caption>
 <thead><tr><th class="l" scope="col">順位</th><th class="l" scope="col">球団</th><th scope="col">${term('試合')}</th><th scope="col">${term('勝利')}</th><th scope="col">${term('敗戦')}</th><th scope="col">${term('引分')}</th><th scope="col">${term('勝率')}</th><th scope="col">${term('ゲーム差', 'ゲーム差')}</th><th scope="col">${term('得点')}</th><th scope="col">${term('失点')}</th><th scope="col">${term('得失点差')}</th></tr></thead>
 <tbody>${rows}</tbody></table></div>
 <p class="muted small">順位は勝率（勝利÷(勝利+敗戦)、引き分けは除く）の順。${S.standings.usesOfficialRank ? '公式発表の順位を反映しています。' : '勝率が並んだ場合は「同率」と表示し、公式の順位決定方法による順位は公式発表が入力され次第反映します。'}</p>`;
@@ -181,7 +182,7 @@ export function renderIndex(ctx) {
     })
     .join('');
   const body = `
-<h1>パ・リーグ ${S.meta.season}年 成績</h1>
+<h1>${LEAGUE.name} ${S.meta.season}年 成績</h1>
 <p class="lead">${S.statsAvailable ? '順位表・主要ランキング・最近好調な選手をまとめて確認できます。' : '順位表・個人タイトル・移籍や契約の動きをまとめて確認できます。'}各指標名をタップすると説明が表示されます。</p>
 ${todayCard(ctx, root)}
 ${newsSection(ctx, root)}
@@ -240,7 +241,7 @@ export function titlesSection(S, root) {
       return `<tr><td class="l">${esc(t.title)}</td><td class="l name" style="white-space:nowrap">${pl ? playerLink(pl, root) : esc(t.player)}</td><td class="l" style="white-space:nowrap">${teamChip(team, root)}</td><td style="white-space:nowrap">${esc(t.value || '')}</td></tr>`;
     })
     .join('');
-  return `<h2 id="titles">${S.meta.season}年 パ・リーグ個人タイトル</h2>
+  return `<h2 id="titles">${S.meta.season}年 ${LEAGUE.name}個人タイトル</h2>
 ${rows ? `<div class="table-scroll"><table class="wrap"><thead><tr><th class="l">タイトル</th><th class="l">選手</th><th class="l">球団</th><th>成績</th></tr></thead><tbody>${rows}</tbody></table></div>
 <p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0）の記載。同じタイトルに複数の選手がいる場合は同時受賞です。正式な記録は NPB の発表をご確認ください。</p>` : '<p class="empty">個人タイトルのデータはまだありません。</p>'}
 <p class="notice info small"><strong>個人成績のランキング・最近好調な選手は表示していません。</strong>リーグ全選手の成績や試合別の成績を、規約上利用できる形で取得できないためです。選手ごとの年度別成績・前年比・平均との差は、各選手ページで確認できます（<a href="${root}about.html#history">比較の方法</a>）。</p>`;

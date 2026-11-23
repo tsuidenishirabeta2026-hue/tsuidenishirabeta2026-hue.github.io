@@ -3,6 +3,7 @@ import { esc, rate3, fixed, int, ip } from '../format.js';
 import { battingRates, pitchingRates } from '../metrics.js';
 import { playerInsight, fmtDiff, MIN_COVERAGE, YOY_MIN_PA, YOY_MIN_OUTS } from '../history.js';
 import { term } from './layout.js';
+import { LEAGUE } from '../league.js';
 
 const sizeText = (isP, n) => (n === null || n === undefined ? 'データなし' : isP ? `${Math.floor(n / 3)}${n % 3 ? `.${n % 3}` : ''}回` : `${n}打席`);
 
@@ -69,7 +70,7 @@ export function insightSection(ctx, p) {
 
   const lg = I.league
     ? `<h3>リーグ平均との差（${I.league.year}年）</h3>
-<p class="small">比較条件: 本人 <b>${sizeText(isP, I.league.size)}</b>。比較対象は「現在パ・リーグ6球団に所属し、Wikipedia の記事が${I.league.year}年まで更新されている${isP ? '投手' : '野手'}${I.league.population}人」の、${I.league.year}年のパ・リーグ球団での成績の合計から計算した平均です（記事の更新率 ${Math.round(I.league.coverage * 100)}%）。退団・引退した選手を含まないため、公式のリーグ平均とは異なります。</p>
+<p class="small">比較条件: 本人 <b>${sizeText(isP, I.league.size)}</b>。比較対象は「現在${LEAGUE.name}6球団に所属し、Wikipedia の記事が${I.league.year}年まで更新されている${isP ? '投手' : '野手'}${I.league.population}人」の、${I.league.year}年の${LEAGUE.name}球団での成績の合計から計算した平均です（記事の更新率 ${Math.round(I.league.coverage * 100)}%）。退団・引退した選手を含まないため、公式のリーグ平均とは異なります。</p>
 <div class="table-scroll"><table class="wrap"><thead><tr><th class="l">指標</th><th>本人</th><th>平均</th><th>差・判定</th></tr></thead><tbody>${I.league.rows
         .map((r) => `<tr><td class="l">${term(r.label.replace(/（.*）/, ''), r.key === 'ISO' ? 'ISO' : r.label.replace(/（.*）/, ''))}${r.higher ? '' : '<sup aria-label="低いほど良い">↓</sup>'}</td><td><b>${esc(r.me)}</b></td><td>${esc(r.lg)}</td><td>${r.diff === null ? '' : `${esc(fmtDiff(r.key, r.diff))}<br>`}${judgeLg(r)}</td></tr>`)
         .join('')}</tbody></table></div>

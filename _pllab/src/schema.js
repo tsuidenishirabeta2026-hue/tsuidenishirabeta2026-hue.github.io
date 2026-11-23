@@ -8,7 +8,9 @@
 //   enum  values のいずれか
 // need: 'col' = 列が必須（値は空欄可）, 'val' = 列も値も必須, なし = 列自体が任意
 
-export const LEAGUE_TEAMS = ['F', 'E', 'L', 'M', 'B', 'H'];
+import { LEAGUE } from './league.js';
+
+export const LEAGUE_TEAMS = LEAGUE.teamIds;
 export const PHASES = ['preseason', 'regular', 'postseason', 'offseason'];
 export const POSITIONS = ['投手', '捕手', '内野手', '外野手'];
 
@@ -158,7 +160,7 @@ export const FILES = {
       C('game_id', 'game_id', 'str', '試合ID（一意）', { need: 'val' }),
       C('date', 'date', 'date', '試合日', { need: 'val' }),
       C('start_time', 'start_time', 'str', '開始時刻（HH:MM）', { need: 'col' }),
-      C('away_team', 'away', 'str', 'ビジター球団（パ・リーグ外は球団名をそのまま記入）', { need: 'val' }),
+      C('away_team', 'away', 'str', `ビジター球団（${LEAGUE.name}外は球団名をそのまま記入）`, { need: 'val' }),
       C('home_team', 'home', 'str', 'ホーム球団', { need: 'val' }),
       C('stadium', 'stadium', 'str', '球場', { need: 'col' }),
       C('status', 'status', 'enum', '状態', { need: 'val', values: ['scheduled', 'final', 'postponed', 'cancelled'] }),

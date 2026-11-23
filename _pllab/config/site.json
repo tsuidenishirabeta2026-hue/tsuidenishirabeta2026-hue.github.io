@@ -1,5 +1,6 @@
 {
   "siteName": "パ・リーグ成績ラボ",
+  "league": "pacific",
   "source": "wikipedia",
   "seasons": null,
   "inputDir": "data/input",

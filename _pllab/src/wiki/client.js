@@ -5,11 +5,13 @@
 //   - 429/5xx は Retry-After を尊重し、指数バックオフで再試行
 //   - maxlag=5（サーバー混雑時は自動的に待つ）
 //   - User-Agent にサイト名（と任意の連絡先）を入れる
+import { LEAGUE } from '../league.js';
+
 const API = 'https://ja.wikipedia.org/w/api.php';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 export function userAgent(env = process.env) {
-  return `pl-lab-updater/1.0 (unofficial baseball fan site${env.PLLAB_UA_CONTACT ? `; ${env.PLLAB_UA_CONTACT}` : ''})`;
+  return `${LEAGUE.updaterName}/1.0 (unofficial baseball fan site${env.PLLAB_UA_CONTACT ? `; ${env.PLLAB_UA_CONTACT}` : ''})`;
 }
 
 async function call(params, { fetchImpl = globalThis.fetch, ua, maxAttempts = 6, baseDelayMs = 5000, maxWaitMs = 300000, log = () => {} }) {

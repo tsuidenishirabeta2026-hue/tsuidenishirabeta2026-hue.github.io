@@ -1,4 +1,4 @@
-// ローカル確認用の静的サーバー（リポジトリのルートを配信。GitHub Pages と同じ /pl-lab/ のパスで確認できる）
+// ローカル確認用の静的サーバー（リポジトリのルートを配信。パ・リーグ版は /pl-lab/、セ・リーグ版は /cl-lab/ で確認できる）
 //   node scripts/serve.js [port]
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
@@ -22,4 +22,4 @@ createServer(async (req, res) => {
     res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('404 Not Found');
   }
-}).listen(port, () => console.log(`http://localhost:${port}/pl-lab/`));
+}).listen(port, () => console.log(`http://localhost:${port}/pl-lab/ （パ・リーグ版）\nhttp://localhost:${port}/cl-lab/ （セ・リーグ版）`));

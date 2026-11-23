@@ -1,0 +1,24 @@
+{
+  "id": "central",
+  "name": "セ・リーグ",
+  "wikiName": "セントラル・リーグ",
+  "titleColumnKeyword": "セントラル",
+  "updaterName": "cl-lab-updater",
+  "utmSource": "cl-lab",
+  "notRelatedOrgsFooter": "日本野球機構（NPB）、各球団",
+  "notRelatedOrgsAbout": "NPB・各球団",
+  "officialSitesText": "NPB公式サイト、各球団の公式サイト",
+  "extraRightsRows": [
+    ["各球団の公式サイト", "不可", "不可（二次利用・転載の制限）", "不可", "不可"]
+  ],
+  "_movesIgnore説明": "移籍・契約の抽出で、球団名と紛らわしい語（報道機関名・地名）を先に取り除く",
+  "movesIgnore": ["中日新聞", "中日スポーツ", "中日ビル", "広島市", "広島県", "広島大学", "広島テレビ", "広島ホームテレビ", "阪神電気鉄道", "阪神電鉄", "阪神百貨店", "阪神・淡路"],
+  "teams": [
+    { "team_id": "G", "name": "読売ジャイアンツ", "short_name": "巨人", "home": "東京都", "stadium": "東京ドーム", "color": "#f26b0f", "aliases": ["読売", "ジャイアンツ"] },
+    { "team_id": "T", "name": "阪神タイガース", "short_name": "阪神", "home": "兵庫県", "stadium": "阪神甲子園球場", "color": "#c9a800", "aliases": ["タイガース"] },
+    { "team_id": "DB", "name": "横浜DeNAベイスターズ", "short_name": "DeNA", "home": "神奈川県", "stadium": "横浜スタジアム", "color": "#0055a5", "aliases": ["横浜", "横浜ベイスターズ", "横浜大洋ホエールズ", "大洋"] },
+    { "team_id": "C", "name": "広島東洋カープ", "short_name": "広島", "home": "広島県", "stadium": "MAZDA Zoom-Zoom スタジアム広島", "color": "#d7000f", "aliases": ["カープ"] },
+    { "team_id": "S", "name": "東京ヤクルトスワローズ", "short_name": "ヤクルト", "home": "東京都", "stadium": "明治神宮野球場", "color": "#0d7f4f", "aliases": ["スワローズ"] },
+    { "team_id": "D", "name": "中日ドラゴンズ", "short_name": "中日", "home": "愛知県", "stadium": "バンテリンドーム ナゴヤ", "color": "#002f87", "aliases": ["ドラゴンズ"] }
+  ]
+}

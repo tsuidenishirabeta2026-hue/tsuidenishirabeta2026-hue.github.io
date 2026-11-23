@@ -21,7 +21,6 @@ import { loadNotes } from './notes.js';
 import { loadTodayPicks } from './today.js';
 import { buildHistory } from './history.js';
 import { loadColumns, renderColumnIndex, renderColumn } from './render/page-columns.js';
-import { ROOT } from './config.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const MARKER = '.pllab-generated';
@@ -94,6 +93,7 @@ export async function runBuild({ config = loadConfig() } = {}) {
     th: config.thresholds,
     analytics: config.analytics || {},
     siteUrl: (config.siteUrl || '').replace(/\/+$/, ''),
+    basePath: config.basePath || '/pl-lab/',
     adsense: config.adsense || {},
     noteProfileUrl: config.note?.profileUrl || '',
     repoSlug: config.repo || '',
@@ -103,13 +103,13 @@ export async function runBuild({ config = loadConfig() } = {}) {
   const nl = await loadNotes(join(config.inputDir, 'notes.csv'));
   for (const e of nl.errors) console.warn(`⚠ ${e}`);
   ctx.notes = nl.notes;
-  ctx.columns = await loadColumns(join(ROOT, 'content', 'columns'));
+  ctx.columns = await loadColumns(config.columnsDir);
   ctx.todayPicks = await loadTodayPicks(join(config.inputDir, 'today.csv'));
   const ps = await readJson(join(config.storeDir, 'player-stats.json'));
   ctx.history = ps ? buildHistory(ps, [...S.players.values()], S.meta.season) : null;
   let pages = 0;
   const pageList = [];
-  const base = ctx.siteUrl || 'https://tsuidenishirabeta2026-hue.github.io/pl-lab';
+  const base = ctx.siteUrl || `https://tsuidenishirabeta2026-hue.github.io${ctx.basePath.replace(/\/+$/, '')}`;
   const write = async (rel, html) => {
     const url = `${base}/${rel.replace(/(^|\/)index\.html$/, '$1')}`;
     await out(dir, rel, html.replace('<!--PL_CANONICAL-->', `<link rel="canonical" href="${url}">`));
