@@ -89,6 +89,12 @@ function latestOf(H, p, isCurrent) {
   if (!H || !isCurrent) return {};
   const h = H.per.get(p.id);
   if (!h) return {};
+  const sal = h.salary?.yen ?? null;
+  const out = latestStats(h, p);
+  return sal === null ? out : { ...out, sal };
+}
+
+function latestStats(h, p) {
   const years = p.isPitcher ? h.pit : h.bat;
   if (!years.size) return {};
   const y = Math.max(...years.keys());

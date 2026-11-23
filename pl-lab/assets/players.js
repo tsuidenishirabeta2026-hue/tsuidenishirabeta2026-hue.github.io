@@ -42,6 +42,7 @@
     if (f === 'rate') { var s = v.toFixed(3); return s.indexOf('0.') === 0 ? s.slice(1) : s; }
     if (f === 'f2') return v.toFixed(2);
     if (f === 'ip') return Math.floor(v / 3) + '.' + (v % 3);
+    if (f === 'yen') return v >= 1e8 ? (Math.round(v / 1e7) / 10) + '億円' : Math.round(v / 1e4).toLocaleString('ja-JP') + '万円';
     return String(v);
   }
   function num(v) { return typeof v === 'number' ? v : null; }
@@ -84,7 +85,7 @@
     var season = Number(state.season || DATA.current);
     var noStats = DATA.noStats.indexOf(season) >= 0;
     var cols = noStats
-      ? [['背番号', 'num', 'text'], ['年度', 'ly', 'int'], tab === 'bat' ? ['打席', 'sz', 'int'] : ['投球回', 'sz', 'ip'], tab === 'bat' ? ['OPS', 'km', 'rate'] : ['防御率', 'km', 'f2']]
+      ? [['背番号', 'num', 'text'], ['年度', 'ly', 'int'], tab === 'bat' ? ['打席', 'sz', 'int'] : ['投球回', 'sz', 'ip'], tab === 'bat' ? ['OPS', 'km', 'rate'] : ['防御率', 'km', 'f2'], ['年俸（推定）', 'sal', 'yen']]
       : COLS[tab];
     el('f-qual').closest('label').hidden = noStats;
     if (noStats) state.qual = false;
@@ -128,7 +129,7 @@
     var body = rows.map(function (r) {
       var st = tab === 'bat' ? r.b : r.p;
       var lead = '<td class="l name"><a href="' + esc(r.id) + '.html">' + esc(r.n) + '</a>' + ((tab === 'bat' ? r.qb : r.qp) ? ' <span class="tag" title="規定到達">規定</span>' : '') + '</td><td class="l">' + esc(r.tn) + '</td><td class="l">' + esc(tab === 'bat' ? r.pos : r.role) + '</td>';
-      if (noStats) return '<tr>' + lead + '<td>' + esc(r.num) + '</td>' + (r.ly ? '<td>' + r.ly + '</td><td>' + fmt(r.sz, tab === 'bat' ? 'int' : 'ip') + '</td><td>' + fmt(r.km, tab === 'bat' ? 'rate' : 'f2') + '</td>' : '<td colspan="3" class="l"><span class="na">年度別成績なし</span></td>') + '</tr>';
+      if (noStats) return '<tr>' + lead + '<td>' + esc(r.num) + '</td>' + (r.ly ? '<td>' + r.ly + '</td><td>' + fmt(r.sz, tab === 'bat' ? 'int' : 'ip') + '</td><td>' + fmt(r.km, tab === 'bat' ? 'rate' : 'f2') + '</td>' : '<td colspan="3" class="l"><span class="na">年度別成績なし</span></td>') + '<td>' + (r.sal != null ? fmt(r.sal, 'yen') : '<span class="na">記載なし</span>') + '</td></tr>';
       if (!st) return '<tr>' + lead + '<td class="l" colspan="' + cols.length + '"><span class="na">今季の' + (tab === 'bat' ? '出場' : '登板') + '記録なし</span></td></tr>';
       return '<tr>' + lead + cols.map(function (c) { return '<td>' + fmt(st[c[1]], c[2]) + '</td>'; }).join('') + '</tr>';
     }).join('');

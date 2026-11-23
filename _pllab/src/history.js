@@ -68,6 +68,8 @@ export function buildHistory(store, players, currentSeason) {
       invalidYears: [...new Set([...(a.batting || []), ...(a.pitching || [])].filter((r) => !r.valid).map((r) => r.year))].sort(),
       hasTables: !!(a.batting?.length || a.pitching?.length),
       revid: a.revid,
+      salary: a.salary || null,
+      salaryHistory: a.salaryHistory || {},
     });
   }
   // 年ごとの更新率とリーグ平均（母集団: その年まで更新済みの記事）

@@ -308,3 +308,8 @@ article.column table { font-size: .86rem; }
 .today-sub { font-size: .82rem; color: var(--ink-3); }
 .today-sub u { color: var(--accent); }
 @media (prefers-color-scheme: dark) { .today-card a { background: #3a2f12; border-color: #b07800; } .today-kicker { color: #f2c14e; } }
+
+/* 選手ページの年俸（推定） */
+.salary-box { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+.salary-box p { margin: 4px 0; }
+.salary-main b { font-size: 1.25rem; }
