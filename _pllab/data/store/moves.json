@@ -1,11 +1,11 @@
 {
- "hash": "548f201d54ed83ad8091e816d502624cdbfd98e55416c023312425c81bb4aae9",
- "saved_at": "2026-11-23T08:13:17.808Z",
+ "hash": "6d7c16867defb2f1de6ced0c25bf4053b631390a891d5aa6d648c6a493d91fc1",
+ "saved_at": "2026-11-23T08:59:07.336Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111874326,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111874326",
+   "revid": 111874903,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111874903",
    "count": 241
   }
  ],
@@ -33,7 +33,7 @@
     {
      "url": "https://www.nikkansports.com/baseball/news/202611230001059.html",
      "site": "日刊スポーツ",
-     "date": null
+     "date": "2026-11-23"
     },
     {
      "url": "https://www.sponichi.co.jp/baseball/news/2026/11/23/articles/20261123s00001173117000c.html",
@@ -267,7 +267,7 @@
    "sources": [
     {
      "url": "https://www.chunichi.co.jp/article/1341665",
-     "site": "中日スポーツ・東京中日スポーツ",
+     "site": "中日スポーツ",
      "date": "2026-11-19"
     }
    ],
