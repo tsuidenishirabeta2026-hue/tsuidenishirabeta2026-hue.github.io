@@ -10,6 +10,7 @@ import { loadConfig } from './config.js';
 import { acquireLock, appendLog, hashOf, paths, readJson, redact, writeJsonAtomic } from './store.js';
 import { fetchPages, fetchRevids, userAgent } from './wiki/client.js';
 import { parseArticle } from './sources/player-articles.js';
+import { parseSalary } from './sources/salary.js';
 
 export async function runPlayerStatsUpdate({ config = loadConfig(), env = process.env, now = () => new Date(), fetchImpl, pauseMs = 3000, log = () => {} } = {}) {
   const storeFile = join(config.storeDir, 'player-stats.json');
@@ -32,7 +33,8 @@ export async function runPlayerStatsUpdate({ config = loadConfig(), env = proces
     if (!titles.length) throw new Error('記事名のある所属選手がいません');
     const opts = { fetchImpl, ua: userAgent(env), pauseMs, log };
     const latest = await fetchRevids(titles, opts);
-    const changed = titles.filter((t) => latest.has(t) && prev.articles[t]?.revid !== latest.get(t).revid);
+    // 年俸の読み取りを追加する前に保存した記事（salary の項目が無いもの）も、一度だけ取り直す
+    const changed = titles.filter((t) => latest.has(t) && (prev.articles[t]?.revid !== latest.get(t).revid || !('salary' in (prev.articles[t] || {}))));
     log(`記事 ${titles.length}件中、更新・未取得 ${changed.length}件`);
     const pages = changed.length ? await fetchPages(changed, opts) : new Map();
     const articles = {};
@@ -46,7 +48,11 @@ export async function runPlayerStatsUpdate({ config = loadConfig(), env = proces
         const noted = [...pg.text.matchAll(/(\d{4})年(?:度)?(?:シーズン)?終了時/g)].map((m) => Number(m[1])).filter((y) => y <= season);
         const cands = [...noted, ...yearsSeen.filter((y) => y <= season)];
         const updatedThrough = cands.length ? Math.max(...cands) : null;
-        articles[t] = { revid: pg.revid, title: pg.title, updatedThrough, batting: r.batting, pitching: r.pitching };
+        // 年俸（推定）。年ごとの値を残しておき、前年からの増減を出せるようにする
+        const salary = parseSalary(pg.text);
+        const salaryHistory = { ...(prev.articles[t]?.salaryHistory || {}) };
+        if (salary?.year) salaryHistory[salary.year] = { text: salary.text, yen: salary.yen };
+        articles[t] = { revid: pg.revid, title: pg.title, updatedThrough, batting: r.batting, pitching: r.pitching, salary, salaryHistory };
       } else if (prev.articles[t] && latest.get(t)?.revid === prev.articles[t].revid) {
         articles[t] = prev.articles[t];
       }

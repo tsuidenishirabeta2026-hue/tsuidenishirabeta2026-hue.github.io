@@ -8,6 +8,7 @@ import { BAT_COLS, PIT_COLS, td, headCells } from './cols.js';
 import { indexBars, trendLine } from './charts.js';
 import { noteBlock } from './notes.js';
 import { insightSection } from './insight.js';
+import { yenShort } from '../sources/salary.js';
 import { columnsFor, columnCards } from './page-columns.js';
 
 const SECTION_TITLES = [
@@ -274,6 +275,25 @@ ${splitsBlock(S, p)}
 ${yearByYear(entries, p, root)}`;
 }
 
+/** 年俸（推定）。前年の値が分かれば増減と、成績の前年比の要点を並べる */
+export function salaryBlock(ctx, p) {
+  const h = ctx.history?.per.get(p.id);
+  const sal = h?.salary;
+  if (!sal) return '';
+  const hist = h.salaryHistory || {};
+  const prev = sal.year && hist[sal.year - 1];
+  let diff = '';
+  if (prev && sal.yen !== null && prev.yen !== null) {
+    const d = sal.yen - prev.yen;
+    diff = d === 0 ? '前年から変わらず' : `前年（${esc(prev.text)}）から${d > 0 ? '+' : '−'}${esc(yenShort(Math.abs(d)))}`;
+  }
+  const ins = ctx.history ? insightSection(ctx, p) : null;
+  return `<h2>年俸（推定）</h2>
+<div class="salary-box"><p class="salary-main"><b>${esc(sal.text)}</b>${sal.year ? `<span class="muted">（${sal.year}年）</span>` : ''}</p>
+${diff ? `<p class="small">${diff}</p>` : ''}${sal.note ? `<p class="small muted">${esc(sal.note)}</p>` : ''}
+<p class="small muted">年俸は球団が公表していないため、報道による推定の金額です。出典: Wikipedia「${esc(p.info.wiki_title || p.name)}」の基本情報（CC BY-SA 4.0）。記事の更新が遅れて、最新の契約が反映されていないことがあります。</p></div>`;
+}
+
 /** 個人成績の取得元が無い場合: 推測で埋めず、分かる情報（タイトル・最近の動き・外部リンク）だけを出す */
 function noStatsSections(ctx, S, p, root) {
   const titles = S.titles.filter((t) => t.player_id === p.id);
@@ -282,6 +302,7 @@ function noStatsSections(ctx, S, p, root) {
   const ins = insightSection(ctx, p);
   return `<h2>数字で見る${esc(p.name)}</h2>
 ${ins ? ins.html : '<div class="notice info"><strong>個人成績は掲載していません。</strong>規約上利用できる個人成績の取得元がないため、打率・防御率などの個人成績と、それに基づく分析は表示していません（推測で作ることはしません）。</div>'}
+${salaryBlock(ctx, p)}
 ${titles.length ? `<h2>${S.meta.season}年の個人タイトル</h2><ul>${titles.map((t) => `<li>${esc(t.title)}${t.value ? `（${esc(t.value)}）` : ''}</li>`).join('')}</ul>` : ''}
 ${moves.length ? `<h2>この選手に関する最近の動き</h2><ul>${moves.slice(0, 5).map((e) => `<li>${esc(dateShort(e.date))}: ${esc(e.text)}</li>`).join('')}</ul><p class="muted small">出典: Wikipedia 日本語版（CC BY-SA 4.0、改変あり）。<a href="${root}moves.html">移籍・契約の一覧</a></p>` : ''}
 ${wiki ? `<p>経歴・過去の成績: <a href="${esc(wiki)}" rel="noopener">Wikipedia「${esc(p.info.wiki_title)}」</a>（外部サイト）</p>` : ''}`;

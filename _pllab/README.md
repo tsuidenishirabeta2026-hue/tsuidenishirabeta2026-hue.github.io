@@ -158,6 +158,13 @@ CSV を Web 上（自分のスプレッドシートの CSV 公開 URL、契約�
   Umami を使う場合は `"provider": "umami", "id": "<Website ID>"`。設定が無ければ何も送信しない
 - 記事の下書き: 非公開リポジトリ `pacific-labo-analytics` の `drafts/`（有料部分を含むため、このリポジトリには置かない）。利用条件: `docs/DATA_RIGHTS.md`
 
+## 年俸（推定）
+
+- 毎朝の `update-player-stats.js` で、選手記事の基本情報（Infobox）の「年俸」欄も読む（`src/sources/salary.js`）。記事の本文は成績と同じ取得で済むため、通信は増えない
+- 年ごとの値を `player-stats.json` の `salaryHistory` に残し、前年の値があれば選手ページに増減を出す
+- 表示: 選手ページ「年俸（推定）」、球団ページ「年俸（推定）の高い選手」（上位10人）、選手一覧の「年俸（推定）」列（並べ替え可）
+- 年俸は球団が公表しないため、すべて報道による推定。表示には必ず「推定」と出典（Wikipedia、CC BY-SA 4.0）を添える。ドル表記は円に換算しない
+
 ## トップの「今日の数字」と「新着の記事」
 
 - `data/input/today.csv`（`date,player_id,label,from,to,comment`）に1日1行。今日（日本時間）以前で最も新しい行を、トップの「今日の数字」に出す。3日以上前の行しかなければ、最新の記事の選手から前年比で最も伸びた指標を自動で選ぶ
