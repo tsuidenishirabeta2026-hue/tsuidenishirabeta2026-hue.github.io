@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1006" viewBox="0 0 1920 1006">
+  <!-- note のヘッダー用（1920×1006）。パソコンでは上下が切れて中央の細い帯だけ見えるため、文字は中央の帯（高さ約260px）に収める -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c3a2a"/>
+      <stop offset="1" stop-color="#1b7a4e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1006" fill="url(#bg)"/>
+  <!-- 右側の棒グラフ（飾り。中央の帯にかかる高さ） -->
+  <g fill="#ffffff" opacity="0.10">
+    <rect x="1520" y="560" width="48" height="446" rx="8"/>
+    <rect x="1588" y="500" width="48" height="506" rx="8"/>
+    <rect x="1656" y="440" width="48" height="566" rx="8"/>
+    <rect x="1724" y="380" width="48" height="626" rx="8"/>
+  </g>
+  <path d="M1500 560 L 1590 495 L 1660 515 L 1760 380" fill="none" stroke="#f2b01e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <!-- 文字（中央の帯 y=380〜630 に収める） -->
+  <text x="960" y="478" text-anchor="middle" font-family="IPAGothic, sans-serif" font-size="96" font-weight="700" fill="#ffffff">セ・リーグ成績ラボ</text>
+  <text x="960" y="550" text-anchor="middle" font-family="IPAGothic, sans-serif" font-size="42" fill="#cdeedd">セ・リーグの選手を、数字で読み解く</text>
+  <text x="960" y="605" text-anchor="middle" font-family="IPAGothic, sans-serif" font-size="32" fill="#f2b01e" font-weight="700">前年比・平均との差・移籍とFA　｜　非公式・個人運営</text>
+</svg>
