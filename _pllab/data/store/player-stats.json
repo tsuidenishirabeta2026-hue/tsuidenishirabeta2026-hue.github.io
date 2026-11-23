@@ -1,6 +1,6 @@
 {
- "hash": "c64e4c0c9ee0215611e6da77425aa6fcbe196e7eefcf311c637c823f6713245e",
- "saved_at": "2026-11-23T10:18:11.432Z",
+ "hash": "2b50e7d2857e29949c6a55d2b65a0b14c9275800814588a3972890e8ab41fedc",
+ "saved_at": "2026-11-23T22:38:28.035Z",
  "season": 2026,
  "articles": {
   "矢澤宏太": {
@@ -3332,7 +3332,7 @@
    }
   },
   "タナー・レイニー": {
-   "revid": 111875291,
+   "revid": 111881778,
    "title": "タナー・レイニー",
    "updatedThrough": 2026,
    "batting": null,
@@ -5869,7 +5869,7 @@
    }
   },
   "有原航平": {
-   "revid": 111850803,
+   "revid": 111876528,
    "title": "有原航平",
    "updatedThrough": 2026,
    "batting": null,
@@ -21042,7 +21042,7 @@
    "salaryHistory": {}
   },
   "田中和基": {
-   "revid": 111643354,
+   "revid": 111877483,
    "title": "田中和基",
    "updatedThrough": 2025,
    "batting": [
@@ -21382,7 +21382,7 @@
    }
   },
   "カーソン・マッカスカー": {
-   "revid": 111358269,
+   "revid": 111876121,
    "title": "カーソン・マッカスカー",
    "updatedThrough": 2026,
    "batting": [
@@ -37171,7 +37171,7 @@
    "salaryHistory": {}
   },
   "益田直也": {
-   "revid": 111806412,
+   "revid": 111877901,
    "title": "益田直也",
    "updatedThrough": 2026,
    "batting": null,
@@ -50602,9 +50602,9 @@
    }
   },
   "戸柱恭孝": {
-   "revid": 111874250,
+   "revid": 111880475,
    "title": "戸柱恭孝",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2016,
@@ -50854,6 +50854,31 @@
      "HBP": 0,
      "SO": 15,
      "GDP": 5,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "DeNA",
+     "team_id": null,
+     "G": 42,
+     "PA": 110,
+     "AB": 102,
+     "R": 4,
+     "H": 22,
+     "D": 6,
+     "T": 0,
+     "HR": 1,
+     "TB": 31,
+     "RBI": 8,
+     "SB": 1,
+     "CS": 1,
+     "SH": 0,
+     "SF": 1,
+     "BB": 7,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 20,
+     "GDP": 1,
      "valid": true
     }
    ],
@@ -52447,7 +52472,7 @@
    "salaryHistory": {}
   },
   "野口智哉": {
-   "revid": 111424830,
+   "revid": 111880673,
    "title": "野口智哉",
    "updatedThrough": 2025,
    "batting": [
@@ -56499,7 +56524,7 @@
    "salaryHistory": {}
   },
   "大津亮介": {
-   "revid": 111346441,
+   "revid": 111877905,
    "title": "大津亮介",
    "updatedThrough": 2025,
    "batting": null,
@@ -63438,7 +63463,7 @@
    }
   },
   "周東佑京": {
-   "revid": 111730944,
+   "revid": 111881968,
    "title": "周東佑京",
    "updatedThrough": 2026,
    "batting": [
