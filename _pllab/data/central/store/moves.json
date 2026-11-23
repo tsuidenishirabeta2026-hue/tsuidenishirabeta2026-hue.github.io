@@ -1,12 +1,12 @@
 {
- "hash": "9bd70544c9f0a13fb8b0b81aca50af4ee950b0c36521a03b6c753ffd50cf654a",
- "saved_at": "2026-11-23T08:14:23.070Z",
+ "hash": "fdd5093fd8ab208ecedc3939477b70a16ca216ecdf0c631f8ef97847c1423246",
+ "saved_at": "2026-11-23T08:59:04.720Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111874326,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111874326",
-   "count": 235
+   "revid": 111874903,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111874903",
+   "count": 236
   }
  ],
  "events": [
@@ -33,7 +33,7 @@
     {
      "url": "https://www.nikkansports.com/baseball/news/202611230001059.html",
      "site": "日刊スポーツ",
-     "date": null
+     "date": "2026-11-23"
     },
     {
      "url": "https://www.sponichi.co.jp/baseball/news/2026/11/23/articles/20261123s00001173117000c.html",
@@ -58,7 +58,27 @@
     {
      "url": "https://www.nikkansports.com/baseball/news/202611230000524.html",
      "site": "日刊スポーツ",
-     "date": null
+     "date": "2026-11-23"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-23",
+   "text": "広島東洋カープは、来季のキャッチフレーズが『DAHA』に決定したことを発表。",
+   "details": [],
+   "teams": [
+    "C"
+   ],
+   "categories": [
+    "その他"
+   ],
+   "sources": [
+    {
+     "url": "https://www.carp.co.jp/news/20261123_01",
+     "site": "広島東洋カープ",
+     "date": "2026-11-23"
     }
    ],
    "origin": "wikipedia",
@@ -206,12 +226,12 @@
    "sources": [
     {
      "url": "https://www.chunichi.co.jp/article/1341642",
-     "site": "中日スポーツ・東京中日スポーツ",
+     "site": "中日スポーツ",
      "date": "2026-11-19"
     },
     {
      "url": "https://www.chunichi.co.jp/article/1341632",
-     "site": "中日スポーツ・東京中日スポーツ",
+     "site": "中日スポーツ",
      "date": "2026-11-19"
     },
     {
@@ -221,7 +241,7 @@
     },
     {
      "url": "https://www.nikkansports.com/baseball/news/202611190000709.html",
-     "site": "中日スポーツ・東京中日スポーツ",
+     "site": "中日スポーツ",
      "date": "2026-11-19"
     }
    ],
