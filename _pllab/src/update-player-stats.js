@@ -12,6 +12,9 @@ import { fetchPages, fetchRevids, userAgent } from './wiki/client.js';
 import { parseArticle } from './sources/player-articles.js';
 import { parseSalary } from './sources/salary.js';
 
+// 年俸の読み取り方の版。読み取り方を直したら上げる（次の更新で全記事を一度だけ取り直す）
+const SALARY_V = 2;
+
 export async function runPlayerStatsUpdate({ config = loadConfig(), env = process.env, now = () => new Date(), fetchImpl, pauseMs = 3000, log = () => {} } = {}) {
   const storeFile = join(config.storeDir, 'player-stats.json');
   const statusFile = join(config.storeDir, 'player-stats-status.json');
@@ -33,8 +36,8 @@ export async function runPlayerStatsUpdate({ config = loadConfig(), env = proces
     if (!titles.length) throw new Error('記事名のある所属選手がいません');
     const opts = { fetchImpl, ua: userAgent(env), pauseMs, log };
     const latest = await fetchRevids(titles, opts);
-    // 年俸の読み取りを追加する前に保存した記事（salary の項目が無いもの）も、一度だけ取り直す
-    const changed = titles.filter((t) => latest.has(t) && (prev.articles[t]?.revid !== latest.get(t).revid || !('salary' in (prev.articles[t] || {}))));
+    // 年俸の読み取り方を変えたとき（SALARY_V を上げたとき）は、保存済みの記事も一度だけ取り直す
+    const changed = titles.filter((t) => latest.has(t) && (prev.articles[t]?.revid !== latest.get(t).revid || prev.articles[t]?.salaryV !== SALARY_V));
     log(`記事 ${titles.length}件中、更新・未取得 ${changed.length}件`);
     const pages = changed.length ? await fetchPages(changed, opts) : new Map();
     const articles = {};
@@ -52,7 +55,7 @@ export async function runPlayerStatsUpdate({ config = loadConfig(), env = proces
         const salary = parseSalary(pg.text);
         const salaryHistory = { ...(prev.articles[t]?.salaryHistory || {}) };
         if (salary?.year) salaryHistory[salary.year] = { text: salary.text, yen: salary.yen };
-        articles[t] = { revid: pg.revid, title: pg.title, updatedThrough, batting: r.batting, pitching: r.pitching, salary, salaryHistory };
+        articles[t] = { revid: pg.revid, title: pg.title, updatedThrough, batting: r.batting, pitching: r.pitching, salary, salaryHistory, salaryV: SALARY_V };
       } else if (prev.articles[t] && latest.get(t)?.revid === prev.articles[t].revid) {
         articles[t] = prev.articles[t];
       }

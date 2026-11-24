@@ -5,13 +5,16 @@
 const FW = '０１２３４５６７８９';
 const half = (s) => s.replace(/[０-９]/g, (c) => String(FW.indexOf(c))).replace(/，/g, ',');
 
+const KEEP = new Set(['nowrap', 'nobr', 'small', 'big', 'lang', 'font']);
+
 /** wiki 記法・HTML を取り除いた表示用の文字列 */
 function plain(s) {
   return s
     .replace(/<ref[^>]*\/>/g, '')
     .replace(/<ref[^>]*>[\s\S]*?<\/ref>/g, '')
     .replace(/\{\{\s*0\s*\}\}/g, '')
-    .replace(/\{\{[^{}|]*\|([^{}]*)\}\}/g, '$1')
+    // 見た目だけを整えるテンプレート（{{Nowrap|…}} など）は中身を残し、出典の {{R|…}} などは消す
+    .replace(/\{\{\s*([^{}|]*?)\s*\|([^{}]*)\}\}/g, (m, name, body) => (KEEP.has(name.toLowerCase()) ? body.split('|').pop() : ''))
     .replace(/\{\{[^{}]*\}\}/g, '')
     .replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1')
     .replace(/'''?/g, '')
