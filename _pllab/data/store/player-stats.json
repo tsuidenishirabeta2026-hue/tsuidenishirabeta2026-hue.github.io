@@ -1,6 +1,6 @@
 {
- "hash": "f5ca8c47dab299ca4ec903bba3d5804934074c70a813b53992db535195b37563",
- "saved_at": "2026-11-24T13:08:16.618Z",
+ "hash": "acec18658e9c8b47aa3e968d60943f290e35a6c4f1212e3957f87fd2db9fddc9",
+ "saved_at": "2026-11-24T13:23:09.872Z",
  "season": 2026,
  "articles": {
   "矢澤宏太": {
@@ -839,7 +839,7 @@
    "salaryV": 2
   },
   "達孝太": {
-   "revid": 111889957,
+   "revid": 111889985,
    "title": "達孝太",
    "updatedThrough": 2025,
    "batting": null,
@@ -47253,7 +47253,7 @@
    "salaryV": 2
   },
   "藤浪晋太郎": {
-   "revid": 111875905,
+   "revid": 111890052,
    "title": "藤浪晋太郎",
    "updatedThrough": 2025,
    "batting": null,
