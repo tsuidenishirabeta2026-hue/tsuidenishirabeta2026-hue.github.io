@@ -1,18 +1,59 @@
 {
- "hash": "0c99d0bb7777a65812375cf1d941eee4646ac7f4dd07ecc672ff2e3d9f4c8ac5",
- "saved_at": "2026-11-23T22:39:04.874Z",
+ "hash": "da6a8aaa92cf16f143f037e2b6d548b1e76ba5f41988a577c348242fa7fe304f",
+ "saved_at": "2026-11-24T13:10:05.306Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111877239,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111877239",
-   "count": 242
+   "revid": 111889004,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111889004",
+   "count": 244
   }
  ],
  "events": [
   {
+   "date": "2026-11-24",
+   "text": "東北楽天ゴールデンイーグルスは、戦力外としていた石原彪と育成契約を締結したことを発表。",
+   "details": [],
+   "teams": [
+    "E"
+   ],
+   "categories": [
+    "戦力外・退団",
+    "獲得・入団・契約"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611240001684.html",
+     "site": "日刊スポーツ",
+     "date": null
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-24",
+   "text": "福岡ソフトバンクホークスは、山川穂高が背番号を5→81に変更することを発表。",
+   "details": [],
+   "teams": [
+    "H"
+   ],
+   "categories": [
+    "背番号"
+   ],
+   "sources": [
+    {
+     "url": "https://www.sponichi.co.jp/baseball/news/2026/11/24/articles/20261124s00001173176000c.html#goog_rewarded",
+     "site": "スポニチアネックス",
+     "date": "2026-11-24"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
    "date": "2026-11-23",
-   "text": "オリックス・バファローズは、横浜DeNAベイスターズを戦力外となっていた藤浪晋太郎と、同じくDeNAから海外FA権を行使していた戸柱恭孝の獲得を発表、背番号は藤浪が27、戸柱が3。また、今季は中信兄弟（CPBL）で打撃コーチを務めた後藤駿太の育成コーチ就任を発表。背番号は03。",
+   "text": "オリックス・バファローズは、横浜DeNAベイスターズを戦力外となっていた藤浪晋太郎と、同じくDeNAから海外FA権を行使していた戸柱恭孝の獲得を発表。背番号は藤浪が27、戸柱が3。また、今季は中信兄弟（CPBL）で打撃コーチを務めた後藤駿太の育成コーチ就任を発表。背番号は03。",
    "details": [],
    "teams": [
     "B"
@@ -46,7 +87,7 @@
   },
   {
    "date": "2026-11-23",
-   "text": "北海道日本ハムファイターズは、元デトロイト・タイガースのタナー・レイニーとの契約合意を発表、背番号は30。",
+   "text": "北海道日本ハムファイターズは、元デトロイト・タイガースの投手のタナー・レイニーとの契約合意を発表。背番号は30。",
    "details": [],
    "teams": [
     "F"
