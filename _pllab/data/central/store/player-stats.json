@@ -1,6 +1,6 @@
 {
- "hash": "d546cd9a50509da0e3179e7d6f915553c9c3a9abdc8a33fc0e7bf14f533f0f07",
- "saved_at": "2026-11-24T13:39:26.529Z",
+ "hash": "1235c71d3b8ffc26112b8b0dd759521dd88c3886ad9bd6c89033af67f74b04f6",
+ "saved_at": "2026-11-24T14:56:13.716Z",
  "season": 2026,
  "articles": {
   "田中将大": {
@@ -10806,7 +10806,7 @@
    "salaryV": 2
   },
   "浅野翔吾": {
-   "revid": 111516795,
+   "revid": 111890688,
    "title": "浅野翔吾",
    "updatedThrough": 2025,
    "batting": [
@@ -34180,7 +34180,7 @@
    "salaryV": 2
   },
   "髙太一": {
-   "revid": 111886451,
+   "revid": 111890343,
    "title": "髙太一",
    "updatedThrough": 2025,
    "batting": null,
