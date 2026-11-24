@@ -670,7 +670,7 @@
     "text": "3億円",
     "yen": 300000000,
     "year": 2026,
-    "note": "※2024年から4年契約hochi20231111"
+    "note": "※2024年から4年契約"
    },
    "salaryHistory": {
     "2026": {
@@ -1425,7 +1425,7 @@
     "text": "2億5000万円",
     "yen": 250000000,
     "year": 2026,
-    "note": "※2024年から4年契約nikkansports20231206"
+    "note": "※2024年から4年契約"
    },
    "salaryHistory": {
     "2026": {
@@ -3036,14 +3036,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1300万円chunichi20251121",
+    "text": "1300万円",
     "yen": 13000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1300万円chunichi20251121",
+     "text": "1300万円",
      "yen": 13000000
     }
    }
@@ -3724,14 +3724,14 @@
     }
    ],
    "salary": {
-    "text": "880万円nikkansports20241112",
+    "text": "880万円",
     "yen": 8800000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "880万円nikkansports20241112",
+     "text": "880万円",
      "yen": 8800000
     }
    }
@@ -3743,14 +3743,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "770万円sanspo20241126",
+    "text": "770万円",
     "yen": 7700000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "770万円sanspo20241126",
+     "text": "770万円",
      "yen": 7700000
     }
    }
@@ -4025,14 +4025,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1000万円hochi20241129",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "1000万円hochi20241129",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -5574,14 +5574,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "530万円sponichi20241119",
+    "text": "530万円",
     "yen": 5300000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "530万円sponichi20241119",
+     "text": "530万円",
      "yen": 5300000
     }
    }
@@ -5593,14 +5593,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "770万円hochi20241130",
+    "text": "770万円",
     "yen": 7700000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "770万円hochi20241130",
+     "text": "770万円",
      "yen": 7700000
     }
    }
@@ -6200,14 +6200,14 @@
     }
    ],
    "salary": {
-    "text": "5億円sponichi20260114",
+    "text": "5億円",
     "yen": 500000000,
     "year": 2026,
     "note": "※2026年から4年契約"
    },
    "salaryHistory": {
     "2026": {
-     "text": "5億円sponichi20260114",
+     "text": "5億円",
      "yen": 500000000
     }
    }
@@ -6348,14 +6348,14 @@
     }
    ],
    "salary": {
-    "text": "700万円hochi20241129",
+    "text": "700万円",
     "yen": 7000000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "700万円hochi20241129",
+     "text": "700万円",
      "yen": 7000000
     }
    }
@@ -6690,14 +6690,14 @@
    ],
    "pitching": null,
    "salary": {
-    "text": "2億5000万円hochi20241219",
+    "text": "2億5000万円",
     "yen": 250000000,
     "year": 2026,
-    "note": "※2025年から4年契約hochi20241219"
+    "note": "※2025年から4年契約"
    },
    "salaryHistory": {
     "2026": {
-     "text": "2億5000万円hochi20241219",
+     "text": "2億5000万円",
      "yen": 250000000
     }
    }
@@ -8902,14 +8902,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1000万円nikkansports20251105",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1000万円nikkansports20251105",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -8921,14 +8921,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "530万円nikkansports20251110",
+    "text": "530万円",
     "yen": 5300000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "530万円nikkansports20251110",
+     "text": "530万円",
      "yen": 5300000
     }
    }
@@ -8966,14 +8966,14 @@
    ],
    "pitching": null,
    "salary": {
-    "text": "830万円nikkansports20241208",
+    "text": "830万円",
     "yen": 8300000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "830万円nikkansports20241208",
+     "text": "830万円",
      "yen": 8300000
     }
    }
@@ -10048,14 +10048,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1100万円sanspo20251107",
+    "text": "1100万円",
     "yen": 11000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1100万円sanspo20251107",
+     "text": "1100万円",
      "yen": 11000000
     }
    }
@@ -10970,14 +10970,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "260万円nikkansports20241208",
+    "text": "260万円",
     "yen": 2600000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "260万円nikkansports20241208",
+     "text": "260万円",
      "yen": 2600000
     }
    }
@@ -10989,14 +10989,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "260万円nikkansports20241208_01",
+    "text": "260万円",
     "yen": 2600000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "260万円nikkansports20241208_01",
+     "text": "260万円",
      "yen": 2600000
     }
    }
@@ -13609,14 +13609,14 @@
     }
    ],
    "salary": {
-    "text": "1000万円nhk20241113",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "1000万円nhk20241113",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -14067,14 +14067,14 @@
     }
    ],
    "salary": {
-    "text": "1000万円sanspo20241115",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "1000万円sanspo20241115",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -16718,14 +16718,14 @@
     }
    ],
    "salary": {
-    "text": "900万円nikkansports20251114",
+    "text": "900万円",
     "yen": 9000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "900万円nikkansports20251114",
+     "text": "900万円",
      "yen": 9000000
     }
    }
@@ -19075,7 +19075,7 @@
     "text": "5億円",
     "yen": 500000000,
     "year": 2026,
-    "note": "※2023年から4年契約hochi20221120"
+    "note": "※2023年から4年契約"
    },
    "salaryHistory": {
     "2026": {
@@ -21474,14 +21474,14 @@
    ],
    "pitching": null,
    "salary": {
-    "text": "730万円sponichi20251121",
+    "text": "730万円",
     "yen": 7300000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "730万円sponichi20251121",
+     "text": "730万円",
      "yen": 7300000
     }
    }
@@ -21638,14 +21638,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "700万円nikkansports20251121",
+    "text": "700万円",
     "yen": 7000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "700万円nikkansports20251121",
+     "text": "700万円",
      "yen": 7000000
     }
    }
@@ -22042,14 +22042,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1100万円sanspo20241129",
+    "text": "1100万円",
     "yen": 11000000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "1100万円sanspo20241129",
+     "text": "1100万円",
      "yen": 11000000
     }
    }
@@ -22080,14 +22080,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "300万円nikkansports20241104_02",
+    "text": "300万円",
     "yen": 3000000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "300万円nikkansports20241104_02",
+     "text": "300万円",
      "yen": 3000000
     }
    }
@@ -24261,14 +24261,14 @@
     }
    ],
    "salary": {
-    "text": "900万円sponichi20251110",
+    "text": "900万円",
     "yen": 9000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "900万円sponichi20251110",
+     "text": "900万円",
      "yen": 9000000
     }
    }
@@ -26008,14 +26008,14 @@
    ],
    "pitching": null,
    "salary": {
-    "text": "1600万円nikkansports20251121",
+    "text": "1600万円",
     "yen": 16000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1600万円nikkansports20251121",
+     "text": "1600万円",
      "yen": 16000000
     }
    }
@@ -28080,7 +28080,7 @@
     "text": "3億円",
     "yen": 300000000,
     "year": 2026,
-    "note": "※2023年から5年契約fullcount20221126"
+    "note": "※2023年から5年契約"
    },
    "salaryHistory": {
     "2026": {
@@ -28250,7 +28250,7 @@
     "text": "3億円",
     "yen": 300000000,
     "year": 2026,
-    "note": "※2026年から2年契約nikkansports20250623"
+    "note": "※2026年から2年契約"
    },
    "salaryHistory": {
     "2026": {
@@ -31196,14 +31196,14 @@
    ],
    "pitching": null,
    "salary": {
-    "text": "1200万円nikkansports20251113",
+    "text": "1200万円",
     "yen": 12000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1200万円nikkansports20251113",
+     "text": "1200万円",
      "yen": 12000000
     }
    }
@@ -33336,14 +33336,14 @@
     }
    ],
    "salary": {
-    "text": "1200万円nikkansports20251203",
+    "text": "1200万円",
     "yen": 12000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1200万円nikkansports20251203",
+     "text": "1200万円",
      "yen": 12000000
     }
    }
@@ -34037,14 +34037,14 @@
     }
    ],
    "salary": {
-    "text": "1600万円sponichi20251127",
+    "text": "1600万円",
     "yen": 16000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1600万円sponichi20251127",
+     "text": "1600万円",
      "yen": 16000000
     }
    }
@@ -35352,7 +35352,7 @@
     "text": "1億5000万円",
     "yen": 150000000,
     "year": 2026,
-    "note": "※2025年から3年契約daily20241113"
+    "note": "※2025年から3年契約"
    },
    "salaryHistory": {
     "2026": {
@@ -36453,14 +36453,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "600万円nikkansports20251124",
+    "text": "600万円",
     "yen": 6000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "600万円nikkansports20251124",
+     "text": "600万円",
      "yen": 6000000
     }
    }
@@ -36500,14 +36500,14 @@
     }
    ],
    "salary": {
-    "text": "1000万円nikkansports20241126",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1000万円nikkansports20241126",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -36701,14 +36701,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1000万円nikkansports20251117",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1000万円nikkansports20251117",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -38151,14 +38151,14 @@
     }
    ],
    "salary": {
-    "text": "600万円nikkansports20241120",
+    "text": "600万円",
     "yen": 6000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "600万円nikkansports20241120",
+     "text": "600万円",
      "yen": 6000000
     }
    }
@@ -39152,14 +39152,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "460万円nikkansports20251125",
+    "text": "460万円",
     "yen": 4600000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "460万円nikkansports20251125",
+     "text": "460万円",
      "yen": 4600000
     }
    }
@@ -40632,14 +40632,14 @@
    ],
    "pitching": null,
    "salary": {
-    "text": "1500万円hochi20241114",
+    "text": "1500万円",
     "yen": 15000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1500万円hochi20241114",
+     "text": "1500万円",
      "yen": 15000000
     }
    }
@@ -40677,14 +40677,14 @@
    ],
    "pitching": null,
    "salary": {
-    "text": "1000万円hochi20241118",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1000万円hochi20241118",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -42211,14 +42211,14 @@
    ],
    "pitching": null,
    "salary": {
-    "text": "4200万円hochi20241201",
+    "text": "4200万円",
     "yen": 42000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "4200万円hochi20241201",
+     "text": "4200万円",
      "yen": 42000000
     }
    }
@@ -44277,14 +44277,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "260万円daily20241117",
+    "text": "260万円",
     "yen": 2600000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "260万円daily20241117",
+     "text": "260万円",
      "yen": 2600000
     }
    }
@@ -44372,14 +44372,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "260万円baseballking20241112",
+    "text": "260万円",
     "yen": 2600000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "260万円baseballking20241112",
+     "text": "260万円",
      "yen": 2600000
     }
    }
@@ -44592,14 +44592,14 @@
     }
    ],
    "salary": {
-    "text": "2億5000万円sponichi20240116",
+    "text": "2億5000万円",
     "yen": 250000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "2億5000万円sponichi20240116",
+     "text": "2億5000万円",
      "yen": 250000000
     }
    }
@@ -44868,14 +44868,14 @@
     }
    ],
    "salary": {
-    "text": "1400万円sponichi20251110",
+    "text": "1400万円",
     "yen": 14000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1400万円sponichi20251110",
+     "text": "1400万円",
      "yen": 14000000
     }
    }
@@ -46803,7 +46803,7 @@
     "text": "1億4000万円",
     "yen": 140000000,
     "year": 2025,
-    "note": "※2025年から2年契約nikkei20241225"
+    "note": "※2025年から2年契約"
    },
    "salaryHistory": {
     "2025": {
@@ -47854,14 +47854,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "800万円hochi20251122",
+    "text": "800万円",
     "yen": 8000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "800万円hochi20251122",
+     "text": "800万円",
      "yen": 8000000
     }
    }
@@ -48700,14 +48700,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "700万円hochi20251119",
+    "text": "700万円",
     "yen": 7000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "700万円hochi20251119",
+     "text": "700万円",
      "yen": 7000000
     }
    }
@@ -49079,14 +49079,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "700万円sponichi20251210",
+    "text": "700万円",
     "yen": 7000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "700万円sponichi20251210",
+     "text": "700万円",
      "yen": 7000000
     }
    }
@@ -49496,14 +49496,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "500万円nikkansports20260505",
+    "text": "500万円",
     "yen": 5000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "500万円nikkansports20260505",
+     "text": "500万円",
      "yen": 5000000
     }
    }
@@ -49779,14 +49779,14 @@
     }
    ],
    "salary": {
-    "text": "500万円 hochi20250731",
+    "text": "500万円",
     "yen": 5000000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "500万円 hochi20250731",
+     "text": "500万円",
      "yen": 5000000
     }
    }
@@ -49907,14 +49907,14 @@
     }
    ],
    "salary": {
-    "text": "1億5000万円sponichi20260113",
+    "text": "1億5000万円",
     "yen": 150000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1億5000万円sponichi20260113",
+     "text": "1億5000万円",
      "yen": 150000000
     }
    }
@@ -51232,7 +51232,7 @@
     "text": "4億円",
     "yen": 400000000,
     "year": 2026,
-    "note": "※2023年から4年契約baseballking20221126"
+    "note": "※2023年から4年契約"
    },
    "salaryHistory": {
     "2026": {
@@ -54693,14 +54693,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "500万円sanspo20251118",
+    "text": "500万円",
     "yen": 5000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "500万円sanspo20251118",
+     "text": "500万円",
      "yen": 5000000
     }
    }
@@ -55271,14 +55271,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "240万円chunichi20241120",
+    "text": "240万円",
     "yen": 2400000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "240万円chunichi20241120",
+     "text": "240万円",
      "yen": 2400000
     }
    }
@@ -55756,14 +55756,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "240万円chunichi20241113",
+    "text": "240万円",
     "yen": 2400000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "240万円chunichi20241113",
+     "text": "240万円",
      "yen": 2400000
     }
    }
@@ -56369,14 +56369,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1200万円 sponichi20251203",
+    "text": "1200万円",
     "yen": 12000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1200万円 sponichi20251203",
+     "text": "1200万円",
      "yen": 12000000
     }
    }
@@ -56388,14 +56388,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "400万円sponichi20241118",
+    "text": "400万円",
     "yen": 4000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "400万円sponichi20241118",
+     "text": "400万円",
      "yen": 4000000
     }
    }
@@ -56669,14 +56669,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1100万円sponichi20251124",
+    "text": "1100万円",
     "yen": 11000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1100万円sponichi20251124",
+     "text": "1100万円",
      "yen": 11000000
     }
    }
@@ -56688,14 +56688,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1000万円hochi20241128",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "1000万円hochi20241128",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -56919,7 +56919,7 @@
     "text": "1000万円",
     "yen": 10000000,
     "year": 2026,
-    "note": "※2022年から6年契約lineadirecta20221109"
+    "note": "※2022年から6年契約"
    },
    "salaryHistory": {
     "2026": {
@@ -57179,14 +57179,14 @@
     }
    ],
    "salary": {
-    "text": "3億円nikkansports20220127",
+    "text": "3億円",
     "yen": 300000000,
     "year": 2024,
-    "note": "※2022年から3年契約nikkansports20220127 2025年シーズンから新たに4年契約（4年総額40億円規模）"
+    "note": "※2022年から3年契約 2025年シーズンから新たに4年契約（4年総額40億円規模）"
    },
    "salaryHistory": {
     "2024": {
-     "text": "3億円nikkansports20220127",
+     "text": "3億円",
      "yen": 300000000
     }
    }
@@ -58040,14 +58040,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1000万円sanspo20251123",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1000万円sanspo20251123",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -59264,14 +59264,14 @@
     }
    ],
    "salary": {
-    "text": "800万円nishispo20241203",
+    "text": "800万円",
     "yen": 8000000,
     "year": 2025,
     "note": ""
    },
    "salaryHistory": {
     "2025": {
-     "text": "800万円nishispo20241203",
+     "text": "800万円",
      "yen": 8000000
     }
    }
@@ -60651,7 +60651,7 @@
     "text": "4億5000万円",
     "yen": 450000000,
     "year": 2026,
-    "note": "※2024年から4年契約nikkansports20231219"
+    "note": "※2024年から4年契約"
    },
    "salaryHistory": {
     "2026": {
@@ -62496,14 +62496,14 @@
    "batting": null,
    "pitching": null,
    "salary": {
-    "text": "1000万円nikkansports20251114",
+    "text": "1000万円",
     "yen": 10000000,
     "year": 2026,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
-     "text": "1000万円nikkansports20251114",
+     "text": "1000万円",
      "yen": 10000000
     }
    }
@@ -63673,7 +63673,7 @@
     "text": "4億円",
     "yen": 400000000,
     "year": 2026,
-    "note": "※2026年から5年契約nikkansports20260123"
+    "note": "※2026年から5年契約"
    },
    "salaryHistory": {
     "2026": {

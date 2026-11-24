@@ -29,3 +29,8 @@ test('金額の変換と短い表示', () => {
   assert.equal(yenShort(480000000), '4.8億円');
   assert.equal(yenShort(62000000), '6,200万円');
 });
+
+test('年俸: 出典テンプレート {{R|…}} の名前を残さない', () => {
+  assert.deepEqual(parseSalary('| 年俸 = 5億円{{R|sponichi20260114}}（2026年）<br />※2026年から4年契約{{R|hochi20231111|nikkan}}'), { text: '5億円', yen: 500000000, year: 2026, note: '※2026年から4年契約' });
+  assert.equal(parseSalary('| 年俸 = {{Nowrap|1億5000万円}}（2026年）').text, '1億5000万円');
+});
