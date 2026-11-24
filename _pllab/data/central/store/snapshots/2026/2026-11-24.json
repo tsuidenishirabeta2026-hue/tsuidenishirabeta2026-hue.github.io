@@ -1,6 +1,6 @@
 {
- "hash": "a1a2cafc9838c312dc6f060645729a6d7acfc76c775019eb42f7f6fac595b812",
- "saved_at": "2026-11-23T22:39:44.804Z",
+ "hash": "3e9c98e410b007f11e40f6c487712879e2bf3a912912379ea8d66655915e50ad",
+ "saved_at": "2026-11-24T13:08:16.460Z",
  "season": 2026,
  "data": {
   "meta": {
@@ -13,7 +13,7 @@
    "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
    "stats_level": "none",
    "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-24 取得、支配下・育成を含む）です。",
-   "source_detail": "Template:2026年のセントラル・リーグ順位表（版 111317028）、Template:読売ジャイアンツの選手・スタッフ（版 111823300）、Template:阪神タイガースの選手・スタッフ（版 111837291）、Template:横浜DeNAベイスターズの選手・スタッフ（版 111874800）、Template:広島東洋カープの選手・スタッフ（版 111822829）、Template:東京ヤクルトスワローズの選手・スタッフ（版 111824773）、Template:中日ドラゴンズの選手・スタッフ（版 111871117）、2026年の日本プロ野球（版 111877239）"
+   "source_detail": "Template:2026年のセントラル・リーグ順位表（版 111317028）、Template:読売ジャイアンツの選手・スタッフ（版 111884629）、Template:阪神タイガースの選手・スタッフ（版 111886957）、Template:横浜DeNAベイスターズの選手・スタッフ（版 111874800）、Template:広島東洋カープの選手・スタッフ（版 111885741）、Template:東京ヤクルトスワローズの選手・スタッフ（版 111824773）、Template:中日ドラゴンズの選手・スタッフ（版 111889195）、2026年の日本プロ野球（版 111889004）"
   },
   "titles": [
    {
@@ -4399,6 +4399,21 @@
     "roster_type": "支配下"
    },
    {
+    "player_id": "wead2d8cb7e",
+    "team_id": "C",
+    "name": "河野佳",
+    "name_kana": null,
+    "number": "70",
+    "position": "投手",
+    "throws": null,
+    "bats": null,
+    "birth_date": null,
+    "from_date": null,
+    "to_date": null,
+    "wiki_title": "河野佳",
+    "roster_type": "支配下"
+   },
+   {
     "player_id": "w44a0f142a1",
     "team_id": "C",
     "name": "會澤翼",
@@ -4936,21 +4951,6 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "竹下海斗",
-    "roster_type": "育成"
-   },
-   {
-    "player_id": "wead2d8cb7e",
-    "team_id": "C",
-    "name": "河野佳",
-    "name_kana": null,
-    "number": "127",
-    "position": "投手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "河野佳",
     "roster_type": "育成"
    },
    {
@@ -7051,21 +7051,6 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "川越誠司",
-    "roster_type": "支配下"
-   },
-   {
-    "player_id": "w01bf5c3f14",
-    "team_id": "D",
-    "name": "上林誠知",
-    "name_kana": null,
-    "number": "51",
-    "position": "外野手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "上林誠知",
     "roster_type": "支配下"
    },
    {
