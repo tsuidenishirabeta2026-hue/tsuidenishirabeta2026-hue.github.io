@@ -1,11 +1,11 @@
 {
- "last_attempt_at": "2026-11-24T13:29:22.977Z",
- "last_success_at": "2026-11-24T13:29:22.977Z",
+ "last_attempt_at": "2026-11-24T22:43:23.582Z",
+ "last_success_at": "2026-11-24T22:43:23.582Z",
  "last_result": "updated",
  "last_error": null,
  "last_error_details": [],
  "consecutive_failures": 0,
  "articles": 511,
  "parsed": 357,
- "fetched": 1
+ "fetched": 6
 }
