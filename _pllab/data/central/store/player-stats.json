@@ -1,10 +1,10 @@
 {
- "hash": "708eaf847584b979c9639390466dcfcc5107998fcdfd17c8e75c008f2f52a0d9",
- "saved_at": "2026-11-25T14:58:03.210Z",
+ "hash": "62e0472ee58c33769625dfa3211529b67fa39fd5df69afb24fa99b425add9b65",
+ "saved_at": "2026-11-25T22:43:00.806Z",
  "season": 2026,
  "articles": {
   "田中将大": {
-   "revid": 111850611,
+   "revid": 111903809,
    "title": "田中将大",
    "updatedThrough": 2026,
    "batting": null,
@@ -8922,7 +8922,7 @@
    "salaryV": 2
   },
   "泉口友汰": {
-   "revid": 111898321,
+   "revid": 111905244,
    "title": "泉口友汰",
    "updatedThrough": 2026,
    "batting": [
@@ -9939,7 +9939,7 @@
    "salaryV": 2
   },
   "松本剛 (野球)": {
-   "revid": 111902050,
+   "revid": 111902194,
    "title": "松本剛 (野球)",
    "updatedThrough": 2026,
    "batting": [
@@ -10406,9 +10406,9 @@
    "salaryV": 2
   },
   "トレイ・キャベッジ": {
-   "revid": 111038062,
+   "revid": 111902128,
    "title": "トレイ・キャベッジ",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2023,
@@ -10484,6 +10484,31 @@
      "SO": 144,
      "GDP": 4,
      "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 103,
+     "PA": 370,
+     "AB": 345,
+     "R": 37,
+     "H": 81,
+     "D": 16,
+     "T": 0,
+     "HR": 13,
+     "TB": 136,
+     "RBI": 29,
+     "SB": 4,
+     "CS": 4,
+     "SH": 0,
+     "SF": 0,
+     "BB": 21,
+     "IBB": 2,
+     "HBP": 4,
+     "SO": 119,
+     "GDP": 8,
+     "valid": true
     }
    ],
    "pitching": null,
@@ -10502,9 +10527,9 @@
    "salaryV": 2
   },
   "岡田悠希": {
-   "revid": 111631349,
+   "revid": 111902186,
    "title": "岡田悠希",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2022,
@@ -10605,6 +10630,31 @@
      "SO": 10,
      "GDP": 0,
      "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 3,
+     "PA": 8,
+     "AB": 7,
+     "R": 2,
+     "H": 1,
+     "D": 0,
+     "T": 0,
+     "HR": 0,
+     "TB": 1,
+     "RBI": 1,
+     "SB": 0,
+     "CS": 0,
+     "SH": 0,
+     "SF": 0,
+     "BB": 1,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 2,
+     "GDP": 0,
+     "valid": true
     }
    ],
    "pitching": null,
@@ -10623,7 +10673,7 @@
    "salaryV": 2
   },
   "皆川岳飛": {
-   "revid": 111793981,
+   "revid": 111902211,
    "title": "皆川岳飛",
    "updatedThrough": 2026,
    "batting": [
@@ -10669,9 +10719,9 @@
    "salaryV": 2
   },
   "中山礼都": {
-   "revid": 111015053,
+   "revid": 111902272,
    "title": "中山礼都",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2022,
@@ -10772,6 +10822,31 @@
      "SO": 42,
      "GDP": 6,
      "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 60,
+     "PA": 157,
+     "AB": 141,
+     "R": 8,
+     "H": 27,
+     "D": 5,
+     "T": 0,
+     "HR": 2,
+     "TB": 38,
+     "RBI": 16,
+     "SB": 3,
+     "CS": 1,
+     "SH": 0,
+     "SF": 3,
+     "BB": 13,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 26,
+     "GDP": 3,
+     "valid": true
     }
    ],
    "pitching": null,
@@ -10790,9 +10865,9 @@
    "salaryV": 2
   },
   "佐々木俊輔": {
-   "revid": 111782557,
+   "revid": 111902359,
    "title": "佐々木俊輔",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2024,
@@ -10843,6 +10918,31 @@
      "SO": 34,
      "GDP": 2,
      "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 123,
+     "PA": 385,
+     "AB": 348,
+     "R": 45,
+     "H": 88,
+     "D": 21,
+     "T": 0,
+     "HR": 10,
+     "TB": 139,
+     "RBI": 39,
+     "SB": 9,
+     "CS": 8,
+     "SH": 4,
+     "SF": 0,
+     "BB": 29,
+     "IBB": 4,
+     "HBP": 4,
+     "SO": 85,
+     "GDP": 4,
+     "valid": true
     }
    ],
    "pitching": null,
@@ -10861,10 +10961,36 @@
    "salaryV": 2
   },
   "フリアン・ティマ": {
-   "revid": 111340637,
+   "revid": 111902514,
    "title": "フリアン・ティマ",
-   "updatedThrough": null,
-   "batting": null,
+   "updatedThrough": 2026,
+   "batting": [
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 14,
+     "PA": 33,
+     "AB": 33,
+     "R": 1,
+     "H": 3,
+     "D": 0,
+     "T": 0,
+     "HR": 0,
+     "TB": 3,
+     "RBI": 0,
+     "SB": 0,
+     "CS": 0,
+     "SH": 0,
+     "SF": 0,
+     "BB": 0,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 11,
+     "GDP": 2,
+     "valid": true
+    }
+   ],
    "pitching": null,
    "salary": {
     "text": "550万円",
@@ -10881,9 +11007,9 @@
    "salaryV": 2
   },
   "浅野翔吾": {
-   "revid": 111890688,
+   "revid": 111902548,
    "title": "浅野翔吾",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2023,
@@ -10959,6 +11085,31 @@
      "SO": 17,
      "GDP": 1,
      "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 9,
+     "PA": 28,
+     "AB": 27,
+     "R": 2,
+     "H": 5,
+     "D": 1,
+     "T": 0,
+     "HR": 1,
+     "TB": 9,
+     "RBI": 1,
+     "SB": 0,
+     "CS": 1,
+     "SH": 0,
+     "SF": 0,
+     "BB": 1,
+     "IBB": 1,
+     "HBP": 0,
+     "SO": 6,
+     "GDP": 2,
+     "valid": true
     }
    ],
    "pitching": null,
@@ -10977,9 +11128,9 @@
    "salaryV": 2
   },
   "鈴木大和": {
-   "revid": 111704090,
+   "revid": 111902583,
    "title": "鈴木大和",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2025,
@@ -11005,6 +11156,31 @@
      "SO": 0,
      "GDP": 0,
      "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 12,
+     "PA": 22,
+     "AB": 19,
+     "R": 0,
+     "H": 5,
+     "D": 1,
+     "T": 0,
+     "HR": 0,
+     "TB": 6,
+     "RBI": 5,
+     "SB": 1,
+     "CS": 2,
+     "SH": 0,
+     "SF": 0,
+     "BB": 1,
+     "IBB": 0,
+     "HBP": 2,
+     "SO": 4,
+     "GDP": 0,
+     "valid": true
     }
    ],
    "pitching": null,
@@ -11023,10 +11199,36 @@
    "salaryV": 2
   },
   "知念大成": {
-   "revid": 111704082,
+   "revid": 111902597,
    "title": "知念大成",
-   "updatedThrough": null,
-   "batting": null,
+   "updatedThrough": 2026,
+   "batting": [
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 15,
+     "PA": 29,
+     "AB": 29,
+     "R": 4,
+     "H": 8,
+     "D": 1,
+     "T": 0,
+     "HR": 0,
+     "TB": 9,
+     "RBI": 2,
+     "SB": 0,
+     "CS": 0,
+     "SH": 0,
+     "SF": 0,
+     "BB": 0,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 4,
+     "GDP": 1,
+     "valid": true
+    }
+   ],
    "pitching": null,
    "salary": {
     "text": "400万円",
@@ -11043,9 +11245,9 @@
    "salaryV": 2
   },
   "笹原操希": {
-   "revid": 110407887,
+   "revid": 111902640,
    "title": "笹原操希",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2025,
@@ -11070,6 +11272,31 @@
      "HBP": 0,
      "SO": 7,
      "GDP": 0,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 45,
+     "PA": 106,
+     "AB": 99,
+     "R": 11,
+     "H": 21,
+     "D": 8,
+     "T": 0,
+     "HR": 2,
+     "TB": 35,
+     "RBI": 15,
+     "SB": 1,
+     "CS": 1,
+     "SH": 1,
+     "SF": 0,
+     "BB": 6,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 31,
+     "GDP": 5,
      "valid": true
     }
    ],
@@ -11563,9 +11790,9 @@
    "salaryV": 2
   },
   "川原田純平": {
-   "revid": 111340646,
+   "revid": 111902675,
    "title": "川原田純平",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2022,
@@ -30237,7 +30464,7 @@
    "salaryV": 2
   },
   "佐野恵太": {
-   "revid": 111833958,
+   "revid": 111902158,
    "title": "佐野恵太",
    "updatedThrough": 2026,
    "batting": [
@@ -45339,7 +45566,7 @@
    "salaryV": 2
   },
   "岩井俊介": {
-   "revid": 111899901,
+   "revid": 111902114,
    "title": "岩井俊介",
    "updatedThrough": 2026,
    "batting": null,
