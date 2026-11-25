@@ -1,6 +1,6 @@
 {
- "hash": "8dad290c7696f139ba8fcd21aacdfef8e6986252296c1fdb211f74c654ca8ffd",
- "saved_at": "2026-11-24T22:43:23.582Z",
+ "hash": "e3788f677e2722f69a4c92be83f4f52b09d9d84bcd4a97111c006755b3ba2607",
+ "saved_at": "2026-11-25T14:52:13.172Z",
  "season": 2026,
  "articles": {
   "矢澤宏太": {
@@ -839,9 +839,9 @@
    "salaryV": 2
   },
   "達孝太": {
-   "revid": 111889985,
+   "revid": 111895998,
    "title": "達孝太",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": null,
    "pitching": [
     {
@@ -923,6 +923,33 @@
      "BK": 1,
      "R": 27,
      "ER": 25,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "日本ハム",
+     "team_id": "F",
+     "G": 27,
+     "GS": 17,
+     "CG": 1,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 5,
+     "L": 8,
+     "SV": 2,
+     "HLD": 5,
+     "BF": 506,
+     "outs": 374,
+     "H": 95,
+     "HR": 12,
+     "BB": 29,
+     "IBB": 1,
+     "HBP": 6,
+     "SO": 126,
+     "WP": 0,
+     "BK": 1,
+     "R": 44,
+     "ER": 41,
      "valid": true
     }
    ],
@@ -3347,7 +3374,7 @@
    "salaryV": 2
   },
   "タナー・レイニー": {
-   "revid": 111881778,
+   "revid": 111900515,
    "title": "タナー・レイニー",
    "updatedThrough": 2026,
    "batting": null,
@@ -7157,7 +7184,7 @@
    "salaryV": 2
   },
   "清水優心": {
-   "revid": 111392288,
+   "revid": 111898504,
    "title": "清水優心",
    "updatedThrough": 2025,
    "batting": [
@@ -7428,7 +7455,7 @@
    "salaryV": 2
   },
   "進藤勇也": {
-   "revid": 111782491,
+   "revid": 111895819,
    "title": "進藤勇也",
    "updatedThrough": 2025,
    "batting": [
@@ -7771,7 +7798,7 @@
    "salaryV": 2
   },
   "野村佑希": {
-   "revid": 111424900,
+   "revid": 111898884,
    "title": "野村佑希",
    "updatedThrough": 2026,
    "batting": [
@@ -7967,7 +7994,7 @@
    "salaryV": 2
   },
   "水野達稀": {
-   "revid": 111855313,
+   "revid": 111898334,
    "title": "水野達稀",
    "updatedThrough": 2026,
    "batting": [
@@ -8534,7 +8561,7 @@
    "salaryV": 2
   },
   "清宮幸太郎": {
-   "revid": 111848940,
+   "revid": 111897686,
    "title": "清宮幸太郎",
    "updatedThrough": 2026,
    "batting": [
@@ -8755,7 +8782,7 @@
    "salaryV": 2
   },
   "有薗直輝": {
-   "revid": 111237928,
+   "revid": 111898922,
    "title": "有薗直輝",
    "updatedThrough": 2026,
    "batting": [
@@ -10707,7 +10734,7 @@
    "salaryV": 2
   },
   "フランミル・レイエス": {
-   "revid": 111768008,
+   "revid": 111900895,
    "title": "フランミル・レイエス",
    "updatedThrough": 2026,
    "batting": [
@@ -17510,7 +17537,7 @@
    "salaryV": 2
   },
   "甲斐拓也": {
-   "revid": 111762958,
+   "revid": 111900974,
    "title": "甲斐拓也",
    "updatedThrough": 2026,
    "batting": [
@@ -18369,7 +18396,7 @@
    "salaryV": 2
   },
   "小深田大翔": {
-   "revid": 111643366,
+   "revid": 111900487,
    "title": "小深田大翔",
    "updatedThrough": 2025,
    "batting": [
@@ -18611,7 +18638,7 @@
    "salaryV": 2
   },
   "浅村栄斗": {
-   "revid": 111836251,
+   "revid": 111898505,
    "title": "浅村栄斗",
    "updatedThrough": 2025,
    "batting": [
@@ -22050,6 +22077,16 @@
    },
    "salaryV": 2
   },
+  "ヨナウィル・フロリモン": {
+   "revid": 111896618,
+   "title": "ヨナウィル・フロリモン",
+   "updatedThrough": null,
+   "batting": null,
+   "pitching": null,
+   "salary": null,
+   "salaryHistory": {},
+   "salaryV": 2
+  },
   "中沢匠磨": {
    "revid": 111754467,
    "title": "中沢匠磨",
@@ -25397,7 +25434,7 @@
    "salaryV": 2
   },
   "平良海馬": {
-   "revid": 111893013,
+   "revid": 111898236,
    "title": "平良海馬",
    "updatedThrough": 2026,
    "batting": null,
@@ -26008,7 +26045,7 @@
    "salaryV": 2
   },
   "小島大河": {
-   "revid": 111782486,
+   "revid": 111898458,
    "title": "小島大河",
    "updatedThrough": 2026,
    "batting": [
@@ -28305,7 +28342,7 @@
    "salaryV": 2
   },
   "山村崇嘉": {
-   "revid": 111530662,
+   "revid": 111899024,
    "title": "山村崇嘉",
    "updatedThrough": 2026,
    "batting": [
@@ -38963,7 +39000,7 @@
    "salaryV": 2
   },
   "佐藤都志也": {
-   "revid": 111640023,
+   "revid": 111898254,
    "title": "佐藤都志也",
    "updatedThrough": 2025,
    "batting": [
@@ -42302,7 +42339,7 @@
    "salaryV": 2
   },
   "西川史礁": {
-   "revid": 111806605,
+   "revid": 111898360,
    "title": "西川史礁",
    "updatedThrough": 2026,
    "batting": [
@@ -47253,7 +47290,7 @@
    "salaryV": 2
   },
   "藤浪晋太郎": {
-   "revid": 111890052,
+   "revid": 111895560,
    "title": "藤浪晋太郎",
    "updatedThrough": 2025,
    "batting": null,
@@ -53694,7 +53731,7 @@
    "salaryV": 2
   },
   "ボブ・シーモア": {
-   "revid": 111063720,
+   "revid": 111896589,
    "title": "ボブ・シーモア",
    "updatedThrough": 2025,
    "batting": [
@@ -57640,7 +57677,7 @@
    "salaryV": 2
   },
   "前田悠伍": {
-   "revid": 111663754,
+   "revid": 111900171,
    "title": "前田悠伍",
    "updatedThrough": 2025,
    "batting": null,
@@ -58909,7 +58946,7 @@
    "salaryV": 2
   },
   "上茶谷大河": {
-   "revid": 111307239,
+   "revid": 111893183,
    "title": "上茶谷大河",
    "updatedThrough": 2025,
    "batting": null,
@@ -61449,7 +61486,7 @@
    "salaryV": 2
   },
   "牧原大成": {
-   "revid": 111737187,
+   "revid": 111898294,
    "title": "牧原大成",
    "updatedThrough": 2026,
    "batting": [
@@ -61845,7 +61882,7 @@
    "salaryV": 2
   },
   "栗原陵矢": {
-   "revid": 111766965,
+   "revid": 111899808,
    "title": "栗原陵矢",
    "updatedThrough": 2026,
    "batting": [
@@ -62952,7 +62989,7 @@
    "salaryV": 2
   },
   "近藤健介": {
-   "revid": 111452207,
+   "revid": 111898344,
    "title": "近藤健介",
    "updatedThrough": 2026,
    "batting": [
@@ -63769,7 +63806,7 @@
    "salaryV": 2
   },
   "周東佑京": {
-   "revid": 111881968,
+   "revid": 111897985,
    "title": "周東佑京",
    "updatedThrough": 2026,
    "batting": [
@@ -63990,7 +64027,7 @@
    "salaryV": 2
   },
   "正木智也": {
-   "revid": 111804472,
+   "revid": 111898278,
    "title": "正木智也",
    "updatedThrough": 2026,
    "batting": [

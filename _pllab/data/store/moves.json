@@ -1,12 +1,12 @@
 {
- "hash": "da6a8aaa92cf16f143f037e2b6d548b1e76ba5f41988a577c348242fa7fe304f",
- "saved_at": "2026-11-24T13:10:05.306Z",
+ "hash": "320ee704e590f9b50c3b4ce9c0ca92a87d5eb4c847b6618afb6d455faac0c22f",
+ "saved_at": "2026-11-25T14:53:04.438Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111889004,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111889004",
-   "count": 244
+   "revid": 111900352,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111900352",
+   "count": 245
   }
  ],
  "events": [
@@ -25,7 +25,7 @@
     {
      "url": "https://www.nikkansports.com/baseball/news/202611240001684.html",
      "site": "日刊スポーツ",
-     "date": null
+     "date": "2026-11-24"
     }
    ],
    "origin": "wikipedia",
@@ -46,6 +46,32 @@
      "url": "https://www.sponichi.co.jp/baseball/news/2026/11/24/articles/20261124s00001173176000c.html#goog_rewarded",
      "site": "スポニチアネックス",
      "date": "2026-11-24"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-24",
+   "text": "（現地時間）阪神タイガースからポスティングシステムを利用していた佐藤輝明が、シカゴ・カブスと契約合意。また、同様のシステムを埼玉西武ライオンズから利用していた平良海馬が、トロント・ブルージェイズと契約合意。",
+   "details": [],
+   "teams": [
+    "L"
+   ],
+   "categories": [
+    "ポスティング・海外",
+    "獲得・入団・契約"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/mlb/news/202611250000276.html",
+     "site": "日刊スポーツ",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://www.chunichi.co.jp/article/1344264",
+     "site": "中日スポーツ・東京中日スポーツ",
+     "date": "2026-11-25"
     }
    ],
    "origin": "wikipedia",
