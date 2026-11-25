@@ -1,6 +1,6 @@
 {
- "hash": "e57b6f07295f20cd7cc4faef95411d47b5fb806da2f722060dbe22c8b47daf0a",
- "saved_at": "2026-11-24T22:45:02.562Z",
+ "hash": "708eaf847584b979c9639390466dcfcc5107998fcdfd17c8e75c008f2f52a0d9",
+ "saved_at": "2026-11-25T14:58:03.210Z",
  "season": 2026,
  "articles": {
   "田中将大": {
@@ -1216,7 +1216,7 @@
    "salaryV": 2
   },
   "竹丸和幸": {
-   "revid": 111782402,
+   "revid": 111901926,
    "title": "竹丸和幸",
    "updatedThrough": 2026,
    "batting": null,
@@ -4097,7 +4097,7 @@
    "salaryV": 2
   },
   "船迫大雅": {
-   "revid": 111860525,
+   "revid": 111901499,
    "title": "船迫大雅",
    "updatedThrough": 2026,
    "batting": null,
@@ -6035,7 +6035,7 @@
    "salaryV": 2
   },
   "小林誠司": {
-   "revid": 111861280,
+   "revid": 111901033,
    "title": "小林誠司",
    "updatedThrough": 2026,
    "batting": [
@@ -6627,7 +6627,7 @@
    "salaryV": 2
   },
   "岸田行倫": {
-   "revid": 111861361,
+   "revid": 111901160,
    "title": "岸田行倫",
    "updatedThrough": 2026,
    "batting": [
@@ -7069,7 +7069,7 @@
    "salaryV": 2
   },
   "山瀬慎之助": {
-   "revid": 111861416,
+   "revid": 111901170,
    "title": "山瀬慎之助",
    "updatedThrough": 2026,
    "batting": [
@@ -7215,7 +7215,7 @@
    "salaryV": 2
   },
   "湯浅大": {
-   "revid": 111887529,
+   "revid": 111901196,
    "title": "湯浅大",
    "updatedThrough": 2026,
    "batting": [
@@ -8805,7 +8805,7 @@
    "salaryV": 2
   },
   "浦田俊輔": {
-   "revid": 111812291,
+   "revid": 111897935,
    "title": "浦田俊輔",
    "updatedThrough": 2026,
    "batting": [
@@ -8922,7 +8922,7 @@
    "salaryV": 2
   },
   "泉口友汰": {
-   "revid": 111865020,
+   "revid": 111898321,
    "title": "泉口友汰",
    "updatedThrough": 2026,
    "batting": [
@@ -9018,7 +9018,7 @@
    "salaryV": 2
   },
   "砂川リチャード": {
-   "revid": 111862902,
+   "revid": 111895881,
    "title": "砂川リチャード",
    "updatedThrough": 2026,
    "batting": [
@@ -9260,9 +9260,9 @@
    "salaryV": 2
   },
   "増田陸 (野球)": {
-   "revid": 111622514,
+   "revid": 111901446,
    "title": "増田陸 (野球)",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2022,
@@ -9338,6 +9338,31 @@
      "SO": 62,
      "GDP": 4,
      "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 63,
+     "PA": 176,
+     "AB": 165,
+     "R": 11,
+     "H": 39,
+     "D": 6,
+     "T": 0,
+     "HR": 6,
+     "TB": 63,
+     "RBI": 16,
+     "SB": 1,
+     "CS": 0,
+     "SH": 2,
+     "SF": 1,
+     "BB": 7,
+     "IBB": 2,
+     "HBP": 1,
+     "SO": 45,
+     "GDP": 2,
+     "valid": true
     }
    ],
    "pitching": null,
@@ -9356,7 +9381,7 @@
    "salaryV": 2
   },
   "宇都宮葵星": {
-   "revid": 111704230,
+   "revid": 111901513,
    "title": "宇都宮葵星",
    "updatedThrough": 2026,
    "batting": [
@@ -9914,9 +9939,9 @@
    "salaryV": 2
   },
   "松本剛 (野球)": {
-   "revid": 111827325,
+   "revid": 111902050,
    "title": "松本剛 (野球)",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2013,
@@ -10217,6 +10242,31 @@
      "SO": 24,
      "GDP": 5,
      "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 130,
+     "PA": 464,
+     "AB": 419,
+     "R": 43,
+     "H": 115,
+     "D": 17,
+     "T": 0,
+     "HR": 3,
+     "TB": 141,
+     "RBI": 25,
+     "SB": 17,
+     "CS": 9,
+     "SH": 14,
+     "SF": 0,
+     "BB": 26,
+     "IBB": 0,
+     "HBP": 5,
+     "SO": 60,
+     "GDP": 7,
+     "valid": true
     }
    ],
    "pitching": null,
@@ -10235,9 +10285,9 @@
    "salaryV": 2
   },
   "萩尾匡也": {
-   "revid": 111280103,
+   "revid": 111902094,
    "title": "萩尾匡也",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2023,
@@ -10311,6 +10361,31 @@
      "IBB": 1,
      "HBP": 0,
      "SO": 5,
+     "GDP": 0,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "巨人",
+     "team_id": "G",
+     "G": 7,
+     "PA": 7,
+     "AB": 6,
+     "R": 0,
+     "H": 0,
+     "D": 0,
+     "T": 0,
+     "HR": 0,
+     "TB": 0,
+     "RBI": 0,
+     "SB": 1,
+     "CS": 0,
+     "SH": 0,
+     "SF": 0,
+     "BB": 1,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 2,
      "GDP": 0,
      "valid": true
     }
@@ -13418,7 +13493,7 @@
    "salaryV": 2
   },
   "髙橋遥人": {
-   "revid": 111723253,
+   "revid": 111898219,
    "title": "髙橋遥人",
    "updatedThrough": 2026,
    "batting": null,
@@ -14757,7 +14832,7 @@
    "salaryV": 2
   },
   "工藤泰成": {
-   "revid": 111825037,
+   "revid": 111897927,
    "title": "工藤泰成",
    "updatedThrough": 2026,
    "batting": null,
@@ -16241,7 +16316,7 @@
    "salaryV": 2
   },
   "坂本誠志郎": {
-   "revid": 111829561,
+   "revid": 111898244,
    "title": "坂本誠志郎",
    "updatedThrough": 2026,
    "batting": [
@@ -17804,7 +17879,7 @@
    "salaryV": 2
   },
   "大山悠輔": {
-   "revid": 111780713,
+   "revid": 111898271,
    "title": "大山悠輔",
    "updatedThrough": 2026,
    "batting": [
@@ -18467,7 +18542,7 @@
    "salaryV": 2
   },
   "佐藤輝明": {
-   "revid": 111892846,
+   "revid": 111898302,
    "title": "佐藤輝明",
    "updatedThrough": 2026,
    "batting": [
@@ -19635,7 +19710,7 @@
    "salaryV": 2
   },
   "森下翔太": {
-   "revid": 111870052,
+   "revid": 111898369,
    "title": "森下翔太",
    "updatedThrough": 2026,
    "batting": [
@@ -23141,7 +23216,7 @@
    "salaryV": 2
   },
   "小園健太": {
-   "revid": 111827814,
+   "revid": 111899072,
    "title": "小園健太",
    "updatedThrough": 2026,
    "batting": null,
@@ -27069,9 +27144,9 @@
    "salaryV": 2
   },
   "古市尊": {
-   "revid": 111544855,
+   "revid": 111899010,
    "title": "古市尊",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2023,
@@ -27145,6 +27220,31 @@
      "IBB": 0,
      "HBP": 0,
      "SO": 1,
+     "GDP": 0,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "DeNA",
+     "team_id": "DB",
+     "G": 27,
+     "PA": 72,
+     "AB": 64,
+     "R": 9,
+     "H": 23,
+     "D": 4,
+     "T": 0,
+     "HR": 1,
+     "TB": 30,
+     "RBI": 5,
+     "SB": 0,
+     "CS": 1,
+     "SH": 2,
+     "SF": 0,
+     "BB": 5,
+     "IBB": 0,
+     "HBP": 1,
+     "SO": 10,
      "GDP": 0,
      "valid": true
     }
@@ -27286,7 +27386,7 @@
    "salaryV": 2
   },
   "嶺井博希": {
-   "revid": 111724572,
+   "revid": 111893518,
    "title": "嶺井博希",
    "updatedThrough": 2026,
    "batting": [
@@ -27607,7 +27707,7 @@
    "salaryV": 2
   },
   "林琢真": {
-   "revid": 111296436,
+   "revid": 111901962,
    "title": "林琢真",
    "updatedThrough": 2026,
    "batting": [
@@ -27728,7 +27828,7 @@
    "salaryV": 2
   },
   "牧秀悟": {
-   "revid": 111862036,
+   "revid": 111898285,
    "title": "牧秀悟",
    "updatedThrough": 2026,
    "batting": [
@@ -27899,7 +27999,7 @@
    "salaryV": 2
   },
   "小田康一郎": {
-   "revid": 111875576,
+   "revid": 111902080,
    "title": "小田康一郎",
    "updatedThrough": 2026,
    "batting": [
@@ -27945,7 +28045,7 @@
    "salaryV": 2
   },
   "森敬斗": {
-   "revid": 111453071,
+   "revid": 111902027,
    "title": "森敬斗",
    "updatedThrough": 2026,
    "batting": [
@@ -28858,9 +28958,9 @@
    "salaryV": 2
   },
   "三森大貴": {
-   "revid": 111625682,
+   "revid": 111899352,
    "title": "三森大貴",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2019,
@@ -29034,6 +29134,31 @@
      "IBB": 5,
      "HBP": 0,
      "SO": 32,
+     "GDP": 1,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "DeNA",
+     "team_id": "DB",
+     "G": 71,
+     "PA": 140,
+     "AB": 132,
+     "R": 19,
+     "H": 31,
+     "D": 4,
+     "T": 0,
+     "HR": 0,
+     "TB": 35,
+     "RBI": 9,
+     "SB": 16,
+     "CS": 4,
+     "SH": 0,
+     "SF": 1,
+     "BB": 7,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 33,
      "GDP": 1,
      "valid": true
     }
@@ -30016,7 +30141,7 @@
    "salaryV": 2
   },
   "度会隆輝": {
-   "revid": 111787118,
+   "revid": 111901853,
    "title": "度会隆輝",
    "updatedThrough": 2026,
    "batting": [
@@ -30383,7 +30508,7 @@
    "salaryV": 2
   },
   "神里和毅": {
-   "revid": 111568193,
+   "revid": 111902099,
    "title": "神里和毅",
    "updatedThrough": 2026,
    "batting": [
@@ -30771,9 +30896,9 @@
    "salaryV": 2
   },
   "梶原昂希": {
-   "revid": 111840647,
+   "revid": 111899549,
    "title": "梶原昂希",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2022,
@@ -30874,6 +30999,31 @@
      "SO": 51,
      "GDP": 1,
      "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "DeNA",
+     "team_id": "DB",
+     "G": 28,
+     "PA": 73,
+     "AB": 64,
+     "R": 7,
+     "H": 13,
+     "D": 3,
+     "T": 1,
+     "HR": 1,
+     "TB": 21,
+     "RBI": 5,
+     "SB": 2,
+     "CS": 0,
+     "SH": 1,
+     "SF": 0,
+     "BB": 6,
+     "IBB": 0,
+     "HBP": 2,
+     "SO": 18,
+     "GDP": 1,
+     "valid": true
     }
    ],
    "pitching": null,
@@ -30892,9 +31042,9 @@
    "salaryV": 2
   },
   "蝦名達夫": {
-   "revid": 111863469,
+   "revid": 111899757,
    "title": "蝦名達夫",
-   "updatedThrough": 2025,
+   "updatedThrough": 2026,
    "batting": [
     {
      "year": 2020,
@@ -31044,6 +31194,31 @@
      "HBP": 11,
      "SO": 68,
      "GDP": 5,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "DeNA",
+     "team_id": "DB",
+     "G": 104,
+     "PA": 385,
+     "AB": 346,
+     "R": 44,
+     "H": 83,
+     "D": 14,
+     "T": 3,
+     "HR": 5,
+     "TB": 118,
+     "RBI": 27,
+     "SB": 6,
+     "CS": 4,
+     "SH": 2,
+     "SF": 1,
+     "BB": 20,
+     "IBB": 1,
+     "HBP": 16,
+     "SO": 88,
+     "GDP": 6,
      "valid": true
     }
    ],
@@ -33049,7 +33224,7 @@
    "salaryV": 2
   },
   "常廣羽也斗": {
-   "revid": 111101640,
+   "revid": 111893258,
    "title": "常廣羽也斗",
    "updatedThrough": 2025,
    "batting": null,
@@ -36074,7 +36249,7 @@
    "salaryV": 2
   },
   "杉田健": {
-   "revid": 110988961,
+   "revid": 111896219,
    "title": "杉田健",
    "updatedThrough": null,
    "batting": null,
@@ -45164,7 +45339,7 @@
    "salaryV": 2
   },
   "岩井俊介": {
-   "revid": 111826467,
+   "revid": 111899901,
    "title": "岩井俊介",
    "updatedThrough": 2026,
    "batting": null,
@@ -53283,7 +53458,7 @@
    "salaryV": 2
   },
   "岩田幸宏": {
-   "revid": 111833912,
+   "revid": 111900474,
    "title": "岩田幸宏",
    "updatedThrough": 2026,
    "batting": [
@@ -63467,7 +63642,7 @@
    "salaryV": 2
   },
   "ジェイソン・ボスラー": {
-   "revid": 111676236,
+   "revid": 111899440,
    "title": "ジェイソン・ボスラー",
    "updatedThrough": 2026,
    "batting": [
@@ -64034,7 +64209,7 @@
    "salaryV": 2
   },
   "細川成也": {
-   "revid": 111786776,
+   "revid": 111898384,
    "title": "細川成也",
    "updatedThrough": 2026,
    "batting": [
