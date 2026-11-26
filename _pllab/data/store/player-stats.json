@@ -1,6 +1,6 @@
 {
- "hash": "4c58be8991cc6376ccc7346ac178bbc035ab91d2c5ec5b572d08827bd9539138",
- "saved_at": "2026-11-26T13:57:18.146Z",
+ "hash": "2002efdfe0da27c861786911573c970a471560e8315a71e7ec5c1e511e4caf06",
+ "saved_at": "2026-11-26T22:41:47.107Z",
  "season": 2026,
  "articles": {
   "生田目翼": {
@@ -8410,7 +8410,7 @@
    "salaryV": 2
   },
   "清宮幸太郎": {
-   "revid": 111897686,
+   "revid": 111915753,
    "title": "清宮幸太郎",
    "updatedThrough": 2026,
    "batting": [
@@ -35476,7 +35476,7 @@
    "salaryV": 2
   },
   "西野勇士": {
-   "revid": 111856867,
+   "revid": 111916017,
    "title": "西野勇士",
    "updatedThrough": 2025,
    "batting": null,
@@ -62822,7 +62822,7 @@
    "salaryV": 2
   },
   "石見颯真": {
-   "revid": 110206707,
+   "revid": 111916334,
    "title": "石見颯真",
    "updatedThrough": null,
    "batting": null,
