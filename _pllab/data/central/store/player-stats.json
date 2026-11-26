@@ -1,6 +1,6 @@
 {
- "hash": "96f56c8c82654c47e5890320ae988acb782b5a34a0883445c2e6f45ed535a804",
- "saved_at": "2026-11-26T14:12:25.067Z",
+ "hash": "1e78cf0675d5940b5920a4e739839be6b542325498738be482f7b003338c61d9",
+ "saved_at": "2026-11-26T22:43:15.108Z",
  "season": 2026,
  "articles": {
   "田中将大": {
@@ -1216,7 +1216,7 @@
    "salaryV": 2
   },
   "竹丸和幸": {
-   "revid": 111906214,
+   "revid": 111915609,
    "title": "竹丸和幸",
    "updatedThrough": 2026,
    "batting": null,
@@ -10527,7 +10527,7 @@
    "salaryV": 2
   },
   "岡田悠希": {
-   "revid": 111902186,
+   "revid": 111914412,
    "title": "岡田悠希",
    "updatedThrough": 2026,
    "batting": [
@@ -17714,7 +17714,7 @@
    "salaryV": 2
   },
   "元山飛優": {
-   "revid": 111840519,
+   "revid": 111914375,
    "title": "元山飛優",
    "updatedThrough": 2026,
    "batting": [
@@ -31742,7 +31742,7 @@
    "salaryV": 2
   },
   "清水麻成": {
-   "revid": 108064739,
+   "revid": 111915795,
    "title": "清水麻成",
    "updatedThrough": null,
    "batting": null,
@@ -55795,7 +55795,7 @@
    "salaryV": 2
   },
   "根尾昂": {
-   "revid": 111912267,
+   "revid": 111915271,
    "title": "根尾昂",
    "updatedThrough": 2025,
    "batting": [
