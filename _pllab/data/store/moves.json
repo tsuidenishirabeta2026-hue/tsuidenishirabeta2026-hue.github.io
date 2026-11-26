@@ -1,15 +1,86 @@
 {
- "hash": "320ee704e590f9b50c3b4ce9c0ca92a87d5eb4c847b6618afb6d455faac0c22f",
- "saved_at": "2026-11-25T14:53:04.438Z",
+ "hash": "edad888586c3dc6f4d9fbe2afbdea24fc721a7c11342764ef1e3db5b326a2776",
+ "saved_at": "2026-11-26T13:58:04.024Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111900352,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111900352",
-   "count": 245
+   "revid": 111911923,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111911923",
+   "count": 248
   }
  ],
  "events": [
+  {
+   "date": "2026-11-26",
+   "text": "埼玉西武ライオンズは、上田大河が背番号を11→48に変更することと、育成契約を締結した4選手の新背番号を以下の通り発表。",
+   "details": [
+    "青山美夏人：29→115",
+    "牧野翔矢：53→122",
+    "古川雄大：33→123",
+    "林冠臣：44→125"
+   ],
+   "teams": [
+    "L"
+   ],
+   "categories": [
+    "獲得・入団・契約",
+    "背番号"
+   ],
+   "sources": [
+    {
+     "url": "https://www.sanspo.com/article/20261126-L647VDRFHFECHPTNY2Y222PSQA/?outputType=theme_lions",
+     "site": "サンスポ",
+     "date": "2026-11-26"
+    },
+    {
+     "url": "https://www.seibulions.jp/news/detail/202602115001.html",
+     "site": "埼玉西武ライオンズ",
+     "date": "2026-11-26"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-26",
+   "text": "北海道日本ハムファイターズの矢澤宏太が、来季より守備位置登録を投手から外野手に変更することを表明。",
+   "details": [],
+   "teams": [
+    "F"
+   ],
+   "categories": [
+    "その他"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611260001268.html",
+     "site": "日刊スポーツ",
+     "date": "2026-11-26"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-25",
+   "text": "NPB AWARDS 2026開催。最優秀選手賞を佐藤輝明（阪神）と栗原陵矢（ソフトバンク）、最優秀新人賞を竹丸和幸（巨人）と前田悠伍（ソフトバンク）がそれぞれ受賞。",
+   "details": [],
+   "teams": [
+    "H"
+   ],
+   "categories": [
+    "その他"
+   ],
+   "sources": [
+    {
+     "url": "https://npb.jp/news/detail/20261125_01.html",
+     "site": "NPB.jp 日本野球機構",
+     "date": null
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
   {
    "date": "2026-11-24",
    "text": "東北楽天ゴールデンイーグルスは、戦力外としていた石原彪と育成契約を締結したことを発表。",
@@ -2843,7 +2914,7 @@
   },
   {
    "date": "2026-08-25",
-   "text": "東北楽天ゴールデンイーグルスは、四国アイランドリーグplus・香川オリーブガイナーズのヨナウィル・フロリモン・ロドリゲスと育成選手契約を結んだことを発表。背番号は130。",
+   "text": "東北楽天ゴールデンイーグルスは、四国アイランドリーグplus・香川オリーブガイナーズのヨナウィル・フロリモンと育成選手契約を結んだことを発表。背番号は130。",
    "details": [],
    "teams": [
     "E"

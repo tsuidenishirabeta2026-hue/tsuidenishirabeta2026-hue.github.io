@@ -1,6 +1,6 @@
 {
- "hash": "61b649e3398a1ad1d4247d1a37118a06a754d0c62a9fd4487ca5d02fd7292ae4",
- "saved_at": "2026-11-25T22:42:16.172Z",
+ "hash": "b61699a5046eb8368ed7bc60fdfddff9c47632f3ed6e8e74ddf465fa2217b29c",
+ "saved_at": "2026-11-26T13:57:17.801Z",
  "season": 2026,
  "data": {
   "meta": {
@@ -13,7 +13,7 @@
    "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
    "stats_level": "none",
    "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-26 取得、支配下・育成を含む）です。",
-   "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111873409）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111896639）、Template:埼玉西武ライオンズの選手・スタッフ（版 111829607）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111835881）、Template:オリックス・バファローズの選手・スタッフ（版 111874498）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111885871）、2026年の日本プロ野球（版 111900352）"
+   "source_detail": "Template:2026年のパシフィック・リーグ順位表（版 111296662）、Template:北海道日本ハムファイターズの選手・スタッフ（版 111909239）、Template:東北楽天ゴールデンイーグルスの選手・スタッフ（版 111896639）、Template:埼玉西武ライオンズの選手・スタッフ（版 111911702）、Template:千葉ロッテマリーンズの選手・スタッフ（版 111835881）、Template:オリックス・バファローズの選手・スタッフ（版 111874498）、Template:福岡ソフトバンクホークスの選手・スタッフ（版 111885871）、2026年の日本プロ野球（版 111911923）"
   },
   "titles": [
    {
@@ -256,21 +256,6 @@
    }
   ],
   "players": [
-   {
-    "player_id": "w973bfcb2c5",
-    "team_id": "F",
-    "name": "矢澤宏太",
-    "name_kana": null,
-    "number": "12",
-    "position": "投手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "矢澤宏太",
-    "roster_type": "支配下"
-   },
    {
     "player_id": "weadfb2b2ee",
     "team_id": "F",
@@ -1154,6 +1139,21 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "淺間大基",
+    "roster_type": "支配下"
+   },
+   {
+    "player_id": "w973bfcb2c5",
+    "team_id": "F",
+    "name": "矢澤宏太",
+    "name_kana": null,
+    "number": "12",
+    "position": "外野手",
+    "throws": null,
+    "bats": null,
+    "birth_date": null,
+    "from_date": null,
+    "to_date": null,
+    "wiki_title": "矢澤宏太",
     "roster_type": "支配下"
    },
    {
@@ -2522,21 +2522,6 @@
     "roster_type": "育成"
    },
    {
-    "player_id": "w1c8e3a00a2",
-    "team_id": "L",
-    "name": "上田大河",
-    "name_kana": null,
-    "number": "11",
-    "position": "投手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "上田大河",
-    "roster_type": "支配下"
-   },
-   {
     "player_id": "wc504124446",
     "team_id": "L",
     "name": "渡邉勇太朗",
@@ -2804,6 +2789,21 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "杉山遙希",
+    "roster_type": "支配下"
+   },
+   {
+    "player_id": "w1c8e3a00a2",
+    "team_id": "L",
+    "name": "上田大河",
+    "name_kana": null,
+    "number": "48",
+    "position": "投手",
+    "throws": null,
+    "bats": null,
+    "birth_date": null,
+    "from_date": null,
+    "to_date": null,
+    "wiki_title": "上田大河",
     "roster_type": "支配下"
    },
    {
@@ -3497,6 +3497,21 @@
     "roster_type": "育成"
    },
    {
+    "player_id": "w642cd61539",
+    "team_id": "L",
+    "name": "青山美夏人",
+    "name_kana": null,
+    "number": "115",
+    "position": "投手",
+    "throws": null,
+    "bats": null,
+    "birth_date": null,
+    "from_date": null,
+    "to_date": null,
+    "wiki_title": "青山美夏人",
+    "roster_type": "育成"
+   },
+   {
     "player_id": "w7ca5ce8caa",
     "team_id": "L",
     "name": "宮澤太成",
@@ -3737,6 +3752,21 @@
     "roster_type": "育成"
    },
    {
+    "player_id": "w7e2860a66c",
+    "team_id": "L",
+    "name": "牧野翔矢",
+    "name_kana": null,
+    "number": "122",
+    "position": "捕手",
+    "throws": null,
+    "bats": null,
+    "birth_date": null,
+    "from_date": null,
+    "to_date": null,
+    "wiki_title": "牧野翔矢",
+    "roster_type": "育成"
+   },
+   {
     "player_id": "w83cc5de7e5",
     "team_id": "L",
     "name": "新井唯斗",
@@ -3854,6 +3884,36 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "フランシスコ・アポンテ",
+    "roster_type": "育成"
+   },
+   {
+    "player_id": "w82a90cd582",
+    "team_id": "L",
+    "name": "古川雄大",
+    "name_kana": null,
+    "number": "123",
+    "position": "外野手",
+    "throws": null,
+    "bats": null,
+    "birth_date": null,
+    "from_date": null,
+    "to_date": null,
+    "wiki_title": "古川雄大 (野球)",
+    "roster_type": "育成"
+   },
+   {
+    "player_id": "wf9209b4dc9",
+    "team_id": "L",
+    "name": "林冠臣",
+    "name_kana": null,
+    "number": "125",
+    "position": "外野手",
+    "throws": null,
+    "bats": null,
+    "birth_date": null,
+    "from_date": null,
+    "to_date": null,
+    "wiki_title": "林冠臣",
     "roster_type": "育成"
    },
    {

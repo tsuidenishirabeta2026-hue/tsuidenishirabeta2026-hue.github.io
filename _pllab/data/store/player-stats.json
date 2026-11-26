@@ -1,159 +1,8 @@
 {
- "hash": "d8b49b1b1a78923791c12047461ac6059ee065fc8c73093c60b7763027bf399c",
- "saved_at": "2026-11-25T22:42:16.823Z",
+ "hash": "4c58be8991cc6376ccc7346ac178bbc035ab91d2c5ec5b572d08827bd9539138",
+ "saved_at": "2026-11-26T13:57:18.146Z",
  "season": 2026,
  "articles": {
-  "矢澤宏太": {
-   "revid": 111457443,
-   "title": "矢澤宏太",
-   "updatedThrough": 2025,
-   "batting": [
-    {
-     "year": 2023,
-     "team": "日本ハム",
-     "team_id": "F",
-     "G": 37,
-     "PA": 107,
-     "AB": 96,
-     "R": 13,
-     "H": 17,
-     "D": 4,
-     "T": 0,
-     "HR": 1,
-     "TB": 24,
-     "RBI": 4,
-     "SB": 2,
-     "CS": 2,
-     "SH": 1,
-     "SF": 1,
-     "BB": 8,
-     "IBB": 0,
-     "HBP": 1,
-     "SO": 35,
-     "GDP": 0,
-     "valid": true
-    },
-    {
-     "year": 2024,
-     "team": "日本ハム",
-     "team_id": "F",
-     "G": 28,
-     "PA": 19,
-     "AB": 18,
-     "R": 0,
-     "H": 2,
-     "D": 0,
-     "T": 0,
-     "HR": 0,
-     "TB": 2,
-     "RBI": 0,
-     "SB": 0,
-     "CS": 0,
-     "SH": 1,
-     "SF": 0,
-     "BB": 0,
-     "IBB": 0,
-     "HBP": 0,
-     "SO": 5,
-     "GDP": 1,
-     "valid": true
-    },
-    {
-     "year": 2025,
-     "team": "日本ハム",
-     "team_id": "F",
-     "G": 86,
-     "PA": 182,
-     "AB": 166,
-     "R": 20,
-     "H": 41,
-     "D": 5,
-     "T": 2,
-     "HR": 1,
-     "TB": 53,
-     "RBI": 18,
-     "SB": 11,
-     "CS": 2,
-     "SH": 1,
-     "SF": 1,
-     "BB": 10,
-     "IBB": 0,
-     "HBP": 4,
-     "SO": 46,
-     "GDP": 2,
-     "valid": true
-    }
-   ],
-   "pitching": [
-    {
-     "year": 2023,
-     "team": "日本ハム",
-     "team_id": "F",
-     "G": 2,
-     "GS": 0,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 0,
-     "L": 0,
-     "SV": 0,
-     "HLD": 0,
-     "BF": 7,
-     "outs": 6,
-     "H": 1,
-     "HR": 0,
-     "BB": 0,
-     "IBB": 0,
-     "HBP": 0,
-     "SO": 3,
-     "WP": 0,
-     "BK": 0,
-     "R": 0,
-     "ER": 0,
-     "valid": true
-    },
-    {
-     "year": 2024,
-     "team": "日本ハム",
-     "team_id": "F",
-     "G": 17,
-     "GS": 0,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 1,
-     "L": 2,
-     "SV": 0,
-     "HLD": 3,
-     "BF": 62,
-     "outs": 40,
-     "H": 11,
-     "HR": 0,
-     "BB": 13,
-     "IBB": 1,
-     "HBP": 0,
-     "SO": 12,
-     "WP": 1,
-     "BK": 0,
-     "R": 7,
-     "ER": 6,
-     "valid": true
-    }
-   ],
-   "salary": {
-    "text": "2600万円",
-    "yen": 26000000,
-    "year": 2026,
-    "note": ""
-   },
-   "salaryHistory": {
-    "2026": {
-     "text": "2600万円",
-     "yen": 26000000
-    }
-   },
-   "salaryV": 2
-  },
   "生田目翼": {
    "revid": 110556088,
    "title": "生田目翼",
@@ -3374,7 +3223,7 @@
    "salaryV": 2
   },
   "タナー・レイニー": {
-   "revid": 111900515,
+   "revid": 111907315,
    "title": "タナー・レイニー",
    "updatedThrough": 2026,
    "batting": null,
@@ -6988,7 +6837,7 @@
    "salaryV": 2
   },
   "田宮裕涼": {
-   "revid": 111850200,
+   "revid": 111912690,
    "title": "田宮裕涼",
    "updatedThrough": 2026,
    "batting": [
@@ -10029,6 +9878,157 @@
     "2025": {
      "text": "2800万円",
      "yen": 28000000
+    }
+   },
+   "salaryV": 2
+  },
+  "矢澤宏太": {
+   "revid": 111457443,
+   "title": "矢澤宏太",
+   "updatedThrough": 2025,
+   "batting": [
+    {
+     "year": 2023,
+     "team": "日本ハム",
+     "team_id": "F",
+     "G": 37,
+     "PA": 107,
+     "AB": 96,
+     "R": 13,
+     "H": 17,
+     "D": 4,
+     "T": 0,
+     "HR": 1,
+     "TB": 24,
+     "RBI": 4,
+     "SB": 2,
+     "CS": 2,
+     "SH": 1,
+     "SF": 1,
+     "BB": 8,
+     "IBB": 0,
+     "HBP": 1,
+     "SO": 35,
+     "GDP": 0,
+     "valid": true
+    },
+    {
+     "year": 2024,
+     "team": "日本ハム",
+     "team_id": "F",
+     "G": 28,
+     "PA": 19,
+     "AB": 18,
+     "R": 0,
+     "H": 2,
+     "D": 0,
+     "T": 0,
+     "HR": 0,
+     "TB": 2,
+     "RBI": 0,
+     "SB": 0,
+     "CS": 0,
+     "SH": 1,
+     "SF": 0,
+     "BB": 0,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 5,
+     "GDP": 1,
+     "valid": true
+    },
+    {
+     "year": 2025,
+     "team": "日本ハム",
+     "team_id": "F",
+     "G": 86,
+     "PA": 182,
+     "AB": 166,
+     "R": 20,
+     "H": 41,
+     "D": 5,
+     "T": 2,
+     "HR": 1,
+     "TB": 53,
+     "RBI": 18,
+     "SB": 11,
+     "CS": 2,
+     "SH": 1,
+     "SF": 1,
+     "BB": 10,
+     "IBB": 0,
+     "HBP": 4,
+     "SO": 46,
+     "GDP": 2,
+     "valid": true
+    }
+   ],
+   "pitching": [
+    {
+     "year": 2023,
+     "team": "日本ハム",
+     "team_id": "F",
+     "G": 2,
+     "GS": 0,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 0,
+     "L": 0,
+     "SV": 0,
+     "HLD": 0,
+     "BF": 7,
+     "outs": 6,
+     "H": 1,
+     "HR": 0,
+     "BB": 0,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 3,
+     "WP": 0,
+     "BK": 0,
+     "R": 0,
+     "ER": 0,
+     "valid": true
+    },
+    {
+     "year": 2024,
+     "team": "日本ハム",
+     "team_id": "F",
+     "G": 17,
+     "GS": 0,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 1,
+     "L": 2,
+     "SV": 0,
+     "HLD": 3,
+     "BF": 62,
+     "outs": 40,
+     "H": 11,
+     "HR": 0,
+     "BB": 13,
+     "IBB": 1,
+     "HBP": 0,
+     "SO": 12,
+     "WP": 1,
+     "BK": 0,
+     "R": 7,
+     "ER": 6,
+     "valid": true
+    }
+   ],
+   "salary": {
+    "text": "2600万円",
+    "yen": 26000000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "2600万円",
+     "yen": 26000000
     }
    },
    "salaryV": 2
@@ -22078,7 +22078,7 @@
    "salaryV": 2
   },
   "ヨナウィル・フロリモン": {
-   "revid": 111896618,
+   "revid": 111911638,
    "title": "ヨナウィル・フロリモン",
    "updatedThrough": null,
    "batting": null,
@@ -22205,108 +22205,6 @@
    "pitching": null,
    "salary": null,
    "salaryHistory": {},
-   "salaryV": 2
-  },
-  "上田大河": {
-   "revid": 111729540,
-   "title": "上田大河",
-   "updatedThrough": 2026,
-   "batting": null,
-   "pitching": [
-    {
-     "year": 2024,
-     "team": "西武",
-     "team_id": "L",
-     "G": 17,
-     "GS": 1,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 0,
-     "L": 0,
-     "SV": 0,
-     "HLD": 1,
-     "BF": 99,
-     "outs": 70,
-     "H": 17,
-     "HR": 2,
-     "BB": 13,
-     "IBB": 0,
-     "HBP": 0,
-     "SO": 11,
-     "WP": 1,
-     "BK": 0,
-     "R": 7,
-     "ER": 7,
-     "valid": true
-    },
-    {
-     "year": 2025,
-     "team": "西武",
-     "team_id": "L",
-     "G": 4,
-     "GS": 4,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 0,
-     "L": 2,
-     "SV": 0,
-     "HLD": 0,
-     "BF": 94,
-     "outs": 60,
-     "H": 30,
-     "HR": 1,
-     "BB": 6,
-     "IBB": 0,
-     "HBP": 1,
-     "SO": 6,
-     "WP": 0,
-     "BK": 0,
-     "R": 15,
-     "ER": 15,
-     "valid": true
-    },
-    {
-     "year": 2026,
-     "team": "西武",
-     "team_id": "L",
-     "G": 14,
-     "GS": 0,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 2,
-     "L": 1,
-     "SV": 0,
-     "HLD": 1,
-     "BF": 84,
-     "outs": 58,
-     "H": 19,
-     "HR": 3,
-     "BB": 6,
-     "IBB": 0,
-     "HBP": 0,
-     "SO": 16,
-     "WP": 0,
-     "BK": 0,
-     "R": 10,
-     "ER": 8,
-     "valid": true
-    }
-   ],
-   "salary": {
-    "text": "1250万円",
-    "yen": 12500000,
-    "year": 2026,
-    "note": ""
-   },
-   "salaryHistory": {
-    "2026": {
-     "text": "1250万円",
-     "yen": 12500000
-    }
-   },
    "salaryV": 2
   },
   "渡邉勇太朗": {
@@ -24280,7 +24178,7 @@
    "salaryV": 2
   },
   "堀越啓太": {
-   "revid": 111537732,
+   "revid": 111913116,
    "title": "堀越啓太",
    "updatedThrough": 2026,
    "batting": null,
@@ -24805,6 +24703,108 @@
     "2026": {
      "text": "700万円",
      "yen": 7000000
+    }
+   },
+   "salaryV": 2
+  },
+  "上田大河": {
+   "revid": 111910081,
+   "title": "上田大河",
+   "updatedThrough": 2026,
+   "batting": null,
+   "pitching": [
+    {
+     "year": 2024,
+     "team": "西武",
+     "team_id": "L",
+     "G": 17,
+     "GS": 1,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 0,
+     "L": 0,
+     "SV": 0,
+     "HLD": 1,
+     "BF": 99,
+     "outs": 70,
+     "H": 17,
+     "HR": 2,
+     "BB": 13,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 11,
+     "WP": 1,
+     "BK": 0,
+     "R": 7,
+     "ER": 7,
+     "valid": true
+    },
+    {
+     "year": 2025,
+     "team": "西武",
+     "team_id": "L",
+     "G": 4,
+     "GS": 4,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 0,
+     "L": 2,
+     "SV": 0,
+     "HLD": 0,
+     "BF": 94,
+     "outs": 60,
+     "H": 30,
+     "HR": 1,
+     "BB": 6,
+     "IBB": 0,
+     "HBP": 1,
+     "SO": 6,
+     "WP": 0,
+     "BK": 0,
+     "R": 15,
+     "ER": 15,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "西武",
+     "team_id": "L",
+     "G": 14,
+     "GS": 0,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 2,
+     "L": 1,
+     "SV": 0,
+     "HLD": 1,
+     "BF": 84,
+     "outs": 58,
+     "H": 19,
+     "HR": 3,
+     "BB": 6,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 16,
+     "WP": 0,
+     "BK": 0,
+     "R": 10,
+     "ER": 8,
+     "valid": true
+    }
+   ],
+   "salary": {
+    "text": "1250万円",
+    "yen": 12500000,
+    "year": 2026,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2026": {
+     "text": "1250万円",
+     "yen": 12500000
     }
    },
    "salaryV": 2
@@ -25434,7 +25434,7 @@
    "salaryV": 2
   },
   "平良海馬": {
-   "revid": 111898236,
+   "revid": 111907575,
    "title": "平良海馬",
    "updatedThrough": 2026,
    "batting": null,
@@ -26045,7 +26045,7 @@
    "salaryV": 2
   },
   "小島大河": {
-   "revid": 111898458,
+   "revid": 111906671,
    "title": "小島大河",
    "updatedThrough": 2026,
    "batting": [
@@ -26237,7 +26237,7 @@
    "salaryV": 2
   },
   "炭谷銀仁朗": {
-   "revid": 111641048,
+   "revid": 111906617,
    "title": "炭谷銀仁朗",
    "updatedThrough": 2026,
    "batting": [
@@ -29617,7 +29617,7 @@
    "salaryV": 2
   },
   "滝澤夏央": {
-   "revid": 111586956,
+   "revid": 111911718,
    "title": "滝澤夏央",
    "updatedThrough": 2026,
    "batting": [
@@ -29749,15 +29749,19 @@
    ],
    "pitching": null,
    "salary": {
-    "text": "3200万円",
-    "yen": 32000000,
-    "year": 2026,
+    "text": "7200万円",
+    "yen": 72000000,
+    "year": 2027,
     "note": ""
    },
    "salaryHistory": {
     "2026": {
      "text": "3200万円",
      "yen": 32000000
+    },
+    "2027": {
+     "text": "7200万円",
+     "yen": 72000000
     }
    },
    "salaryV": 2
@@ -32399,6 +32403,135 @@
    },
    "salaryV": 2
   },
+  "青山美夏人": {
+   "revid": 111911085,
+   "title": "青山美夏人",
+   "updatedThrough": 2026,
+   "batting": null,
+   "pitching": [
+    {
+     "year": 2023,
+     "team": "西武",
+     "team_id": "L",
+     "G": 39,
+     "GS": 1,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 0,
+     "L": 1,
+     "SV": 3,
+     "HLD": 1,
+     "BF": 186,
+     "outs": 137,
+     "H": 32,
+     "HR": 4,
+     "BB": 23,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 34,
+     "WP": 5,
+     "BK": 1,
+     "R": 15,
+     "ER": 15,
+     "valid": true
+    },
+    {
+     "year": 2024,
+     "team": "西武",
+     "team_id": "L",
+     "G": 6,
+     "GS": 6,
+     "CG": 1,
+     "SHO": 1,
+     "NBB": 0,
+     "W": 1,
+     "L": 4,
+     "SV": 0,
+     "HLD": 0,
+     "BF": 139,
+     "outs": 97,
+     "H": 30,
+     "HR": 3,
+     "BB": 12,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 13,
+     "WP": 0,
+     "BK": 0,
+     "R": 12,
+     "ER": 10,
+     "valid": true
+    },
+    {
+     "year": 2025,
+     "team": "西武",
+     "team_id": "L",
+     "G": 2,
+     "GS": 0,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 0,
+     "L": 0,
+     "SV": 0,
+     "HLD": 0,
+     "BF": 11,
+     "outs": 6,
+     "H": 3,
+     "HR": 1,
+     "BB": 2,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 0,
+     "WP": 0,
+     "BK": 0,
+     "R": 3,
+     "ER": 3,
+     "valid": true
+    },
+    {
+     "year": 2026,
+     "team": "西武",
+     "team_id": "L",
+     "G": 2,
+     "GS": 0,
+     "CG": 0,
+     "SHO": 0,
+     "NBB": 0,
+     "W": 0,
+     "L": 0,
+     "SV": 0,
+     "HLD": 0,
+     "BF": 10,
+     "outs": 6,
+     "H": 3,
+     "HR": 0,
+     "BB": 1,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 2,
+     "WP": 0,
+     "BK": 0,
+     "R": 2,
+     "ER": 2,
+     "valid": true
+    }
+   ],
+   "salary": {
+    "text": "1000万円",
+    "yen": 10000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "1000万円",
+     "yen": 10000000
+    }
+   },
+   "salaryV": 2
+  },
   "宮澤太成": {
    "revid": 107604367,
    "title": "宮澤太成",
@@ -32965,6 +33098,102 @@
    },
    "salaryV": 2
   },
+  "牧野翔矢": {
+   "revid": 111911100,
+   "title": "牧野翔矢",
+   "updatedThrough": 2026,
+   "batting": [
+    {
+     "year": 2022,
+     "team": "西武",
+     "team_id": "L",
+     "G": 11,
+     "PA": 32,
+     "AB": 29,
+     "R": 3,
+     "H": 4,
+     "D": 0,
+     "T": 1,
+     "HR": 0,
+     "TB": 6,
+     "RBI": 2,
+     "SB": 0,
+     "CS": 1,
+     "SH": 1,
+     "SF": 0,
+     "BB": 2,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 7,
+     "GDP": 1,
+     "valid": true
+    },
+    {
+     "year": 2024,
+     "team": "西武",
+     "team_id": "L",
+     "G": 10,
+     "PA": 20,
+     "AB": 20,
+     "R": 0,
+     "H": 1,
+     "D": 0,
+     "T": 0,
+     "HR": 0,
+     "TB": 0,
+     "RBI": 1,
+     "SB": 0,
+     "CS": 0,
+     "SH": 0,
+     "SF": 0,
+     "BB": 0,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 0,
+     "GDP": 0,
+     "valid": false
+    },
+    {
+     "year": 2025,
+     "team": "西武",
+     "team_id": "L",
+     "G": 29,
+     "PA": 67,
+     "AB": 61,
+     "R": 3,
+     "H": 13,
+     "D": 0,
+     "T": 1,
+     "HR": 0,
+     "TB": 15,
+     "RBI": 0,
+     "SB": 1,
+     "CS": 0,
+     "SH": 4,
+     "SF": 0,
+     "BB": 2,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 22,
+     "GDP": 0,
+     "valid": true
+    }
+   ],
+   "pitching": null,
+   "salary": {
+    "text": "900万円",
+    "yen": 9000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "900万円",
+     "yen": 9000000
+    }
+   },
+   "salaryV": 2
+  },
   "新井唯斗": {
    "revid": 111783090,
    "title": "新井唯斗",
@@ -33083,6 +33312,72 @@
    "pitching": null,
    "salary": null,
    "salaryHistory": {},
+   "salaryV": 2
+  },
+  "古川雄大 (野球)": {
+   "revid": 111911111,
+   "title": "古川雄大 (野球)",
+   "updatedThrough": 2026,
+   "batting": [
+    {
+     "year": 2025,
+     "team": "西武",
+     "team_id": "L",
+     "G": 5,
+     "PA": 16,
+     "AB": 12,
+     "R": 1,
+     "H": 1,
+     "D": 0,
+     "T": 0,
+     "HR": 0,
+     "TB": 1,
+     "RBI": 0,
+     "SB": 0,
+     "CS": 1,
+     "SH": 0,
+     "SF": 0,
+     "BB": 4,
+     "IBB": 0,
+     "HBP": 0,
+     "SO": 4,
+     "GDP": 1,
+     "valid": true
+    }
+   ],
+   "pitching": null,
+   "salary": {
+    "text": "700万円",
+    "yen": 7000000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "700万円",
+     "yen": 7000000
+    }
+   },
+   "salaryV": 2
+  },
+  "林冠臣": {
+   "revid": 111911121,
+   "title": "林冠臣",
+   "updatedThrough": null,
+   "batting": null,
+   "pitching": null,
+   "salary": {
+    "text": "850万円",
+    "yen": 8500000,
+    "year": 2027,
+    "note": ""
+   },
+   "salaryHistory": {
+    "2027": {
+     "text": "850万円",
+     "yen": 8500000
+    }
+   },
    "salaryV": 2
   },
   "ラタナヤケ・ラマル・ギービン": {
@@ -43865,7 +44160,7 @@
    "salaryV": 2
   },
   "山口航輝": {
-   "revid": 111782537,
+   "revid": 111911271,
    "title": "山口航輝",
    "updatedThrough": 2026,
    "batting": [
@@ -50033,7 +50328,7 @@
    "salaryV": 2
   },
   "ショーン・ジェリー": {
-   "revid": 111884002,
+   "revid": 111905730,
    "title": "ショーン・ジェリー",
    "updatedThrough": 2025,
    "batting": null,
@@ -50851,7 +51146,7 @@
    "salaryV": 2
   },
   "戸柱恭孝": {
-   "revid": 111889374,
+   "revid": 111912000,
    "title": "戸柱恭孝",
    "updatedThrough": 2026,
    "batting": [
@@ -57494,7 +57789,7 @@
    "salaryV": 2
   },
   "杉山一樹": {
-   "revid": 111552790,
+   "revid": 111912553,
    "title": "杉山一樹",
    "updatedThrough": 2025,
    "batting": null,
@@ -65179,7 +65474,7 @@
    "salaryV": 2
   },
   "鈴木貴大": {
-   "revid": 111685521,
+   "revid": 111911656,
    "title": "鈴木貴大",
    "updatedThrough": null,
    "batting": null,
