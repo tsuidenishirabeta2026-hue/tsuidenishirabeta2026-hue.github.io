@@ -1,12 +1,12 @@
 {
- "hash": "9ad776096865cc0fd2b4bc37cffc5959bd47e7958cf58c65a59b560556303b76",
- "saved_at": "2026-11-25T14:59:01.608Z",
+ "hash": "33412fd91c543f4691c2bc5ef4c7a0f08bf13a28c76e6206cf8316699b514509",
+ "saved_at": "2026-11-26T14:13:01.035Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111900352,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111900352",
-   "count": 243
+   "revid": 111911923,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111911923",
+   "count": 244
   }
  ],
  "events": [
@@ -26,6 +26,27 @@
      "url": "https://hochi.news/articles/20261125-OHT1T51053.html",
      "site": "スポーツ報知",
      "date": "2026-11-25"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-25",
+   "text": "NPB AWARDS 2026開催。最優秀選手賞を佐藤輝明（阪神）と栗原陵矢（ソフトバンク）、最優秀新人賞を竹丸和幸（巨人）と前田悠伍（ソフトバンク）がそれぞれ受賞。",
+   "details": [],
+   "teams": [
+    "G",
+    "T"
+   ],
+   "categories": [
+    "その他"
+   ],
+   "sources": [
+    {
+     "url": "https://npb.jp/news/detail/20261125_01.html",
+     "site": "NPB.jp 日本野球機構",
+     "date": null
     }
    ],
    "origin": "wikipedia",

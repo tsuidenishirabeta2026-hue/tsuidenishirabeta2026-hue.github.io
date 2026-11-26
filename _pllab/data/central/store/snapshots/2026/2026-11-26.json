@@ -1,6 +1,6 @@
 {
- "hash": "621b7eea50e080fefa5e2bc981738bf7f837c22315ddcd0f81a0c7bf3e03aca3",
- "saved_at": "2026-11-25T22:43:00.128Z",
+ "hash": "7cc6ed62e8093a0ec9fda762c2f2111f6bf7fab268e27afc256ad55edbb2af9c",
+ "saved_at": "2026-11-26T14:12:24.619Z",
  "season": 2026,
  "data": {
   "meta": {
@@ -13,7 +13,7 @@
    "note": "得点・失点と個人成績は取得元に無いため掲載していません。",
    "stats_level": "none",
    "roster_note": "所属選手は Wikipedia の各球団「選手・スタッフ」テンプレートの記載（2026-11-26 取得、支配下・育成を含む）です。",
-   "source_detail": "Template:2026年のセントラル・リーグ順位表（版 111317028）、Template:読売ジャイアンツの選手・スタッフ（版 111884629）、Template:阪神タイガースの選手・スタッフ（版 111886957）、Template:横浜DeNAベイスターズの選手・スタッフ（版 111874800）、Template:広島東洋カープの選手・スタッフ（版 111885741）、Template:東京ヤクルトスワローズの選手・スタッフ（版 111824773）、Template:中日ドラゴンズの選手・スタッフ（版 111889195）、2026年の日本プロ野球（版 111900352）"
+   "source_detail": "Template:2026年のセントラル・リーグ順位表（版 111317028）、Template:読売ジャイアンツの選手・スタッフ（版 111884629）、Template:阪神タイガースの選手・スタッフ（版 111912994）、Template:横浜DeNAベイスターズの選手・スタッフ（版 111874800）、Template:広島東洋カープの選手・スタッフ（版 111885741）、Template:東京ヤクルトスワローズの選手・スタッフ（版 111824773）、Template:中日ドラゴンズの選手・スタッフ（版 111889195）、2026年の日本プロ野球（版 111911923）"
   },
   "titles": [
    {
@@ -21,7 +21,7 @@
     "player": "佐藤輝明",
     "team_id": "T",
     "value": null,
-    "player_id": "wf4ef98e589"
+    "player_id": null
    },
    {
     "title": "最優秀新人",
@@ -42,28 +42,28 @@
     "player": "佐藤輝明",
     "team_id": "T",
     "value": null,
-    "player_id": "wf4ef98e589"
+    "player_id": null
    },
    {
     "title": "首位打者",
     "player": "佐藤輝明",
     "team_id": "T",
     "value": ".306",
-    "player_id": "wf4ef98e589"
+    "player_id": null
    },
    {
     "title": "最多本塁打",
     "player": "佐藤輝明",
     "team_id": "T",
     "value": "39本",
-    "player_id": "wf4ef98e589"
+    "player_id": null
    },
    {
     "title": "最多打点",
     "player": "佐藤輝明",
     "team_id": "T",
     "value": "106打点",
-    "player_id": "wf4ef98e589"
+    "player_id": null
    },
    {
     "title": "最多盗塁",
@@ -77,7 +77,7 @@
     "player": "佐藤輝明",
     "team_id": "T",
     "value": "165安打",
-    "player_id": "wf4ef98e589"
+    "player_id": null
    },
    {
     "title": "最高出塁率",
@@ -2313,21 +2313,6 @@
     "roster_type": "支配下"
    },
    {
-    "player_id": "wf4ef98e589",
-    "team_id": "T",
-    "name": "佐藤輝明",
-    "name_kana": null,
-    "number": "8",
-    "position": "内野手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "佐藤輝明",
-    "roster_type": "支配下"
-   },
-   {
     "player_id": "w30dbd4dc8c",
     "team_id": "T",
     "name": "立石正広",
@@ -2508,21 +2493,6 @@
     "roster_type": "支配下"
    },
    {
-    "player_id": "w3b77a81008",
-    "team_id": "T",
-    "name": "島田海吏",
-    "name_kana": null,
-    "number": "53",
-    "position": "外野手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "島田海吏",
-    "roster_type": "支配下"
-   },
-   {
     "player_id": "w975cda47c2",
     "team_id": "T",
     "name": "前川右京",
@@ -2550,21 +2520,6 @@
     "from_date": null,
     "to_date": null,
     "wiki_title": "小野寺暖",
-    "roster_type": "支配下"
-   },
-   {
-    "player_id": "w4174fc5cee",
-    "team_id": "T",
-    "name": "豊田寛",
-    "name_kana": null,
-    "number": "61",
-    "position": "外野手",
-    "throws": null,
-    "bats": null,
-    "birth_date": null,
-    "from_date": null,
-    "to_date": null,
-    "wiki_title": "豊田寛",
     "roster_type": "支配下"
    },
    {
