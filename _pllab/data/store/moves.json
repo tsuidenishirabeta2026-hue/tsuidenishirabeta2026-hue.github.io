@@ -1,15 +1,68 @@
 {
- "hash": "b27a927b9d60564aa2e1da147ea9f26ae6997a7348db9c536d300387880d95d6",
- "saved_at": "2026-11-26T22:42:17.982Z",
+ "hash": "7cabbaaeb483d60e775a0b8b680b19a8839149e7e8eadff09f881929838c9724",
+ "saved_at": "2026-11-27T14:56:27.429Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111916544,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111916544",
-   "count": 248
+   "revid": 111923790,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111923790",
+   "count": 250
   }
  ],
  "events": [
+  {
+   "date": "2026-11-27",
+   "text": "埼玉西武ライオンズは、新入団選手の背番号を以下の通り発表。",
+   "details": [
+    "川尻啓人：11",
+    "柿本晟弥：23",
+    "沢山優介：29",
+    "田中諒：53",
+    "中津大和：33",
+    "三浦遼大：127",
+    "川島謙心：133",
+    "後藤幸樹：148"
+   ],
+   "teams": [
+    "L"
+   ],
+   "categories": [
+    "獲得・入団・契約",
+    "背番号"
+   ],
+   "sources": [
+    {
+     "url": "https://news.ntv.co.jp/category/sports/70af83f196144544ba6197be5b1b073e",
+     "site": "日テレNEWS NNN",
+     "date": "2026-11-27"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-27",
+   "text": "オリックス・バファローズは、楽天を戦力外になっていた酒居知史を育成契約で獲得したことを発表。背番号は126。",
+   "details": [],
+   "teams": [
+    "E",
+    "B"
+   ],
+   "categories": [
+    "戦力外・退団",
+    "獲得・入団・契約",
+    "背番号"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611270001325.html",
+     "site": "日刊スポーツ",
+     "date": "2026-11-27"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
   {
    "date": "2026-11-26",
    "text": "埼玉西武ライオンズは、上田大河が背番号を11→48に変更することと、育成契約を締結した4選手の新背番号を以下の通り発表。",
