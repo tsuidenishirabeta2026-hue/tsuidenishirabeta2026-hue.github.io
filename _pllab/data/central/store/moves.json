@@ -1,15 +1,56 @@
 {
- "hash": "49e9f8de8d53f4a12dbb55f0b0885f450fc8f1a0d86b5f8d92d64de6096e7a82",
- "saved_at": "2026-11-26T22:44:00.821Z",
+ "hash": "1e0ee7a9ea9fd6b11f414469766da0edf16667ed2c228cca2d7714adff437a4f",
+ "saved_at": "2026-11-27T15:01:03.307Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111916544,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111916544",
-   "count": 244
+   "revid": 111923790,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111923790",
+   "count": 246
   }
  ],
  "events": [
+  {
+   "date": "2026-11-27",
+   "text": "広島東洋カープは、フレディ・ターノック、エレフリス・モンテロと来季契約を締結したこととテイラー・ハーン、サンドロ・ファビアンの退団を発表。",
+   "details": [],
+   "teams": [
+    "C"
+   ],
+   "categories": [
+    "戦力外・退団"
+   ],
+   "sources": [
+    {
+     "url": "https://hochi.news/articles/20261127-OHT1T51019.html?page=1",
+     "site": "スポーツ報知",
+     "date": "2026-11-27"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-27",
+   "text": "オイシックス新潟アルビレックス・ベースボール・クラブは、広島を戦力外となっていた田村俊介を獲得したことを発表。",
+   "details": [],
+   "teams": [
+    "C"
+   ],
+   "categories": [
+    "戦力外・退団",
+    "獲得・入団・契約"
+   ],
+   "sources": [
+    {
+     "url": "https://www.niigata-albirex-bc.jp/news/32402/",
+     "site": "オイシックス新潟アルビレックス・ベースボール・クラブ",
+     "date": "2026-11-27"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
   {
    "date": "2026-11-25",
    "text": "広島東洋カープは、自由契約としていた杉原望来と再度育成契約を締結したことを発表。",
@@ -715,11 +756,6 @@
      "url": "https://www.baystars.co.jp/news/2026/11/1113_04.php",
      "site": "横浜DeNAベイスターズ",
      "date": "2026-11-13"
-    },
-    {
-     "url": "https://news.ntv.co.jp/category/sports/04c140bbdb9a49b7a7465520528db949",
-     "site": "日テレNEWS NNN",
-     "date": "2026-11-20"
     }
    ],
    "origin": "wikipedia",
@@ -4364,7 +4400,7 @@
   },
   {
    "date": "2026-05-24",
-   "text": "横浜DeNAベイスターズは、ダヤン・ビシエドが同日限りで現役を引退し、退団することを発表。",
+   "text": "横浜DeNAベイスターズは、ダヤン・ビシエドが同日限りで退団し、現役を引退することを発表。翌25日にNPBから任意引退選手として公示された。",
    "details": [],
    "teams": [
     "DB"
@@ -4378,6 +4414,11 @@
      "url": "https://www.nikkansports.com/baseball/news/202605240000191.html",
      "site": "日刊スポーツ",
      "date": "2026-05-24"
+    },
+    {
+     "url": "https://npb.jp/announcement/2026/pn_retired.html",
+     "site": "日本野球機構",
+     "date": null
     }
    ],
    "origin": "wikipedia",
