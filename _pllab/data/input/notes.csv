@@ -1,5 +1,5 @@
 note_id,status,type,price,title,url,published_at,teams,players,summary
-kurihara-2026,draft,free,0,栗原陵矢の「長打力」は2倍になった──数字で見る2026年の二冠,,,H,wf1e30ef86b,下書き: 非公開リポジトリの drafts/note-kurihara/。公開したら status=published、url と published_at を入れる
+kurihara-2026,published,free,0,栗原陵矢の「長打力」は2倍になった──打率は変わらず、長打だけが上乗せされた二冠,https://note.com/pacific_labo/n/n2e61b47f7861,2026-11-27,H,wf1e30ef86b,打率は.267→.271とほぼ同じ。長打力の指標ISOは.140→.286と約2倍になりました
 fa-diagnosis-2026,published,paid,300,FA権を行使したパ・リーグ5選手を、4年分の数字で診断する【2026年オフ】,https://note.com/pacific_labo/n/n2951b27e3f3b,2026-11-19,E/M/L/B,wc556b7924d/w9d48a91b49/w38a395665d/w00ecce47b3/wd7b8b85ed3,髙橋光成・宗佑磨・小島和哉・中川圭太・太田光の直近4年の数字を、伸びた点・課題・来季の注目点で整理
 taira-2026,published,free,0,平良海馬はなぜ「先発で防御率1.36」を出せたのか──2023年の先発との違いを数字で比べる,https://note.com/pacific_labo/n/n92d025467792,2026-11-19,L,w456f935378,2023年と2026年の2つの先発シーズンを比べると、変わったのは「四球」と「被本塁打」でした
 reyes-2026,published,free,0,レイエスの「17本増えた安打」はどこから来たのか──同じ531打席で、三振が29個減った,https://note.com/pacific_labo/n/ndeb6e34b44f3,2026-11-20,F,w31415d9ae2,同じ531打席で安打が17本増えた理由を、三振の減少とヒットになる割合の上昇に分けて計算しました
