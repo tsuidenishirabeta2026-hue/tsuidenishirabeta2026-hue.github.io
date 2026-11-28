@@ -1,15 +1,36 @@
 {
- "hash": "1e0ee7a9ea9fd6b11f414469766da0edf16667ed2c228cca2d7714adff437a4f",
- "saved_at": "2026-11-27T15:01:03.307Z",
+ "hash": "76d70772184f99270d73b8f17f5bebdcabf958b83910a026014a7576fb8082c2",
+ "saved_at": "2026-11-28T12:59:01.148Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111923790,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111923790",
-   "count": 246
+   "revid": 111934763,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111934763",
+   "count": 247
   }
  ],
  "events": [
+  {
+   "date": "2026-11-28",
+   "text": "阪神タイガースは、オリックス・バファローズから国内FA権を行使していた中川圭太と契約合意したことを発表。",
+   "details": [],
+   "teams": [
+    "T"
+   ],
+   "categories": [
+    "FA",
+    "獲得・入団・契約"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611280000039.html",
+     "site": "日刊スポーツ",
+     "date": "2026-11-28"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
   {
    "date": "2026-11-27",
    "text": "広島東洋カープは、フレディ・ターノック、エレフリス・モンテロと来季契約を締結したこととテイラー・ハーン、サンドロ・ファビアンの退団を発表。",
