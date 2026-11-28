@@ -1,6 +1,6 @@
 {
- "hash": "8090393355ce2ef34b5d645b292d9a13fffbae467dbe719bbb1ca24a523fa3f0",
- "saved_at": "2026-11-27T22:44:17.547Z",
+ "hash": "90dc770019199c7ad8dac27d971dd3dbcc20f0128becbd828b52e5eb654ef9d6",
+ "saved_at": "2026-11-28T12:48:02.528Z",
  "season": 2026,
  "articles": {
   "生田目翼": {
@@ -817,7 +817,7 @@
    "salaryV": 2
   },
   "伊藤大海 (野球)": {
-   "revid": 111748928,
+   "revid": 111939540,
    "title": "伊藤大海 (野球)",
    "updatedThrough": 2026,
    "batting": null,
@@ -9216,7 +9216,7 @@
    "salaryV": 2
   },
   "西川遥輝": {
-   "revid": 111929344,
+   "revid": 111939180,
    "title": "西川遥輝",
    "updatedThrough": 2025,
    "batting": [
@@ -10392,7 +10392,7 @@
    "salaryV": 2
   },
   "今川優馬": {
-   "revid": 111921104,
+   "revid": 111937955,
    "title": "今川優馬",
    "updatedThrough": 2025,
    "batting": [
@@ -20128,7 +20128,7 @@
    "salaryV": 2
   },
   "渡邊佳明": {
-   "revid": 111929731,
+   "revid": 111937785,
    "title": "渡邊佳明",
    "updatedThrough": 2025,
    "batting": [
@@ -22391,7 +22391,7 @@
    "salaryV": 2
   },
   "髙橋光成": {
-   "revid": 111643378,
+   "revid": 111939771,
    "title": "髙橋光成",
    "updatedThrough": 2026,
    "batting": null,
@@ -25434,7 +25434,7 @@
    "salaryV": 2
   },
   "平良海馬": {
-   "revid": 111929572,
+   "revid": 111933193,
    "title": "平良海馬",
    "updatedThrough": 2026,
    "batting": null,
@@ -36886,7 +36886,7 @@
    "salaryV": 2
   },
   "奥村頼人": {
-   "revid": 111929727,
+   "revid": 111937771,
    "title": "奥村頼人",
    "updatedThrough": null,
    "batting": null,
@@ -37157,147 +37157,11 @@
    "salaryV": 2
   },
   "鈴木昭汰": {
-   "revid": 111628565,
+   "revid": 111937547,
    "title": "鈴木昭汰",
    "updatedThrough": 2025,
    "batting": null,
-   "pitching": [
-    {
-     "year": 2021,
-     "team": "ロッテ",
-     "team_id": "M",
-     "G": 23,
-     "GS": 12,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 1,
-     "L": 4,
-     "SV": 0,
-     "HLD": 1,
-     "BF": 341,
-     "outs": 238,
-     "H": 78,
-     "HR": 10,
-     "BB": 28,
-     "IBB": 0,
-     "HBP": 2,
-     "SO": 76,
-     "WP": 2,
-     "BK": 0,
-     "R": 38,
-     "ER": 36,
-     "valid": true
-    },
-    {
-     "year": 2022,
-     "team": "ロッテ",
-     "team_id": "M",
-     "G": 6,
-     "GS": 3,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 1,
-     "L": 3,
-     "SV": 0,
-     "HLD": 0,
-     "BF": 65,
-     "outs": 37,
-     "H": 22,
-     "HR": 1,
-     "BB": 9,
-     "IBB": 0,
-     "HBP": 0,
-     "SO": 5,
-     "WP": 0,
-     "BK": 0,
-     "R": 10,
-     "ER": 10,
-     "valid": true
-    },
-    {
-     "year": 2023,
-     "team": "ロッテ",
-     "team_id": "M",
-     "G": 13,
-     "GS": 0,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 0,
-     "L": 0,
-     "SV": 0,
-     "HLD": 0,
-     "BF": 67,
-     "outs": 49,
-     "H": 12,
-     "HR": 2,
-     "BB": 7,
-     "IBB": 0,
-     "HBP": 0,
-     "SO": 13,
-     "WP": 0,
-     "BK": 0,
-     "R": 8,
-     "ER": 5,
-     "valid": true
-    },
-    {
-     "year": 2024,
-     "team": "ロッテ",
-     "team_id": "M",
-     "G": 51,
-     "GS": 0,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 2,
-     "L": 2,
-     "SV": 5,
-     "HLD": 27,
-     "BF": 194,
-     "outs": 148,
-     "H": 32,
-     "HR": 2,
-     "BB": 18,
-     "IBB": 0,
-     "HBP": 1,
-     "SO": 42,
-     "WP": 1,
-     "BK": 0,
-     "R": 7,
-     "ER": 5,
-     "valid": false
-    },
-    {
-     "year": 2025,
-     "team": "ロッテ",
-     "team_id": "M",
-     "G": 29,
-     "GS": 0,
-     "CG": 0,
-     "SHO": 0,
-     "NBB": 0,
-     "W": 1,
-     "L": 3,
-     "SV": 5,
-     "HLD": 14,
-     "BF": 122,
-     "outs": 84,
-     "H": 32,
-     "HR": 1,
-     "BB": 8,
-     "IBB": 0,
-     "HBP": 2,
-     "SO": 27,
-     "WP": 2,
-     "BK": 0,
-     "R": 15,
-     "ER": 15,
-     "valid": true
-    }
-   ],
+   "pitching": null,
    "salary": {
     "text": "5100万円",
     "yen": 51000000,
@@ -42634,7 +42498,7 @@
    "salaryV": 2
   },
   "西川史礁": {
-   "revid": 111929649,
+   "revid": 111934212,
    "title": "西川史礁",
    "updatedThrough": 2026,
    "batting": [
@@ -54233,8 +54097,8 @@
    "salaryV": 2
   },
   "中川圭太": {
-   "revid": 111930398,
-   "title": "ぴえんちゃん",
+   "revid": 111937927,
+   "title": "中川圭太",
    "updatedThrough": 2025,
    "batting": [
     {
@@ -60038,8 +59902,8 @@
    "salaryV": 2
   },
   "山本祐大": {
-   "revid": 111930393,
-   "title": "眠いぜ",
+   "revid": 111937778,
+   "title": "山本祐大",
    "updatedThrough": 2026,
    "batting": [
     {
@@ -62656,7 +62520,7 @@
    "salaryV": 2
   },
   "秋広優人": {
-   "revid": 111875106,
+   "revid": 111939351,
    "title": "秋広優人",
    "updatedThrough": 2026,
    "batting": [

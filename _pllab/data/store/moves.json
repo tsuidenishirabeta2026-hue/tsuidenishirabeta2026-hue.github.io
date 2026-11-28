@@ -1,15 +1,36 @@
 {
- "hash": "7cabbaaeb483d60e775a0b8b680b19a8839149e7e8eadff09f881929838c9724",
- "saved_at": "2026-11-27T14:56:27.429Z",
+ "hash": "333b100e8667ff937eff462abf99ff8a5019a1a38f71cfec4f3361fc4577b4a4",
+ "saved_at": "2026-11-28T12:49:03.423Z",
  "articles": [
   {
    "title": "2026年の日本プロ野球",
-   "revid": 111923790,
-   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111923790",
-   "count": 250
+   "revid": 111934763,
+   "url": "https://ja.wikipedia.org/w/index.php?title=2026%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83&oldid=111934763",
+   "count": 252
   }
  ],
  "events": [
+  {
+   "date": "2026-11-28",
+   "text": "阪神タイガースは、オリックス・バファローズから国内FA権を行使していた中川圭太と契約合意したことを発表。",
+   "details": [],
+   "teams": [
+    "B"
+   ],
+   "categories": [
+    "FA",
+    "獲得・入団・契約"
+   ],
+   "sources": [
+    {
+     "url": "https://www.nikkansports.com/baseball/news/202611280000039.html",
+     "site": "日刊スポーツ",
+     "date": "2026-11-28"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
   {
    "date": "2026-11-27",
    "text": "埼玉西武ライオンズは、新入団選手の背番号を以下の通り発表。",
@@ -58,6 +79,34 @@
      "url": "https://www.nikkansports.com/baseball/news/202611270001325.html",
      "site": "日刊スポーツ",
      "date": "2026-11-27"
+    }
+   ],
+   "origin": "wikipedia",
+   "article": "2026年の日本プロ野球"
+  },
+  {
+   "date": "2026-11-27",
+   "text": "（現地時間）埼玉西武ライオンズから海外FA権を行使していた髙橋光成が、アリゾナ・ダイヤモンドバックスと契約合意。また、北海道日本ハムファイターズからポスティングシステムを使用していた伊藤大海が、シカゴ・カブスと契約合意。",
+   "details": [],
+   "teams": [
+    "F",
+    "L"
+   ],
+   "categories": [
+    "FA",
+    "ポスティング・海外",
+    "獲得・入団・契約"
+   ],
+   "sources": [
+    {
+     "url": "https://www.sponichi.co.jp/baseball/news/2026/11/28/articles/20261128s00001173070000c.html",
+     "site": "スポニチ Sponichi Annex",
+     "date": null
+    },
+    {
+     "url": "https://hochi.news/articles/20261122-OHT1T51354.html",
+     "site": "スポーツ報知",
+     "date": "2026-11-28"
     }
    ],
    "origin": "wikipedia",
